@@ -17,11 +17,7 @@ const config = require("../../config.json");
 
 const root = config.db.root;
 
-export function getStoragePath(
-  pathof: PathType,
-  username?: string,
-  period?: TimePeriod
-): string {
+export function getStoragePath(pathof: PathType, username?: string): string {
   switch (pathof) {
     case "UserData":
       return `${root}/gitlab/${username}.json`;
@@ -30,7 +26,7 @@ export function getStoragePath(
     case "NotesAnalysis":
       return `${root}/notes-analysis/${username}.json`;
     case "Report":
-      return `${root}/report/${period}/${username}.json`;
+      return `${root}/report/${username}.json`;
     default:
       throw new Error("Invalid path requested");
   }
@@ -50,21 +46,14 @@ export function getUserData(username: string): GQLUserNode | null {
 }
 
 // User Report
-export function getUserReport(
-  username: string,
-  period: TimePeriod
-): UserReport | null {
-  const storagePath = getStoragePath("Report", username, period);
+export function getUserReport(username: string): UserReport | null {
+  const storagePath = getStoragePath("Report", username);
   if (!fileExist(storagePath)) return null;
   return readJsonFile(storagePath);
 }
 
-export function storeUserReport(
-  username: string,
-  period: TimePeriod,
-  data: UserReport
-): void {
-  const storagePath = getStoragePath("Report", username, period);
+export function storeUserReport(username: string, data: UserReport): void {
+  const storagePath = getStoragePath("Report", username);
   writeJsonFile(storagePath, data);
 }
 
@@ -137,15 +126,11 @@ export function getNotesAnalsysis(
   return readJsonFile(storagePath);
 }
 
-export function updateStatus(
-  username: string,
-  period: TimePeriod,
-  status: ReportStatus
-) {
-  const filePath = getStoragePath("Report", username, period);
+export function updateStatus(username: string, status: ReportStatus) {
+  const filePath = getStoragePath("Report", username);
   if (!fileExist(filePath)) {
     throw console.error(
-      `attempt to update status of ${username} for period: ${period}. however report do no exist`
+      `attempt to update status of ${username}. however report do no exist`
     );
   }
   const data: UserReport = readJsonFile(filePath);
@@ -158,13 +143,13 @@ export function storeInsights(
   period: TimePeriod,
   insights: InsightsReport
 ) {
-  const filePath = getStoragePath("Report", username, period);
+  const filePath = getStoragePath("Report", username);
   if (!fileExist(filePath)) {
     throw console.error(
       `attempt to add insights of ${username} for period: ${period}. however report do no exist`
     );
   }
   const data: UserReport = readJsonFile(filePath);
-  data.report = { insights };
+  data.report = { ...data.report, [period]: insights };
   writeJsonFile(filePath, data);
 }

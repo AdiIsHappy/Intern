@@ -1,14 +1,13 @@
 import { getUserReport, storeUserReport } from "./services/db/db";
 import { checkIfUserExistsAsync } from "./services/gitlab/gitlab";
 import { DateTime } from "luxon";
-import { TimePeriod } from "./types/core.types";
 import { QueueData, QueueTypes } from "./types/bull.types";
 import { queue } from "./bull/queue";
+const config = require("./config.json");
 
-export async function startPreparingReport(
-  username: string,
-  period: TimePeriod
-) {
+const considerSameReportPeriod = config.analysis.reportUpdatePeriod;
+
+export async function startPreparingReport(username: string) {
   // Check if gitlab user exists or not
   try {
     const userName = await checkIfUserExistsAsync(username);
@@ -20,7 +19,7 @@ export async function startPreparingReport(
     return { status: "error", message: "Error while checking user existence" };
   }
 
-  const userReport = getUserReport(username, period);
+  const userReport = getUserReport(username);
   // Check if user report is already being prepared
   if (userReport !== null && userReport.status !== "Avaliable") {
     return {
@@ -31,8 +30,8 @@ export async function startPreparingReport(
   } else if (
     userReport !== null &&
     userReport.status === "Avaliable" &&
-    DateTime.fromISO(userReport.updatedAt).startOf(period) ===
-      DateTime.now().startOf(period)
+    DateTime.fromISO(userReport.updatedAt).startOf(considerSameReportPeriod) ===
+      DateTime.now().startOf(considerSameReportPeriod)
   ) {
     return {
       status: "error",
@@ -42,24 +41,23 @@ export async function startPreparingReport(
 
   // Start preparing report
   if (userReport === null) {
-    storeUserReport(username, period, {
+    storeUserReport(username, {
       username,
       updatedAt: DateTime.now().toISO(),
-      period,
       status: "Getting Data",
       report: null,
     });
   } else {
     userReport.status = "Getting Data";
     userReport.updatedAt = DateTime.now().toISO();
-    storeUserReport(username, period, userReport);
+    storeUserReport(username, userReport);
   }
 
   // Get user data from gitlab
   const task: QueueData = {
     type: QueueTypes.GITLAB_FETCH,
     tag: username,
-    data: { username: username, period: period },
+    data: { username: username },
   };
   await queue.add(task);
   return { status: "success", message: "Started prepearing user report" };

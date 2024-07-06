@@ -1,4 +1,5 @@
 import { QueueTypes, QueueData } from "../types/bull.types";
+import { TimePeriod } from "../types/core.types";
 import { queue } from "./queue";
 import { analyseMergeRequestsAsync } from "./workers/analyse_merge_requests";
 import { analyseNotesAsync } from "./workers/analyse_notes";
@@ -10,19 +11,14 @@ queue.process(1, async (job) => {
   const data = job.data as QueueData;
   const type = data.type;
   if (type === QueueTypes.GITLAB_FETCH) {
-    await fecthUserDataAsync(data.data.username, data.data.period, data.tag);
+    await fecthUserDataAsync(data.data.username, data.tag);
   } else if (type === QueueTypes.ANALYSIS_SCHDULER) {
-    await ScheduleAnalysisAsync(data.data.username, data.data.period, data.tag);
+    await ScheduleAnalysisAsync(data.data.username, data.tag);
   } else if (type === QueueTypes.VERTEX_ANALYSE_NOTES) {
-    await analyseNotesAsync(
-      data.data.username,
-      data.data.period,
-      data.data.noteIds
-    );
+    await analyseNotesAsync(data.data.username, data.data.noteIds);
   } else if (type === QueueTypes.VERTEX_ANALYSE_MERGE_REQUEST) {
     await analyseMergeRequestsAsync(
       data.data.username,
-      data.data.period,
       data.data.mergeRequestIds
     );
   } else if (type === QueueTypes.GENERATE_INSIGHTS) {
@@ -40,15 +36,18 @@ queue.on("completed", async (job) => {
       job.data.type === QueueTypes.VERTEX_ANALYSE_MERGE_REQUEST ||
       job.data.type === QueueTypes.VERTEX_ANALYSE_NOTES
     ) {
-      const task: QueueData = {
-        tag: job.data.tag,
-        type: QueueTypes.GENERATE_INSIGHTS,
-        data: {
-          username: job.data.data.username,
-          period: job.data.data.period,
-        },
-      };
-      await queue.add(task);
+      const periods: TimePeriod[] = ["month", "week", "quarter"];
+      for (const period of periods) {
+        const task: QueueData = {
+          tag: job.data.tag,
+          type: QueueTypes.GENERATE_INSIGHTS,
+          data: {
+            username: job.data.data.username,
+            period: period,
+          },
+        };
+        await queue.add(task);
+      }
     } else if (job.data.type === QueueTypes.GENERATE_INSIGHTS) {
       console.log(`Insights generated for ${job.data.data.username}`);
     }

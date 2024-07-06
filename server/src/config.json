@@ -11,15 +11,21 @@
     "maxParallelJobs": 1
   },
   "analysis": {
+    "reportUpdatePeriod": "week",
+    "fetchDataPeriodLengthinWeeks": 28,
     "dataPerJob": {
       "mergeRequests": 10,
       "notes": 30
     },
     "period": {
-      "week": 8,
+      "week": 16,
       "month": 4,
-      "quarter": 2,
-      "year": 2
+      "quarter": 2
     }
-  }
+  },
+
+  "notes": [
+    "reportUpdatePeriod : two reports will be considerd same if they are within this period",
+    "fetchDataPeriodLengthinWeeks : how many weeks of data to fetch in for a user"
+  ]
 }

@@ -8,7 +8,6 @@ import { queue } from "../queue";
 
 export async function analyseMergeRequestsAsync(
   username: string,
-  period: TimePeriod,
   mergeRequestIds: string[]
 ) {
   // ger merge requests for analysis
@@ -55,7 +54,6 @@ export async function analyseMergeRequestsAsync(
       type: QueueTypes.VERTEX_ANALYSE_MERGE_REQUEST,
       data: {
         username,
-        period,
         mergeRequestIds,
       },
     };

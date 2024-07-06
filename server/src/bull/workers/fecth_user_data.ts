@@ -1,18 +1,13 @@
 import { getMergeRequestDiffAsync } from "../../api/gitlab/gitlab";
-import { getStoragePath, storeUserData } from "../../services/db/db";
-import { writeJsonFile } from "../../services/db/file_handling";
+import { storeUserData } from "../../services/db/db";
 import { getGitlabUserDataAsync } from "../../services/gitlab/gitlab";
 import { QueueData, QueueTypes } from "../../types/bull.types";
 import { TimePeriod } from "../../types/core.types";
 import { queue } from "../queue";
 
-export async function fecthUserDataAsync(
-  username: string,
-  period: TimePeriod,
-  tag: string
-) {
+export async function fecthUserDataAsync(username: string, tag: string) {
   // Get user data from Gitlab : includes Merge requests and comments
-  const userData = await getGitlabUserDataAsync(username, period);
+  const userData = await getGitlabUserDataAsync(username);
   if (userData === null) {
     return;
   }
@@ -42,7 +37,6 @@ export async function fecthUserDataAsync(
     type: QueueTypes.ANALYSIS_SCHDULER,
     data: {
       username,
-      period: period,
     },
   };
 

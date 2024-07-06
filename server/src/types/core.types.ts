@@ -1,4 +1,4 @@
-export type TimePeriod = "week" | "month" | "quarter" | "year";
+export type TimePeriod = "week" | "month" | "quarter";
 export type Nature = "Positive" | "Negative" | "Neutral";
 
 export type ReportStatus =
@@ -10,7 +10,6 @@ export type ReportStatus =
 export interface UserReport {
   username: string;
   updatedAt: string;
-  period: TimePeriod;
   status: ReportStatus;
   report: any;
 }

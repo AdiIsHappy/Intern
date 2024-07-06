@@ -6,11 +6,7 @@ import { AnalysedNote, TimePeriod } from "../../types/core.types";
 import { VERTNoteBody, VERTNoteForAnalysis } from "../../types/vertex.types";
 import { queue } from "../queue";
 
-export async function analyseNotesAsync(
-  username: string,
-  period: TimePeriod,
-  noteIds: string[]
-) {
+export async function analyseNotesAsync(username: string, noteIds: string[]) {
   // get notes for analysis
   // :STORAGE
   const userData = getUserData(username);
@@ -62,7 +58,6 @@ export async function analyseNotesAsync(
       type: QueueTypes.VERTEX_ANALYSE_NOTES,
       data: {
         username,
-        period,
         noteIds,
       },
     };
@@ -102,7 +97,6 @@ export async function analyseNotesAsync(
       type: QueueTypes.VERTEX_ANALYSE_NOTES,
       data: {
         username,
-        period,
         noteIds,
       },
     };

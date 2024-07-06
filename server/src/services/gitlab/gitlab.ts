@@ -1,3 +1,4 @@
+import { DateTime } from "luxon";
 import { fetchDataFromGitlabAsync } from "../../api/gitlab/gitlab";
 import {
   gitlabUserDataQuery,
@@ -9,7 +10,10 @@ import {
   GQLUserNode,
   GQLUserVerificationResponse,
 } from "../../types/gitlab.types";
-import { getNPeriodBeforeDate } from "../../utlis/time";
+const config = require("../../config.json");
+
+const dataToFetchPeriodLengthInWeeks =
+  config.analysis.fetchDataPeriodLengthinWeeks;
 
 export async function checkIfUserExistsAsync(
   username: string
@@ -26,7 +30,10 @@ export async function getGitlabUserDataAsync(
   username: string,
   period: TimePeriod = "month"
 ): Promise<GQLUserNode> {
-  const date = getNPeriodBeforeDate(period);
+  const date = DateTime.now()
+    .startOf("week")
+    .minus({ week: dataToFetchPeriodLengthInWeeks })
+    .toISO();
   const query = gitlabUserDataQuery(username, date);
   let response = await fetchDataFromGitlabAsync(query);
   const data = (response as GQLResponse).user;

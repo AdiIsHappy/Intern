@@ -2,18 +2,13 @@ import { DateTime } from "luxon";
 import { getMergeRequestAnalysis, getUserData } from "../../services/db/db";
 import { QueueData, QueueTypes } from "../../types/bull.types";
 import { queue } from "../queue";
-import { TimePeriod } from "../../types/core.types";
 
 const config = require("../../config.json");
 
 const notesPerIteration = config.analysis.dataPerJob.notes;
 const mergeRequestsPerITeration = config.analysis.dataPerJob.mergeRequests;
 
-export async function ScheduleAnalysisAsync(
-  username: string,
-  period: TimePeriod,
-  tag: string
-) {
+export async function ScheduleAnalysisAsync(username: string, tag: string) {
   const userData = getUserData(username);
   if (userData === null) {
     return;
@@ -43,7 +38,6 @@ export async function ScheduleAnalysisAsync(
       tag: tag,
       data: {
         username,
-        period,
         mergeRequestIds: requests,
       },
     };
@@ -63,7 +57,6 @@ export async function ScheduleAnalysisAsync(
       tag: tag,
       data: {
         username,
-        period,
         noteIds,
       },
     };
