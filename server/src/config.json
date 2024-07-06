@@ -1,0 +1,25 @@
+{
+  "port": 4000,
+  "redis": {
+    "host": "localhost",
+    "port": 6379
+  },
+  "db": {
+    "root": "./tmp/"
+  },
+  "bull": {
+    "maxParallelJobs": 1
+  },
+  "analysis": {
+    "dataPerJob": {
+      "mergeRequests": 10,
+      "notes": 30
+    },
+    "period": {
+      "week": 8,
+      "month": 4,
+      "quarter": 2,
+      "year": 2
+    }
+  }
+}
