@@ -34,7 +34,7 @@ app.use(cors());
 app.use("/api", apiRouter);
 
 app.get("/queue", async (req, res) => {
-  res.json(await queue.getJobs(["failed"]));
+  res.json(await queue.getJobs(["failed", "completed", "active"]));
 });
 
 // // Start the server
