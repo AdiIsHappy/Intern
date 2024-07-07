@@ -17,7 +17,7 @@ import { getNPeriodBeforeDate } from "../../utlis/time";
 
 // TODO: Reschduel the analysis upon failing
 
-export async function generateInsights(username: string, period: TimePeriod) {
+export async function generateReport(username: string, period: TimePeriod) {
   // Get analysis datas
   const notesAnalysis = getNotesAnalsysis(username);
   const mergeRequestAnalysis = getMergeRequestAnalysis(username);
@@ -52,7 +52,8 @@ export async function generateInsights(username: string, period: TimePeriod) {
   let mrInsights: InsightsReport;
   try {
     const dataToSend = mergeRequestAnalysis.data.filter(
-      (mr) => DateTime.fromISO(mr.createdAt!) >= DateTime.fromISO(startPeriodDate)
+      (mr) =>
+        DateTime.fromISO(mr.createdAt!) >= DateTime.fromISO(startPeriodDate)
     );
     mrInsights = await sendAiPrompt<InsightsReport, AnalysedMergeRequest[]>(
       dataToSend,

@@ -1,5 +1,6 @@
 export type TimePeriod = "week" | "month" | "quarter";
 export type Nature = "Positive" | "Negative" | "Neutral";
+export type Quality = "High" | "Medium" | "Low";
 
 export type ReportStatus =
   | "Getting Data"
@@ -25,13 +26,22 @@ export interface References {
   description: string;
 }
 
+export interface TestChanges {
+  added: 0;
+  removed: 0;
+  modified: 0;
+}
+
 export interface AnalysedMergeRequest {
   id: string;
   keywords: string[];
+  quality: string;
   skills: Skill[];
   impact: Nature;
   references: string[];
   createdAt?: string;
+  testRequired: true;
+  tests: TestChanges;
 }
 
 export interface AnalysedNote {

@@ -6,6 +6,8 @@ import { AnalysedNote, TimePeriod } from "../../types/core.types";
 import { VERTNoteBody, VERTNoteForAnalysis } from "../../types/vertex.types";
 import { queue } from "../queue";
 
+
+
 export async function analyseNotesAsync(username: string, noteIds: string[]) {
   // get notes for analysis
   // :STORAGE

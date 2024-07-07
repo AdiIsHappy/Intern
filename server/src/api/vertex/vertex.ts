@@ -9,6 +9,16 @@ import {
 import { SystemPrompts } from "./prompts";
 configDotenv();
 
+/* UNKNOWN ERROR: upon sending very large data there is some issue with googole reciving the data mainly occuring from merge request analysis due to large diffs.
+GoogleGenerativeAIError: [VertexAI.GoogleGenerativeAIError]: Failed to parse final chunk of stream: {
+  "error": {
+    "code": 500,
+    "message": "Internal error encountered.",
+    "status": "INTERNAL"
+  }
+}
+*/
+
 // Initialize Vertex with your Cloud project and location
 const vertex_ai = new VertexAI({
   project: "gitlab-insights",

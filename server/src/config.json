@@ -14,8 +14,8 @@
     "reportUpdatePeriod": "week",
     "fetchDataPeriodLengthinWeeks": 28,
     "dataPerJob": {
-      "mergeRequests": 10,
-      "notes": 30
+      "mergeRequests": 5,
+      "notes": 15
     },
     "period": {
       "week": 16,

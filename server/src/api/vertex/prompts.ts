@@ -9,7 +9,7 @@ Your task is to analyze each comment and return the following information:
 
 1. Type of Feedback to Merge Request Author: This can be "Positive," "Negative," or "Neutral." If the comment is appreciating or pointing out something good, it is "Positive." If the comment points out a mistake or has a negative sentiment, it is "Negative." If it is a general discussion about an issue or some reference, it is "Neutral."
 2. Keywords: Extract keywords with significant technical importance from the comment. Try to keep the maximum size of keywords to 2 words.
-3. Skills:  Identify skills discussed in the context of the comment body. The skills must be relevant from a developer's perspective (e.g., programming languages, frameworks, tools like Ide, concepts). For each skill, provide feedback for the merge request author. If the feedback is appreciating or indicates that the user did something good related to that skill, it is "Positive." If it points out a user's mistake or suggests what can be improved, the feedback is "Negative." For general discussion, keep it "Neutral."
+3. Skills:  Identify skills discussed in the context of the comment body. The skills must be relevant from a developer's perspective (e.g., programming languages, frameworks). For each skill, provide feedback for the merge request author. If the feedback is appreciating or indicates that the user did something good related to that skill, it is "Positive." If it points out a user's mistake or suggests what can be improved, the feedback is "Negative." For general discussion, keep it "Neutral."
 4. References: Provide references from the web that might be helpful with respect to the merge request, if any are mentioned in the merge request itself. Do not include any URLs to comments or merge requests. URLs must be helpful learning resources. For each reference, associate a description and the related skill.
   - In case a skill is mentioned with a negative sentiment, include a good reference URL for learning that skill.
 
@@ -66,45 +66,55 @@ const textsi_analyse_merege_request = `You are given a list of GitLab's merge re
 Your task is to analyze this information and provide the following details:
 
 1. Impact of Merge Request to Repository: This can be "Positive," "Negative," or "Neutral." You can use vote counts along with other relevant information to determine the impact.
-2. Keywords: Extract keywords with highly significant technical importance and relevance to developers, if any.
-3. Skills: Identify skills relevant to the merge request. The skills must be relevant from a developer's perspective (e.g., programming languages, frameworks, tools, concepts). For each skill, provide feedback type for the merge request author, which can be one of "Positive," "Negative," or "Neutral."
-4. References: Provide references from the web that might be helpful with respect to the merge request, if any are mentioned in the merge request itself. Do not include any URLs to comments or merge requests. URLs must be helpful learning resources. For each reference, associate a description and the related skill.
-  - If there are URLs in the comment, also analyze their content if available to the public.
+2. Quality of merge request: This can be "High," "Medium," or "Low". Consider how well the user described the changes made.
+3. Keywords: Extract keywords with highly significant technical importance and relevance to developers, if any.
+4. Skills: Identify skills relevant to the merge request. The skills must be relevant from a developer's perspective (e.g., programming languages, frameworks). For each skill, provide feedback type for the merge request author, which can be one of "Positive," "Negative," or "Neutral."
+5. References: Provide references from the web that might be helpful with respect to the merge request, if any are mentioned in the merge request itself. Do not include any URLs to comments, merge requests, forums etc. URLs must be helpful learning resources. For each reference, associate a description and the related skill.
+ - If there are URLs in the comment, also analyze their content if available to the public.
+6. Test Analysis:
+ - testRequired: A boolean value indicating if there is a need to add tests based on the changes in the merge request.
+ - tests: An object indicating the count of added, modified, or removed tests. Format: {added: 0, removed: 0, modified: 0}
 
 Output should be in the following JSON format for each merge request:
 
-
 [
  {
-  "id": "",
-  "keywords": [],
-  "skills": [
-   {
-    "skill": "",
-    "feedback": ""
-   }
-  ],
-  "impact": "",
-  "references": [
-   {
-    "url": "",
-    "skill": "",
-    "description": ""
-   }
-  ]
+ "id": "",
+ "keywords": [],
+ "quality": "",
+ "skills": [
+  {
+  "skill": "",
+  "feedback": ""
+  }
+ ],
+ "impact": "",
+ "references": [
+  {
+  "url": "",
+  "skill": "",
+  "description": ""
+  }
+ ],
+ "testRequired": false,
+ "tests": {
+  "added": 0,
+  "removed": 0,
+  "modified": 0
+ }
  }
 ]
 
-Note: make the JSON as small as possible no need to add additional spaces or newlines or formatting and ensuring that it can be directly parsed using Json.parse() method of javascript.
-`;
+
+Note: Make the JSON as small as possible. There is no need to add additional spaces or newlines, ensuring that it can be directly parsed using the JSON.parse() method of JavaScript.`;
 
 const textsi_report_mr_analysis = `You are given a JSON formatted dataset containing an analysis of authored merge requests by a GitLab user over a fixed time period. Your task is to analyze this data and perform the following tasks:
 
-1. Identify trends in merge request activity and sentiment over the past seven months.
-2. Determine which skills have been frequently mentioned, group relevant skills together, and assess the sentiment towards these skills.
+1. Identify trends in merge request activity and sentiment over the given time period focusing with more focus on recent activites.
+2. Determine which skills have been frequently mentioned, group relevant skills together(Example Android Development and Android can be merge together), and assess the sentiment towards these skills.
 3. Highlight any significant changes or patterns in activity and skill development.
 
-These points should be presented in a direct informational way, telling the user their performance in a report. For example: "You have made more impactful merge requests in the current month compared to the past." Insights should focus on either giving the user direct actions to take or providing a piece of direct information.
+These points should be presented in a direct informational way, giving the user suggestions and pointing out area for improvement. For example: "You have made more impactful merge requests in the current month compared to the past." Insights should focus on either giving the user direct actions to take or his performance in a report.
 
 The response should be in JSON format with the following structure:
 
@@ -139,11 +149,11 @@ Note: make the JSON as small as possible no need to add additional spaces or new
 
 const textsi_report_notes_analysis = `You are given a JSON formatted dataset containing an analysis of comments on authored merge requests by a GitLab user over a fixed time period. Your task is to analyze this data and perform the following tasks:
 
-1. Identify trends in merge request activity and sentiment over the past seven months.
-2. Determine which skills have been frequently mentioned, group relevant skills together, and assess the sentiment towards these skills.
+1. Identify trends in merge request activity and sentiment over the given time period focusing with more focus on recent activites.
+2. Determine which skills have been frequently mentioned, group relevant skills together(Example Android Development and Android can be merge together), and assess the sentiment towards these skills.
 3. Highlight any significant changes or patterns in activity and skill development.
 
-These points should be presented in a direct informational way, telling the user their performance in a report. For example: "You have made more impactful merge requests in the current month compared to the past." Insights should focus on either giving the user direct actions to take or providing a piece of direct information.
+These points should be presented in a direct informational way, giving the user suggestions and pointing out area for improvement. For example: "You have made more impactful merge requests in the current month compared to the past." Insights should focus on either giving the user direct actions to take or his performance in a report.
 
 The response should be in JSON format with the following structure:
 
@@ -203,6 +213,7 @@ Task:
    - Merge the summary sections from both datasets into a single array of strings, limited to 5 points maximum.
    - Merge the skills sections from both datasets. If there are similar or related skills, combine them into a single skill entry. Update the frequency and sentimentFrequency accordingly.
    - Provide combined insights for each skill, limited to a maximum of 5 points per skill.
+   - Ensure that insights are not repeated and are actionable.
 
 Output:
 The combined insights should be in the following JSON format:

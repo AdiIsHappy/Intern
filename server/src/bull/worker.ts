@@ -4,7 +4,7 @@ import { queue } from "./queue";
 import { analyseMergeRequestsAsync } from "./workers/analyse_merge_requests";
 import { analyseNotesAsync } from "./workers/analyse_notes";
 import { fecthUserDataAsync } from "./workers/fecth_user_data";
-import { generateInsights } from "./workers/generate_insights";
+import { generateReport } from "./workers/generate_report";
 import { ScheduleAnalysisAsync } from "./workers/schedule_analysis";
 
 queue.process(1, async (job) => {
@@ -22,7 +22,7 @@ queue.process(1, async (job) => {
       data.data.mergeRequestIds
     );
   } else if (type === QueueTypes.GENERATE_INSIGHTS) {
-    await generateInsights(data.data.username, data.data.period);
+    await generateReport(data.data.username, data.data.period);
   }
 });
 
