@@ -74,13 +74,13 @@ export function TestCaseRatioChart({ className }: { className?: string }) {
         },
         title: {
           display: true,
-          text: "Date",
+          text: "Timeline",
         },
       },
       y: {
         title: {
           display: true,
-          text: "Value",
+          text: "merge requests with testcases/merge requests",
         },
       },
     },
@@ -88,10 +88,10 @@ export function TestCaseRatioChart({ className }: { className?: string }) {
 
   return (
     <Chart
+      className={className}
       type="line"
       data={chartData}
       options={options}
-      className={className}
     />
   );
 }
