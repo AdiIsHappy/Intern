@@ -28,6 +28,7 @@ ChartJS.register(
   LineController
 );
 
+
 export function TestCaseRatioChart({ className }: { className?: string }) {
   const data: {
     testCases: Record<string, number>;
@@ -60,9 +61,6 @@ export function TestCaseRatioChart({ className }: { className?: string }) {
         data: Object.keys(data.testCases).map(
           (date) => data.testCases[date] / data.testCasesRequired[date]
         ),
-        backgroundColor: "rgba(75, 192, 192, 0.2)",
-        borderColor: "rgba(75, 192, 192, 1)",
-        borderWidth: 1,
       },
     ],
   };
@@ -71,7 +69,6 @@ export function TestCaseRatioChart({ className }: { className?: string }) {
       title: {
         display: true,
         text: "Test Added Ratio",
-        color: "black",
       },
       tooltip: {
         enabled: true,

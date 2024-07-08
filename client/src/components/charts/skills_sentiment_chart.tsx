@@ -96,23 +96,14 @@ export function SkillSentimentChart({ className }: { className?: string }) {
       {
         label: "Negative",
         data: data.map((item) => item.sentimentFrequency.Negative),
-        backgroundColor: "rgba(228, 8, 10, 0.6)",
-        borderColor: "rgba(228, 8, 10, 1)",
-        borderWidth: 2,
       },
       {
         label: "Neutral",
         data: data.map((item) => item.sentimentFrequency.Neutral),
-        backgroundColor: "rgba(93, 226, 231, 0.6)",
-        borderColor: "rgba(93, 226, 231, 1)",
-        borderWidth: 2,
       },
       {
         label: "Positive",
         data: data.map((item) => item.sentimentFrequency.Positive),
-        backgroundColor: "rgba(125, 218, 88, 0.6)",
-        borderColor: "rgba(125, 218, 88, 1)",
-        borderWidth: 2,
       },
     ],
   };
@@ -121,7 +112,6 @@ export function SkillSentimentChart({ className }: { className?: string }) {
       title: {
         display: true,
         text: "Skill Sentiment Analysis",
-        color: "black",
       },
       tooltip: {
         enabled: true,
@@ -133,6 +123,10 @@ export function SkillSentimentChart({ className }: { className?: string }) {
           },
         },
       },
+    },
+    interaction: {
+      mode: "index",
+      intersect: false,
     },
     responsive: true,
     scales: {

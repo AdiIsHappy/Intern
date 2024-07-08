@@ -1,3 +1,4 @@
+import { SkillsFrequencyTimeline } from "@/components/charts/skills_frequency_timeline";
 import { SkillSentimentChart } from "@/components/charts/skills_sentiment_chart";
 import { TestCaseRatioChart } from "@/components/charts/test_case_ratio_chart";
 import Dropdown from "@/components/dropdown";
@@ -35,6 +36,11 @@ export default function Home() {
         <SkillSentimentChart className="w-full max-w-2xl p-4" />
         <TestCaseRatioChart className="w-full max-w-2xl p-4" />
       </div>
+      <div className="w-full h-96 max-w-7xl flex justify-center">
+        <SkillSentimentChart className="w-full max-w-2xl p-4" />
+        <SkillsFrequencyTimeline className="w-full max-w-2xl, p-4" />
+      </div>
+
       <div className="w-full max-w-7xl m-4 bg-gray-100 p-4 rounded-md">
         <h3 className="font-semibold text-lg">Insights:</h3>
         <ol className="ml-8 mt-2 list-decimal list-outside">
