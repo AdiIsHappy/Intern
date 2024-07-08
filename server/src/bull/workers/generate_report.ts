@@ -124,6 +124,6 @@ export async function generateReport(username: string, period: TimePeriod) {
     testCases,
     testCasesRequired,
   };
-  storeInsightsDB(username, period, mergedInsights);
+  storeInsightsDB(username, period, dataToStore);
   updateStatusDB(username, "Avaliable");
 }
