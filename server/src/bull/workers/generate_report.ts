@@ -14,15 +14,21 @@ import {
   Quality,
   TimePeriod,
 } from "../../types/core.types";
-import { getNPeriodBeforeDate } from "../../utlis/time";
+import {
+  getAllPeriodsBeggningsafter,
+  getNPeriodBeforeDate,
+} from "../../utlis/time";
 
 // TODO: Reschduel the analysis upon failing
 
 export async function generateReport(username: string, period: TimePeriod) {
+  console.log("generating report");
   // Get analysis datas
   const startPeriodDate = getNPeriodBeforeDate(period);
   const notesAnalysis = getNotesAnalsysisDB(username);
   const mergeRequestAnalysis = getMergeRequestAnalysisDB(username);
+  const periods = getAllPeriodsBeggningsafter(period, startPeriodDate);
+  console.log(mergeRequestAnalysis?.data.length);
 
   if (notesAnalysis === null || mergeRequestAnalysis === null) {
     console.error(`Analysis data not found for user ${username}`);
@@ -32,12 +38,14 @@ export async function generateReport(username: string, period: TimePeriod) {
   // Get Insights from notes
   let notesInsights: InsightsReport;
   try {
-    const dataToSend = notesAnalysis.data.filter(
-      (note) =>
-        DateTime.fromISO(note.createdAt!) >= DateTime.fromISO(startPeriodDate)
-    );
-
-    notesInsights = await sendAiPrompt<InsightsReport, AnalysedNote[]>(
+    const dataToSend = {
+      data: notesAnalysis.data.filter(
+        (note) =>
+          DateTime.fromISO(note.createdAt!) >= DateTime.fromISO(startPeriodDate)
+      ),
+      date: periods,
+    };
+    notesInsights = await sendAiPrompt<InsightsReport, any>(
       dataToSend,
       SystemPrompts.REPORT_NOTES_ANALYSIS
     );
@@ -52,11 +60,14 @@ export async function generateReport(username: string, period: TimePeriod) {
   // Get Insights from merge requests
   let mrInsights: InsightsReport;
   try {
-    const dataToSend = mergeRequestAnalysis.data.filter(
-      (mr) =>
-        DateTime.fromISO(mr.createdAt!) >= DateTime.fromISO(startPeriodDate)
-    );
-    mrInsights = await sendAiPrompt<InsightsReport, AnalysedMergeRequest[]>(
+    const dataToSend = {
+      data: mergeRequestAnalysis.data.filter(
+        (mr) =>
+          DateTime.fromISO(mr.createdAt!) >= DateTime.fromISO(startPeriodDate)
+      ),
+      date: periods,
+    };
+    mrInsights = await sendAiPrompt<InsightsReport, any>(
       dataToSend,
       SystemPrompts.REPORT_MR_ANALYSIS
     );
@@ -67,7 +78,6 @@ export async function generateReport(username: string, period: TimePeriod) {
     );
     return;
   }
-
   // Merge generated insights
   let mergedInsights: InsightsReport = {};
   try {

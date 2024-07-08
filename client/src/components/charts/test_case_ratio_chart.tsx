@@ -2,7 +2,7 @@
 import { TimePeriod } from "@/lib/types/core.types";
 import { Chart } from "react-chartjs-2";
 import "chartjs-adapter-luxon";
-import { ChartOptions } from "chart.js";
+import { ChartOptions, TooltipItem } from "chart.js";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -50,14 +50,13 @@ export function TestCaseRatioChart({ className }: { className?: string }) {
       "2024-01-01T00:00:00.000+05:30": 3,
     },
   };
-  console.log();
   const period: TimePeriod = "month";
 
   const chartData = {
     labels: Object.keys(data.testCases),
     datasets: [
       {
-        label: "Test Case Ratio",
+        label: "Test Added Ratio",
         data: Object.keys(data.testCases).map(
           (date) => data.testCases[date] / data.testCasesRequired[date]
         ),
@@ -68,6 +67,27 @@ export function TestCaseRatioChart({ className }: { className?: string }) {
     ],
   };
   const options: ChartOptions<"line"> = {
+    plugins: {
+      title: {
+        display: true,
+        text: "Test Added Ratio",
+        color: "black",
+      },
+      tooltip: {
+        enabled: true,
+        callbacks: {
+          label: function (context: TooltipItem<"line">) {
+            const label = context.dataset.label || "";
+            const value = (context.raw as number).toPrecision(2);
+            return `${label}: ${value}`;
+          },
+        },
+      },
+    },
+    interaction: {
+      mode: "index",
+      intersect: false,
+    },
     scales: {
       x: {
         type: "time",

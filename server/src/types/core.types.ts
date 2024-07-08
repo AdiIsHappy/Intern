@@ -42,6 +42,7 @@ export interface AnalysedMergeRequest {
   createdAt?: string;
   testRequired: true;
   tests: TestChanges;
+  summary: string;
 }
 
 export interface AnalysedNote {
@@ -52,6 +53,7 @@ export interface AnalysedNote {
   references: References[];
   createdAt?: string;
   mergeRequestId?: string;
+  summary: string;
 }
 
 export interface InsightsReport {
@@ -59,11 +61,11 @@ export interface InsightsReport {
   skills?: [
     {
       skill: string;
-      frequency: number;
+      frequency: Record<string, number>;
       sentimentFrequency: {
-        Positive: number;
-        Negative: number;
-        Neutral: number;
+        Positive: Record<string, number>;
+        Negative: Record<string, number>;
+        Neutral: Record<string, number>;
       };
       insights: string[];
     }

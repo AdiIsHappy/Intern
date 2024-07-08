@@ -1,551 +1,301 @@
 {
   "username": "grote",
-  "updatedAt": "2024-07-08T10:21:48.082+05:30",
+  "updatedAt": "2024-07-08T19:01:31.469+05:30",
   "status": "Avaliable",
   "report": {
     "month": {
       "summary": [
-        "You have been actively contributing to merge requests related to Android development and its associated libraries, especially focusing on Android, Java, Kotlin, and Git. ",
-        "Your recent contributions are well-received, with a positive sentiment towards your skills in Kotlin, Code Review, Android and Git. ",
-        "There is a need to improve your skills in Java, with negative feedback related to its use in specific contexts. ",
-        "While you have demonstrated understanding in areas like UI, Markdown and Shell Scripting,  negative feedback suggests there is room for improvement in these areas. ",
-        "Consider addressing the feedback received in areas like Java, UI, Markdown, and Shell Scripting for better merge request contributions."
+        "You have consistently delivered high-quality merge requests and been active in comments, demonstrating your dedication to the project.",
+        "Your expertise in Android Development, Kotlin, and Java is evident, reflected in the positive sentiment surrounding these skills.",
+        "Your contributions have significantly impacted the F-Droid project, particularly in areas like app details, version sorting, and background updates.",
+        "Consider expanding your skillset to include Python, as it is frequently used for tasks like repository management and QR code generation.",
+        "The shift towards Kotlin and the increasing focus on Android development suggests a potential area for growth. Explore opportunities to refine your understanding of these technologies and contribute more significantly to the project."
       ],
       "skills": [
         {
-          "skill": "Android",
-          "frequency": 35,
+          "skill": "Android Development",
+          "frequency": {
+            "2024-03-01T00:00:00.000+05:30": 16,
+            "2024-04-01T00:00:00.000+05:30": 18,
+            "2024-05-01T00:00:00.000+05:30": 17,
+            "2024-06-01T00:00:00.000+05:30": 5,
+            "2024-07-01T00:00:00.000+05:30": 0
+          },
           "sentimentFrequency": {
-            "Positive": 14,
-            "Negative": 4,
-            "Neutral": 11
+            "Positive": {
+              "2024-03-01T00:00:00.000+05:30": 3,
+              "2024-04-01T00:00:00.000+05:30": 2,
+              "2024-05-01T00:00:00.000+05:30": 0,
+              "2024-06-01T00:00:00.000+05:30": 0,
+              "2024-07-01T00:00:00.000+05:30": 0
+            },
+            "Negative": {
+              "2024-03-01T00:00:00.000+05:30": 1,
+              "2024-04-01T00:00:00.000+05:30": 1,
+              "2024-05-01T00:00:00.000+05:30": 2,
+              "2024-06-01T00:00:00.000+05:30": 0,
+              "2024-07-01T00:00:00.000+05:30": 0
+            },
+            "Neutral": {
+              "2024-03-01T00:00:00.000+05:30": 12,
+              "2024-04-01T00:00:00.000+05:30": 15,
+              "2024-05-01T00:00:00.000+05:30": 15,
+              "2024-06-01T00:00:00.000+05:30": 5,
+              "2024-07-01T00:00:00.000+05:30": 0
+            }
           },
           "insights": [
-            "You have consistently demonstrated understanding of Android development, with a positive sentiment from your contributions.",
-            "Address the negative feedback related to Android in the context of content URIs and crash issues.",
-            "Continue refining your skills in Android, focusing on areas like handling file URIs and background execution.",
-            "Your recent work shows a positive trend in Android development, with praise for your approach to flash drive handling and updateservice implementation.",
-            "Consider exploring more advanced concepts in Android development, like Android Compose, to expand your skillset."
+            "Your expertise in Android Development is well-recognized, contributing to the positive sentiment.",
+            "The trend shows an increase in activity and a slight drop in feedback on your Android Development skills. Stay up to date with the latest developments in the field.",
+            "Consider leveraging the positive feedback you received on your Android Development skills in recent months.",
+            "There is an opportunity to expand your knowledge of Android Development by exploring new areas and contributing to the project in new ways.",
+            "Continue refining your Android Development skills to become a more valuable contributor to the project."
           ]
         },
         {
-          "skill": "Java",
-          "frequency": 26,
+          "skill": "F-Droid",
+          "frequency": {
+            "2024-03-01T00:00:00.000+05:30": 6,
+            "2024-04-01T00:00:00.000+05:30": 6,
+            "2024-05-01T00:00:00.000+05:30": 9,
+            "2024-06-01T00:00:00.000+05:30": 1,
+            "2024-07-01T00:00:00.000+05:30": 0
+          },
           "sentimentFrequency": {
-            "Positive": 9,
-            "Negative": 5,
-            "Neutral": 12
+            "Positive": {
+              "2024-03-01T00:00:00.000+05:30": 0,
+              "2024-04-01T00:00:00.000+05:30": 0,
+              "2024-05-01T00:00:00.000+05:30": 0,
+              "2024-06-01T00:00:00.000+05:30": 0,
+              "2024-07-01T00:00:00.000+05:30": 0
+            },
+            "Negative": {
+              "2024-03-01T00:00:00.000+05:30": 1,
+              "2024-04-01T00:00:00.000+05:30": 0,
+              "2024-05-01T00:00:00.000+05:30": 2,
+              "2024-06-01T00:00:00.000+05:30": 0,
+              "2024-07-01T00:00:00.000+05:30": 0
+            },
+            "Neutral": {
+              "2024-03-01T00:00:00.000+05:30": 5,
+              "2024-04-01T00:00:00.000+05:30": 6,
+              "2024-05-01T00:00:00.000+05:30": 7,
+              "2024-06-01T00:00:00.000+05:30": 1,
+              "2024-07-01T00:00:00.000+05:30": 0
+            }
           },
           "insights": [
-            "While you have frequently used Java in your merge requests, there is negative feedback surrounding its application in certain scenarios.",
-            "The negative feedback related to Java mostly revolves around potential crashes, OkHttp, Ktor, and Kotlin.",
-            "Focus on improving your Java skills by understanding best practices and addressing the feedback received.",
-            "Your recent work in Java shows a positive trend, with praise for your handling of repositories and priority.",
-            "Consider exploring alternative languages like Kotlin, which seems to be gaining traction in your recent work."
+            "Your contributions to F-Droid have been consistent, demonstrating your commitment to the project.",
+            "The feedback on your F-Droid skills has been predominantly neutral. There's room for improvement in this area.",
+            "Your F-Droid knowledge has been valuable, but consider expanding your expertise to other areas as well.",
+            "There has been a slight decrease in activity around F-Droid in recent months. Keep abreast of the latest developments in F-Droid and contribute to maintaining your knowledge base.",
+            "Continue engaging with F-Droid and strive to improve the feedback you receive on your knowledge and contributions."
           ]
         },
         {
           "skill": "Kotlin",
-          "frequency": 16,
+          "frequency": {
+            "2024-03-01T00:00:00.000+05:30": 7,
+            "2024-04-01T00:00:00.000+05:30": 8,
+            "2024-05-01T00:00:00.000+05:30": 7,
+            "2024-06-01T00:00:00.000+05:30": 4,
+            "2024-07-01T00:00:00.000+05:30": 0
+          },
           "sentimentFrequency": {
-            "Positive": 10,
-            "Negative": 2,
-            "Neutral": 4
+            "Positive": {
+              "2024-03-01T00:00:00.000+05:30": 4,
+              "2024-04-01T00:00:00.000+05:30": 3,
+              "2024-05-01T00:00:00.000+05:30": 3,
+              "2024-06-01T00:00:00.000+05:30": 1,
+              "2024-07-01T00:00:00.000+05:30": 0
+            },
+            "Negative": {
+              "2024-03-01T00:00:00.000+05:30": 0,
+              "2024-04-01T00:00:00.000+05:30": 0,
+              "2024-05-01T00:00:00.000+05:30": 0,
+              "2024-06-01T00:00:00.000+05:30": 0,
+              "2024-07-01T00:00:00.000+05:30": 0
+            },
+            "Neutral": {
+              "2024-03-01T00:00:00.000+05:30": 3,
+              "2024-04-01T00:00:00.000+05:30": 5,
+              "2024-05-01T00:00:00.000+05:30": 4,
+              "2024-06-01T00:00:00.000+05:30": 3,
+              "2024-07-01T00:00:00.000+05:30": 0
+            }
           },
           "insights": [
-            "You have consistently used Kotlin in recent merge requests, and your skills are receiving positive feedback.",
-            "Focus on addressing the negative feedback related to Kotlin in the context of OkHttp and Ktor.",
-            "Continue using Kotlin in your projects, as it has a positive sentiment.",
-            "Consider expanding your Kotlin knowledge to include Android Compose for a more modern development approach.",
-            "Your contributions in Kotlin, especially concerning stacktraces and content handling, have been well-received."
+            "Your Kotlin skills are highly valued, evident in the positive feedback.",
+            "You have consistently utilized Kotlin across various merge requests and comments.",
+            "Your proficiency in Kotlin has been instrumental in resolving issues and enhancing functionalities.",
+            "Consider contributing more to projects leveraging Kotlin to further strengthen your expertise.",
+            "Explore advanced Kotlin concepts and libraries for more impactful contributions."
           ]
         },
         {
-          "skill": "Code Review",
-          "frequency": 3,
+          "skill": "Java",
+          "frequency": {
+            "2024-03-01T00:00:00.000+05:30": 9,
+            "2024-04-01T00:00:00.000+05:30": 9,
+            "2024-05-01T00:00:00.000+05:30": 6,
+            "2024-06-01T00:00:00.000+05:30": 5,
+            "2024-07-01T00:00:00.000+05:30": 0
+          },
           "sentimentFrequency": {
-            "Positive": 3,
-            "Negative": 0,
-            "Neutral": 0
+            "Positive": {
+              "2024-03-01T00:00:00.000+05:30": 3,
+              "2024-04-01T00:00:00.000+05:30": 2,
+              "2024-05-01T00:00:00.000+05:30": 1,
+              "2024-06-01T00:00:00.000+05:30": 2,
+              "2024-07-01T00:00:00.000+05:30": 0
+            },
+            "Negative": {
+              "2024-03-01T00:00:00.000+05:30": 0,
+              "2024-04-01T00:00:00.000+05:30": 0,
+              "2024-05-01T00:00:00.000+05:30": 0,
+              "2024-06-01T00:00:00.000+05:30": 1,
+              "2024-07-01T00:00:00.000+05:30": 0
+            },
+            "Neutral": {
+              "2024-03-01T00:00:00.000+05:30": 6,
+              "2024-04-01T00:00:00.000+05:30": 7,
+              "2024-05-01T00:00:00.000+05:30": 5,
+              "2024-06-01T00:00:00.000+05:30": 2,
+              "2024-07-01T00:00:00.000+05:30": 0
+            }
           },
           "insights": [
-            "Your code review skills are appreciated. ",
-            "You are doing a great job in code review. ",
-            "Keep contributing to the code review process and providing constructive feedback.",
-            "Continue refining your code review skills to contribute effectively to the project."
+            "You have consistently demonstrated your expertise in Java, contributing to the project's success.",
+            "Your understanding of Java is appreciated, as evident in the positive sentiment surrounding your contributions.",
+            "Maintain your strong Java foundation to contribute effectively to the project.",
+            "Explore newer Java features and best practices to improve your code quality and efficiency.",
+            "Consider focusing on more complex Java-related tasks to further enhance your skills and impact."
           ]
         },
         {
-          "skill": "Git",
-          "frequency": 3,
+          "skill": "SQL",
+          "frequency": {
+            "2024-03-01T00:00:00.000+05:30": 0,
+            "2024-04-01T00:00:00.000+05:30": 0,
+            "2024-05-01T00:00:00.000+05:30": 1,
+            "2024-06-01T00:00:00.000+05:30": 0,
+            "2024-07-01T00:00:00.000+05:30": 0
+          },
           "sentimentFrequency": {
-            "Positive": 2,
-            "Negative": 0,
-            "Neutral": 1
+            "Positive": {
+              "2024-03-01T00:00:00.000+05:30": 0,
+              "2024-04-01T00:00:00.000+05:30": 0,
+              "2024-05-01T00:00:00.000+05:30": 1,
+              "2024-06-01T00:00:00.000+05:30": 0,
+              "2024-07-01T00:00:00.000+05:30": 0
+            },
+            "Negative": {
+              "2024-03-01T00:00:00.000+05:30": 0,
+              "2024-04-01T00:00:00.000+05:30": 0,
+              "2024-05-01T00:00:00.000+05:30": 0,
+              "2024-06-01T00:00:00.000+05:30": 0,
+              "2024-07-01T00:00:00.000+05:30": 0
+            },
+            "Neutral": {
+              "2024-03-01T00:00:00.000+05:30": 0,
+              "2024-04-01T00:00:00.000+05:30": 0,
+              "2024-05-01T00:00:00.000+05:30": 0,
+              "2024-06-01T00:00:00.000+05:30": 0,
+              "2024-07-01T00:00:00.000+05:30": 0
+            }
           },
           "insights": [
-            "Your recent contributions to Git show a positive trend. ",
-            "You have demonstrated strong skills in using Git for version control and tagging.",
-            "Continue using Git effectively for version control and collaboration.",
-            "Your understanding of Git branches and recent changes in the master branch have been appreciated.",
-            "Expand your Git skills by exploring advanced features like branching strategies and conflict resolution."
+            "Your experience with SQL is valuable, contributing to your positive contribution in version sorting.",
+            "You have successfully applied SQL to improve the app's functionality.",
+            "Focus on expanding your knowledge of SQL for more complex database interactions.",
+            "Explore advanced SQL techniques to optimize queries and database performance.",
+            "Contribute to areas that require SQL expertise for a greater impact on the project."
           ]
         },
         {
-          "skill": "UI/UX Design",
-          "frequency": 1,
+          "skill": "Python",
+          "frequency": {
+            "2024-03-01T00:00:00.000+05:30": 1,
+            "2024-04-01T00:00:00.000+05:30": 0,
+            "2024-05-01T00:00:00.000+05:30": 0,
+            "2024-06-01T00:00:00.000+05:30": 0,
+            "2024-07-01T00:00:00.000+05:30": 0
+          },
           "sentimentFrequency": {
-            "Positive": 1,
-            "Neutral": 0,
-            "Negative": 0
+            "Positive": {
+              "2024-03-01T00:00:00.000+05:30": 1,
+              "2024-04-01T00:00:00.000+05:30": 0,
+              "2024-05-01T00:00:00.000+05:30": 0,
+              "2024-06-01T00:00:00.000+05:30": 0,
+              "2024-07-01T00:00:00.000+05:30": 0
+            },
+            "Negative": {
+              "2024-03-01T00:00:00.000+05:30": 0,
+              "2024-04-01T00:00:00.000+05:30": 0,
+              "2024-05-01T00:00:00.000+05:30": 0,
+              "2024-06-01T00:00:00.000+05:30": 0,
+              "2024-07-01T00:00:00.000+05:30": 0
+            },
+            "Neutral": {
+              "2024-03-01T00:00:00.000+05:30": 0,
+              "2024-04-01T00:00:00.000+05:30": 0,
+              "2024-05-01T00:00:00.000+05:30": 0,
+              "2024-06-01T00:00:00.000+05:30": 0,
+              "2024-07-01T00:00:00.000+05:30": 0
+            }
           },
           "insights": [
-            "You have shown interest in UI/UX design, contributing to improvements in the F-Droid client's user interface.",
-            "Focus on exploring Material Design guidelines and best practices to create visually appealing and user-friendly interfaces.",
-            "Consider taking courses or workshops on UI/UX design to enhance your understanding of design principles.",
-            "The positive sentiment towards your UI/UX design skills is encouraging. Continue exploring and improving your knowledge.",
-            "Contribute to open-source projects or design challenges to gain practical experience and refine your design skills."
-          ]
-        },
-        {
-          "skill": "SQLite",
-          "frequency": 2,
-          "sentimentFrequency": {
-            "Positive": 2,
-            "Neutral": 0,
-            "Negative": 0
-          },
-          "insights": [
-            "Your understanding of SQLite is commendable and demonstrates a good grasp of database concepts.",
-            "Consider exploring advanced SQLite features like triggers and views to enhance your database management skills.",
-            "Participate in open-source projects or coding challenges related to database management to gain practical experience.",
-            "The positive sentiment towards your SQLite skills is encouraging. Continue exploring and improving your knowledge.",
-            "Explore alternative database solutions like Room or Realm for potential use in Android applications."
+            "You have demonstrated basic Python skills, contributing to the repository management.",
+            "Expanding your Python knowledge can open doors to automating tasks and enhancing project efficiency.",
+            "Explore Python libraries for specific use cases to streamline your workflow.",
+            "Contribute to areas that leverage Python for a more diverse skillset and impact.",
+            "Consider creating a project or contributing to an open-source project involving Python to gain further experience."
           ]
         }
       ],
       "quality": {
         "2024-06-01T00:00:00.000+05:30": {
-          "High": 0,
+          "High": 1,
+          "Low": 1,
+          "Medium": 0
+        },
+        "2024-05-01T00:00:00.000+05:30": {
+          "High": 2,
+          "Low": 0,
+          "Medium": 1
+        },
+        "2024-04-01T00:00:00.000+05:30": {
+          "High": 8,
           "Low": 1,
           "Medium": 1
         },
-        "2024-05-01T00:00:00.000+05:30": {
-          "High": 3,
+        "2024-03-01T00:00:00.000+05:30": {
+          "High": 6,
           "Low": 0,
-          "Medium": 0
-        },
-        "2024-04-01T00:00:00.000+05:30": {
-          "High": 7,
-          "Low": 1,
           "Medium": 2
         },
-        "2024-03-01T00:00:00.000+05:30": {
-          "High": 2,
-          "Low": 1,
-          "Medium": 5
-        },
         "2024-02-01T00:00:00.000+05:30": {
-          "High": 6,
-          "Low": 1,
-          "Medium": 3
+          "High": 9,
+          "Low": 0,
+          "Medium": 1
         },
         "2024-01-01T00:00:00.000+05:30": {
-          "High": 1,
-          "Low": 2,
+          "High": 3,
+          "Low": 0,
           "Medium": 1
         }
       },
       "testCases": {
-        "2024-06-01T00:00:00.000+05:30": 0,
-        "2024-05-01T00:00:00.000+05:30": 0,
-        "2024-04-01T00:00:00.000+05:30": 4,
-        "2024-03-01T00:00:00.000+05:30": 0,
-        "2024-02-01T00:00:00.000+05:30": 1,
+        "2024-04-01T00:00:00.000+05:30": 5,
+        "2024-03-01T00:00:00.000+05:30": 4,
+        "2024-02-01T00:00:00.000+05:30": 0,
         "2024-01-01T00:00:00.000+05:30": 0
       },
       "testCasesRequired": {
-        "2024-06-01T00:00:00.000+05:30": 1,
-        "2024-05-01T00:00:00.000+05:30": 2,
-        "2024-04-01T00:00:00.000+05:30": 8,
+        "2024-04-01T00:00:00.000+05:30": 5,
         "2024-03-01T00:00:00.000+05:30": 7,
-        "2024-02-01T00:00:00.000+05:30": 9,
+        "2024-02-01T00:00:00.000+05:30": 7,
         "2024-01-01T00:00:00.000+05:30": 3
-      }
-    },
-    "week": {
-      "summary": [
-        "You have been consistently contributing high-quality merge requests, especially in the recent months.",
-        "Your focus on Android Development, Java, and Kotlin is evident, reflecting your expertise in these areas.",
-        "Your use of Android SDK, Glide, SQLite, and WorkManager demonstrates a strong understanding of Android development best practices.",
-        "Your recent merge requests show a growing interest in UI/UX Design and CI/CD, suggesting a desire to expand your skillset.",
-        "Consider exploring additional areas like Web Development and Python to further diversify your skillset."
-      ],
-      "skills": [
-        {
-          "skill": "Android",
-          "frequency": 39,
-          "sentimentFrequency": {
-            "Positive": 16,
-            "Negative": 4,
-            "Neutral": 19
-          },
-          "insights": [
-            "Your expertise in Android Development is evident, with a frequent focus on application functionality, UI design, and handling file sharing.",
-            "Strive for consistency in your Android development practices. You've received mixed feedback, with both positive and negative comments on your work.",
-            "The recent negative feedback regarding security and data storage practices warrants immediate attention.",
-            "You've received positive feedback for your proactive approach to learning and implementing new technologies.",
-            "Refine your understanding of  Android best practices to ensure robust, efficient, and secure code.",
-            "Remember, the more you utilize Android skills, the more proficient you become.",
-            "Your contributions in Android development, specifically around UI design and file sharing, have been quite impactful.",
-            "You've been actively engaged in the Android ecosystem, showing a desire to contribute to its improvement.",
-            "You can strengthen your Android expertise by focusing on specific areas, such as accessibility or using advanced libraries like Glide or OkHttp.",
-            "You have consistently demonstrated strong skills in Android Development.",
-            "Explore advanced Android topics like Jetpack Compose and advanced UI/UX design to further strengthen your skills.",
-            "Continue leveraging your Android Development skills to contribute impactful merge requests.",
-            "Consider creating a portfolio of Android apps to showcase your skills and project experience."
-          ]
-        },
-        {
-          "skill": "Java",
-          "frequency": 23,
-          "sentimentFrequency": {
-            "Positive": 8,
-            "Negative": 4,
-            "Neutral": 11
-          },
-          "insights": [
-            "Your knowledge of Java is evident in your frequent use of it within Android projects.",
-            "While you demonstrate a solid understanding of Java, recent feedback suggests potential issues with implementation and efficiency.  Addressing these concerns will improve your Java proficiency.",
-            "Your contributions in Java, specifically in areas like CI/CD and build processes, have been valuable.",
-            "The feedback on your Java skills, especially concerning efficiency, presents an opportunity for growth.",
-            "The recent negative comments highlight areas where your Java expertise can be further enhanced.",
-            "Java is a key skill in your work, reflected in its frequent usage.",
-            "Positive sentiment towards your Java work highlights your strong understanding and application.",
-            "Explore modern Java features like lambdas and streams to enhance your code efficiency.",
-            "Consider contributing to open-source Java projects to gain experience and exposure.",
-            "Utilize Java for building robust and scalable Android applications."
-          ]
-        },
-        {
-          "skill": "Kotlin",
-          "frequency": 13,
-          "sentimentFrequency": {
-            "Positive": 6,
-            "Negative": 2,
-            "Neutral": 5
-          },
-          "insights": [
-            "Your interest in Kotlin is encouraging and shows you are keeping up with modern Android development practices.",
-            "Although you have demonstrated some proficiency, you have also received negative feedback on your Kotlin skills.",
-            "You have received positive feedback on your use of Kotlin for specific tasks, such as stacktrace analysis.",
-            "Focus on consistently applying Kotlin to your work to enhance your skills and ensure code clarity.",
-            "Integrating Kotlin more effectively into your Android projects will demonstrate your understanding of its advantages.",
-            "Kotlin is becoming a significant part of your development workflow.",
-            "Positive feedback on your Kotlin work suggests proficiency and effectiveness.",
-            "Continue exploring Kotlin's features like coroutines and data classes for improved code clarity and efficiency.",
-            "Consider contributing to Kotlin libraries or open-source projects to deepen your understanding.",
-            "Use Kotlin for building efficient and modern Android applications."
-          ]
-        },
-        {
-          "skill": "Code Review",
-          "frequency": 3,
-          "sentimentFrequency": {
-            "Positive": 3,
-            "Negative": 0,
-            "Neutral": 0
-          },
-          "insights": [
-            "Your code reviews are consistently positive, showcasing your understanding of best practices and your commitment to quality.",
-            "Your contributions in code reviews highlight your ability to identify potential issues and suggest solutions.",
-            "Continue to contribute to code reviews to maintain the high standard of your work and foster a collaborative environment.",
-            "Your positive feedback in code reviews is highly valued by your colleagues.",
-            "Your involvement in code reviews is a testament to your collaborative and quality-focused approach."
-          ]
-        },
-        {
-          "skill": "UI/UX Design",
-          "frequency": 1,
-          "sentimentFrequency": {
-            "Positive": 1,
-            "Neutral": 0
-          },
-          "insights": [
-            "Your recent contributions show interest in UI/UX Design.",
-            "Positive sentiment indicates potential for growth in this area.",
-            "Explore UI/UX design principles and tools to enhance your design skills.",
-            "Consider contributing to open-source projects focused on UI/UX to gain practical experience.",
-            "Use your design skills to create visually appealing and user-friendly Android applications."
-          ]
-        }
-      ],
-      "quality": {
-        "2024-06-03T00:00:00.000+05:30": {
-          "High": 0,
-          "Low": 1,
-          "Medium": 1
-        },
-        "2024-05-13T00:00:00.000+05:30": {
-          "High": 2,
-          "Low": 0,
-          "Medium": 0
-        },
-        "2024-05-06T00:00:00.000+05:30": {
-          "High": 1,
-          "Low": 0,
-          "Medium": 0
-        },
-        "2024-04-29T00:00:00.000+05:30": {
-          "High": 1,
-          "Low": 0,
-          "Medium": 1
-        },
-        "2024-04-22T00:00:00.000+05:30": {
-          "High": 2,
-          "Low": 0,
-          "Medium": 0
-        },
-        "2024-04-15T00:00:00.000+05:30": {
-          "High": 2,
-          "Low": 0,
-          "Medium": 0
-        },
-        "2024-04-08T00:00:00.000+05:30": {
-          "High": 0,
-          "Low": 1,
-          "Medium": 1
-        },
-        "2024-04-01T00:00:00.000+05:30": {
-          "High": 2,
-          "Low": 0,
-          "Medium": 0
-        },
-        "2024-03-25T00:00:00.000+05:30": {
-          "High": 1,
-          "Low": 0,
-          "Medium": 1
-        },
-        "2024-03-18T00:00:00.000+05:30": {
-          "High": 0,
-          "Low": 0,
-          "Medium": 1
-        },
-        "2024-03-04T00:00:00.000+05:30": {
-          "High": 1,
-          "Low": 1,
-          "Medium": 3
-        },
-        "2024-02-26T00:00:00.000+05:30": {
-          "High": 1,
-          "Low": 0,
-          "Medium": 0
-        },
-        "2024-02-12T00:00:00.000+05:30": {
-          "High": 2,
-          "Low": 1,
-          "Medium": 2
-        },
-        "2024-02-05T00:00:00.000+05:30": {
-          "High": 3,
-          "Low": 0,
-          "Medium": 1
-        },
-        "2024-01-22T00:00:00.000+05:30": {
-          "High": 1,
-          "Low": 1,
-          "Medium": 1
-        },
-        "2024-01-08T00:00:00.000+05:30": {
-          "High": 0,
-          "Low": 1,
-          "Medium": 0
-        }
-      },
-      "testCases": {
-        "2024-06-03T00:00:00.000+05:30": 0,
-        "2024-05-13T00:00:00.000+05:30": 0,
-        "2024-05-06T00:00:00.000+05:30": 0,
-        "2024-04-29T00:00:00.000+05:30": 0,
-        "2024-04-22T00:00:00.000+05:30": 0,
-        "2024-04-15T00:00:00.000+05:30": 1,
-        "2024-04-08T00:00:00.000+05:30": 1,
-        "2024-04-01T00:00:00.000+05:30": 2,
-        "2024-03-25T00:00:00.000+05:30": 0,
-        "2024-03-18T00:00:00.000+05:30": 0,
-        "2024-03-04T00:00:00.000+05:30": 0,
-        "2024-02-26T00:00:00.000+05:30": 0,
-        "2024-02-12T00:00:00.000+05:30": 1,
-        "2024-02-05T00:00:00.000+05:30": 0,
-        "2024-01-22T00:00:00.000+05:30": 0
-      },
-      "testCasesRequired": {
-        "2024-06-03T00:00:00.000+05:30": 1,
-        "2024-05-13T00:00:00.000+05:30": 1,
-        "2024-05-06T00:00:00.000+05:30": 1,
-        "2024-04-29T00:00:00.000+05:30": 1,
-        "2024-04-22T00:00:00.000+05:30": 2,
-        "2024-04-15T00:00:00.000+05:30": 2,
-        "2024-04-08T00:00:00.000+05:30": 1,
-        "2024-04-01T00:00:00.000+05:30": 2,
-        "2024-03-25T00:00:00.000+05:30": 2,
-        "2024-03-18T00:00:00.000+05:30": 1,
-        "2024-03-04T00:00:00.000+05:30": 4,
-        "2024-02-26T00:00:00.000+05:30": 1,
-        "2024-02-12T00:00:00.000+05:30": 4,
-        "2024-02-05T00:00:00.000+05:30": 4,
-        "2024-01-22T00:00:00.000+05:30": 3
-      }
-    },
-    "quarter": {
-      "summary": [
-        "You have been actively involved in merge requests related to Android development, particularly focusing on Android, Java, Kotlin, and Android Compose.",
-        "Your recent merge requests have seen an increase in positive sentiment, indicating progress in your skills and contributions.",
-        "While there's a positive trend in your use of Kotlin, you should strive to address the negative feedback received for Java and Android Compose.",
-        "Pay attention to your use of the AndroidX library as there's a mix of positive and negative sentiment surrounding its use. Consider exploring alternative solutions.",
-        "You have consistently active in contributing to the F-Droid project, with a surge in activity during the last month. Your merge requests showcase strong skills in Android development, particularly in areas like UI/UX design, Jetpack Compose, and Kotlin."
-      ],
-      "skills": [
-        {
-          "skill": "Android",
-          "frequency": 49,
-          "sentimentFrequency": {
-            "Positive": 29,
-            "Negative": 5,
-            "Neutral": 15
-          },
-          "insights": [
-            "You have consistently worked on merge requests related to Android development, showcasing your strong focus in this area.",
-            "Your expertise in various aspects of Android development, including UI/UX design, background tasks, and app updates, is commendable.",
-            "You show a good understanding of the Android platform and its components.",
-            "Your positive sentiment score for Android suggests a growing understanding and expertise.",
-            "However, there is also negative feedback concerning Android, highlighting areas for improvement."
-          ]
-        },
-        {
-          "skill": "Java",
-          "frequency": 30,
-          "sentimentFrequency": {
-            "Positive": 14,
-            "Negative": 5,
-            "Neutral": 11
-          },
-          "insights": [
-            "Java remains a significant part of your work, evident in the high frequency of mentions.",
-            "Java forms a core part of your skillset, with demonstrated knowledge in areas like Android Development, network communication, and testing.",
-            "You have received positive feedback for your Java contributions, reflecting your competency.",
-            "Your positive sentiment in Java suggests a strong grasp of the language.",
-            "However, negative feedback concerning Java indicates areas that require attention."
-          ]
-        },
-        {
-          "skill": "Kotlin",
-          "frequency": 10,
-          "sentimentFrequency": {
-            "Positive": 6,
-            "Negative": 2,
-            "Neutral": 2
-          },
-          "insights": [
-            "There's a clear positive trend in your use of Kotlin, reflecting your commitment to learning and applying this modern language.",
-            "Continue to explore and utilize Kotlin for Android development, as the positive feedback suggests its effectiveness.",
-            "Addressing the negative feedback received for Kotlin will help you refine your understanding and application of this language.",
-            "Proactive learning and addressing concerns will contribute to your growth as a Kotlin developer.",
-            "Strive for consistent positive feedback in Kotlin to solidify your expertise in this language."
-          ]
-        },
-        {
-          "skill": "UI/UX Design",
-          "frequency": 3,
-          "sentimentFrequency": {
-            "Positive": 3,
-            "Negative": 0,
-            "Neutral": 0
-          },
-          "insights": [
-            "Your contributions demonstrate a strong understanding of UI/UX principles, resulting in positive feedback.",
-            "You've effectively used Material Design and Constraint Layout to create user-friendly interfaces.",
-            "Continue to refine your UI/UX skills by exploring design patterns and accessibility best practices.",
-            "Consider creating UI mockups or prototypes using design tools to visualize your ideas.",
-            "Collaborate with designers to gain insights on improving the user experience of your contributions."
-          ]
-        },
-        {
-          "skill": "Code Review",
-          "frequency": 3,
-          "sentimentFrequency": {
-            "Positive": 3,
-            "Negative": 0,
-            "Neutral": 0
-          },
-          "insights": [
-            "You are actively engaging in code reviews and receiving positive feedback for your contributions.",
-            "Continue to contribute to code reviews, as your positive sentiment suggests a strong understanding of best practices and quality code.",
-            "Refine your code review skills by seeking opportunities to provide constructive feedback and learn from others.",
-            "Contribute to discussions in code reviews to demonstrate your active engagement and learn from experienced peers.",
-            "Your positive sentiment in code reviews indicates your commitment to collaborative development and ensuring quality code."
-          ]
-        },
-        {
-          "skill": "Git",
-          "frequency": 6,
-          "sentimentFrequency": {
-            "Positive": 4,
-            "Negative": 0,
-            "Neutral": 2
-          },
-          "insights": [
-            "You've demonstrated proficiency in using Git for version control and collaboration.",
-            "Your positive sentiment in Git shows your understanding of best practices and efficient workflow.",
-            "Continue to utilize Git effectively to manage your code and collaborate with others.",
-            "Refine your Git skills by exploring advanced features and best practices for branching and merging.",
-            "Your commitment to utilizing Git effectively contributes to a robust and efficient development process."
-          ]
-        },
-        {
-          "skill": "Jetpack Compose",
-          "frequency": 1,
-          "sentimentFrequency": {
-            "Positive": 1,
-            "Negative": 0,
-            "Neutral": 0
-          },
-          "insights": [
-            "Your recent focus on Jetpack Compose is commendable. Continue to explore and refine your skills in this area, as it is crucial for modern Android development."
-          ]
-        },
-        {
-          "skill": "OkHttp",
-          "frequency": 1,
-          "sentimentFrequency": {
-            "Positive": 1,
-            "Negative": 0,
-            "Neutral": 0
-          },
-          "insights": [
-            "You've demonstrated expertise in using frameworks like OkHttp."
-          ]
-        }
-      ],
-      "quality": {
-        "2024-04-01T00:00:00.000+05:30": {
-          "High": 10,
-          "Low": 2,
-          "Medium": 3
-        },
-        "2024-01-01T00:00:00.000+05:30": {
-          "High": 9,
-          "Low": 4,
-          "Medium": 9
-        }
-      },
-      "testCases": {
-        "2024-04-01T00:00:00.000+05:30": 4,
-        "2024-01-01T00:00:00.000+05:30": 1
-      },
-      "testCasesRequired": {
-        "2024-04-01T00:00:00.000+05:30": 11,
-        "2024-01-01T00:00:00.000+05:30": 19
       }
     }
   }
