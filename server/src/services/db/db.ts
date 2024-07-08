@@ -17,7 +17,7 @@ const config = require("../../config.json");
 
 const root = config.db.root;
 
-export function getStoragePath(pathof: PathType, username?: string): string {
+export function getStoragePathDB(pathof: PathType, username?: string): string {
   switch (pathof) {
     case "UserData":
       return `${root}/gitlab/${username}.json`;
@@ -34,52 +34,52 @@ export function getStoragePath(pathof: PathType, username?: string): string {
 
 // User Data
 
-export function storeUserData(username: string, data: GQLUserNode): void {
-  const storagePath = getStoragePath("UserData", username);
+export function storeUserDataDB(username: string, data: GQLUserNode): void {
+  const storagePath = getStoragePathDB("UserData", username);
   writeJsonFile(storagePath, data);
 }
 
-export function getUserData(username: string): GQLUserNode | null {
-  const storagePath = getStoragePath("UserData", username);
+export function getUserDataDB(username: string): GQLUserNode | null {
+  const storagePath = getStoragePathDB("UserData", username);
   if (!fileExist(storagePath)) return null;
   return readJsonFile(storagePath);
 }
 
 // User Report
-export function getUserReport(username: string): UserReport | null {
-  const storagePath = getStoragePath("Report", username);
+export function getUserReportDB(username: string): UserReport | null {
+  const storagePath = getStoragePathDB("Report", username);
   if (!fileExist(storagePath)) return null;
   return readJsonFile(storagePath);
 }
 
-export function storeUserReport(username: string, data: UserReport): void {
-  const storagePath = getStoragePath("Report", username);
+export function storeUserReportDB(username: string, data: UserReport): void {
+  const storagePath = getStoragePathDB("Report", username);
   writeJsonFile(storagePath, data);
 }
 
 // Merge Request Analysis
-export function getMergeRequestAnalysis(
+export function getMergeRequestAnalysisDB(
   username: string
 ): AnalysedMergeRequestStorage | null {
-  const storagePath = getStoragePath("MergeRequestAnalysis", username);
+  const storagePath = getStoragePathDB("MergeRequestAnalysis", username);
   if (!fileExist(storagePath)) return null;
   return readJsonFile(storagePath);
 }
 
-export function storeMergeRequestAnalysis(
+export function storeMergeRequestAnalysisDB(
   username: string,
   data: AnalysedMergeRequestStorage
 ): void {
-  const storagePath = getStoragePath("MergeRequestAnalysis", username);
+  const storagePath = getStoragePathDB("MergeRequestAnalysis", username);
   writeJsonFile(storagePath, data);
 }
 
 // Notes
-export function getNotesWithIds(
+export function getNotesWithIdsDB(
   username: string,
   ids: string[]
 ): GQLNoteNode[] {
-  const storagePath = getStoragePath("UserData", username);
+  const storagePath = getStoragePathDB("UserData", username);
   if (!fileExist(storagePath)) return [];
   const user = readJsonFile(storagePath) as GQLUserNode;
   const notes = user.authoredMergeRequests.nodes
@@ -88,11 +88,11 @@ export function getNotesWithIds(
   return notes;
 }
 
-export function addNotesToAnalysis(
+export function addNotesToAnalysisDB(
   username: string,
   notes: AnalysedNote[]
 ): void {
-  const storagePath = getStoragePath("NotesAnalysis", username);
+  const storagePath = getStoragePathDB("NotesAnalysis", username);
   const existingNotes: AnalysedNoteStorage = fileExist(storagePath)
     ? readJsonFile(storagePath)
     : { updatedAt: "", data: [] };
@@ -102,11 +102,11 @@ export function addNotesToAnalysis(
   writeJsonFile(storagePath, existingNotes);
 }
 
-export function addMergeRequestsToAnalysis(
+export function addMergeRequestsToAnalysisDB(
   username: string,
   mergeRequests: AnalysedMergeRequest[]
 ): void {
-  const storagePath = getStoragePath("MergeRequestAnalysis", username);
+  const storagePath = getStoragePathDB("MergeRequestAnalysis", username);
   const existingMergeRequests: AnalysedMergeRequestStorage = fileExist(
     storagePath
   )
@@ -118,16 +118,16 @@ export function addMergeRequestsToAnalysis(
   writeJsonFile(storagePath, existingMergeRequests);
 }
 
-export function getNotesAnalsysis(
+export function getNotesAnalsysisDB(
   username: string
 ): AnalysedNoteStorage | null {
-  const storagePath = getStoragePath("NotesAnalysis", username);
+  const storagePath = getStoragePathDB("NotesAnalysis", username);
   if (!fileExist(storagePath)) return null;
   return readJsonFile(storagePath);
 }
 
-export function updateStatus(username: string, status: ReportStatus) {
-  const filePath = getStoragePath("Report", username);
+export function updateStatusDB(username: string, status: ReportStatus) {
+  const filePath = getStoragePathDB("Report", username);
   if (!fileExist(filePath)) {
     throw console.error(
       `attempt to update status of ${username}. however report do no exist`
@@ -138,12 +138,12 @@ export function updateStatus(username: string, status: ReportStatus) {
   writeJsonFile(filePath, data);
 }
 
-export function storeInsights(
+export function storeInsightsDB(
   username: string,
   period: TimePeriod,
   insights: InsightsReport
 ) {
-  const filePath = getStoragePath("Report", username);
+  const filePath = getStoragePathDB("Report", username);
   if (!fileExist(filePath)) {
     throw console.error(
       `attempt to add insights of ${username} for period: ${period}. however report do no exist`

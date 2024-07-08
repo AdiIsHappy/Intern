@@ -1,6 +1,9 @@
 import { SystemPrompts } from "../../api/vertex/prompts";
 import { sendAiPrompt } from "../../api/vertex/vertex";
-import { addMergeRequestsToAnalysis, getUserData } from "../../services/db/db";
+import {
+  addMergeRequestsToAnalysisDB,
+  getUserDataDB,
+} from "../../services/db/db";
 import { QueueData, QueueTypes } from "../../types/bull.types";
 import { AnalysedMergeRequest, TimePeriod } from "../../types/core.types";
 import { VERTMergeRequestForAnalysis } from "../../types/vertex.types";
@@ -11,7 +14,7 @@ export async function analyseMergeRequestsAsync(
   mergeRequestIds: string[]
 ) {
   // ger merge requests for analysis
-  const userData = getUserData(username);
+  const userData = getUserDataDB(username);
   if (userData === null) {
     return;
   }
@@ -63,5 +66,5 @@ export async function analyseMergeRequestsAsync(
 
   // Updates merege requests in storage
   // :STORAGE
-  addMergeRequestsToAnalysis(username, analysedMergeRequest);
+  addMergeRequestsToAnalysisDB(username, analysedMergeRequest);
 }

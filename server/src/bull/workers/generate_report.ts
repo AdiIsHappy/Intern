@@ -2,15 +2,16 @@ import { DateTime } from "luxon";
 import { SystemPrompts } from "../../api/vertex/prompts";
 import { sendAiPrompt } from "../../api/vertex/vertex";
 import {
-  getMergeRequestAnalysis,
-  getNotesAnalsysis,
-  storeInsights,
-  updateStatus,
+  getMergeRequestAnalysisDB,
+  getNotesAnalsysisDB,
+  storeInsightsDB,
+  updateStatusDB,
 } from "../../services/db/db";
 import {
   AnalysedMergeRequest,
   AnalysedNote,
   InsightsReport,
+  Quality,
   TimePeriod,
 } from "../../types/core.types";
 import { getNPeriodBeforeDate } from "../../utlis/time";
@@ -19,14 +20,14 @@ import { getNPeriodBeforeDate } from "../../utlis/time";
 
 export async function generateReport(username: string, period: TimePeriod) {
   // Get analysis datas
-  const notesAnalysis = getNotesAnalsysis(username);
-  const mergeRequestAnalysis = getMergeRequestAnalysis(username);
+  const startPeriodDate = getNPeriodBeforeDate(period);
+  const notesAnalysis = getNotesAnalsysisDB(username);
+  const mergeRequestAnalysis = getMergeRequestAnalysisDB(username);
 
   if (notesAnalysis === null || mergeRequestAnalysis === null) {
     console.error(`Analysis data not found for user ${username}`);
     return null;
   }
-  const startPeriodDate = getNPeriodBeforeDate(period);
 
   // Get Insights from notes
   let notesInsights: InsightsReport;
@@ -82,8 +83,47 @@ export async function generateReport(username: string, period: TimePeriod) {
     return;
   }
 
+  // Generate test case counts
+  const testCases: Record<string, number> = {};
+  const testCasesRequired: Record<string, number> = {};
+  mergeRequestAnalysis.data.forEach((mr) => {
+    if (!mr.testRequired) return;
+    if (!mr.createdAt) return;
+    const startOfPeriod = DateTime.fromISO(mr.createdAt)
+      .startOf(period)
+      .toISO()!;
+    if (!testCases[startOfPeriod]) testCases[startOfPeriod] = 0;
+    if (!testCasesRequired[startOfPeriod]) testCasesRequired[startOfPeriod] = 0;
+    testCasesRequired[startOfPeriod] += 1;
+    const sum = mr.tests.added + mr.tests.modified + mr.tests.removed;
+    if (sum > 0) {
+      testCases[startOfPeriod] += 1;
+    }
+  });
+  // Generate Quality Count
+  const quality: Record<string, Record<Quality, number>> = {};
+  mergeRequestAnalysis.data.forEach((mr) => {
+    if (!mr.createdAt) return;
+    const startOfPeriod = DateTime.fromISO(mr.createdAt)
+      .startOf(period)
+      .toISO()!;
+    if (!quality[startOfPeriod]) {
+      quality[startOfPeriod] = {
+        High: 0,
+        Low: 0,
+        Medium: 0,
+      };
+    }
+    quality[startOfPeriod][mr.quality] += 1;
+  });
   // store insights
   // :STORAGE
-  storeInsights(username, period, mergedInsights);
-  updateStatus(username, "Avaliable");
+  const dataToStore = {
+    ...mergedInsights,
+    quality,
+    testCases,
+    testCasesRequired,
+  };
+  storeInsightsDB(username, period, mergedInsights);
+  updateStatusDB(username, "Avaliable");
 }

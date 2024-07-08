@@ -1,3 +1,4 @@
+import { updateStatusDB } from "../services/db/db";
 import { QueueTypes, QueueData } from "../types/bull.types";
 import { TimePeriod } from "../types/core.types";
 import { queue } from "./queue";
@@ -36,6 +37,7 @@ queue.on("completed", async (job) => {
       job.data.type === QueueTypes.VERTEX_ANALYSE_MERGE_REQUEST ||
       job.data.type === QueueTypes.VERTEX_ANALYSE_NOTES
     ) {
+      await updateStatusDB(job.data.data.username, "Preparing Presentation");
       const periods: TimePeriod[] = ["month", "week", "quarter"];
       for (const period of periods) {
         const task: QueueData = {

@@ -1,4 +1,4 @@
-import { getUserReport, storeUserReport } from "./services/db/db";
+import { getUserReportDB, storeUserReportDB } from "./services/db/db";
 import { checkIfUserExistsAsync } from "./services/gitlab/gitlab";
 import { DateTime } from "luxon";
 import { QueueData, QueueTypes } from "./types/bull.types";
@@ -19,7 +19,7 @@ export async function startPreparingReport(username: string) {
     return { status: "error", message: "Error while checking user existence" };
   }
 
-  const userReport = getUserReport(username);
+  const userReport = getUserReportDB(username);
   // Check if user report is already being prepared
   if (userReport !== null && userReport.status !== "Avaliable") {
     return {
@@ -41,7 +41,7 @@ export async function startPreparingReport(username: string) {
 
   // Start preparing report
   if (userReport === null) {
-    storeUserReport(username, {
+    storeUserReportDB(username, {
       username,
       updatedAt: DateTime.now().toISO(),
       status: "Getting Data",
@@ -50,7 +50,7 @@ export async function startPreparingReport(username: string) {
   } else {
     userReport.status = "Getting Data";
     userReport.updatedAt = DateTime.now().toISO();
-    storeUserReport(username, userReport);
+    storeUserReportDB(username, userReport);
   }
 
   // Get user data from gitlab

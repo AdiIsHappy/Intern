@@ -35,7 +35,7 @@ export interface TestChanges {
 export interface AnalysedMergeRequest {
   id: string;
   keywords: string[];
-  quality: string;
+  quality: Quality;
   skills: Skill[];
   impact: Nature;
   references: string[];

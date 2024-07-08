@@ -1,17 +1,15 @@
 import { SystemPrompts } from "../../api/vertex/prompts";
 import { sendAiPrompt } from "../../api/vertex/vertex";
-import { addNotesToAnalysis, getUserData } from "../../services/db/db";
+import { addNotesToAnalysisDB, getUserDataDB } from "../../services/db/db";
 import { QueueData, QueueTypes } from "../../types/bull.types";
 import { AnalysedNote, TimePeriod } from "../../types/core.types";
 import { VERTNoteBody, VERTNoteForAnalysis } from "../../types/vertex.types";
 import { queue } from "../queue";
 
-
-
 export async function analyseNotesAsync(username: string, noteIds: string[]) {
   // get notes for analysis
   // :STORAGE
-  const userData = getUserData(username);
+  const userData = getUserDataDB(username);
   if (userData === null) {
     return;
   }
@@ -108,5 +106,5 @@ export async function analyseNotesAsync(username: string, noteIds: string[]) {
 
   // Update notes in storage
   // :STORAGE
-  addNotesToAnalysis(username, analysedNotes);
+  addNotesToAnalysisDB(username, analysedNotes);
 }

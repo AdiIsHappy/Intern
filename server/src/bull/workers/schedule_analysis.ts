@@ -1,5 +1,5 @@
 import { DateTime } from "luxon";
-import { getMergeRequestAnalysis, getUserData } from "../../services/db/db";
+import { getMergeRequestAnalysisDB, getUserDataDB } from "../../services/db/db";
 import { QueueData, QueueTypes } from "../../types/bull.types";
 import { queue } from "../queue";
 
@@ -9,7 +9,7 @@ const notesPerIteration = config.analysis.dataPerJob.notes;
 const mergeRequestsPerITeration = config.analysis.dataPerJob.mergeRequests;
 
 export async function ScheduleAnalysisAsync(username: string, tag: string) {
-  const userData = getUserData(username);
+  const userData = getUserDataDB(username);
   if (userData === null) {
     return;
   }
@@ -17,7 +17,7 @@ export async function ScheduleAnalysisAsync(username: string, tag: string) {
   let mergeRequests = userData.authoredMergeRequests.nodes;
 
   // filter merge requests based on exisiting analysis
-  const exisitingAnalysis = getMergeRequestAnalysis(username);
+  const exisitingAnalysis = getMergeRequestAnalysisDB(username);
   if (exisitingAnalysis !== null) {
     const filterData = DateTime.fromISO(exisitingAnalysis.updatedAt);
     mergeRequests = mergeRequests.filter(

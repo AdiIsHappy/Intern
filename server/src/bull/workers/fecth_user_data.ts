@@ -1,5 +1,5 @@
 import { getMergeRequestDiffAsync } from "../../api/gitlab/gitlab";
-import { storeUserData } from "../../services/db/db";
+import { storeUserDataDB, updateStatusDB } from "../../services/db/db";
 import { getGitlabUserDataAsync } from "../../services/gitlab/gitlab";
 import { QueueData, QueueTypes } from "../../types/bull.types";
 import { TimePeriod } from "../../types/core.types";
@@ -29,7 +29,8 @@ export async function fecthUserDataAsync(username: string, tag: string) {
   }
 
   //:STORAGE
-  storeUserData(username, userData);
+  storeUserDataDB(username, userData);
+  await updateStatusDB(username, "Analyzing Data");
 
   // Add Schduler to Job Queue
   const task: QueueData = {
