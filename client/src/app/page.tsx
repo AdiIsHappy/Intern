@@ -1,5 +1,6 @@
 import { SkillsFrequencyTimeline } from "@/components/charts/skills_frequency_timeline";
 import { SkillSentimentChart } from "@/components/charts/skills_sentiment_chart";
+import { SkillSentimentFrequencyTimeline } from "@/components/charts/skills_sentiment_frequency_timeline";
 import { TestCaseRatioChart } from "@/components/charts/test_case_ratio_chart";
 import Dropdown from "@/components/dropdown";
 
@@ -37,7 +38,7 @@ export default function Home() {
         <TestCaseRatioChart className="w-full max-w-2xl p-4" />
       </div>
       <div className="w-full h-96 max-w-7xl flex justify-center">
-        <SkillSentimentChart className="w-full max-w-2xl p-4" />
+        <SkillSentimentFrequencyTimeline className="w-full max-w-2xl p-4" />
         <SkillsFrequencyTimeline className="w-full max-w-2xl, p-4" />
       </div>
 
