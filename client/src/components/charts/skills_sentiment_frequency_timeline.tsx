@@ -1,6 +1,6 @@
 "use client";
 import { ChartOptions } from "chart.js";
-import { Chart } from "react-chartjs-2";
+import { Line } from "react-chartjs-2";
 
 export function SkillSentimentFrequencyTimeline({
   className,
@@ -82,12 +82,5 @@ export function SkillSentimentFrequencyTimeline({
     },
   };
 
-  return (
-    <Chart
-      className={className}
-      data={chartData}
-      type="line"
-      options={options}
-    />
-  );
+  return <Line className={className} data={chartData} options={options} />;
 }

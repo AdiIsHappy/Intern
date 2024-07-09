@@ -1,32 +1,10 @@
 "use client";
 import { TimePeriod } from "@/lib/types/core.types";
-import { Chart } from "react-chartjs-2";
+import { Line } from "react-chartjs-2";
 import "chartjs-adapter-luxon";
 import { ChartOptions, TooltipItem } from "chart.js";
-import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  LineController,
-  Title,
-  Tooltip,
-  Legend,
-  TimeScale,
-} from "chart.js";
 
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Legend,
-  TimeScale,
-  LineController
-);
+
 
 
 export function TestCaseRatioChart({ className }: { className?: string }) {
@@ -105,12 +83,5 @@ export function TestCaseRatioChart({ className }: { className?: string }) {
     },
   };
 
-  return (
-    <Chart
-      className={className}
-      type="line"
-      data={chartData}
-      options={options}
-    />
-  );
+  return <Line className={className} data={chartData} options={options} />;
 }

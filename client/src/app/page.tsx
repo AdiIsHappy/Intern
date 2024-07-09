@@ -3,6 +3,9 @@ import { SkillSentimentChart } from "@/components/charts/skills_sentiment_chart"
 import { SkillSentimentFrequencyTimeline } from "@/components/charts/skills_sentiment_frequency_timeline";
 import { TestCaseRatioChart } from "@/components/charts/test_case_ratio_chart";
 import Dropdown from "@/components/dropdown";
+import "../lib/chart_registration";
+import { PRQualityTimeline } from "@/components/charts/pr_quality_timeline";
+import { PRImpactTimeline } from "@/components/charts/pr_impact_timeline";
 
 export default function Home() {
   const userDropwdownOptions = [
@@ -34,6 +37,10 @@ export default function Home() {
         />
       </div>
       <div className="w-full h-96 max-w-7xl flex justify-center">
+        <PRImpactTimeline className="w-full max-w-2xl p-4" />
+        <PRQualityTimeline className="w-full max-w-2xl p-4" />
+      </div>
+      <div className="w-full h-96 max-w-7xl flex justify-center">
         <SkillSentimentChart className="w-full max-w-2xl p-4" />
         <TestCaseRatioChart className="w-full max-w-2xl p-4" />
       </div>
@@ -41,7 +48,6 @@ export default function Home() {
         <SkillSentimentFrequencyTimeline className="w-full max-w-2xl p-4" />
         <SkillsFrequencyTimeline className="w-full max-w-2xl, p-4" />
       </div>
-
       <div className="w-full max-w-7xl m-4 bg-gray-100 p-4 rounded-md">
         <h3 className="font-semibold text-lg">Insights:</h3>
         <ol className="ml-8 mt-2 list-decimal list-outside">

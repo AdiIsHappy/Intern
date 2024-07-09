@@ -1,8 +1,6 @@
 "use client";
-import { ChartOptions, Chart as ChartJS, Colors } from "chart.js";
-import { Chart } from "react-chartjs-2";
-
-ChartJS.register(Colors);
+import { ChartOptions } from "chart.js";
+import { Line } from "react-chartjs-2";
 
 export function SkillsFrequencyTimeline({ className }: { className?: string }) {
   const data: {
@@ -302,12 +300,5 @@ export function SkillsFrequencyTimeline({ className }: { className?: string }) {
     },
   };
 
-  return (
-    <Chart
-      className={className}
-      data={chartData}
-      type="line"
-      options={options}
-    />
-  );
+  return <Line className={className} data={chartData} options={options} />;
 }

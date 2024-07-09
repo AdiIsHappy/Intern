@@ -1,28 +1,8 @@
 "use client";
 
-import { Chart } from "react-chartjs-2";
+import { Bar } from "react-chartjs-2";
 import "chartjs-adapter-luxon";
 import { ChartOptions, TooltipItem } from "chart.js";
-import {
-  Chart as ChartJS,
-  BarController,
-  Title,
-  LinearScale,
-  BarElement,
-  CategoryScale,
-  Legend,
-  Tooltip,
-} from "chart.js";
-
-ChartJS.register(
-  BarController,
-  BarElement,
-  LinearScale,
-  CategoryScale,
-  Title,
-  Legend,
-  Tooltip
-);
 
 export function SkillSentimentChart({ className }: { className?: string }) {
   const data = [
@@ -115,6 +95,7 @@ export function SkillSentimentChart({ className }: { className?: string }) {
       },
       tooltip: {
         enabled: true,
+
         callbacks: {
           label: function (context: TooltipItem<"bar">) {
             const label = context.dataset.label || "";
@@ -146,12 +127,5 @@ export function SkillSentimentChart({ className }: { className?: string }) {
       },
     },
   };
-  return (
-    <Chart
-      className={className}
-      type="bar"
-      data={chartData}
-      options={options}
-    />
-  );
+  return <Bar className={className} data={chartData} options={options} />;
 }
