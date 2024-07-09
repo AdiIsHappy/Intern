@@ -1,5 +1,5 @@
 "use server";
-import { PathType, TimePeriod } from "../types/core.types";
+import { PathType, TimePeriod, userReport } from "../types/core.types";
 const config = require("../../config.json");
 import path from "path";
 import { fileExist, readJsonFile } from "./file_handler";
@@ -12,12 +12,15 @@ export async function getPath(username: string, pathType: PathType) {
   return "";
 }
 
-export async function getReport(username: string, period: TimePeriod) {
+export async function getReport(
+  username: string,
+  period: TimePeriod
+): Promise<userReport> {
   const filePath = await getPath(username, "report");
   if (await fileExist(filePath)) {
     const data = await readJsonFile(filePath);
-    return data[period];
+    return data.report[period] as userReport;
   }
   console.error(`Report for ${username} not found`);
-  return null;
+  return {};
 }

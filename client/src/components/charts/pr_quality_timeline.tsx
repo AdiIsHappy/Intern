@@ -2,39 +2,13 @@
 import { ChartOptions, TooltipItem } from "chart.js";
 import { Bar, Line } from "react-chartjs-2";
 
-export function PRQualityTimeline({ className }: { className?: string }) {
-  const data: Record<string, { High: number; Low: number; Medium: number }> = {
-    "2024-06-01T00:00:00.000+05:30": {
-      High: 1,
-      Low: 1,
-      Medium: 0,
-    },
-    "2024-05-01T00:00:00.000+05:30": {
-      High: 2,
-      Low: 0,
-      Medium: 1,
-    },
-    "2024-04-01T00:00:00.000+05:30": {
-      High: 8,
-      Low: 1,
-      Medium: 1,
-    },
-    "2024-03-01T00:00:00.000+05:30": {
-      High: 6,
-      Low: 0,
-      Medium: 2,
-    },
-    "2024-02-01T00:00:00.000+05:30": {
-      High: 9,
-      Low: 0,
-      Medium: 1,
-    },
-    "2024-01-01T00:00:00.000+05:30": {
-      High: 3,
-      Low: 0,
-      Medium: 1,
-    },
-  };
+export function PRQualityTimeline({
+  className,
+  data,
+}: {
+  className?: string;
+  data: Record<string, { High: number; Low: number; Medium: number }>;
+}) {
   const period = "month";
   const chartData = {
     labels: Object.keys(data),
