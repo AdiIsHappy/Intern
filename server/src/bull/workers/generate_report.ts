@@ -8,9 +8,8 @@ import {
   updateStatusDB,
 } from "../../services/db/db";
 import {
-  AnalysedMergeRequest,
-  AnalysedNote,
   InsightsReport,
+  Nature,
   Quality,
   TimePeriod,
 } from "../../types/core.types";
@@ -78,6 +77,7 @@ export async function generateReport(username: string, period: TimePeriod) {
     );
     return;
   }
+
   // Merge generated insights
   let mergedInsights: InsightsReport = {};
   try {
@@ -94,24 +94,13 @@ export async function generateReport(username: string, period: TimePeriod) {
   }
 
   // Generate test case counts
+
+  // Generate PR quality count, impact count & test added count
+  const quality: Record<string, Record<Quality, number>> = {};
+  const impact: Record<string, Record<Nature, number>> = {};
   const testCases: Record<string, number> = {};
   const testCasesRequired: Record<string, number> = {};
-  mergeRequestAnalysis.data.forEach((mr) => {
-    if (!mr.testRequired) return;
-    if (!mr.createdAt) return;
-    const startOfPeriod = DateTime.fromISO(mr.createdAt)
-      .startOf(period)
-      .toISO()!;
-    if (!testCases[startOfPeriod]) testCases[startOfPeriod] = 0;
-    if (!testCasesRequired[startOfPeriod]) testCasesRequired[startOfPeriod] = 0;
-    testCasesRequired[startOfPeriod] += 1;
-    const sum = mr.tests.added + mr.tests.modified + mr.tests.removed;
-    if (sum > 0) {
-      testCases[startOfPeriod] += 1;
-    }
-  });
-  // Generate Quality Count
-  const quality: Record<string, Record<Quality, number>> = {};
+
   mergeRequestAnalysis.data.forEach((mr) => {
     if (!mr.createdAt) return;
     const startOfPeriod = DateTime.fromISO(mr.createdAt)
@@ -125,7 +114,26 @@ export async function generateReport(username: string, period: TimePeriod) {
       };
     }
     quality[startOfPeriod][mr.quality] += 1;
+
+    if (!impact[startOfPeriod]) {
+      impact[startOfPeriod] = {
+        Negative: 0,
+        Neutral: 0,
+        Positive: 0,
+      };
+    }
+    impact[startOfPeriod][mr.impact] += 1;
+
+    if (!mr.testRequired) return;
+    if (!testCases[startOfPeriod]) testCases[startOfPeriod] = 0;
+    if (!testCasesRequired[startOfPeriod]) testCasesRequired[startOfPeriod] = 0;
+    testCasesRequired[startOfPeriod] += 1;
+    const sum = mr.tests.added + mr.tests.modified + mr.tests.removed;
+    if (sum > 0) {
+      testCases[startOfPeriod] += 1;
+    }
   });
+
   // store insights
   // :STORAGE
   const dataToStore = {
@@ -133,6 +141,7 @@ export async function generateReport(username: string, period: TimePeriod) {
     quality,
     testCases,
     testCasesRequired,
+    impact,
   };
   storeInsightsDB(username, period, dataToStore);
   updateStatusDB(username, "Avaliable");

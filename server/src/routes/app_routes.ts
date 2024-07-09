@@ -18,10 +18,10 @@ apiRouter.get("/reports", async (req: Request, res: Response) => {
   const periods: TimePeriod[] = ["month", "week", "quarter"];
   for (const period of periods) {
     const task: QueueData = {
-      tag: "b21083",
+      tag: "grote",
       type: QueueTypes.GENERATE_INSIGHTS,
       data: {
-        username: "b21083",
+        username: "grote",
         period: period,
       },
     };

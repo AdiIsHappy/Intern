@@ -2,7 +2,6 @@ import { getMergeRequestDiffAsync } from "../../api/gitlab/gitlab";
 import { storeUserDataDB, updateStatusDB } from "../../services/db/db";
 import { getGitlabUserDataAsync } from "../../services/gitlab/gitlab";
 import { QueueData, QueueTypes } from "../../types/bull.types";
-import { TimePeriod } from "../../types/core.types";
 import { queue } from "../queue";
 
 export async function fecthUserDataAsync(username: string, tag: string) {
