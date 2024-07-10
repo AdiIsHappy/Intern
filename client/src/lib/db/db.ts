@@ -8,7 +8,8 @@ const reportsRoot = config.reportsPath;
 
 export async function getPath(username: string, pathType: PathType) {
   if (pathType === "report") {
-    return path.resolve("./src/lib/db/reports", `${username}.json`);
+    path.resolve("./public/", reportsRoot);
+    return path.join("/", "reports", `${username}.json`);
   }
   if (pathType === "user")
     return path.join(process.cwd(), reportsRoot, `${username}`);
@@ -29,7 +30,6 @@ export async function getReport(
   return null;
 }
 
-printFileStructure(".");
 
 // export async function getAvailableReportsPeriod(
 //   username: string
