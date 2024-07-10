@@ -57,3 +57,20 @@ export async function listFilesInDirectory(
     throw error;
   }
 }
+
+export const printFileStructure = async (dir: string, level = 0) => {
+  const indent = "  ".repeat(level);
+  const files = fs.readdirSync(dir);
+
+  files.forEach((file) => {
+    const filePath = path.join(dir, file);
+    const stats = fs.statSync(filePath);
+
+    if (stats.isDirectory()) {
+      console.log(`${indent}- ${file}/`);
+      printFileStructure(filePath, level + 1);
+    } else {
+      console.log(`${indent}- ${file}`);
+    }
+  });
+};

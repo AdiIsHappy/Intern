@@ -2,7 +2,7 @@
 import { PathType, TimePeriod, userReport } from "../types/core.types";
 const config = require("../../config.json");
 import path from "path";
-import { fileExist, readJsonFile } from "./file_handler";
+import { fileExist, printFileStructure, readJsonFile } from "./file_handler";
 
 const reportsRoot = config.reportsPath;
 
@@ -19,7 +19,6 @@ export async function getReport(
   username: string,
   period: TimePeriod
 ): Promise<userReport | null> {
-
   const filePath = await getPath(username, "report");
   console.log(filePath);
   if (await fileExist(filePath)) {
@@ -29,6 +28,8 @@ export async function getReport(
   console.error(`Report for ${username} not found`);
   return null;
 }
+
+printFileStructure(".");
 
 // export async function getAvailableReportsPeriod(
 //   username: string
