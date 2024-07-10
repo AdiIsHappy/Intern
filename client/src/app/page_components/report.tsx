@@ -1,12 +1,14 @@
 "use client";
 
-import { userReport } from "@/lib/types/core.types";
+import { TimePeriod, userReport } from "@/lib/types/core.types";
 import "../../lib/chart_registration";
 import { PositiveSkills } from "./positive_skills";
 import { NegativeSkills } from "./negative_skills";
+import { MonthOnMonthComp } from "./month_on_month_comparisons";
 
 export interface ReportProps {
   data: userReport;
+  period: TimePeriod;
 }
 
 function generateSummary(data: userReport | null) {
@@ -16,7 +18,7 @@ function generateSummary(data: userReport | null) {
   return summary;
 }
 
-export function Report({ data }: ReportProps) {
+export function Report({ data, period }: ReportProps) {
   const summary = generateSummary(data);
   return (
     <div className=" flex flex-col mt-8 w-full max-w-7xl items-center">
@@ -43,15 +45,16 @@ export function Report({ data }: ReportProps) {
         </div>
       </div>
       {data.positiveSkills ? (
-        <PositiveSkills data={data} />
+        <PositiveSkills period={period} data={data} />
       ) : (
         <div>Positive Skills not available please regenerate the report.</div>
       )}
       {data.negativeSkills ? (
-        <NegativeSkills data={data} />
+        <NegativeSkills period={period} data={data} />
       ) : (
         <div>Negative Skills not available please regenerate the report.</div>
       )}
+      <MonthOnMonthComp period={period} data={data} />
     </div>
   );
 }

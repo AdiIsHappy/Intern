@@ -45,7 +45,7 @@ export default function Home() {
       {data === null || data === undefined ? (
         <p>please wait while prepare report</p>
       ) : (
-        <Report data={data} />
+        <Report data={data} period={period} />
       )}
     </main>
   );

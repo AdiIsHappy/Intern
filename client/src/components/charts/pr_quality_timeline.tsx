@@ -1,15 +1,17 @@
 "use client";
+import { Quality, TimePeriod } from "@/lib/types/core.types";
 import { ChartOptions, TooltipItem } from "chart.js";
 import { Bar, Line } from "react-chartjs-2";
 
 export function PRQualityTimeline({
   className,
   data,
+  period,
 }: {
   className?: string;
-  data: Record<string, { High: number; Low: number; Medium: number }>;
+  data: Record<string, Record<Quality, number>>;
+  period: TimePeriod;
 }) {
-  const period = "month";
   const chartData = {
     labels: Object.keys(data),
     datasets: [

@@ -1,16 +1,16 @@
 import { SkillsFrequencyTimeline } from "@/components/charts/skills_frequency_timeline";
 import { SkillSentimentChart } from "@/components/charts/skills_sentiment_chart";
 import Dropdown from "@/components/dropdown";
-import { userReport } from "@/lib/types/core.types";
+import { TimePeriod, userReport } from "@/lib/types/core.types";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import linkIcon from "@/../public/link.svg";
 export interface negativeSkillsProp {
-  className?: string;
   data: userReport;
+  period: TimePeriod;
 }
-export function NegativeSkills({ className, data }: negativeSkillsProp) {
+export function NegativeSkills({ data, period }: negativeSkillsProp) {
   const skillsDropdownOptions: { label: string; value: string }[] =
     data.negativeSkills.map((skill) => ({
       value: skill.skill,
@@ -19,7 +19,7 @@ export function NegativeSkills({ className, data }: negativeSkillsProp) {
   useEffect(() => {
     setSkill(skillsDropdownOptions.at(0)?.label || "");
   }, [data]);
-  const [skill, setSkill] = useState(skillsDropdownOptions.at(0)?.label || "");
+  const [skill, setSkill] = useState("");
 
   if (skillsDropdownOptions.length === 0)
     return <div>Positive Skill data not availale</div>;
@@ -38,6 +38,7 @@ export function NegativeSkills({ className, data }: negativeSkillsProp) {
         </div>
         <div className="flex-1 h-max">
           <SkillsFrequencyTimeline
+            period={period}
             data={data.negativeSkills.map((skill) => ({
               skill: skill.skill,
               frequency: skill.frequency,

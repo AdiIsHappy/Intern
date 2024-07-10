@@ -1,16 +1,19 @@
 "use client";
+import { TimePeriod } from "@/lib/types/core.types";
 import { ChartOptions } from "chart.js";
 import { Line } from "react-chartjs-2";
 
 export function SkillsFrequencyTimeline({
   className,
   data,
+  period,
 }: {
   className?: string;
   data: {
     skill: string;
     frequency: Record<string, number>;
   }[];
+  period: TimePeriod;
 }) {
   const chartData = {
     labels: data.length > 0 ? Object.keys(data[0].frequency) : [],
@@ -52,7 +55,11 @@ export function SkillsFrequencyTimeline({
       x: {
         type: "time",
         time: {
-          unit: "month",
+          unit: period,
+        },
+        title: {
+          display: true,
+          text: "Period",
         },
       },
       y: {

@@ -1,16 +1,18 @@
 "use client";
 
+import { Sentiment, TimePeriod } from "@/lib/types/core.types";
 import { ChartOptions, TooltipItem } from "chart.js";
 import { Bar } from "react-chartjs-2";
 
 export function PRImpactTimeline({
   className,
   data,
+  period,
 }: {
   className?: string;
-  data: Record<string, { Positive: number; Negative: number; Neutral: number }>;
+  data: Record<string, Record<Sentiment, number>>;
+  period: TimePeriod;
 }) {
-  const period = "month";
   const chartData = {
     labels: Object.keys(data),
     datasets: [

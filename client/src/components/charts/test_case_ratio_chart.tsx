@@ -4,40 +4,26 @@ import { Line } from "react-chartjs-2";
 import "chartjs-adapter-luxon";
 import { ChartOptions, TooltipItem } from "chart.js";
 
+export interface TestCaseRatioProps {
+  className?: string;
+  testCases: Record<string, number>;
+  testCasesRequired: Record<string, number>;
+  period: TimePeriod;
+}
 
-
-
-export function TestCaseRatioChart({ className }: { className?: string }) {
-  const data: {
-    testCases: Record<string, number>;
-    testCasesRequired: Record<string, number>;
-  } = {
-    testCases: {
-      "2024-06-01T00:00:00.000+05:30": 0,
-      "2024-05-01T00:00:00.000+05:30": 0,
-      "2024-04-01T00:00:00.000+05:30": 4,
-      "2024-03-01T00:00:00.000+05:30": 0,
-      "2024-02-01T00:00:00.000+05:30": 1,
-      "2024-01-01T00:00:00.000+05:30": 0,
-    },
-    testCasesRequired: {
-      "2024-06-01T00:00:00.000+05:30": 1,
-      "2024-05-01T00:00:00.000+05:30": 2,
-      "2024-04-01T00:00:00.000+05:30": 8,
-      "2024-03-01T00:00:00.000+05:30": 7,
-      "2024-02-01T00:00:00.000+05:30": 9,
-      "2024-01-01T00:00:00.000+05:30": 3,
-    },
-  };
-  const period: TimePeriod = "month";
-
+export function TestCaseRatioChart({
+  className,
+  testCases,
+  testCasesRequired,
+  period,
+}: TestCaseRatioProps) {
   const chartData = {
-    labels: Object.keys(data.testCases),
+    labels: Object.keys(testCases),
     datasets: [
       {
         label: "Test Added Ratio",
-        data: Object.keys(data.testCases).map(
-          (date) => data.testCases[date] / data.testCasesRequired[date]
+        data: Object.keys(testCases).map(
+          (date) => testCases[date] / testCasesRequired[date]
         ),
       },
     ],

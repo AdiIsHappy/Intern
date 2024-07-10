@@ -1,19 +1,27 @@
 import { SkillsFrequencyTimeline } from "@/components/charts/skills_frequency_timeline";
 import { SkillSentimentChart } from "@/components/charts/skills_sentiment_chart";
 import Dropdown from "@/components/dropdown";
-import { userReport } from "@/lib/types/core.types";
+import { TimePeriod, userReport } from "@/lib/types/core.types";
 import { useEffect, useState } from "react";
 
-export function PositiveSkills({ data }: { data: userReport }) {
+export function PositiveSkills({
+  data,
+  period,
+}: {
+  data: userReport;
+  period: TimePeriod;
+}) {
   const skillsDropdownOptions: { label: string; value: string }[] =
     data.positiveSkills.map((skill) => ({
       value: skill.skill,
       label: skill.skill,
     }));
-  const [skill, setSkill] = useState(skillsDropdownOptions.at(0)?.label || "");
+  const [skill, setSkill] = useState("");
+
   useEffect(() => {
     setSkill(skillsDropdownOptions.at(0)?.label || "");
   }, [data]);
+
   if (skillsDropdownOptions.length === 0)
     return <div>Positive Skill data not availale</div>;
 
@@ -32,6 +40,7 @@ export function PositiveSkills({ data }: { data: userReport }) {
         </div>
         <div className="flex-1 h-max">
           <SkillsFrequencyTimeline
+            period={period}
             data={data.positiveSkills.map((skill) => ({
               skill: skill.skill,
               frequency: skill.frequency,
