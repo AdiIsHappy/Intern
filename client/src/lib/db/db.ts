@@ -18,7 +18,9 @@ export async function getReport(
   username: string,
   period: TimePeriod
 ): Promise<userReport | null> {
+
   const filePath = await getPath(username, "report");
+  console.log(filePath);
   if (await fileExist(filePath)) {
     const data = await readJsonFile(filePath);
     return data.report[period] as userReport;
