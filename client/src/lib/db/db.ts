@@ -8,8 +8,7 @@ const reportsRoot = config.reportsPath;
 
 export async function getPath(username: string, pathType: PathType) {
   if (pathType === "report") {
-    path.resolve("./public/", reportsRoot);
-    return path.join("/", "reports", `${username}.json`);
+    return path.join(process.cwd(), "/reports", `${username}.json`);
   }
   if (pathType === "user")
     return path.join(process.cwd(), reportsRoot, `${username}`);
