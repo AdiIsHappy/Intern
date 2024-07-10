@@ -7,8 +7,10 @@ import { fileExist, readJsonFile } from "./file_handler";
 const reportsRoot = config.reportsPath;
 
 export async function getPath(username: string, pathType: PathType) {
-  if (pathType === "report")
-    return path.join(process.cwd(), reportsRoot, `${username}.json`);
+  if (pathType === "report") {
+    const p = path.resolve("./public", reportsRoot);
+    return path.join(p, `${username}.json`);
+  }
   if (pathType === "user")
     return path.join(process.cwd(), reportsRoot, `${username}`);
   return "";
@@ -29,14 +31,14 @@ export async function getReport(
   return null;
 }
 
-export async function getAvailableReportsPeriod(
-  username: string
-): Promise<string[]> {
-  const userPath = await getPath(username, "user");
-  if (await fileExist(userPath)) {
-    const files = await readJsonFile(userPath);
-    return Object.keys(files.report);
-  }
-  console.error(`User ${username} not found`);
-  return [];
-}
+// export async function getAvailableReportsPeriod(
+//   username: string
+// ): Promise<string[]> {
+//   const userPath = await getPath(username, "user");
+//   if (await fileExist(userPath)) {
+//     const files = await readJsonFile(userPath);
+//     return Object.keys(files.report);
+//   }
+//   console.error(`User ${username} not found`);
+//   return [];
+// }

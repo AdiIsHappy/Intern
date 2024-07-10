@@ -1,3 +1,5 @@
 {
-  "reportsPath": "data/reports/"
+  "reportsPath": "reports",
+
+  "Notes": ["relative to public folder"]
 }
