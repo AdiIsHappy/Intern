@@ -8,9 +8,9 @@ const reportsRoot = config.reportsPath;
 
 export async function getPath(username: string, pathType: PathType) {
   if (pathType === "report")
-    return path.join(process.cwd(), reportsRoot, `${username}.json`);
+    return path.join( reportsRoot, `${username}.json`);
   if (pathType === "user")
-    return path.join(process.cwd(), reportsRoot, `${username}`);
+    return path.join(reportsRoot, `${username}`);
   return "";
 }
 
