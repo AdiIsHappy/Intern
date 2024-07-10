@@ -1,463 +1,704 @@
 {
   "username": "grote",
-  "updatedAt": "2024-07-09T11:18:09.154+05:30",
+  "updatedAt": "2024-07-09T19:08:53.664+05:30",
   "status": "Avaliable",
   "report": {
     "month": {
       "summary": [
-        "You have made significant contributions to the project in the last month. Keep up the good work!",
-        "Your skills in Android Development, Kotlin, and Java are frequently used and appreciated. Keep up the good work!",
-        "You have shown strength in Android Development and related skills but have received negative feedback in certain areas. Consider addressing these.",
-        "You've demonstrated proficiency in UI design, especially in the areas of Android UI and XML, showcasing your ability to create user-friendly interfaces.",
-        "Your skills in Version Control and Writing are being actively utilized in the project, showcasing your versatility."
+        "You have consistently been making impactful merge requests with positive feedback, keep up the good work.",
+        "There's been a significant increase in positive feedback in the recent month.",
+        "You've shown proficiency in skills like Kotlin, Android, and F-Droid, demonstrating good understanding and contributing to the project's development.",
+        "Focus on improving your understanding of Kotlin and Android concepts for a more efficient and robust code.",
+        "Pay attention to Markdown formatting and avoid repetitive mistakes in defining types in TypeScript."
       ],
-      "skills": [
-        {
-          "skill": "Android Development",
-          "frequency": {
-            "2024-03-01T00:00:00.000+05:30": 14,
-            "2024-04-01T00:00:00.000+05:30": 23,
-            "2024-05-01T00:00:00.000+05:30": 13,
-            "2024-06-01T00:00:00.000+05:30": 7,
-            "2024-07-01T00:00:00.000+05:30": 0
-          },
-          "sentimentFrequency": {
-            "Positive": {
-              "2024-03-01T00:00:00.000+05:30": 10,
-              "2024-04-01T00:00:00.000+05:30": 15,
-              "2024-05-01T00:00:00.000+05:30": 5,
-              "2024-06-01T00:00:00.000+05:30": 5,
-              "2024-07-01T00:00:00.000+05:30": 0
-            },
-            "Negative": {
-              "2024-03-01T00:00:00.000+05:30": 0,
-              "2024-04-01T00:00:00.000+05:30": 4,
-              "2024-05-01T00:00:00.000+05:30": 2,
-              "2024-06-01T00:00:00.000+05:30": 1,
-              "2024-07-01T00:00:00.000+05:30": 0
-            },
-            "Neutral": {
-              "2024-03-01T00:00:00.000+05:30": 4,
-              "2024-04-01T00:00:00.000+05:30": 4,
-              "2024-05-01T00:00:00.000+05:30": 6,
-              "2024-06-01T00:00:00.000+05:30": 1,
-              "2024-07-01T00:00:00.000+05:30": 0
-            }
-          },
-          "insights": [
-            "You've been focusing heavily on Android Development, contributing significantly to the project.",
-            "You have received positive feedback for your work, indicating strong skills.",
-            "Some negative feedback has been received regarding debugging, URI handling, and APKs. Focus on addressing these points.",
-            "Explore more advanced Android Development concepts and techniques to further enhance your skills.",
-            "Focus on improving user experience and accessibility within your Android Development contributions."
-          ]
-        },
+      "positiveSkills": [
         {
           "skill": "Kotlin",
           "frequency": {
-            "2024-03-01T00:00:00.000+05:30": 7,
-            "2024-04-01T00:00:00.000+05:30": 4,
-            "2024-05-01T00:00:00.000+05:30": 2,
-            "2024-06-01T00:00:00.000+05:30": 0,
+            "2024-03-01T00:00:00.000+05:30": 4,
+            "2024-04-01T00:00:00.000+05:30": 10,
+            "2024-05-01T00:00:00.000+05:30": 6,
+            "2024-06-01T00:00:00.000+05:30": 2,
             "2024-07-01T00:00:00.000+05:30": 0
           },
           "sentimentFrequency": {
-            "Positive": {
-              "2024-03-01T00:00:00.000+05:30": 6,
-              "2024-04-01T00:00:00.000+05:30": 4,
-              "2024-05-01T00:00:00.000+05:30": 2,
-              "2024-06-01T00:00:00.000+05:30": 0,
-              "2024-07-01T00:00:00.000+05:30": 0
+            "2024-03-01T00:00:00.000+05:30": {
+              "Positive": 3,
+              "Negative": 1,
+              "Neutral": 0
             },
-            "Negative": {
-              "2024-03-01T00:00:00.000+05:30": 0,
-              "2024-04-01T00:00:00.000+05:30": 0,
-              "2024-05-01T00:00:00.000+05:30": 0,
-              "2024-06-01T00:00:00.000+05:30": 0,
-              "2024-07-01T00:00:00.000+05:30": 0
+            "2024-04-01T00:00:00.000+05:30": {
+              "Positive": 6,
+              "Negative": 3,
+              "Neutral": 1
             },
-            "Neutral": {
-              "2024-03-01T00:00:00.000+05:30": 1,
-              "2024-04-01T00:00:00.000+05:30": 0,
-              "2024-05-01T00:00:00.000+05:30": 0,
-              "2024-06-01T00:00:00.000+05:30": 0,
-              "2024-07-01T00:00:00.000+05:30": 0
+            "2024-05-01T00:00:00.000+05:30": {
+              "Positive": 5,
+              "Negative": 0,
+              "Neutral": 1
+            },
+            "2024-06-01T00:00:00.000+05:30": {
+              "Positive": 1,
+              "Negative": 0,
+              "Neutral": 1
+            },
+            "2024-07-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
             }
           },
           "insights": [
-            "You've consistently demonstrated expertise in Kotlin, contributing valuable code to the project.",
-            "Your Kotlin skills have been consistently recognized with positive feedback, leading to impactful contributions.",
-            "Continue to refine your Kotlin skills and explore advanced concepts like coroutines and flow.",
-            "Consider participating in Kotlin-related open-source projects to further enhance your skills.",
-            "Focus on writing clean, maintainable, and well-documented Kotlin code to improve collaboration and code readability."
+            "You have demonstrated good understanding of Kotlin concepts, contributing to the project's development.",
+            "Your work on Kotlin code has received positive feedback, showcasing your proficiency.",
+            "You are showing significant improvement in your Kotlin code, addressing feedback and implementing suggestions effectively.",
+            "Continue to work on your Kotlin skills, focusing on best practices and addressing any negative feedback.",
+            "Seek guidance from experienced Kotlin developers to address any shortcomings and improve your understanding."
           ]
         },
         {
-          "skill": "Java",
+          "skill": "Android",
           "frequency": {
-            "2024-03-01T00:00:00.000+05:30": 5,
-            "2024-04-01T00:00:00.000+05:30": 2,
-            "2024-05-01T00:00:00.000+05:30": 2,
-            "2024-06-01T00:00:00.000+05:30": 1,
-            "2024-07-01T00:00:00.000+05:30": 0
+            "2024-03-01T00:00:00.000+05:30": 10,
+            "2024-04-01T00:00:00.000+05:30": 19,
+            "2024-05-01T00:00:00.000+05:30": 19,
+            "2024-06-01T00:00:00.000+05:30": 13,
+            "2024-07-01T00:00:00.000+05:30": 3
           },
           "sentimentFrequency": {
-            "Positive": {
-              "2024-03-01T00:00:00.000+05:30": 3,
-              "2024-04-01T00:00:00.000+05:30": 1,
-              "2024-05-01T00:00:00.000+05:30": 1,
-              "2024-06-01T00:00:00.000+05:30": 1,
-              "2024-07-01T00:00:00.000+05:30": 0
+            "2024-03-01T00:00:00.000+05:30": {
+              "Positive": 7,
+              "Negative": 1,
+              "Neutral": 2
             },
-            "Negative": {
-              "2024-03-01T00:00:00.000+05:30": 0,
-              "2024-04-01T00:00:00.000+05:30": 0,
-              "2024-05-01T00:00:00.000+05:30": 0,
-              "2024-06-01T00:00:00.000+05:30": 0,
-              "2024-07-01T00:00:00.000+05:30": 0
+            "2024-04-01T00:00:00.000+05:30": {
+              "Positive": 12,
+              "Negative": 4,
+              "Neutral": 3
             },
-            "Neutral": {
-              "2024-03-01T00:00:00.000+05:30": 2,
-              "2024-04-01T00:00:00.000+05:30": 1,
-              "2024-05-01T00:00:00.000+05:30": 1,
-              "2024-06-01T00:00:00.000+05:30": 0,
-              "2024-07-01T00:00:00.000+05:30": 0
+            "2024-05-01T00:00:00.000+05:30": {
+              "Positive": 12,
+              "Negative": 4,
+              "Neutral": 3
+            },
+            "2024-06-01T00:00:00.000+05:30": {
+              "Positive": 7,
+              "Negative": 3,
+              "Neutral": 3
+            },
+            "2024-07-01T00:00:00.000+05:30": {
+              "Positive": 2,
+              "Negative": 0,
+              "Neutral": 1
             }
           },
           "insights": [
-            "Your Java skills are a valuable asset to the project, contributing to both positive and neutral feedback.",
-            "Continue to improve your Java code for readability and maintainability, ensuring clean and efficient solutions.",
-            "Explore advanced Java concepts like concurrency and multithreading to enhance your development capabilities.",
-            "Consider participating in Java-related open-source projects to gain practical experience and contribute to the community.",
-            "Focus on writing concise and well-documented Java code to facilitate collaboration and future maintenance."
+            "Your expertise in Android development is evident through your contributions and the positive feedback received.",
+            "Your understanding of Android concepts is improving, as you are actively addressing feedback and making progress.",
+            "You have a good grasp of Android development, showcasing your skills in various areas.",
+            "Continue to explore and learn about advanced Android development techniques to enhance your expertise.",
+            "Seek guidance and collaboration with experienced Android developers to expand your knowledge and proficiency."
           ]
         },
         {
-          "skill": "Git",
+          "skill": "F-Droid",
           "frequency": {
             "2024-03-01T00:00:00.000+05:30": 2,
             "2024-04-01T00:00:00.000+05:30": 10,
-            "2024-05-01T00:00:00.000+05:30": 8,
-            "2024-06-01T00:00:00.000+05:30": 5,
-            "2024-07-01T00:00:00.000+05:30": 0
+            "2024-05-01T00:00:00.000+05:30": 14,
+            "2024-06-01T00:00:00.000+05:30": 8,
+            "2024-07-01T00:00:00.000+05:30": 2
           },
           "sentimentFrequency": {
-            "Positive": {
-              "2024-03-01T00:00:00.000+05:30": 1,
-              "2024-04-01T00:00:00.000+05:30": 4,
-              "2024-05-01T00:00:00.000+05:30": 3,
-              "2024-06-01T00:00:00.000+05:30": 2,
-              "2024-07-01T00:00:00.000+05:30": 0
+            "2024-03-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 2
             },
-            "Negative": {
-              "2024-03-01T00:00:00.000+05:30": 0,
-              "2024-04-01T00:00:00.000+05:30": 0,
-              "2024-05-01T00:00:00.000+05:30": 1,
-              "2024-06-01T00:00:00.000+05:30": 0,
-              "2024-07-01T00:00:00.000+05:30": 0
+            "2024-04-01T00:00:00.000+05:30": {
+              "Positive": 4,
+              "Negative": 3,
+              "Neutral": 3
             },
-            "Neutral": {
-              "2024-03-01T00:00:00.000+05:30": 1,
-              "2024-04-01T00:00:00.000+05:30": 6,
-              "2024-05-01T00:00:00.000+05:30": 4,
-              "2024-06-01T00:00:00.000+05:30": 3,
-              "2024-07-01T00:00:00.000+05:30": 0
+            "2024-05-01T00:00:00.000+05:30": {
+              "Positive": 6,
+              "Negative": 2,
+              "Neutral": 6
+            },
+            "2024-06-01T00:00:00.000+05:30": {
+              "Positive": 3,
+              "Negative": 2,
+              "Neutral": 3
+            },
+            "2024-07-01T00:00:00.000+05:30": {
+              "Positive": 1,
+              "Negative": 0,
+              "Neutral": 1
             }
           },
           "insights": [
-            "You are a strong contributor in Git, receiving positive feedback on your work.",
-            "Stay proactive with Git practices and consider expanding your understanding of advanced workflows and branching strategies.",
-            "You have a good understanding of Git principles and are able to collaborate efficiently.",
-            "Contribute to documentation and share your Git expertise to further empower the team.",
-            "Maintain your positive sentiment towards Git, demonstrating its importance in the project's development."
+            "You have a good understanding of F-Droid concepts and functionalities, contributing to its development.",
+            "Your work on F-Droid code has received positive feedback, showcasing your proficiency.",
+            "You are actively participating in discussions related to F-Droid, demonstrating your knowledge and engagement.",
+            "Keep exploring F-Droid's features and capabilities to expand your expertise.",
+            "Stay updated on the latest F-Droid developments and best practices for a more effective contribution."
           ]
         },
         {
-          "skill": "Version Control",
-          "frequency": {
-            "2024-03-01T00:00:00.000+05:30": 0,
-            "2024-04-01T00:00:00.000+05:30": 7,
-            "2024-05-01T00:00:00.000+05:30": 10,
-            "2024-06-01T00:00:00.000+05:30": 7,
-            "2024-07-01T00:00:00.000+05:30": 0
-          },
-          "sentimentFrequency": {
-            "Positive": {
-              "2024-03-01T00:00:00.000+05:30": 0,
-              "2024-04-01T00:00:00.000+05:30": 2,
-              "2024-05-01T00:00:00.000+05:30": 2,
-              "2024-06-01T00:00:00.000+05:30": 1,
-              "2024-07-01T00:00:00.000+05:30": 0
-            },
-            "Negative": {
-              "2024-03-01T00:00:00.000+05:30": 0,
-              "2024-04-01T00:00:00.000+05:30": 0,
-              "2024-05-01T00:00:00.000+05:30": 2,
-              "2024-06-01T00:00:00.000+05:30": 2,
-              "2024-07-01T00:00:00.000+05:30": 0
-            },
-            "Neutral": {
-              "2024-03-01T00:00:00.000+05:30": 0,
-              "2024-04-01T00:00:00.000+05:30": 5,
-              "2024-05-01T00:00:00.000+05:30": 6,
-              "2024-06-01T00:00:00.000+05:30": 4,
-              "2024-07-01T00:00:00.000+05:30": 0
-            }
-          },
-          "insights": [
-            "You are actively involved in Version Control practices, showcasing your expertise.",
-            "You have received both positive and negative feedback. Ensure your versioning practices are consistent and clear.",
-            "Pay close attention to the negative feedback to identify areas for improvement in versioning.",
-            "Explore different Version Control tools and methodologies to expand your knowledge.",
-            "Maintain a good balance between innovation and established best practices in Version Control."
-          ]
-        },
-        {
-          "skill": "Debugging",
-          "frequency": {
-            "2024-03-01T00:00:00.000+05:30": 0,
-            "2024-04-01T00:00:00.000+05:30": 2,
-            "2024-05-01T00:00:00.000+05:30": 2,
-            "2024-06-01T00:00:00.000+05:30": 0,
-            "2024-07-01T00:00:00.000+05:30": 0
-          },
-          "sentimentFrequency": {
-            "Positive": {
-              "2024-03-01T00:00:00.000+05:30": 0,
-              "2024-04-01T00:00:00.000+05:30": 0,
-              "2024-05-01T00:00:00.000+05:30": 0,
-              "2024-06-01T00:00:00.000+05:30": 0,
-              "2024-07-01T00:00:00.000+05:30": 0
-            },
-            "Negative": {
-              "2024-03-01T00:00:00.000+05:30": 0,
-              "2024-04-01T00:00:00.000+05:30": 1,
-              "2024-05-01T00:00:00.000+05:30": 1,
-              "2024-06-01T00:00:00.000+05:30": 0,
-              "2024-07-01T00:00:00.000+05:30": 0
-            },
-            "Neutral": {
-              "2024-03-01T00:00:00.000+05:30": 0,
-              "2024-04-01T00:00:00.000+05:30": 1,
-              "2024-05-01T00:00:00.000+05:30": 1,
-              "2024-06-01T00:00:00.000+05:30": 0,
-              "2024-07-01T00:00:00.000+05:30": 0
-            }
-          },
-          "insights": [
-            "You have received negative feedback regarding your debugging skills. Focus on improving your debugging techniques.",
-            "Practice identifying and resolving issues effectively and efficiently.",
-            "Develop a systematic approach to debugging, employing various tools and techniques.",
-            "Familiarize yourself with common debugging tools and methodologies.",
-            "Enhance your understanding of the codebase and the project's architecture to facilitate effective debugging."
-          ]
-        },
-        {
-          "skill": "URI Handling",
-          "frequency": {
-            "2024-03-01T00:00:00.000+05:30": 0,
-            "2024-04-01T00:00:00.000+05:30": 5,
-            "2024-05-01T00:00:00.000+05:30": 5,
-            "2024-06-01T00:00:00.000+05:30": 0,
-            "2024-07-01T00:00:00.000+05:30": 0
-          },
-          "sentimentFrequency": {
-            "Positive": {
-              "2024-03-01T00:00:00.000+05:30": 0,
-              "2024-04-01T00:00:00.000+05:30": 1,
-              "2024-05-01T00:00:00.000+05:30": 0,
-              "2024-06-01T00:00:00.000+05:30": 0,
-              "2024-07-01T00:00:00.000+05:30": 0
-            },
-            "Negative": {
-              "2024-03-01T00:00:00.000+05:30": 0,
-              "2024-04-01T00:00:00.000+05:30": 2,
-              "2024-05-01T00:00:00.000+05:30": 1,
-              "2024-06-01T00:00:00.000+05:30": 0,
-              "2024-07-01T00:00:00.000+05:30": 0
-            },
-            "Neutral": {
-              "2024-03-01T00:00:00.000+05:30": 0,
-              "2024-04-01T00:00:00.000+05:30": 2,
-              "2024-05-01T00:00:00.000+05:30": 4,
-              "2024-06-01T00:00:00.000+05:30": 0,
-              "2024-07-01T00:00:00.000+05:30": 0
-            }
-          },
-          "insights": [
-            "You have been actively involved in URI handling tasks, showcasing your technical expertise.",
-            "Focus on addressing the negative feedback to improve the quality and robustness of your URI handling solutions.",
-            "Expand your knowledge of URI best practices and security considerations.",
-            "Explore industry-standard tools and libraries for efficient URI handling.",
-            "Ensure consistency and compliance with URI standards in all your implementations."
-          ]
-        },
-        {
-          "skill": "UI Design",
+          "skill": "WorkManager",
           "frequency": {
             "2024-03-01T00:00:00.000+05:30": 2,
-            "2024-04-01T00:00:00.000+05:30": 2,
+            "2024-04-01T00:00:00.000+05:30": 0,
             "2024-05-01T00:00:00.000+05:30": 0,
             "2024-06-01T00:00:00.000+05:30": 0,
             "2024-07-01T00:00:00.000+05:30": 0
           },
           "sentimentFrequency": {
-            "Positive": {
-              "2024-03-01T00:00:00.000+05:30": 2,
-              "2024-04-01T00:00:00.000+05:30": 2,
-              "2024-05-01T00:00:00.000+05:30": 0,
-              "2024-06-01T00:00:00.000+05:30": 0,
-              "2024-07-01T00:00:00.000+05:30": 0
+            "2024-03-01T00:00:00.000+05:30": {
+              "Positive": 2,
+              "Negative": 0,
+              "Neutral": 0
             },
-            "Negative": {
-              "2024-03-01T00:00:00.000+05:30": 0,
-              "2024-04-01T00:00:00.000+05:30": 0,
-              "2024-05-01T00:00:00.000+05:30": 0,
-              "2024-06-01T00:00:00.000+05:30": 0,
-              "2024-07-01T00:00:00.000+05:30": 0
+            "2024-04-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
             },
-            "Neutral": {
-              "2024-03-01T00:00:00.000+05:30": 0,
-              "2024-04-01T00:00:00.000+05:30": 0,
-              "2024-05-01T00:00:00.000+05:30": 0,
-              "2024-06-01T00:00:00.000+05:30": 0,
-              "2024-07-01T00:00:00.000+05:30": 0
+            "2024-05-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-06-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-07-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
             }
           },
           "insights": [
-            "You have a strong understanding of UI Design principles and have implemented them effectively in your contributions.",
-            "Focus on creating intuitive and accessible user interfaces, ensuring a positive user experience.",
-            "Explore UI design tools and resources to enhance your skills and create visually appealing interfaces.",
-            "Consider learning about Material Design guidelines to create modern and consistent user interfaces.",
-            "Keep exploring new UI design trends and techniques to stay ahead of the curve."
-          ]
-        },
-        {
-          "skill": "GitLab CI",
-          "frequency": {
-            "2024-03-01T00:00:00.000+05:30": 0,
-            "2024-04-01T00:00:00.000+05:30": 1,
-            "2024-05-01T00:00:00.000+05:30": 1,
-            "2024-06-01T00:00:00.000+05:30": 0,
-            "2024-07-01T00:00:00.000+05:30": 0
-          },
-          "sentimentFrequency": {
-            "Positive": {
-              "2024-03-01T00:00:00.000+05:30": 0,
-              "2024-04-01T00:00:00.000+05:30": 1,
-              "2024-05-01T00:00:00.000+05:30": 1,
-              "2024-06-01T00:00:00.000+05:30": 0,
-              "2024-07-01T00:00:00.000+05:30": 0
-            },
-            "Negative": {
-              "2024-03-01T00:00:00.000+05:30": 0,
-              "2024-04-01T00:00:00.000+05:30": 0,
-              "2024-05-01T00:00:00.000+05:30": 0,
-              "2024-06-01T00:00:00.000+05:30": 0,
-              "2024-07-01T00:00:00.000+05:30": 0
-            },
-            "Neutral": {
-              "2024-03-01T00:00:00.000+05:30": 0,
-              "2024-04-01T00:00:00.000+05:30": 0,
-              "2024-05-01T00:00:00.000+05:30": 0,
-              "2024-06-01T00:00:00.000+05:30": 0,
-              "2024-07-01T00:00:00.000+05:30": 0
-            }
-          },
-          "insights": [
-            "You are actively engaging with GitLab CI and integrating testing processes. Ensure that your test reports are well-documented and accessible.",
-            "Explore advanced GitLab CI features and pipelines to optimize your workflow and improve code quality.",
-            "Focus on creating robust and reliable CI pipelines that automate testing, deployment, and other development processes.",
-            "Contribute to the development of shared CI configurations to streamline the team's workflow and promote consistency.",
-            "Share your GitLab CI knowledge with others to empower the team and foster collaboration."
+            "You have effectively utilized WorkManager for background tasks, demonstrating a proactive approach to optimization.",
+            "Your implementation of WorkManager has shown positive results in improving background task efficiency.",
+            "Your understanding of WorkManager's capabilities is evident in your code.",
+            "You have successfully replaced UpdateService with WorkManager, a positive step towards better battery management.",
+            "Your contributions to WorkManager implementation are appreciated."
           ]
         },
         {
           "skill": "XML",
           "frequency": {
+            "2024-03-01T00:00:00.000+05:30": 3,
+            "2024-04-01T00:00:00.000+05:30": 2,
+            "2024-05-01T00:00:00.000+05:30": 0,
+            "2024-06-01T00:00:00.000+05:30": 2,
+            "2024-07-01T00:00:00.000+05:30": 2
+          },
+          "sentimentFrequency": {
+            "2024-03-01T00:00:00.000+05:30": {
+              "Positive": 2,
+              "Negative": 0,
+              "Neutral": 1
+            },
+            "2024-04-01T00:00:00.000+05:30": {
+              "Positive": 2,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-05-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-06-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 2
+            },
+            "2024-07-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 2
+            }
+          },
+          "insights": [
+            "You have shown expertise in XML, particularly for UI layout and design.",
+            "You have used XML effectively for creating and maintaining Android user interfaces.",
+            "Your understanding of XML structure and attributes is evident in your contributions.",
+            "You have effectively used XML to improve the UI layout of app details and list items.",
+            "You have demonstrated good understanding of XML within the Android context."
+          ]
+        },
+        {
+          "skill": "Java",
+          "frequency": {
+            "2024-03-01T00:00:00.000+05:30": 8,
+            "2024-04-01T00:00:00.000+05:30": 8,
+            "2024-05-01T00:00:00.000+05:30": 4,
+            "2024-06-01T00:00:00.000+05:30": 4,
+            "2024-07-01T00:00:00.000+05:30": 0
+          },
+          "sentimentFrequency": {
+            "2024-03-01T00:00:00.000+05:30": {
+              "Positive": 8,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-04-01T00:00:00.000+05:30": {
+              "Positive": 8,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-05-01T00:00:00.000+05:30": {
+              "Positive": 4,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-06-01T00:00:00.000+05:30": {
+              "Positive": 4,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-07-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            }
+          },
+          "insights": [
+            "Your Java skills are evident in your efficient code and bug fixes.",
+            "You've effectively utilized Java for backend logic, background tasks, and UI elements.",
+            "Your understanding of Java concepts is showcased in your contributions to session installer improvements.",
+            "You've successfully integrated Java with other technologies like WorkManager for efficient task management.",
+            "Your knowledge of Java is commendable and has contributed positively to the project."
+          ]
+        }
+      ],
+      "negativeSkills": [
+        {
+          "skill": "Kotlin",
+          "frequency": {
+            "2024-03-01T00:00:00.000+05:30": 1,
+            "2024-04-01T00:00:00.000+05:30": 7,
+            "2024-05-01T00:00:00.000+05:30": 4,
+            "2024-06-01T00:00:00.000+05:30": 2,
+            "2024-07-01T00:00:00.000+05:30": 0
+          },
+          "sentimentFrequency": {
+            "2024-03-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 1,
+              "Neutral": 0
+            },
+            "2024-04-01T00:00:00.000+05:30": {
+              "Positive": 3,
+              "Negative": 3,
+              "Neutral": 1
+            },
+            "2024-05-01T00:00:00.000+05:30": {
+              "Positive": 3,
+              "Negative": 0,
+              "Neutral": 1
+            },
+            "2024-06-01T00:00:00.000+05:30": {
+              "Positive": 1,
+              "Negative": 0,
+              "Neutral": 1
+            },
+            "2024-07-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            }
+          },
+          "insights": [
+            "You have made some mistakes in your Kotlin code, particularly regarding arbitrary restrictions and mirror URLs. ",
+            "Consider reviewing Kotlin documentation to avoid common mistakes.",
+            "Pay close attention to feedback regarding Kotlin code and strive to implement suggested improvements.",
+            "Focus on understanding the nuances of Kotlin syntax and best practices to ensure code quality and clarity.",
+            "Actively seek guidance from experienced Kotlin developers to address any shortcomings and improve your understanding."
+          ],
+          "references": [
+            {
+              "title": "Kotlin Documentation",
+              "url": "https://kotlinlang.org/docs/",
+              "description": "Official documentation for Kotlin programming language. Covers syntax, features, and best practices."
+            }
+          ]
+        },
+        {
+          "skill": "Android Development",
+          "frequency": {
+            "2024-03-01T00:00:00.000+05:30": 2,
+            "2024-04-01T00:00:00.000+05:30": 0,
+            "2024-05-01T00:00:00.000+05:30": 0,
+            "2024-06-01T00:00:00.000+05:30": 0,
+            "2024-07-01T00:00:00.000+05:30": 0
+          },
+          "sentimentFrequency": {
+            "2024-03-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 2
+            },
+            "2024-04-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-05-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-06-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-07-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            }
+          },
+          "insights": [
+            "The description of one merge request regarding targetSdk update lacked detail about the impact and changes, making it difficult to assess its value.",
+            "Ensure that all merge requests are well documented to provide a clear understanding of the changes and their impact.",
+            "Properly document merge requests to enable others to understand the implemented changes and their purpose.",
+            "Provide clear and concise documentation for each merge request, including a detailed description of the changes and their expected impact."
+          ],
+          "references": [
+            {
+              "url": "https://developer.android.com/studio/write/documentation",
+              "skill": "Documentation",
+              "description": "Android developer documentation guidelines, including best practices for writing detailed and clear documentation."
+            }
+          ]
+        },
+        {
+          "skill": "TypeScript",
+          "frequency": {
             "2024-03-01T00:00:00.000+05:30": 0,
+            "2024-04-01T00:00:00.000+05:30": 0,
+            "2024-05-01T00:00:00.000+05:30": 0,
+            "2024-06-01T00:00:00.000+05:30": 2,
+            "2024-07-01T00:00:00.000+05:30": 0
+          },
+          "sentimentFrequency": {
+            "2024-03-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-04-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-05-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-06-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 2,
+              "Neutral": 0
+            },
+            "2024-07-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            }
+          },
+          "insights": [
+            "You have made repetitive mistakes in defining the types of variables in TypeScript code. ",
+            "Focus on using proper code format as decided for the project, which can enhance readability and maintainability.",
+            "Learn more about interfaces in TypeScript to improve the code quality and avoid type-related errors.",
+            "Review TypeScript documentation and examples to understand type declaration and usage.",
+            "Seek guidance from experienced TypeScript developers to resolve any type-related issues and enhance your understanding."
+          ],
+          "references": [
+            {
+              "title": "TypeScript Handbook",
+              "url": "https://www.typescriptlang.org/docs/handbook/intro.html",
+              "description": "Official documentation for TypeScript. Covers syntax, features, and best practices."
+            }
+          ]
+        },
+        {
+          "skill": "Android",
+          "frequency": {
+            "2024-03-01T00:00:00.000+05:30": 3,
+            "2024-04-01T00:00:00.000+05:30": 12,
+            "2024-05-01T00:00:00.000+05:30": 14,
+            "2024-06-01T00:00:00.000+05:30": 10,
+            "2024-07-01T00:00:00.000+05:30": 1
+          },
+          "sentimentFrequency": {
+            "2024-03-01T00:00:00.000+05:30": {
+              "Positive": 1,
+              "Negative": 1,
+              "Neutral": 1
+            },
+            "2024-04-01T00:00:00.000+05:30": {
+              "Positive": 6,
+              "Negative": 4,
+              "Neutral": 2
+            },
+            "2024-05-01T00:00:00.000+05:30": {
+              "Positive": 8,
+              "Negative": 4,
+              "Neutral": 2
+            },
+            "2024-06-01T00:00:00.000+05:30": {
+              "Positive": 5,
+              "Negative": 3,
+              "Neutral": 2
+            },
+            "2024-07-01T00:00:00.000+05:30": {
+              "Positive": 1,
+              "Negative": 0,
+              "Neutral": 0
+            }
+          },
+          "insights": [
+            "You have shown some inconsistencies in understanding Android concepts, particularly regarding installation locations on SD cards. ",
+            "You have received feedback regarding testing on specific SDK versions, which needs to be addressed.",
+            "Ensure you thoroughly understand Android principles and best practices for more efficient and robust code development.",
+            "Review Android documentation and examples to improve your understanding of core concepts and functionalities.",
+            "Seek guidance from experienced Android developers to resolve any discrepancies in your understanding and ensure your code complies with best practices."
+          ],
+          "references": [
+            {
+              "title": "Android Developers Documentation",
+              "url": "https://developer.android.com/studio",
+              "description": "Comprehensive documentation for Android development, including tutorials, guides, and reference materials."
+            },
+            {
+              "title": "Android Jetpack",
+              "url": "https://developer.android.com/jetpack",
+              "description": "Explore the Android Jetpack library for building high-quality Android apps with ease."
+            }
+          ]
+        },
+        {
+          "skill": "Gradle",
+          "frequency": {
+            "2024-03-01T00:00:00.000+05:30": 1,
+            "2024-04-01T00:00:00.000+05:30": 0,
+            "2024-05-01T00:00:00.000+05:30": 0,
+            "2024-06-01T00:00:00.000+05:30": 0,
+            "2024-07-01T00:00:00.000+05:30": 0
+          },
+          "sentimentFrequency": {
+            "2024-03-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 1
+            },
+            "2024-04-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-05-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-06-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-07-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            }
+          },
+          "insights": [
+            "You have made minor changes to the project structure using Gradle, but the description lacked detail.",
+            "Ensure you provide thorough documentation for any changes made to Gradle files.",
+            "Include information about the purpose and impact of Gradle changes in the merge request description.",
+            "Refer to official Gradle documentation for best practices and to ensure proper usage.",
+            "Provide clear and detailed descriptions of your Gradle modifications to enable others to understand the intent and impact of the changes."
+          ],
+          "references": [
+            {
+              "url": "https://docs.gradle.org/current/userguide/userguide.html",
+              "skill": "Gradle",
+              "description": "Official Gradle user guide, covering a wide range of aspects of using Gradle for building projects."
+            }
+          ]
+        },
+        {
+          "skill": "JUnit",
+          "frequency": {
+            "2024-03-01T00:00:00.000+05:30": 2,
             "2024-04-01T00:00:00.000+05:30": 1,
             "2024-05-01T00:00:00.000+05:30": 0,
             "2024-06-01T00:00:00.000+05:30": 0,
             "2024-07-01T00:00:00.000+05:30": 0
           },
           "sentimentFrequency": {
-            "Positive": {
-              "2024-03-01T00:00:00.000+05:30": 0,
-              "2024-04-01T00:00:00.000+05:30": 1,
-              "2024-05-01T00:00:00.000+05:30": 0,
-              "2024-06-01T00:00:00.000+05:30": 0,
-              "2024-07-01T00:00:00.000+05:30": 0
+            "2024-03-01T00:00:00.000+05:30": {
+              "Positive": 2,
+              "Negative": 0,
+              "Neutral": 0
             },
-            "Negative": {
-              "2024-03-01T00:00:00.000+05:30": 0,
-              "2024-04-01T00:00:00.000+05:30": 0,
-              "2024-05-01T00:00:00.000+05:30": 0,
-              "2024-06-01T00:00:00.000+05:30": 0,
-              "2024-07-01T00:00:00.000+05:30": 0
+            "2024-04-01T00:00:00.000+05:30": {
+              "Positive": 1,
+              "Negative": 0,
+              "Neutral": 0
             },
-            "Neutral": {
-              "2024-03-01T00:00:00.000+05:30": 0,
-              "2024-04-01T00:00:00.000+05:30": 0,
-              "2024-05-01T00:00:00.000+05:30": 0,
-              "2024-06-01T00:00:00.000+05:30": 0,
-              "2024-07-01T00:00:00.000+05:30": 0
+            "2024-05-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-06-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-07-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
             }
           },
           "insights": [
-            "Your expertise in XML is evident in your contributions, leading to positive feedback.",
-            "Ensure your XML code is well-structured and adheres to best practices.",
-            "Explore advanced XML concepts like namespaces and schemas to enhance your understanding.",
-            "Contribute to the development of reusable XML components to improve efficiency and code reusability.",
-            "Focus on creating well-defined and maintainable XML structures to facilitate data management and communication."
+            "You have used JUnit for testing, but the frequency is relatively low.",
+            "It is recommended to increase the use of JUnit for comprehensive testing of your code.",
+            "Expand your test coverage by creating more JUnit tests to ensure the reliability of your code.",
+            "Implement unit tests for critical functionalities using JUnit to improve code quality and prevent regressions.",
+            "Utilize JUnit to create robust test cases and improve the overall reliability of the codebase."
+          ],
+          "references": [
+            {
+              "url": "https://junit.org/junit5/docs/current/user-guide.html",
+              "skill": "JUnit",
+              "description": "JUnit 5 user guide, a comprehensive resource for learning about the latest version of JUnit and its features."
+            }
+          ]
+        },
+        {
+          "skill": "Markdown",
+          "frequency": {
+            "2024-03-01T00:00:00.000+05:30": 0,
+            "2024-04-01T00:00:00.000+05:30": 0,
+            "2024-05-01T00:00:00.000+05:30": 2,
+            "2024-06-01T00:00:00.000+05:30": 0,
+            "2024-07-01T00:00:00.000+05:30": 0
+          },
+          "sentimentFrequency": {
+            "2024-03-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-04-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-05-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 2,
+              "Neutral": 0
+            },
+            "2024-06-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-07-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            }
+          },
+          "insights": [
+            "Pay close attention to Markdown formatting and make sure it is clear and consistent.",
+            "Review Markdown documentation to improve your understanding of its syntax and conventions.",
+            "Use proper Markdown headers and formatting to enhance the readability of your merge request descriptions.",
+            "Consider using a Markdown editor with a preview feature to ensure your formatting is correct before submitting your merge request.",
+            "Seek guidance from experienced Markdown users for any specific formatting questions or issues."
+          ],
+          "references": [
+            {
+              "title": "Markdown Guide",
+              "url": "https://www.markdownguide.org/",
+              "description": "A comprehensive guide to Markdown syntax and best practices."
+            }
           ]
         }
       ],
       "quality": {
-        "2024-06-01T00:00:00.000+05:30": {
-          "High": 0,
-          "Low": 1,
-          "Medium": 1
-        },
-        "2024-05-01T00:00:00.000+05:30": {
+        "2024-07-01T00:00:00.000+05:30": {
           "High": 0,
           "Low": 0,
-          "Medium": 3
+          "Medium": 1
+        },
+        "2024-06-01T00:00:00.000+05:30": {
+          "High": 1,
+          "Low": 1,
+          "Medium": 0
+        },
+        "2024-05-01T00:00:00.000+05:30": {
+          "High": 2,
+          "Low": 0,
+          "Medium": 1
         },
         "2024-04-01T00:00:00.000+05:30": {
-          "High": 7,
+          "High": 9,
+          "Low": 0,
+          "Medium": 1
+        },
+        "2024-03-01T00:00:00.000+05:30": {
+          "High": 5,
           "Low": 1,
           "Medium": 2
         },
-        "2024-03-01T00:00:00.000+05:30": {
-          "High": 7,
-          "Low": 0,
-          "Medium": 1
-        },
         "2024-02-01T00:00:00.000+05:30": {
-          "High": 7,
+          "High": 8,
           "Low": 0,
-          "Medium": 3
+          "Medium": 2
         },
         "2024-01-01T00:00:00.000+05:30": {
           "High": 2,
-          "Low": 2,
-          "Medium": 0
+          "Low": 1,
+          "Medium": 1
         }
       },
       "testCases": {
+        "2024-06-01T00:00:00.000+05:30": 0,
+        "2024-05-01T00:00:00.000+05:30": 0,
         "2024-04-01T00:00:00.000+05:30": 4,
-        "2024-03-01T00:00:00.000+05:30": 4,
-        "2024-02-01T00:00:00.000+05:30": 0,
-        "2024-01-01T00:00:00.000+05:30": 0
+        "2024-03-01T00:00:00.000+05:30": 3,
+        "2024-02-01T00:00:00.000+05:30": 6,
+        "2024-01-01T00:00:00.000+05:30": 1
       },
       "testCasesRequired": {
-        "2024-04-01T00:00:00.000+05:30": 4,
-        "2024-03-01T00:00:00.000+05:30": 5,
-        "2024-02-01T00:00:00.000+05:30": 7,
-        "2024-01-01T00:00:00.000+05:30": 3
+        "2024-06-01T00:00:00.000+05:30": 1,
+        "2024-05-01T00:00:00.000+05:30": 2,
+        "2024-04-01T00:00:00.000+05:30": 8,
+        "2024-03-01T00:00:00.000+05:30": 3,
+        "2024-02-01T00:00:00.000+05:30": 6,
+        "2024-01-01T00:00:00.000+05:30": 2
       },
       "impact": {
+        "2024-07-01T00:00:00.000+05:30": {
+          "Negative": 0,
+          "Neutral": 0,
+          "Positive": 1
+        },
         "2024-06-01T00:00:00.000+05:30": {
           "Negative": 0,
           "Neutral": 1,
@@ -465,18 +706,18 @@
         },
         "2024-05-01T00:00:00.000+05:30": {
           "Negative": 0,
-          "Neutral": 1,
-          "Positive": 2
+          "Neutral": 0,
+          "Positive": 3
         },
         "2024-04-01T00:00:00.000+05:30": {
           "Negative": 0,
-          "Neutral": 3,
-          "Positive": 7
+          "Neutral": 1,
+          "Positive": 9
         },
         "2024-03-01T00:00:00.000+05:30": {
           "Negative": 0,
-          "Neutral": 2,
-          "Positive": 6
+          "Neutral": 1,
+          "Positive": 7
         },
         "2024-02-01T00:00:00.000+05:30": {
           "Negative": 0,
@@ -490,619 +731,466 @@
         }
       }
     },
-    "week": {
-      "summary": [
-        "You've consistently demonstrated strong skills in Android Development, Version Control, and Java, particularly in recent months.",
-        "You've been actively involved in addressing issues related to APK installations and sorting behavior, showcasing your expertise in Version Control.",
-        "Your recent work in URI handling has been met with some criticism regarding code design and imposing restrictions, suggesting potential areas for improvement.",
-        "You've successfully addressed the issues related to crashes when using USB thumb drives as mirrors, demonstrating your effective debugging skills.",
-        "You have demonstrated strong proficiency in Android development, particularly in areas like UI design, testing, and repository management."
-      ],
-      "skills": [
-        {
-          "skill": "Android Development",
-          "frequency": {
-            "2024-03-18T00:00:00.000+05:30": 2,
-            "2024-03-25T00:00:00.000+05:30": 4,
-            "2024-04-01T00:00:00.000+05:30": 8,
-            "2024-04-08T00:00:00.000+05:30": 5,
-            "2024-04-15T00:00:00.000+05:30": 9,
-            "2024-04-22T00:00:00.000+05:30": 4,
-            "2024-04-29T00:00:00.000+05:30": 2,
-            "2024-05-06T00:00:00.000+05:30": 9,
-            "2024-05-13T00:00:00.000+05:30": 2,
-            "2024-05-20T00:00:00.000+05:30": 0,
-            "2024-05-27T00:00:00.000+05:30": 0,
-            "2024-06-03T00:00:00.000+05:30": 0,
-            "2024-06-10T00:00:00.000+05:30": 0,
-            "2024-06-17T00:00:00.000+05:30": 0,
-            "2024-06-24T00:00:00.000+05:30": 0,
-            "2024-07-01T00:00:00.000+05:30": 0,
-            "2024-07-08T00:00:00.000+05:30": 0
-          },
-          "sentimentFrequency": {
-            "Positive": {
-              "2024-03-18T00:00:00.000+05:30": 2,
-              "2024-03-25T00:00:00.000+05:30": 3,
-              "2024-04-01T00:00:00.000+05:30": 6,
-              "2024-04-08T00:00:00.000+05:30": 3,
-              "2024-04-15T00:00:00.000+05:30": 5,
-              "2024-04-22T00:00:00.000+05:30": 3,
-              "2024-04-29T00:00:00.000+05:30": 2,
-              "2024-05-06T00:00:00.000+05:30": 5,
-              "2024-05-13T00:00:00.000+05:30": 2,
-              "2024-05-20T00:00:00.000+05:30": 0,
-              "2024-05-27T00:00:00.000+05:30": 0,
-              "2024-06-03T00:00:00.000+05:30": 0,
-              "2024-06-10T00:00:00.000+05:30": 0,
-              "2024-06-17T00:00:00.000+05:30": 0,
-              "2024-06-24T00:00:00.000+05:30": 0,
-              "2024-07-01T00:00:00.000+05:30": 0,
-              "2024-07-08T00:00:00.000+05:30": 0
-            },
-            "Negative": {
-              "2024-03-18T00:00:00.000+05:30": 0,
-              "2024-03-25T00:00:00.000+05:30": 0,
-              "2024-04-01T00:00:00.000+05:30": 0,
-              "2024-04-08T00:00:00.000+05:30": 0,
-              "2024-04-15T00:00:00.000+05:30": 1,
-              "2024-04-22T00:00:00.000+05:30": 0,
-              "2024-04-29T00:00:00.000+05:30": 0,
-              "2024-05-06T00:00:00.000+05:30": 1,
-              "2024-05-13T00:00:00.000+05:30": 0,
-              "2024-05-20T00:00:00.000+05:30": 0,
-              "2024-05-27T00:00:00.000+05:30": 0,
-              "2024-06-03T00:00:00.000+05:30": 0,
-              "2024-06-10T00:00:00.000+05:30": 0,
-              "2024-06-17T00:00:00.000+05:30": 0,
-              "2024-06-24T00:00:00.000+05:30": 0,
-              "2024-07-01T00:00:00.000+05:30": 0,
-              "2024-07-08T00:00:00.000+05:30": 0
-            },
-            "Neutral": {
-              "2024-03-18T00:00:00.000+05:30": 0,
-              "2024-03-25T00:00:00.000+05:30": 1,
-              "2024-04-01T00:00:00.000+05:30": 2,
-              "2024-04-08T00:00:00.000+05:30": 2,
-              "2024-04-15T00:00:00.000+05:30": 3,
-              "2024-04-22T00:00:00.000+05:30": 1,
-              "2024-04-29T00:00:00.000+05:30": 0,
-              "2024-05-06T00:00:00.000+05:30": 3,
-              "2024-05-13T00:00:00.000+05:30": 0,
-              "2024-05-20T00:00:00.000+05:30": 0,
-              "2024-05-27T00:00:00.000+05:30": 0,
-              "2024-06-03T00:00:00.000+05:30": 0,
-              "2024-06-10T00:00:00.000+05:30": 0,
-              "2024-06-17T00:00:00.000+05:30": 0,
-              "2024-06-24T00:00:00.000+05:30": 0,
-              "2024-07-01T00:00:00.000+05:30": 0,
-              "2024-07-08T00:00:00.000+05:30": 0
-            }
-          },
-          "insights": [
-            "You've demonstrated strong skills in Android Development throughout the analyzed period.",
-            "Your recent contributions have received positive feedback, showcasing your commitment to quality.",
-            "Consider reviewing the feedback related to the imposed restrictions on URI handling, as it indicates a potential area for improvement.",
-            "Keep up the excellent work in UI design, testing, and repository management.",
-            "Your strong track record in these areas indicates a high level of proficiency in Android development."
-          ]
-        }
-      ],
-      "quality": {
-        "2024-06-03T00:00:00.000+05:30": {
-          "High": 0,
-          "Low": 1,
-          "Medium": 1
-        },
-        "2024-05-13T00:00:00.000+05:30": {
-          "High": 0,
-          "Low": 0,
-          "Medium": 2
-        },
-        "2024-05-06T00:00:00.000+05:30": {
-          "High": 0,
-          "Low": 0,
-          "Medium": 1
-        },
-        "2024-04-29T00:00:00.000+05:30": {
-          "High": 2,
-          "Low": 0,
-          "Medium": 0
-        },
-        "2024-04-22T00:00:00.000+05:30": {
-          "High": 0,
-          "Low": 0,
-          "Medium": 2
-        },
-        "2024-04-15T00:00:00.000+05:30": {
-          "High": 2,
-          "Low": 0,
-          "Medium": 0
-        },
-        "2024-04-08T00:00:00.000+05:30": {
-          "High": 1,
-          "Low": 1,
-          "Medium": 0
-        },
-        "2024-04-01T00:00:00.000+05:30": {
-          "High": 2,
-          "Low": 0,
-          "Medium": 0
-        },
-        "2024-03-25T00:00:00.000+05:30": {
-          "High": 2,
-          "Low": 0,
-          "Medium": 0
-        },
-        "2024-03-18T00:00:00.000+05:30": {
-          "High": 1,
-          "Low": 0,
-          "Medium": 0
-        },
-        "2024-03-04T00:00:00.000+05:30": {
-          "High": 4,
-          "Low": 0,
-          "Medium": 1
-        },
-        "2024-02-26T00:00:00.000+05:30": {
-          "High": 1,
-          "Low": 0,
-          "Medium": 0
-        },
-        "2024-02-12T00:00:00.000+05:30": {
-          "High": 4,
-          "Low": 0,
-          "Medium": 1
-        },
-        "2024-02-05T00:00:00.000+05:30": {
-          "High": 2,
-          "Low": 0,
-          "Medium": 2
-        },
-        "2024-01-22T00:00:00.000+05:30": {
-          "High": 2,
-          "Low": 1,
-          "Medium": 0
-        },
-        "2024-01-08T00:00:00.000+05:30": {
-          "High": 0,
-          "Low": 1,
-          "Medium": 0
-        }
-      },
-      "testCases": {
-        "2024-04-15T00:00:00.000+05:30": 1,
-        "2024-04-08T00:00:00.000+05:30": 1,
-        "2024-04-01T00:00:00.000+05:30": 2,
-        "2024-03-25T00:00:00.000+05:30": 1,
-        "2024-03-04T00:00:00.000+05:30": 3,
-        "2024-02-26T00:00:00.000+05:30": 0,
-        "2024-02-12T00:00:00.000+05:30": 0,
-        "2024-02-05T00:00:00.000+05:30": 0,
-        "2024-01-22T00:00:00.000+05:30": 0
-      },
-      "testCasesRequired": {
-        "2024-04-15T00:00:00.000+05:30": 1,
-        "2024-04-08T00:00:00.000+05:30": 1,
-        "2024-04-01T00:00:00.000+05:30": 2,
-        "2024-03-25T00:00:00.000+05:30": 1,
-        "2024-03-04T00:00:00.000+05:30": 4,
-        "2024-02-26T00:00:00.000+05:30": 1,
-        "2024-02-12T00:00:00.000+05:30": 3,
-        "2024-02-05T00:00:00.000+05:30": 3,
-        "2024-01-22T00:00:00.000+05:30": 3
-      },
-      "impact": {
-        "2024-06-03T00:00:00.000+05:30": {
-          "Negative": 0,
-          "Neutral": 1,
-          "Positive": 1
-        },
-        "2024-05-13T00:00:00.000+05:30": {
-          "Negative": 0,
-          "Neutral": 1,
-          "Positive": 1
-        },
-        "2024-05-06T00:00:00.000+05:30": {
-          "Negative": 0,
-          "Neutral": 0,
-          "Positive": 1
-        },
-        "2024-04-29T00:00:00.000+05:30": {
-          "Negative": 0,
-          "Neutral": 0,
-          "Positive": 2
-        },
-        "2024-04-22T00:00:00.000+05:30": {
-          "Negative": 0,
-          "Neutral": 1,
-          "Positive": 1
-        },
-        "2024-04-15T00:00:00.000+05:30": {
-          "Negative": 0,
-          "Neutral": 0,
-          "Positive": 2
-        },
-        "2024-04-08T00:00:00.000+05:30": {
-          "Negative": 0,
-          "Neutral": 2,
-          "Positive": 0
-        },
-        "2024-04-01T00:00:00.000+05:30": {
-          "Negative": 0,
-          "Neutral": 0,
-          "Positive": 2
-        },
-        "2024-03-25T00:00:00.000+05:30": {
-          "Negative": 0,
-          "Neutral": 1,
-          "Positive": 1
-        },
-        "2024-03-18T00:00:00.000+05:30": {
-          "Negative": 0,
-          "Neutral": 0,
-          "Positive": 1
-        },
-        "2024-03-04T00:00:00.000+05:30": {
-          "Negative": 0,
-          "Neutral": 1,
-          "Positive": 4
-        },
-        "2024-02-26T00:00:00.000+05:30": {
-          "Negative": 0,
-          "Neutral": 0,
-          "Positive": 1
-        },
-        "2024-02-12T00:00:00.000+05:30": {
-          "Negative": 0,
-          "Neutral": 1,
-          "Positive": 4
-        },
-        "2024-02-05T00:00:00.000+05:30": {
-          "Negative": 0,
-          "Neutral": 0,
-          "Positive": 4
-        },
-        "2024-01-22T00:00:00.000+05:30": {
-          "Negative": 0,
-          "Neutral": 0,
-          "Positive": 3
-        },
-        "2024-01-08T00:00:00.000+05:30": {
-          "Negative": 0,
-          "Neutral": 1,
-          "Positive": 0
-        }
-      }
-    },
     "quarter": {
       "summary": [
-        "Your recent merge requests have been impactful, with positive feedback on your use of Java, Git, and Android development skills.",
-        "You are actively engaging in discussions and providing insightful feedback, demonstrating your understanding of various technical concepts.",
-        "You have shown a strong commitment to improving code quality and user experience, addressing issues and incorporating feedback effectively.",
-        "Consider further expanding your expertise in areas like debugging, URI handling, and documentation to address user concerns and enhance your contributions.",
-        "You have actively used tools like ACRA and WorkManager to enhance crash handling and background processes, showcasing your knowledge of advanced Android development practices."
+        "Your recent merge request activity shows a positive trend, with more impactful contributions in the last few months. You have a good understanding of Android Development and Java, but need to focus on improving code quality and testing practices. Consider incorporating more descriptive merge requests and ensuring thorough testing to minimize potential issues.",
+        "You have been consistently making positive contributions through your merge requests, particularly in areas related to app stability, security, and user experience. Keep up the good work! ",
+        "Your recent merge requests have focused on improving app stability and security by addressing bugs and enhancing background task management. This is commendable! ",
+        "You are demonstrating strong skills in Android development, Kotlin, Java, and CI/CD. You have also shown competence in using libraries like OkHttp, WorkManager, and Room.",
+        "Consider exploring new areas like Jetpack Compose and the latest Android APIs to further enhance your development skills."
       ],
-      "skills": [
+      "positiveSkills": [
         {
           "skill": "Android Development",
           "frequency": {
-            "2024-01-01T00:00:00.000+05:30": 21,
-            "2024-04-01T00:00:00.000+05:30": 40,
-            "2024-07-01T00:00:00.000+05:30": 14
+            "2024-01-01T00:00:00.000+05:30": 14,
+            "2024-04-01T00:00:00.000+05:30": 26,
+            "2024-07-01T00:00:00.000+05:30": 12
           },
           "sentimentFrequency": {
-            "Positive": {
-              "2024-01-01T00:00:00.000+05:30": 13,
-              "2024-04-01T00:00:00.000+05:30": 22,
-              "2024-07-01T00:00:00.000+05:30": 7
+            "2024-01-01T00:00:00.000+05:30": {
+              "Positive": 6,
+              "Negative": 3,
+              "Neutral": 5
             },
-            "Negative": {
-              "2024-01-01T00:00:00.000+05:30": 3,
-              "2024-04-01T00:00:00.000+05:30": 10,
-              "2024-07-01T00:00:00.000+05:30": 1
+            "2024-04-01T00:00:00.000+05:30": {
+              "Positive": 16,
+              "Negative": 4,
+              "Neutral": 6
             },
-            "Neutral": {
-              "2024-01-01T00:00:00.000+05:30": 5,
-              "2024-04-01T00:00:00.000+05:30": 8,
-              "2024-07-01T00:00:00.000+05:30": 6
+            "2024-07-01T00:00:00.000+05:30": {
+              "Positive": 3,
+              "Negative": 1,
+              "Neutral": 8
             }
           },
           "insights": [
-            "Your dedication to Android Development is commendable, as evidenced by your frequent contributions in this area.",
-            "Your Android skills are frequently mentioned, indicating active participation in related projects.",
-            "While positive sentiment is evident, there's room for improvement in addressing negative feedback, particularly regarding debugging and URI handling.",
-            "Focus on resolving concerns related to crashes and handling different URI schemes to enhance user experience.",
-            "Continue to leverage your strong skills in Android Development to address emerging challenges and implement new features."
+            "Your understanding of Android development principles is evident in your code.",
+            "You have shown improvement in addressing feedback and incorporating suggested changes.",
+            "You are actively involved in discussions related to Android development, demonstrating your engagement and willingness to learn.",
+            "Your recent merge requests show a positive trend in addressing critical issues related to Android Development.",
+            "You consistently receive positive feedback for your Android Development skills, demonstrating your expertise.",
+            "You've been consistently using Android development skills in your merge requests, demonstrating a strong foundation in the platform.",
+            "Your recent work has focused on improving app stability, security, and user experience.",
+            "Your merge requests often include positive feedback, showcasing your ability to contribute effectively to the project.",
+            "You have addressed bugs and implemented features that enhance the overall functionality of the Android app.",
+            "There's room to expand your knowledge of newer Android APIs and technologies like Jetpack Compose for more advanced development."
           ]
         },
         {
           "skill": "Kotlin",
           "frequency": {
-            "2024-01-01T00:00:00.000+05:30": 11,
-            "2024-04-01T00:00:00.000+05:30": 14,
-            "2024-07-01T00:00:00.000+05:30": 2
+            "2024-01-01T00:00:00.000+05:30": 8,
+            "2024-04-01T00:00:00.000+05:30": 12,
+            "2024-07-01T00:00:00.000+05:30": 3
           },
           "sentimentFrequency": {
-            "Positive": {
-              "2024-01-01T00:00:00.000+05:30": 9,
-              "2024-04-01T00:00:00.000+05:30": 11,
-              "2024-07-01T00:00:00.000+05:30": 2
+            "2024-01-01T00:00:00.000+05:30": {
+              "Positive": 5,
+              "Negative": 0,
+              "Neutral": 3
             },
-            "Negative": {
-              "2024-01-01T00:00:00.000+05:30": 0,
-              "2024-04-01T00:00:00.000+05:30": 0,
-              "2024-07-01T00:00:00.000+05:30": 0
+            "2024-04-01T00:00:00.000+05:30": {
+              "Positive": 8,
+              "Negative": 1,
+              "Neutral": 3
             },
-            "Neutral": {
-              "2024-01-01T00:00:00.000+05:30": 2,
-              "2024-04-01T00:00:00.000+05:30": 3,
-              "2024-07-01T00:00:00.000+05:30": 0
+            "2024-07-01T00:00:00.000+05:30": {
+              "Positive": 1,
+              "Negative": 0,
+              "Neutral": 2
             }
           },
           "insights": [
-            "Kotlin is a valuable tool in your Android development arsenal.",
-            "Your positive sentiment towards Kotlin suggests a good understanding of the language.",
-            "Explore advanced Kotlin features, such as coroutines or functional programming techniques, to optimize your code.",
-            "You have successfully applied Kotlin to address various challenges in the F-Droid client.",
-            "Consider contributing to Kotlin libraries or frameworks to enhance your understanding of the language."
+            "You have a good understanding of Kotlin syntax and code structure.",
+            "You have shown improvement in addressing feedback and incorporating suggested changes.",
+            "You are actively involved in discussions related to Kotlin code, demonstrating your engagement and willingness to learn.",
+            "Your recent merge requests show a positive trend in addressing critical issues related to Kotlin.",
+            "You consistently receive positive feedback for your Kotlin code, demonstrating your expertise.",
+            "You have been consistently using Kotlin in your merge requests, demonstrating proficiency in the language.",
+            "Your use of Kotlin has contributed to creating more stable, secure, and user-friendly app features.",
+            "You are effectively leveraging Kotlin's features for tasks like handling background tasks, managing data, and improving the user interface.",
+            "Consider exploring advanced Kotlin concepts like coroutines and functional programming for more efficient and expressive code.",
+            "Your understanding of Kotlin is reflected in the positive feedback received on your merge requests."
           ]
         },
         {
           "skill": "Java",
           "frequency": {
-            "2024-01-01T00:00:00.000+05:30": 10,
-            "2024-04-01T00:00:00.000+05:30": 18,
-            "2024-07-01T00:00:00.000+05:30": 6
+            "2024-01-01T00:00:00.000+05:30": 13,
+            "2024-04-01T00:00:00.000+05:30": 20,
+            "2024-07-01T00:00:00.000+05:30": 8
           },
           "sentimentFrequency": {
-            "Positive": {
-              "2024-01-01T00:00:00.000+05:30": 6,
-              "2024-04-01T00:00:00.000+05:30": 11,
-              "2024-07-01T00:00:00.000+05:30": 3
+            "2024-01-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 2,
+              "Neutral": 11
             },
-            "Negative": {
-              "2024-01-01T00:00:00.000+05:30": 1,
-              "2024-04-01T00:00:00.000+05:30": 2,
-              "2024-07-01T00:00:00.000+05:30": 0
+            "2024-04-01T00:00:00.000+05:30": {
+              "Positive": 10,
+              "Negative": 2,
+              "Neutral": 8
             },
-            "Neutral": {
-              "2024-01-01T00:00:00.000+05:30": 3,
-              "2024-04-01T00:00:00.000+05:30": 5,
-              "2024-07-01T00:00:00.000+05:30": 3
+            "2024-07-01T00:00:00.000+05:30": {
+              "Positive": 2,
+              "Negative": 1,
+              "Neutral": 5
             }
           },
           "insights": [
-            "Java remains a relevant language for Android development, and your experience in this area is valuable.",
-            "You're demonstrating strong Java skills, which are frequently discussed in your merge requests.",
-            "Your use of Java has garnered positive feedback, showcasing your competency in the language.",
-            "Strive to address any negative feedback related to Java, potentially focusing on code clarity or adherence to best practices.",
-            "Explore advanced Java concepts, such as concurrency or design patterns, to improve your coding skills."
+            "You have demonstrated a good understanding of Java programming fundamentals.",
+            "You have shown improvement in addressing feedback and incorporating suggested changes.",
+            "You are actively involved in discussions related to Java code, demonstrating your engagement and willingness to learn.",
+            "You have shown a good understanding of Java syntax and code structure.",
+            "You consistently receive positive feedback for your Java code, demonstrating your expertise.",
+            "You have a strong foundation in Java, demonstrated by your consistent use in merge requests.",
+            "You've effectively utilized Java for implementing features and resolving bugs in the Android app.",
+            "The positive feedback received on your merge requests indicates that your Java code is well-written and effective.",
+            "Maintaining your proficiency in Java is crucial for a wide range of Android development tasks.",
+            "Consider exploring new Java features and best practices to keep your skills up-to-date."
+          ]
+        }
+      ],
+      "negativeSkills": [
+        {
+          "skill": "Markdown",
+          "frequency": {
+            "2024-01-01T00:00:00.000+05:30": 0,
+            "2024-04-01T00:00:00.000+05:30": 2,
+            "2024-07-01T00:00:00.000+05:30": 0
+          },
+          "sentimentFrequency": {
+            "2024-01-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-04-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 2,
+              "Neutral": 0
+            },
+            "2024-07-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            }
+          },
+          "insights": [
+            "Your Markdown usage needs improvement. Focus on writing clear and concise merge request descriptions.",
+            "Use proper Markdown syntax to format your merge request descriptions.",
+            "Pay attention to sentence structure and grammar in your descriptions.",
+            "Utilize available resources like Markdown guides to improve your skills.",
+            "Review existing merge request descriptions for examples of good Markdown usage."
+          ],
+          "references": [
+            {
+              "url": "https://www.markdownguide.org/",
+              "skill": "Markdown",
+              "description": "Learn how to write proper Markdown."
+            }
           ]
         },
         {
-          "skill": "Git",
+          "skill": "Android Development",
           "frequency": {
-            "2024-01-01T00:00:00.000+05:30": 7,
-            "2024-04-01T00:00:00.000+05:30": 19,
-            "2024-07-01T00:00:00.000+05:30": 6
+            "2024-01-01T00:00:00.000+05:30": 14,
+            "2024-04-01T00:00:00.000+05:30": 26,
+            "2024-07-01T00:00:00.000+05:30": 12
           },
           "sentimentFrequency": {
-            "Positive": {
-              "2024-01-01T00:00:00.000+05:30": 3,
-              "2024-04-01T00:00:00.000+05:30": 10,
-              "2024-07-01T00:00:00.000+05:30": 3
+            "2024-01-01T00:00:00.000+05:30": {
+              "Positive": 6,
+              "Negative": 3,
+              "Neutral": 5
             },
-            "Negative": {
-              "2024-01-01T00:00:00.000+05:30": 1,
-              "2024-04-01T00:00:00.000+05:30": 3,
-              "2024-07-01T00:00:00.000+05:30": 0
+            "2024-04-01T00:00:00.000+05:30": {
+              "Positive": 16,
+              "Negative": 4,
+              "Neutral": 6
             },
-            "Neutral": {
-              "2024-01-01T00:00:00.000+05:30": 3,
-              "2024-04-01T00:00:00.000+05:30": 6,
-              "2024-07-01T00:00:00.000+05:30": 3
+            "2024-07-01T00:00:00.000+05:30": {
+              "Positive": 3,
+              "Negative": 1,
+              "Neutral": 8
             }
           },
           "insights": [
-            "Your Git skills are consistently being utilized, showcasing your proficiency in version control.",
-            "The positive sentiment surrounding your Git usage suggests you're following best practices.",
-            "Focus on resolving any negative feedback related to Git, potentially improving commit messages or addressing issues with merge requests.",
-            "Explore advanced Git techniques like rebasing or interactive staging to optimize your workflow.",
-            "Consider contributing to Git-related documentation or tutorials to share your knowledge and expertise."
+            "You need to be more careful with code quality in your merge requests related to Android development.",
+            "Ensure your code adheres to the project's coding standards and best practices.",
+            "Write unit tests to ensure the functionality and correctness of your code changes.",
+            "Thoroughly review and test your code changes to prevent regressions and bugs.",
+            "Consider improving your documentation and comment readability for better code maintainability."
+          ],
+          "references": [
+            {
+              "url": "https://developer.android.com/studio/build/dependencies",
+              "skill": "Android Development",
+              "description": "Learn more about dependency management and building Android applications using Gradle"
+            },
+            {
+              "url": "https://developer.android.com/guide/components/intents-filters",
+              "skill": "Android Development",
+              "description": "Explore Intent Filters and their role in handling intents in Android apps"
+            },
+            {
+              "url": "https://developer.android.com/studio/build/index.html",
+              "skill": "Android Development",
+              "description": "Android Developer documentation, covering various aspects of building Android apps"
+            },
+            {
+              "url": "https://developer.android.com/guide/topics/ui/dialogs",
+              "skill": "Android Development",
+              "description": "Android Dialogs documentation, providing examples and best practices"
+            },
+            {
+              "url": "https://developer.android.com/studio/build/apk-packaging",
+              "skill": "Android",
+              "description": "Learn about APKs"
+            }
+          ]
+        },
+        {
+          "skill": "CI",
+          "frequency": {
+            "2024-01-01T00:00:00.000+05:30": 0,
+            "2024-04-01T00:00:00.000+05:30": 1,
+            "2024-07-01T00:00:00.000+05:30": 0
+          },
+          "sentimentFrequency": {
+            "2024-01-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-04-01T00:00:00.000+05:30": {
+              "Positive": 1,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-07-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            }
+          },
+          "insights": [
+            "Ensure your CI pipelines are set up correctly and include all necessary tests.",
+            "Thoroughly review CI results to identify potential issues and failures.",
+            "Analyze CI reports to identify areas for improvement in your code and testing.",
+            "Consider automating more testing tasks to streamline your CI process and improve code quality.",
+            "Work with the team to establish best practices and standards for CI pipelines."
+          ],
+          "references": []
+        },
+        {
+          "skill": "Testing",
+          "frequency": {
+            "2024-01-01T00:00:00.000+05:30": 0,
+            "2024-04-01T00:00:00.000+05:30": 2,
+            "2024-07-01T00:00:00.000+05:30": 0
+          },
+          "sentimentFrequency": {
+            "2024-01-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-04-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 2,
+              "Neutral": 0
+            },
+            "2024-07-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            }
+          },
+          "insights": [
+            "Your testing practices need improvement. Ensure comprehensive testing is done for your merge requests.",
+            "Consider writing more unit tests to cover various scenarios and edge cases in your code.",
+            "Collaborate with the team to establish a solid testing strategy.",
+            "Use testing tools and frameworks to streamline and improve the quality of your tests.",
+            "Thoroughly review test results to identify areas for improvement in your code and testing.",
+            "Review existing merge request descriptions for examples of good testing practices."
+          ],
+          "references": []
+        },
+        {
+          "skill": "Bluetooth",
+          "frequency": {
+            "2024-01-01T00:00:00.000+05:30": 1,
+            "2024-04-01T00:00:00.000+05:30": 0,
+            "2024-07-01T00:00:00.000+05:30": 0
+          },
+          "sentimentFrequency": {
+            "2024-01-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 1,
+              "Neutral": 0
+            },
+            "2024-04-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-07-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            }
+          },
+          "insights": [
+            "You have encountered issues with Bluetooth implementation, indicating potential areas for improvement. ",
+            "Consider reviewing Android Bluetooth documentation and best practices to enhance your knowledge. ",
+            "Ensure that you are handling Bluetooth connections and data transfer efficiently and securely. ",
+            "Practice using Bluetooth in your projects to gain more experience and confidence. ",
+            "It's crucial to address Bluetooth-related issues to provide a seamless user experience."
+          ],
+          "references": [
+            {
+              "title": "Android Bluetooth Developer Guide",
+              "url": "https://developer.android.com/guide/topics/connectivity/bluetooth",
+              "description": "Official Android documentation for Bluetooth development."
+            },
+            {
+              "title": "Bluetooth for Android Developers",
+              "url": "https://developer.android.com/guide/topics/connectivity/bluetooth",
+              "description": "Comprehensive guide on Bluetooth for Android developers."
+            }
+          ]
+        },
+        {
+          "skill": "NFC",
+          "frequency": {
+            "2024-01-01T00:00:00.000+05:30": 1,
+            "2024-04-01T00:00:00.000+05:30": 0,
+            "2024-07-01T00:00:00.000+05:30": 0
+          },
+          "sentimentFrequency": {
+            "2024-01-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 1,
+              "Neutral": 0
+            },
+            "2024-04-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-07-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            }
+          },
+          "insights": [
+            "You have faced challenges with NFC functionality, suggesting a need for further exploration of this feature. ",
+            "Review the Android NFC documentation and ensure you understand the intricacies of NFC communication and data exchange. ",
+            "Thoroughly test your NFC implementation to avoid potential bugs and ensure it functions as expected. ",
+            "It's important to provide a reliable and user-friendly experience when integrating NFC into the app. ",
+            "Consider exploring real-world examples and tutorials to gain more practical experience with NFC development."
+          ],
+          "references": [
+            {
+              "title": "Android NFC Developer Guide",
+              "url": "https://developer.android.com/guide/topics/connectivity/nfc",
+              "description": "Official Android documentation for NFC development."
+            },
+            {
+              "title": "Android NFC API Guide",
+              "url": "https://developer.android.com/reference/android/nfc/package-summary",
+              "description": "Detailed documentation for the Android NFC API."
+            }
           ]
         },
         {
           "skill": "Jetpack Compose",
           "frequency": {
             "2024-01-01T00:00:00.000+05:30": 2,
-            "2024-04-01T00:00:00.000+05:30": 2,
+            "2024-04-01T00:00:00.000+05:30": 0,
             "2024-07-01T00:00:00.000+05:30": 0
           },
           "sentimentFrequency": {
-            "Positive": {
-              "2024-01-01T00:00:00.000+05:30": 2,
-              "2024-04-01T00:00:00.000+05:30": 2,
-              "2024-07-01T00:00:00.000+05:30": 0
+            "2024-01-01T00:00:00.000+05:30": {
+              "Positive": 1,
+              "Negative": 0,
+              "Neutral": 1
             },
-            "Negative": {
-              "2024-01-01T00:00:00.000+05:30": 0,
-              "2024-04-01T00:00:00.000+05:30": 0,
-              "2024-07-01T00:00:00.000+05:30": 0
+            "2024-04-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
             },
-            "Neutral": {
-              "2024-01-01T00:00:00.000+05:30": 0,
-              "2024-04-01T00:00:00.000+05:30": 0,
-              "2024-07-01T00:00:00.000+05:30": 0
+            "2024-07-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
             }
           },
           "insights": [
-            "You're showing interest in Jetpack Compose, which is a promising direction for modern Android UI development.",
-            "Focus on building your skills in Jetpack Compose to create intuitive and performant user interfaces.",
-            "Explore advanced Jetpack Compose features like animations, gestures, or custom layouts to expand your capabilities.",
-            "Your positive sentiment towards Jetpack Compose indicates an optimistic approach to learning this new technology.",
-            "Consider contributing to open-source Jetpack Compose libraries or projects to enhance your understanding of the framework."
-          ]
-        },
-        {
-          "skill": "Gradle",
-          "frequency": {
-            "2024-01-01T00:00:00.000+05:30": 12,
-            "2024-04-01T00:00:00.000+05:30": 12,
-            "2024-07-01T00:00:00.000+05:30": 0
-          },
-          "sentimentFrequency": {
-            "Positive": {
-              "2024-01-01T00:00:00.000+05:30": 5,
-              "2024-04-01T00:00:00.000+05:30": 2,
-              "2024-07-01T00:00:00.000+05:30": 0
+            "Your limited use of Jetpack Compose suggests an opportunity to explore this modern UI toolkit. ",
+            "Jetpack Compose can simplify UI development, making it faster and more efficient. ",
+            "Dive into the Jetpack Compose documentation and tutorials to understand its concepts and best practices. ",
+            "Consider implementing new UI elements or screens using Jetpack Compose to gain practical experience. ",
+            "Embracing Jetpack Compose will enhance your Android UI development skills and future-proof your projects."
+          ],
+          "references": [
+            {
+              "title": "Jetpack Compose Documentation",
+              "url": "https://developer.android.com/jetpack/compose",
+              "description": "Official Jetpack Compose documentation."
             },
-            "Negative": {
-              "2024-01-01T00:00:00.000+05:30": 3,
-              "2024-04-01T00:00:00.000+05:30": 7,
-              "2024-07-01T00:00:00.000+05:30": 0
-            },
-            "Neutral": {
-              "2024-01-01T00:00:00.000+05:30": 4,
-              "2024-04-01T00:00:00.000+05:30": 3,
-              "2024-07-01T00:00:00.000+05:30": 0
+            {
+              "title": "Jetpack Compose Codelabs",
+              "url": "https://developer.android.com/codelabs/jetpack-compose",
+              "description": "Hands-on tutorials for Jetpack Compose."
             }
-          },
-          "insights": [
-            "Gradle is a significant aspect of your work, demonstrating your understanding of build systems and dependencies.",
-            "While you have shown expertise in Gradle, there are areas with negative feedback, potentially related to build failures or configuration issues.",
-            "Focus on addressing negative sentiment surrounding Gradle, improving build stability and resolving any configuration problems.",
-            "Keep up-to-date with the latest Gradle versions and features to optimize build processes and improve efficiency.",
-            "Contribute to Gradle-related projects or communities to learn from others and share your knowledge."
-          ]
-        },
-        {
-          "skill": "Documentation",
-          "frequency": {
-            "2024-01-01T00:00:00.000+05:30": 2,
-            "2024-04-01T00:00:00.000+05:30": 4,
-            "2024-07-01T00:00:00.000+05:30": 1
-          },
-          "sentimentFrequency": {
-            "Positive": {
-              "2024-01-01T00:00:00.000+05:30": 0,
-              "2024-04-01T00:00:00.000+05:30": 1,
-              "2024-07-01T00:00:00.000+05:30": 0
-            },
-            "Negative": {
-              "2024-01-01T00:00:00.000+05:30": 0,
-              "2024-04-01T00:00:00.000+05:30": 1,
-              "2024-07-01T00:00:00.000+05:30": 0
-            },
-            "Neutral": {
-              "2024-01-01T00:00:00.000+05:30": 2,
-              "2024-04-01T00:00:00.000+05:30": 2,
-              "2024-07-01T00:00:00.000+05:30": 1
-            }
-          },
-          "insights": [
-            "Your work related to documentation has been acknowledged, showcasing your understanding of the importance of clear communication.",
-            "Prioritize writing clear and concise documentation for your code and projects to aid user understanding and facilitate collaboration.",
-            "The mixed sentiment surrounding documentation suggests a need for improvement in this area.",
-            "Consider contributing to existing documentation resources or creating new ones to share your knowledge and improve the overall documentation quality.",
-            "Actively participate in discussions regarding documentation best practices to enhance your skills and contribute to better documentation within your team."
-          ]
-        },
-        {
-          "skill": "Version Control",
-          "frequency": {
-            "2024-01-01T00:00:00.000+05:30": 3,
-            "2024-04-01T00:00:00.000+05:30": 11,
-            "2024-07-01T00:00:00.000+05:30": 3
-          },
-          "sentimentFrequency": {
-            "Positive": {
-              "2024-01-01T00:00:00.000+05:30": 1,
-              "2024-04-01T00:00:00.000+05:30": 3,
-              "2024-07-01T00:00:00.000+05:30": 2
-            },
-            "Negative": {
-              "2024-01-01T00:00:00.000+05:30": 0,
-              "2024-04-01T00:00:00.000+05:30": 2,
-              "2024-07-01T00:00:00.000+05:30": 0
-            },
-            "Neutral": {
-              "2024-01-01T00:00:00.000+05:30": 2,
-              "2024-04-01T00:00:00.000+05:30": 6,
-              "2024-07-01T00:00:00.000+05:30": 1
-            }
-          },
-          "insights": [
-            "You're demonstrating understanding of version control concepts, evident in discussions surrounding version numbers and sorting.",
-            "The positive sentiment towards your version control practices suggests you're applying them effectively.",
-            "Pay attention to negative feedback related to version control, potentially ensuring consistency or clarity in versioning strategies.",
-            "Continuously learn about new version control tools or features to enhance your efficiency and maintain best practices.",
-            "Share your knowledge about version control through documentation or mentorship to help others improve their understanding and practices."
-          ]
-        },
-        {
-          "skill": "CI",
-          "frequency": {
-            "2024-01-01T00:00:00.000+05:30": 2,
-            "2024-04-01T00:00:00.000+05:30": 1,
-            "2024-07-01T00:00:00.000+05:30": 0
-          },
-          "sentimentFrequency": {
-            "Positive": {
-              "2024-01-01T00:00:00.000+05:30": 2,
-              "2024-04-01T00:00:00.000+05:30": 1,
-              "2024-07-01T00:00:00.000+05:30": 0
-            },
-            "Negative": {
-              "2024-01-01T00:00:00.000+05:30": 0,
-              "2024-04-01T00:00:00.000+05:30": 0,
-              "2024-07-01T00:00:00.000+05:30": 0
-            },
-            "Neutral": {
-              "2024-01-01T00:00:00.000+05:30": 0,
-              "2024-04-01T00:00:00.000+05:30": 0,
-              "2024-07-01T00:00:00.000+05:30": 0
-            }
-          },
-          "insights": [
-            "You have a positive attitude towards CI, which is essential for streamlined development workflows.",
-            "Continue to optimize your CI pipelines for efficiency, speed, and reliability.",
-            "Explore advanced CI features, such as parallel testing or code coverage analysis, to further enhance your development process.",
-            "Your contributions in the CI area have demonstrated your ability to automate tasks and improve the development cycle.",
-            "Consider experimenting with different CI tools and strategies to find the best fit for your project."
           ]
         }
       ],
       "quality": {
+        "2024-07-01T00:00:00.000+05:30": {
+          "High": 0,
+          "Low": 0,
+          "Medium": 1
+        },
         "2024-04-01T00:00:00.000+05:30": {
-          "High": 7,
-          "Low": 2,
-          "Medium": 6
+          "High": 12,
+          "Low": 1,
+          "Medium": 2
         },
         "2024-01-01T00:00:00.000+05:30": {
-          "High": 16,
+          "High": 15,
           "Low": 2,
-          "Medium": 4
+          "Medium": 5
         }
       },
       "testCases": {
         "2024-04-01T00:00:00.000+05:30": 4,
-        "2024-01-01T00:00:00.000+05:30": 4
+        "2024-01-01T00:00:00.000+05:30": 10
       },
       "testCasesRequired": {
-        "2024-04-01T00:00:00.000+05:30": 4,
-        "2024-01-01T00:00:00.000+05:30": 15
+        "2024-04-01T00:00:00.000+05:30": 11,
+        "2024-01-01T00:00:00.000+05:30": 11
       },
       "impact": {
+        "2024-07-01T00:00:00.000+05:30": {
+          "Negative": 0,
+          "Neutral": 0,
+          "Positive": 1
+        },
         "2024-04-01T00:00:00.000+05:30": {
           "Negative": 0,
-          "Neutral": 5,
-          "Positive": 10
+          "Neutral": 2,
+          "Positive": 13
         },
         "2024-01-01T00:00:00.000+05:30": {
           "Negative": 0,
-          "Neutral": 4,
-          "Positive": 18
+          "Neutral": 3,
+          "Positive": 19
         }
       }
     }

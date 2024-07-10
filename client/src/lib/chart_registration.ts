@@ -13,7 +13,11 @@ import {
   LineElement,
   LineController,
   TimeScale,
+  // RadarController,
+  // RadialLinearScale,
 } from "chart.js";
+
+import "chartjs-adapter-luxon";
 
 ChartJS.register(
   BarController,
@@ -24,6 +28,8 @@ ChartJS.register(
   LineElement,
   LineController,
   TimeScale,
+  // RadarController,
+  // RadialLinearScale,
   Title,
   Legend,
   Tooltip,

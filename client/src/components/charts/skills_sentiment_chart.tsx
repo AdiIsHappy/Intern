@@ -3,95 +3,63 @@
 import { Bar } from "react-chartjs-2";
 import "chartjs-adapter-luxon";
 import { ChartOptions, TooltipItem } from "chart.js";
+import { Sentiment } from "@/lib/types/core.types";
 
-export function SkillSentimentChart({ className }: { className?: string }) {
-  const data = [
-    {
-      skill: "Android",
-      frequency: 35,
-      sentimentFrequency: {
-        Positive: 14,
-        Negative: 4,
-        Neutral: 11,
-      },
-    },
-    {
-      skill: "Java",
-      frequency: 26,
-      sentimentFrequency: {
-        Positive: 9,
-        Negative: 5,
-        Neutral: 12,
-      },
-    },
-    {
-      skill: "Kotlin",
-      frequency: 16,
-      sentimentFrequency: {
-        Positive: 10,
-        Negative: 2,
-        Neutral: 4,
-      },
-    },
-    {
-      skill: "Code Review",
-      frequency: 3,
-      sentimentFrequency: {
-        Positive: 3,
-        Negative: 0,
-        Neutral: 0,
-      },
-    },
-    {
-      skill: "Git",
-      frequency: 3,
-      sentimentFrequency: {
-        Positive: 2,
-        Negative: 0,
-        Neutral: 1,
-      },
-    },
-    {
-      skill: "UI/UX Design",
-      frequency: 1,
-      sentimentFrequency: {
-        Positive: 1,
-        Neutral: 0,
-        Negative: 0,
-      },
-    },
-    {
-      skill: "SQLite",
-      frequency: 2,
-      sentimentFrequency: {
-        Positive: 2,
-        Neutral: 0,
-        Negative: 0,
-      },
-    },
-  ];
+export function SkillSentimentChart({
+  className,
+  data,
+}: {
+  className?: string;
+  data: {
+    skill: string;
+    sentimentFrequency: Record<string, Record<Sentiment, number>>;
+  }[];
+}) {
   const chartData = {
     labels: data.map((item) => item.skill),
     datasets: [
       {
-        label: "Negative",
-        data: data.map((item) => item.sentimentFrequency.Negative),
+        label: "Positive",
+        data: data.map((item) =>
+          Object.keys(item.sentimentFrequency)
+            .map((key) => item.sentimentFrequency[key].Positive)
+            .reduce(
+              (prevVal: number, currentVal: number) => prevVal + currentVal
+            )
+        ),
       },
       {
         label: "Neutral",
-        data: data.map((item) => item.sentimentFrequency.Neutral),
+        data: data.map((item) =>
+          Object.keys(item.sentimentFrequency)
+            .map((key) => item.sentimentFrequency[key].Neutral)
+            .reduce(
+              (prevVal: number, currentVal: number) => prevVal + currentVal
+            )
+        ),
       },
       {
-        label: "Positive",
-        data: data.map((item) => item.sentimentFrequency.Positive),
+        label: "Negative",
+        data: data.map((item) =>
+          Object.keys(item.sentimentFrequency)
+            .map((key) => item.sentimentFrequency[key].Negative)
+            .reduce(
+              (prevVal: number, currentVal: number) => prevVal + currentVal
+            )
+        ),
       },
     ],
   };
+
   const options: ChartOptions<"bar"> = {
     plugins: {
       title: {
         display: true,
         text: "Skill Sentiment Analysis",
+      },
+      colors: {
+        enabled: true,
+        forceOverride: true,
       },
       tooltip: {
         enabled: true,
