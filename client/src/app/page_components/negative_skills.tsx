@@ -6,6 +6,8 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import linkIcon from "@/../public/link.svg";
+import { GraphInfo } from "@/lib/constants/graph_info";
+import { Info } from "@/components/info";
 export interface negativeSkillsProp {
   data: userReport;
   period: TimePeriod;
@@ -28,15 +30,18 @@ export function NegativeSkills({ data, period }: negativeSkillsProp) {
       <h3 className="font-semibold text-lg">Negative skills</h3>
       {/* Graphs */}
       <div className="flex flex-col lg:flex-row items-center w-full">
-        <div className="flex-1 h-max">
+        <div className="flex-1 h-max relative m-4">
           <SkillSentimentChart
             data={data.negativeSkills.map((skill) => ({
               skill: skill.skill,
               sentimentFrequency: skill.sentimentFrequency,
             }))}
           />
+          <div className="absolute top-0 right-0 m-2">
+            <Info tooltipText={GraphInfo.SKILL_SENTIMENT_ANALYSIS} />
+          </div>
         </div>
-        <div className="flex-1 h-max">
+        <div className="flex-1 h-max relative m-4">
           <SkillsFrequencyTimeline
             period={period}
             data={data.negativeSkills.map((skill) => ({
@@ -44,6 +49,9 @@ export function NegativeSkills({ data, period }: negativeSkillsProp) {
               frequency: skill.frequency,
             }))}
           />
+          <div className="absolute top-0 right-0 m-2">
+            <Info tooltipText={GraphInfo.SKILL_SENTIMENT_ANALYSIS} />
+          </div>
         </div>
       </div>
       <div className="flex flex-row items-start justify-start w-full my-8 bg-gray-100 p-4 rounded-md min-h-48">

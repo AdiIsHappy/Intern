@@ -1,6 +1,8 @@
 import { SkillsFrequencyTimeline } from "@/components/charts/skills_frequency_timeline";
 import { SkillSentimentChart } from "@/components/charts/skills_sentiment_chart";
 import Dropdown from "@/components/dropdown";
+import { Info } from "@/components/info";
+import { GraphInfo } from "@/lib/constants/graph_info";
 import { TimePeriod, userReport } from "@/lib/types/core.types";
 import { useEffect, useState } from "react";
 
@@ -30,15 +32,18 @@ export function PositiveSkills({
       <h3 className="font-semibold text-lg">Positive skills</h3>
       {/* Graphs */}
       <div className="flex flex-col lg:flex-row items-center w-full">
-        <div className="flex-1 h-max">
+        <div className="flex-1 h-max relative m-4">
           <SkillSentimentChart
             data={data.positiveSkills.map((skill) => ({
               skill: skill.skill,
               sentimentFrequency: skill.sentimentFrequency,
             }))}
           />
+          <div className="absolute top-0 right-0 m-2">
+            <Info tooltipText={GraphInfo.SKILL_SENTIMENT_ANALYSIS} />
+          </div>
         </div>
-        <div className="flex-1 h-max">
+        <div className="flex-1 h-max relative m-4">
           <SkillsFrequencyTimeline
             period={period}
             data={data.positiveSkills.map((skill) => ({
@@ -46,6 +51,9 @@ export function PositiveSkills({
               frequency: skill.frequency,
             }))}
           />
+          <div className="absolute top-0 right-0 m-2">
+            <Info tooltipText={GraphInfo.SKILL_FREQUENCY_TIMELINE} />
+          </div>
         </div>
       </div>
       <div className="flex flex-col items-start justify-start w-full my-8 bg-gray-100 p-4 rounded-md min-h-48">

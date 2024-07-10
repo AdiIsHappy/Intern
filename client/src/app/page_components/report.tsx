@@ -22,7 +22,7 @@ export function Report({ data, period }: ReportProps) {
   const summary = generateSummary(data);
   return (
     <div className=" flex flex-col mt-8 w-full max-w-7xl items-center">
-      <div className="flex flex-col md:flex-row">
+      <div className="flex flex-col md:flex-row w-full">
         <div className="flex-1">
           <h3 className="font-semibold text-lg">Summary</h3>
           <ol className="list-decimal list-inside p-2">

@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { TimePeriod, userReport } from "@/lib/types/core.types";
 import { getReport } from "@/lib/db/db";
 import { Report } from "@/app/page_components/report";
+import { Info } from "@/components/info";
 
 export default function Home() {
   const [period, setPeriod] = useState<TimePeriod>("month");
