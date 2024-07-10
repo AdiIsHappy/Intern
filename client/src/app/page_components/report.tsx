@@ -4,7 +4,7 @@ import { TimePeriod, userReport } from "@/lib/types/core.types";
 import "../../lib/chart_registration";
 import { PositiveSkills } from "./positive_skills";
 import { NegativeSkills } from "./negative_skills";
-import { MonthOnMonthComp } from "./month_on_month_comparisons";
+import { OtherComparisions } from "./other_comparisions";
 
 export interface ReportProps {
   data: userReport;
@@ -54,7 +54,7 @@ export function Report({ data, period }: ReportProps) {
       ) : (
         <div>Negative Skills not available please regenerate the report.</div>
       )}
-      <MonthOnMonthComp period={period} data={data} />
+      <OtherComparisions period={period} data={data} />
     </div>
   );
 }

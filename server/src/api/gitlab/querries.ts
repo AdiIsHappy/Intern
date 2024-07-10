@@ -32,6 +32,9 @@ export const gitlabUserDataQuery: (
             }
             notes(filter: ONLY_COMMENTS) {
               nodes {
+                author{
+                  username
+                }
                 id
                 body
                 createdAt

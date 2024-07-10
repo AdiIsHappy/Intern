@@ -4,12 +4,13 @@ import { sendAiPrompt } from "../../api/vertex/vertex";
 import {
   getMergeRequestAnalysisDB,
   getNotesAnalsysisDB,
+  getUserDataDB,
   storeInsightsDB,
   updateStatusDB,
 } from "../../services/db/db";
 import {
   InsightsReport,
-  Nature,
+  Sentiment,
   Quality,
   TimePeriod,
 } from "../../types/core.types";
@@ -26,11 +27,14 @@ export async function generateReport(username: string, period: TimePeriod) {
   const startPeriodDate = getNPeriodBeforeDate(period);
   const notesAnalysis = getNotesAnalsysisDB(username);
   const mergeRequestAnalysis = getMergeRequestAnalysisDB(username);
+  const userInfo = getUserDataDB(username);
   const periods = getAllPeriodsBeggningsafter(period, startPeriodDate);
-  console.log(mergeRequestAnalysis?.data.length);
-
-  if (notesAnalysis === null || mergeRequestAnalysis === null) {
-    console.error(`Analysis data not found for user ${username}`);
+  if (
+    notesAnalysis === null ||
+    mergeRequestAnalysis === null ||
+    userInfo === null
+  ) {
+    console.error(`user data not found for user ${username}`);
     return null;
   }
 
@@ -93,11 +97,32 @@ export async function generateReport(username: string, period: TimePeriod) {
     return;
   }
 
-  // Generate test case counts
+  // Generate Response sentiments
+  const userResponseSentiments: Record<Sentiment, number> = {
+    Positive: 0,
+    Negative: 0,
+    Neutral: 0,
+  };
+  const commentsSentiments: Record<Sentiment, number> = {
+    Positive: 0,
+    Negative: 0,
+    Neutral: 0,
+  };
+  userInfo.authoredMergeRequests.nodes.forEach((mr) => {
+    mr.notes.nodes.forEach((note) => {
+      const analysis = notesAnalysis.data.find((n) => n.id === note.id);
+      if (!analysis) return;
+      if (note.author.username === username) {
+        userResponseSentiments[analysis.feedback] += 1;
+      } else {
+        commentsSentiments[analysis.feedback] += 1;
+      }
+    });
+  });
 
   // Generate PR quality count, impact count & test added count
   const quality: Record<string, Record<Quality, number>> = {};
-  const impact: Record<string, Record<Nature, number>> = {};
+  const impact: Record<string, Record<Sentiment, number>> = {};
   const testCases: Record<string, number> = {};
   const testCasesRequired: Record<string, number> = {};
 
@@ -142,6 +167,8 @@ export async function generateReport(username: string, period: TimePeriod) {
     testCases,
     testCasesRequired,
     impact,
+    userResponseSentiments,
+    commentsSentiments,
   };
   storeInsightsDB(username, period, dataToStore);
   updateStatusDB(username, "Avaliable");

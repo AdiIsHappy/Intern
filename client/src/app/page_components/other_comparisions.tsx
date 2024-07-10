@@ -1,18 +1,17 @@
 import { PRImpactTimeline } from "@/components/charts/pr_impact_timeline";
 import { PRQualityTimeline } from "@/components/charts/pr_quality_timeline";
-import { SkillsFrequencyTimeline } from "@/components/charts/skills_frequency_timeline";
-import { SkillSentimentChart } from "@/components/charts/skills_sentiment_chart";
+import { SentimentPieChart } from "@/components/charts/sentiment_pie";
 import { TestCaseRatioChart } from "@/components/charts/test_case_ratio_chart";
 import { TimePeriod, userReport } from "@/lib/types/core.types";
 
-export interface MonthOnMonthCompProp {
+export interface OtherComparisionsProps {
   data: userReport;
   period: TimePeriod;
 }
-export function MonthOnMonthComp({ data, period }: MonthOnMonthCompProp) {
+export function OtherComparisions({ data, period }: OtherComparisionsProps) {
   return (
     <div className="w-full">
-      <h3 className="font-semibold text-lg">Month on Month Comparisons</h3>
+      <h3 className="font-semibold text-lg">Other Comparisons</h3>
       <div className="flex flex-col lg:flex-row items-center w-full">
         <div className="flex-1 h-max">
           <PRQualityTimeline period={period} data={data.quality} />
@@ -29,14 +28,19 @@ export function MonthOnMonthComp({ data, period }: MonthOnMonthCompProp) {
             testCasesRequired={data.testCasesRequired}
           />
         </div>
-        <div className="flex-1 h-max">
-          <SkillsFrequencyTimeline
-            period={period}
-            data={data.positiveSkills.map((skill) => ({
-              skill: skill.skill,
-              frequency: skill.frequency,
-            }))}
-          />
+        <div className="flex-1 h-max flex flex-row">
+          <div className="flex-1 h-max">
+            <SentimentPieChart
+              data={data.commentsSentiments}
+              title="Comments Sentiments"
+            />
+          </div>
+          <div className="flex-1 h-max">
+            <SentimentPieChart
+              data={data.userResponseSentiments}
+              title="User Response Sentiments"
+            />
+          </div>
         </div>
       </div>
     </div>

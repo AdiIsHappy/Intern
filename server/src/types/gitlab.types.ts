@@ -56,6 +56,7 @@ export interface GQLNoteNode {
   id: string;
   body: string;
   createdAt: string;
+  author: { username: string };
   position: GQLPositionNode;
 }
 

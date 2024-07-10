@@ -13,8 +13,8 @@ import {
   LineElement,
   LineController,
   TimeScale,
-  // RadarController,
-  // RadialLinearScale,
+  PieController,
+  ArcElement,
 } from "chart.js";
 
 import "chartjs-adapter-luxon";
@@ -28,8 +28,8 @@ ChartJS.register(
   LineElement,
   LineController,
   TimeScale,
-  // RadarController,
-  // RadialLinearScale,
+  PieController,
+  ArcElement,
   Title,
   Legend,
   Tooltip,

@@ -11,6 +11,8 @@ export interface userReport {
   quality: Record<string, Record<Quality, number>>;
   testCases: Record<string, number>;
   testCasesRequired: Record<string, number>;
+  userResponseSentiments: Record<Sentiment, number>;
+  commentsSentiments: Record<Sentiment, number>;
 }
 
 export interface skillReport {

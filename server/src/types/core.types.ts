@@ -1,5 +1,5 @@
 export type TimePeriod = "week" | "month" | "quarter";
-export type Nature = "Positive" | "Negative" | "Neutral";
+export type Sentiment = "Positive" | "Negative" | "Neutral";
 export type Quality = "High" | "Medium" | "Low";
 
 export type ReportStatus =
@@ -17,7 +17,7 @@ export interface UserReport {
 
 export interface Skill {
   skill: string;
-  feedback: Nature;
+  feedback: Sentiment;
 }
 
 export interface References {
@@ -37,7 +37,7 @@ export interface AnalysedMergeRequest {
   keywords: string[];
   quality: Quality;
   skills: Skill[];
-  impact: Nature;
+  impact: Sentiment;
   references: string[];
   createdAt?: string;
   testRequired: true;
@@ -48,7 +48,7 @@ export interface AnalysedMergeRequest {
 export interface AnalysedNote {
   id: string;
   keywords: string[];
-  feedback: Nature;
+  feedback: Sentiment;
   skills: Skill[];
   references: References[];
   createdAt?: string;
