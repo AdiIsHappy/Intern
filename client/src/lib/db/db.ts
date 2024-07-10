@@ -7,8 +7,10 @@ import { fileExist, readJsonFile } from "./file_handler";
 const reportsRoot = config.reportsPath;
 
 export async function getPath(username: string, pathType: PathType) {
-  if (pathType === "report") return path.join(reportsRoot, `${username}.json`);
-  if (pathType === "user") return path.join(reportsRoot, `${username}`);
+  if (pathType === "report")
+    return path.join(process.cwd(), reportsRoot, `${username}.json`);
+  if (pathType === "user")
+    return path.join(process.cwd(), reportsRoot, `${username}`);
   return "";
 }
 
