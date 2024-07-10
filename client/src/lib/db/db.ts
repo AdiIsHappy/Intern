@@ -2,13 +2,13 @@
 import { PathType, TimePeriod, userReport } from "../types/core.types";
 const config = require("../../config.json");
 import path from "path";
-import { fileExist, printFileStructure, readJsonFile } from "./file_handler";
+import { fileExist, readJsonFile } from "./file_handler";
 
 const reportsRoot = config.reportsPath;
 
 export async function getPath(username: string, pathType: PathType) {
   if (pathType === "report") {
-    return path.join(process.cwd(), "/reports", `${username}.json`);
+    return `/reports/${username}.json`;
   }
   if (pathType === "user")
     return path.join(process.cwd(), reportsRoot, `${username}`);
