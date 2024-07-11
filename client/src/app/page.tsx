@@ -43,8 +43,11 @@ export default function Home() {
           className="flex-1 mx-8 my-2"
         />
       </div>
-      {data === null || data === undefined ? (
-        <p>please wait while prepare report</p>
+
+      {data === null ? (
+        <p>Please Wait! We are getting your report</p>
+      ) : data === undefined ? (
+        <p>Report is not available yet. Please try again later.</p>
       ) : (
         <Report data={data} period={period} />
       )}
