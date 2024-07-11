@@ -8,7 +8,11 @@ const reportsRoot = config.reportsPath;
 
 export async function getPath(username: string, pathType: PathType) {
   if (pathType === "report") {
-    return `public/data/${username}.json`;
+    let basePath = process.cwd();
+    if (process.env.NODE_ENV === "production") {
+      basePath = path.join(process.cwd(), ".next/server/chunks");
+    }
+    return path.join(basePath, "data", `${username}.json`);
   }
   if (pathType === "user")
     return path.join(process.cwd(), reportsRoot, `${username}`);
@@ -20,7 +24,6 @@ export async function getReport(
   period: TimePeriod
 ): Promise<userReport | null> {
   const filePath = await getPath(username, "report");
-  console.log(filePath);
   if (await fileExist(filePath)) {
     const data = await readJsonFile(filePath);
     return data.report[period] as userReport;

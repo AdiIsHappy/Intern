@@ -22,7 +22,6 @@ import {
 // TODO: Reschduel the analysis upon failing
 
 export async function generateReport(username: string, period: TimePeriod) {
-  console.log("generating report");
   // Get analysis datas
   const startPeriodDate = getNPeriodBeforeDate(period);
   const notesAnalysis = getNotesAnalsysisDB(username);
