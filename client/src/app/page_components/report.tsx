@@ -1,21 +1,15 @@
 "use client";
 
 import { TimePeriod, userReport } from "@/lib/types/core.types";
-import "../../lib/chart_registration";
+import "../../lib/constants/chart_registration";
 import { PositiveSkills } from "./positive_skills";
 import { NegativeSkills } from "./negative_skills";
 import { OtherComparisions } from "./other_comparisions";
+import { generateSummary } from "@/lib/generate_summary";
 
 export interface ReportProps {
   data: userReport;
   period: TimePeriod;
-}
-
-function generateSummary(data: userReport | null) {
-  const summary: string[] = ["summary", "summary summary"];
-  if (data === null) return summary;
-  data;
-  return summary;
 }
 
 export function Report({ data, period }: ReportProps) {

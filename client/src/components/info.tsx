@@ -1,22 +1,22 @@
 // components/ButtonWithTooltip.js
 import { useState } from "react";
 import Image from "next/image";
-import tootipIcon from "@/../public/tooltip.svg";
+import InfoIcon from "@/lib/icons/info";
 
 export function Info({ tooltipText }: { tooltipText: string }) {
   const [hovered, setHovered] = useState(false);
 
   return (
-    <div className={`relative inline-block`}>
+    <div className={`relative inline-block w-4 h-4 `}>
       <button
-        className="rounded-full focus:outline-none w-4 h-4"
+        className="rounded-full focus:outline-none`"
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
       >
-        <Image src={tootipIcon} alt="tooltip" />
+        <InfoIcon width={16} className="fill-gray-600" />
       </button>
       {hovered && (
-        <div className="absolute w-48 bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 bg-black text-white text-xs rounded-md shadow-lg">
+        <div className="absolute w-48 bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 bg-black opacity-75 text-white text-xs rounded-md shadow-lg">
           {tooltipText}
         </div>
       )}

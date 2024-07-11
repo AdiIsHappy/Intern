@@ -121,13 +121,13 @@ These points should be presented in a direct informational way, giving the user 
 
 The response should be in JSON format with the following structure:
 
-- insights: An array of strings mentioning insights in points, limited to 5 points maximum and each insight of maximum 15 words.
+- insights: An array of strings mentioning insights in points, limited to 5 points maximum and each insight of maximum 10 words.
 - positive skills: An array of JSON objects for minimum 3 and maximum of 5 skills in which user is performing good or have shown improvements, mentioning the total frequency, sentiment-wise frequency grouped by specified periods, and insights. Each skill's insights should be formatted as an array with a maximum of 5 short and crisp points.
 - negative skills: An array of JSON objects for maximum of 5 skills in which user is performing poor showing lac of skills or repetitive mistakes, mentioning the total frequency, sentiment-wise frequency grouped by specified periods, insights mentioning user mistakes, area where user need to improve etc. and references.
 
-for Each negative skill provide the learning resources under references which can help user correct his mistakes and improve. provide these insights with a suitable title and description in proper format as shown in example.
+for Each negative skill provide the learning resources under references which can help user correct his mistakes and improve. provide these insights with a suitable title, description and associated skill in proper format as shown in example.
 
-Each skill's insights should be formatted as an array with a maximum of 5 very short and crisp points of maximum length 15 words. 
+Each skill's insights should be formatted as an array with a maximum of 5 very short and crisp points of maximum length 10 words. 
 Note: Positive and negative skill must not overlap.
 
 Example JSON format:
@@ -238,6 +238,7 @@ Example JSON format:
     {
      "title": "TypeScript Handbook",
      "url": "https://www.typescriptlang.org/docs/handbook/intro.html",
+     "skill": "TypeScript",
      "description": "The official handbook for TypeScript. It is a great resource to learn about TypeScript and its features."
     }
    ]
@@ -277,13 +278,13 @@ These points should be presented in a direct informational way, giving the user 
 
 The response should be in JSON format with the following structure:
 
-- summary: An array of strings mentioning insights in points, limited to 5 points maximum and each point of maximum length 15 words.
+- summary: An array of strings mentioning insights in points, limited to 5 points maximum and each point of maximum length 10 words.
 - positive skills: An array of JSON objects for minimum 3 and maximum of 5 skills in which user is performing good or have shown improvements, mentioning the total frequency, sentiment-wise frequency grouped by specified periods, and insights. Each skill's insights should be formatted as an array with a maximum of 5 short and crisp points.
 - negative skills: An array of JSON objects for maximum of 5 skills in which user is performing poor showing lac of skills or repetitive mistakes, mentioning the total frequency, sentiment-wise frequency grouped by specified periods, insights mentioning user mistakes, area where user need to improve etc. and references.
 
-for Each negative skill provide the learning resources under references which can help user correct his mistakes and improve. provide these insights with a suitable title and description in proper format as shown in example.
+for Each negative skill provide the learning resources under references which can help user correct his mistakes and improve. provide these insights with a suitable title, description and associated skill in proper format as shown in example.
 
-Each skill's insights should be formatted as an array with a maximum of 5 very short and crisp points of maximum length 15 words. 
+Each skill's insights should be formatted as an array with a maximum of 5 very short and crisp points of maximum length of 10 words. 
 Note: Positive and negative skill must not overlap.
 
 Example JSON format:
@@ -393,6 +394,7 @@ Example JSON format:
         {
           "title": "TypeScript Handbook",
           "url": "https://www.typescriptlang.org/docs/handbook/intro.html",
+          "skill": "TypeScript",
           "description": "The official handbook for TypeScript. It is a great resource to learn about TypeScript and its features."
         }
       ]
@@ -450,6 +452,7 @@ const textsi_combine_reports = `You are given two JSON formatted datasets contai
         {
           "title": "",
           "url": "",
+          "skill": "",
           "description": ""
         }
       ]
@@ -464,9 +467,9 @@ Input Data:
 
 Task:
 1. Combine the Insights:
-   - Merge the summary sections from both datasets into a single array of strings, limited to 5 points maximum with each point of maximum length 15 words.
+   - Merge the summary sections from both datasets into a single array of strings, limited to 5 points maximum with each point of maximum length of 10 words.
    - Merge the skills sections from both datasets. If there are similar or related skills, combine them into a single skill entry. Update the frequency and sentimentFrequency accordingly.
-   - Provide combined insights for each skill, limited to a maximum of 5 points per skill with maximum length og 15 words.
+   - Provide combined insights for each skill, limited to a maximum of 5 points per skill with maximum length of 10 words.
    - Ensure that insights are not repeated and are actionable.
 
 Output:
@@ -500,6 +503,7 @@ The combined insights should be in the following JSON format:
         {
           "title": "",
           "url": "",
+          "skill": "",
           "description": ""
         }
       ]

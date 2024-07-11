@@ -74,3 +74,41 @@ export const printFileStructure = async (dir: string, level = 0) => {
     }
   });
 };
+
+let ran = false;
+function searchJsonFiles(dir: string) {
+  function searchDir(currentDir: string, baseDir: string) {
+    fs.readdir(currentDir, (err, files) => {
+      if (err) {
+        console.error(`Error reading directory ${currentDir}:`, err);
+        return;
+      }
+
+      files.forEach((file) => {
+        const filePath = path.join(currentDir, file);
+        fs.stat(filePath, (err, stats) => {
+          if (err) {
+            console.error(`Error stating file ${filePath}:`, err);
+            return;
+          }
+
+          if (stats.isDirectory()) {
+            searchDir(filePath, baseDir);
+          } else if (
+            stats.isFile() &&
+            path.extname(file) === ".json" &&
+            file !== "package.json"
+          ) {
+            const relativePath = path.relative(baseDir, filePath);
+            console.log(`${file}: ${relativePath}`);
+          }
+        });
+      });
+    });
+  }
+  if (ran) return;
+  ran = true;
+  searchDir(dir, dir);
+}
+
+searchJsonFiles(process.cwd());

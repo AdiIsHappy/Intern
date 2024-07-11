@@ -41,7 +41,7 @@ export function OtherComparisions({ data, period }: OtherComparisionsProps) {
         </div>
         <div className="flex-1 h-max flex flex-row relative m-4">
           <div className="absolute top-0 right-0 m-2">
-            <Info tooltipText={GraphInfo.SKILL_SENTIMENT_ANALYSIS} />
+            <Info tooltipText={GraphInfo.COMMENT_SENTIMENT} />
           </div>
           <div className="flex-1 h-max">
             <SentimentPieChart

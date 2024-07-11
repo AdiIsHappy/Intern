@@ -1,21 +1,27 @@
+/* eslint-disable no-unused-vars */
 const skillSentimentAnalysis =
-  "Kind of review of the skill you recived from comments\nPositive: People are apprecating you for the skill\nNegative: People are not happy with the skill\nNeutral: Skill was just mnetioned without any feedback\nUses Comments on Prs to determine.";
+  "An evaluation of feedback on the skill received from comments. \nPositive: The skill is appreciated. \nNegative: The skill is not satisfactory. \nNeutral: The skill is mentioned without specific feedback. \nThis analysis is based on comments on PRs.";
+
 const skillFrequencyTimeline =
-  "no of times the skills were mentioned in the comments over the period of time";
+  "The frequency at which skills were mentioned in comments over a specified period.";
+
 const prQualityTimeline =
-  "How well described your prs were\nHigh: PR was well described\nMedium: PR description adderess the needs but could have been improved\nLow: PR was not described well.\nUses description and title of PR to determine.";
+  "Assessment of the quality of your PR descriptions. \nHigh: The PR is well-described. \nMedium: The PR description meets requirements but could be improved. \nLow: The PR is not well-described. \nThis evaluation uses the description and title of the PR.";
+
 const prImpactTimeline =
-  "how impact full changes were made in the prs\nHigh: PR had a high impact on the project like introducing new fuctanality, fixing breaking changes etc.\nMedium: PR had a medium impact on the project\nLow: PR had a low impact on the project like minor bug fixes.\nUses the code changed in the PR to determine.";
-const testAddedRation =
-  "Ratio of tests added to the code changes in the PR which requires test to be added";
+  "The impact of changes made in the PRs.\nHigh: The PR introduces significant functionality or fixes critical issues. \nMedium: The PR has a moderate impact on the project. \nLow: The PR involves minor changes or bug fixes. \nThis assessment is based on the code changes in the PR.";
+
+const testAddedRatio =
+  "The ratio of tests added relative to the code changes in the PR that require testing.";
+
 const commentSentiment =
-  "Comment Sentiment: Sentiments of the comment on your PR's\nUser Response Sentiment: Sentiments of the response you gave to the comments\nUses the comments and responses on your PR to determine.";
+  "Comment Sentiment: The sentiment of comments on your PRs. User Response Sentiment: The sentiment of your responses to comments. This analysis uses the comments and responses on your PRs.";
 
 export enum GraphInfo {
   SKILL_SENTIMENT_ANALYSIS = skillSentimentAnalysis,
   SKILL_FREQUENCY_TIMELINE = skillFrequencyTimeline,
   PR_QUALITY_TIMELINE = prQualityTimeline,
   PR_IMPACT_TIMELINE = prImpactTimeline,
-  TEST_ADDED_RATIO = testAddedRation,
+  TEST_ADDED_RATIO = testAddedRatio,
   COMMENT_SENTIMENT = commentSentiment,
 }
