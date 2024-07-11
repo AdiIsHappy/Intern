@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Navbar() {
   return (
-    <nav className="bg-gray-800 text-white py-3 px-4 w-full fixed x-0 y-0 flex justify-center items-center z-auto">
+    <nav className="bg-gray-800 text-white py-3 px-4 w-full fixed x-0 y-0 flex justify-center items-center z-50">
       <div className="max-w-7xl w-full flex justify-between items-center text-nowrap">
         <Link href="/" className="text-md sm:text-xl md:text-2xl">
           {" "}

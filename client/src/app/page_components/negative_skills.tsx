@@ -26,12 +26,13 @@ export function NegativeSkills({ data, period }: negativeSkillsProp) {
   if (skillsDropdownOptions.length === 0)
     return <div>Positive Skill data not availale</div>;
   return (
-    <div className="w-full my-8">
+    <div className="w-full">
       <h3 className="font-semibold text-lg">Negative skills</h3>
       {/* Graphs */}
-      <div className="flex flex-col lg:flex-row items-center w-full">
-        <div className="flex-1 h-max relative m-4">
+      <div className="flex w-full flex-col lg:flex-row items-center">
+        <div className="flex-1 w-full relative min-h-96">
           <SkillSentimentChart
+            className="w-full"
             data={data.negativeSkills.map((skill) => ({
               skill: skill.skill,
               sentimentFrequency: skill.sentimentFrequency,
@@ -41,8 +42,9 @@ export function NegativeSkills({ data, period }: negativeSkillsProp) {
             <Info tooltipText={GraphInfo.SKILL_SENTIMENT_ANALYSIS} />
           </div>
         </div>
-        <div className="flex-1 h-max relative m-4">
+        <div className="flex-1 w-full relative min-h-96">
           <SkillsFrequencyTimeline
+            className="w-full"
             period={period}
             data={data.negativeSkills.map((skill) => ({
               skill: skill.skill,
@@ -54,15 +56,15 @@ export function NegativeSkills({ data, period }: negativeSkillsProp) {
           </div>
         </div>
       </div>
-      <div className="flex flex-row items-start justify-start w-full my-8 bg-gray-100 p-4 rounded-md min-h-48">
-        <div className="flex-1">
+      <div className="flex flex-col lg:flex-row items-start justify-start w-full my-8 bg-gray-100 p-4 rounded-md min-h-48">
+        <div className="flex-1 mx-2">
           <Dropdown
             onChange={(val: string) => setSkill(val)}
-            className="w-1/4"
+            className="w-full md:w-1/2 "
             options={skillsDropdownOptions}
             defaultValue={skillsDropdownOptions.at(0)?.value || ""}
           />
-          <ol className="list-inside list-decimal px-2 py-4 flex-1">
+          <ol className="list-inside list-decimal px-2 py-4 flex-1 text-justify">
             {data.negativeSkills
               .find((e) => e.skill === skill)
               ?.insights.map((insight, index) => (
@@ -71,7 +73,7 @@ export function NegativeSkills({ data, period }: negativeSkillsProp) {
           </ol>
         </div>
 
-        <div className="flex-1">
+        <div className="flex-1 mx-2">
           <h3 className=" font-semibold text-lg">Refrences</h3>
           <div className="flex flex-col max-h-64 scroll-m-11 overflow-auto">
             {data.negativeSkills

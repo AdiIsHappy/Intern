@@ -46,7 +46,9 @@ export function SkillsFrequencyTimeline({
         },
       },
     },
+    
     responsive: true,
+    maintainAspectRatio: false,
     interaction: {
       mode: "index",
       intersect: false,

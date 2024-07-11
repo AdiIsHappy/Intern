@@ -51,6 +51,9 @@ export function PRQualityTimeline({
       mode: "index",
       intersect: false,
     },
+    maintainAspectRatio: false,
+    responsive: true,
+
     scales: {
       x: {
         type: "time",

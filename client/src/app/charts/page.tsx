@@ -1,12 +1,9 @@
 "use client";
 import { ChartOptions } from "chart.js";
 import { Line } from "react-chartjs-2";
+import "@/lib/constants/chart_registration";
 
-export function SkillSentimentFrequencyTimeline({
-  className,
-}: {
-  className?: string;
-}) {
+export default function Page() {
   const data: Record<string, Record<string, number>> = {
     Positive: {
       "2024-03-01T00:00:00.000+05:30": 4,
@@ -61,9 +58,7 @@ export function SkillSentimentFrequencyTimeline({
         },
       },
     },
-    responsive: true,
     maintainAspectRatio: false,
-
     interaction: {
       mode: "index",
       intersect: false,
@@ -85,5 +80,5 @@ export function SkillSentimentFrequencyTimeline({
     },
   };
 
-  return <Line className={className} data={chartData} options={options} />;
+  return <Line className="w-full h-full" data={chartData} options={options} />;
 }

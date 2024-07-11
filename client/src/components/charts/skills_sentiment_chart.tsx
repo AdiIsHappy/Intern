@@ -78,6 +78,7 @@ export function SkillSentimentChart({
       intersect: false,
     },
     responsive: true,
+    maintainAspectRatio: false,
     scales: {
       x: {
         title: {

@@ -14,23 +14,32 @@ export function OtherComparisions({ data, period }: OtherComparisionsProps) {
   return (
     <div className="w-full items-center">
       <h3 className="font-semibold text-lg">Other Comparisons</h3>
-      <div className="flex flex-col lg:flex-row items-center w-full">
-        <div className="flex-1 h-max relative m-4">
-          <PRQualityTimeline period={period} data={data.quality} />
+      <div className="flex w-full flex-col lg:flex-row items-center">
+        <div className="flex-1 w-full relative m-4 min-h-96">
+          <PRQualityTimeline
+            className="w-full"
+            period={period}
+            data={data.quality}
+          />
           <div className="absolute top-0 right-0 m-2">
             <Info tooltipText={GraphInfo.PR_QUALITY_TIMELINE} />
           </div>
         </div>
-        <div className="flex-1 h-max relative m-4">
-          <PRImpactTimeline period={period} data={data.impact} />
+        <div className="flex-1 w-full relative m-4 min-h-96">
+          <PRImpactTimeline
+            className="w-full"
+            period={period}
+            data={data.impact}
+          />
           <div className="absolute top-0 right-0 m-2">
             <Info tooltipText={GraphInfo.PR_IMPACT_TIMELINE} />
           </div>
         </div>
       </div>
       <div className="flex flex-col lg:flex-row items-center w-full">
-        <div className="flex-1 h-max relative m-4">
+        <div className="flex-1 w-full relative m-4 min-h-96">
           <TestCaseRatioChart
+            className="w-full"
             period={period}
             testCases={data.testCases}
             testCasesRequired={data.testCasesRequired}
@@ -39,18 +48,20 @@ export function OtherComparisions({ data, period }: OtherComparisionsProps) {
             <Info tooltipText={GraphInfo.TEST_ADDED_RATIO} />
           </div>
         </div>
-        <div className="flex-1 h-max flex flex-row relative m-4">
-          <div className="absolute top-0 right-0 m-2">
+        <div className="flex-1 flex flex-col md:w-full md:flex-row relative m-4 min-h-[36rem] lg:min-h-96">
+          <div className="absolute top-0 right-0">
             <Info tooltipText={GraphInfo.COMMENT_SENTIMENT} />
           </div>
-          <div className="flex-1 h-max">
+          <div className="flex-1 h-max w-max">
             <SentimentPieChart
+              className="w-full my-4"
               data={data.commentsSentiments}
               title="Comments Sentiments"
             />
           </div>
-          <div className="flex-1 h-max">
+          <div className="flex-1 h-max w-max">
             <SentimentPieChart
+              className="w-full my-4"
               data={data.userResponseSentiments}
               title="User Response Sentiments"
             />

@@ -46,6 +46,8 @@ export function PRImpactTimeline({
         },
       },
     },
+    maintainAspectRatio: false,
+    responsive: true,
     scales: {
       x: {
         stacked: true,

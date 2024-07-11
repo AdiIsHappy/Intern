@@ -28,23 +28,24 @@ export function PositiveSkills({
     return <div>Positive Skill data not availale</div>;
 
   return (
-    <div className="w-full my-8">
+    <div className=" w-full">
       <h3 className="font-semibold text-lg">Positive skills</h3>
-      {/* Graphs */}
-      <div className="flex flex-col lg:flex-row items-center w-full">
-        <div className="flex-1 h-max relative m-4">
+      <div className="flex w-full flex-col lg:flex-row items-center">
+        <div className="flex-1 w-full relative min-h-96">
+          <div className="absolute top-0 right-0 m-2">
+            <Info tooltipText={GraphInfo.SKILL_SENTIMENT_ANALYSIS} />
+          </div>
           <SkillSentimentChart
+            className="w-full"
             data={data.positiveSkills.map((skill) => ({
               skill: skill.skill,
               sentimentFrequency: skill.sentimentFrequency,
             }))}
           />
-          <div className="absolute top-0 right-0 m-2">
-            <Info tooltipText={GraphInfo.SKILL_SENTIMENT_ANALYSIS} />
-          </div>
         </div>
-        <div className="flex-1 h-max relative m-4">
+        <div className="flex-1 w-full relative min-h-96">
           <SkillsFrequencyTimeline
+            className="w-full"
             period={period}
             data={data.positiveSkills.map((skill) => ({
               skill: skill.skill,
@@ -59,11 +60,11 @@ export function PositiveSkills({
       <div className="flex flex-col items-start justify-start w-full my-8 bg-gray-100 p-4 rounded-md min-h-48">
         <Dropdown
           onChange={(val: string) => setSkill(val)}
-          className="w-1/4"
+          className="w-full md:w-1/2 lg:w-1/4"
           options={skillsDropdownOptions}
           defaultValue={skillsDropdownOptions.at(0)?.value || ""}
         />
-        <ol className="list-inside list-decimal px-8 py-4">
+        <ol className="list-inside list-decimal px-2 py-4 text-justify">
           {data.positiveSkills
             .find((e) => e.skill === skill)
             ?.insights.map((insight, index) => (
