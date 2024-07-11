@@ -16,16 +16,13 @@ export default function Navbar() {
               <h2 className="font-bold text-white-400 text-lg">Aditya Sahu</h2>
               <p className="text-gray-100">Intern</p>
             </div>
-            <div className="relative">
-              <Image
-                className="h-16 w-16 rounded-full object-cover"
-                src="https://randomuser.me/api/portraits/men/24.jpg"
-                width={64}
-                height={64}
-                alt="User Profile"
-              />{" "}
-              <div className="absolute inset-0 rounded-full shadow-inner"></div>
-            </div>
+            <Image
+              className="h-16 w-16 rounded-full object-cover"
+              src="https://randomuser.me/api/portraits/men/24.jpg"
+              width={64}
+              height={64}
+              alt="User Profile"
+            />
           </div>
         </Link>
       </div>

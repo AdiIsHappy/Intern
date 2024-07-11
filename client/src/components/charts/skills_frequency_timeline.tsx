@@ -1,6 +1,7 @@
 "use client";
 import { TimePeriod } from "@/lib/types/core.types";
 import { ChartOptions } from "chart.js";
+import { useEffect, useState } from "react";
 import { Line } from "react-chartjs-2";
 
 export function SkillsFrequencyTimeline({
@@ -15,6 +16,7 @@ export function SkillsFrequencyTimeline({
   }[];
   period: TimePeriod;
 }) {
+  console.log("rendering");
   const chartData = {
     labels: data.length > 0 ? Object.keys(data[0].frequency) : [],
     datasets: data.map((item) => ({
@@ -46,7 +48,7 @@ export function SkillsFrequencyTimeline({
         },
       },
     },
-    
+
     responsive: true,
     maintainAspectRatio: false,
     interaction: {
@@ -74,5 +76,5 @@ export function SkillsFrequencyTimeline({
     },
   };
 
-  return <Line className={className} data={chartData} options={options} />;
+  return <Line redraw={true} className={className} data={chartData} options={options} />;
 }

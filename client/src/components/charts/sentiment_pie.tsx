@@ -52,5 +52,5 @@ export function SentimentPieChart({
     responsive: true,
   };
 
-  return <Pie className={className} data={chartData} options={options} />;
+  return <Pie redraw={true} className={className} data={chartData} options={options} />;
 }

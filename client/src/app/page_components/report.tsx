@@ -6,6 +6,7 @@ import { PositiveSkills } from "./positive_skills";
 import { NegativeSkills } from "./negative_skills";
 import { OtherComparisions } from "./other_comparisions";
 import { generateSummary } from "@/lib/generate_summary";
+import useWindowSize from "@/lib/hooks/use_windows_size";
 
 export interface ReportProps {
   data: userReport;
@@ -14,9 +15,12 @@ export interface ReportProps {
 
 export function Report({ data, period }: ReportProps) {
   const summary = generateSummary(data);
+
+  useWindowSize();
+
   return (
     <div className=" flex flex-col mt-8 w-full max-w-7xl items-center text-justify">
-      <div className="flex flex-col md:flex-row w-full">
+      <div className="flex flex-col lg:flex-row w-full">
         <div className="flex-1">
           <h3 className="font-semibold text-lg">Summary</h3>
           <ol className="list-decimal list-inside p-2">

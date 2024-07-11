@@ -13,20 +13,30 @@ export function PRImpactTimeline({
   data: Record<string, Record<Sentiment, number>>;
   period: TimePeriod;
 }) {
+
   const chartData = {
     labels: Object.keys(data),
     datasets: [
       {
         label: "Positive",
         data: Object.keys(data).map((date) => data[date].Positive),
+        backgroundColor: "rgba(75, 192, 192, 0.2)",
+        borderColor: "rgba(75, 192, 192, 1)",
+        borderWidth: 1,
       },
       {
         label: "Neutral",
-        data: Object.keys(data).map((date) => data[date].Negative),
+        data: Object.keys(data).map((date) => data[date].Neutral),
+        backgroundColor: "rgba(255, 206, 86, 0.2)",
+        borderColor: "rgba(255, 206, 86, 1)",
+        borderWidth: 1,
       },
       {
         label: "Negative",
-        data: Object.keys(data).map((date) => data[date].Neutral),
+        data: Object.keys(data).map((date) => data[date].Negative),
+        backgroundColor: "rgba(255, 99, 132, 0.2)",
+        borderColor: "rgba(255, 99, 132, 1)",
+        borderWidth: 1,
       },
     ],
   };
@@ -62,5 +72,6 @@ export function PRImpactTimeline({
       },
     },
   };
-  return <Bar options={options} data={chartData} className={className} />;
+
+  return <Bar  redraw={true} options={options} data={chartData} className={className} />;
 }

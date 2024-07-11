@@ -47,7 +47,7 @@ export default function Home() {
       {data === null ? (
         <p>Please Wait! We are getting your report</p>
       ) : data === undefined ? (
-        <p>Report is not available yet. Please try again later.</p>
+        <p>Report is not available yet. Please try again</p>
       ) : (
         <Report data={data} period={period} />
       )}

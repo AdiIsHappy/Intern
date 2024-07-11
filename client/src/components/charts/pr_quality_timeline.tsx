@@ -76,5 +76,5 @@ export function PRQualityTimeline({
     },
   };
 
-  return <Bar data={chartData} className={className} options={options} />;
+  return <Bar redraw={true} data={chartData} className={className} options={options} />;
 }

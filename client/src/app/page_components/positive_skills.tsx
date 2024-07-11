@@ -24,14 +24,15 @@ export function PositiveSkills({
     setSkill(skillsDropdownOptions.at(0)?.label || "");
   }, [data]);
 
-  if (skillsDropdownOptions.length === 0)
-    return <div>Positive Skill data not availale</div>;
+  if (skillsDropdownOptions.length === 0) {
+    return <div>Positive Skill data not available</div>;
+  }
 
   return (
-    <div className=" w-full">
+    <div className="w-full">
       <h3 className="font-semibold text-lg">Positive skills</h3>
       <div className="flex w-full flex-col lg:flex-row items-center">
-        <div className="flex-1 w-full relative min-h-96">
+        <div className="w-full relative min-h-96 lg:max-w-7xl">
           <div className="absolute top-0 right-0 m-2">
             <Info tooltipText={GraphInfo.SKILL_SENTIMENT_ANALYSIS} />
           </div>
@@ -43,7 +44,7 @@ export function PositiveSkills({
             }))}
           />
         </div>
-        <div className="flex-1 w-full relative min-h-96">
+        <div className="w-full relative min-h-96 lg:max-w-7xl">
           <SkillsFrequencyTimeline
             className="w-full"
             period={period}

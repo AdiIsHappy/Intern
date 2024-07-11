@@ -72,5 +72,5 @@ export function TestCaseRatioChart({
     },
   };
 
-  return <Line className={className} data={chartData} options={options} />;
+  return <Line redraw={true} className={className} data={chartData} options={options} />;
 }

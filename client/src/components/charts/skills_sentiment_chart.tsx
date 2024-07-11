@@ -79,6 +79,7 @@ export function SkillSentimentChart({
     },
     responsive: true,
     maintainAspectRatio: false,
+
     scales: {
       x: {
         title: {
@@ -96,5 +97,13 @@ export function SkillSentimentChart({
       },
     },
   };
-  return <Bar className={className} data={chartData} options={options} />;
+
+  return (
+    <Bar
+      redraw={true}
+      className={className}
+      data={chartData}
+      options={options}
+    />
+  );
 }
