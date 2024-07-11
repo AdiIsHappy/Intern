@@ -5,7 +5,7 @@ import path from "path";
 async function ensureDirectoryExist(filePath: string): Promise<void> {
   const dirname = path.dirname(filePath);
   if (!fs.existsSync(dirname)) {
-    fs.mkdirSync(dirname, { recursive: true });
+    await fs.promises.mkdir(dirname, { recursive: true });
   }
 }
 
@@ -18,7 +18,7 @@ export async function readJsonFile(filePath: string): Promise<any> {
   try {
     const absolutePath = path.resolve(filePath);
     if (!fileExist(absolutePath)) return "";
-    const data = fs.readFileSync(absolutePath, "utf8");
+    const data = await fs.promises.readFile(absolutePath, "utf8");
     return JSON.parse(data);
   } catch (error) {
     console.error(`Error reading JSON file at ${filePath}:`, error);
@@ -34,7 +34,7 @@ export async function writeJsonFile(
     const absolutePath = path.resolve(filePath);
     ensureDirectoryExist(absolutePath);
     const jsonData = JSON.stringify(data, null, 2);
-    fs.writeFileSync(absolutePath, jsonData, "utf8");
+    await fs.promises.writeFile(absolutePath, jsonData, "utf8");
   } catch (error) {
     console.error(`Error writing JSON file at ${filePath}:`, error);
     throw error;
@@ -48,9 +48,9 @@ export async function listFilesInDirectory(
     const absolutePath = path.resolve(directoryPath);
     ensureDirectoryExist(absolutePath);
     if (!fs.existsSync(absolutePath)) {
-      fs.mkdirSync(absolutePath, { recursive: true });
+      await fs.promises.mkdir(absolutePath, { recursive: true });
     }
-    const files = fs.readdirSync(absolutePath);
+    const files = await fs.promises.readdir(absolutePath);
     return files;
   } catch (error) {
     console.error(`Error listing files in directory ${directoryPath}:`, error);
@@ -60,11 +60,11 @@ export async function listFilesInDirectory(
 
 export const printFileStructure = async (dir: string, level = 0) => {
   const indent = "  ".repeat(level);
-  const files = fs.readdirSync(dir);
+  const files = await fs.promises.readdir(dir);
 
-  files.forEach((file) => {
+  files.forEach(async (file) => {
     const filePath = path.join(dir, file);
-    const stats = fs.statSync(filePath);
+    const stats = await fs.promises.stat(filePath);
 
     if (stats.isDirectory()) {
       console.log(`${indent}- ${file}/`);
@@ -92,7 +92,7 @@ function searchJsonFiles(dir: string) {
             return;
           }
 
-          if (stats.isDirectory()) {
+          if (stats.isDirectory() && file !== "node_modules") {
             searchDir(filePath, baseDir);
           } else if (
             stats.isFile() &&
