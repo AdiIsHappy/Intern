@@ -1,7 +1,19 @@
-"use server";
-
 import { TimePeriod, userReport } from "@/lib/types/core.types";
 import { list } from "@vercel/blob";
+
+export default async function Page() {
+  const response = await list();
+  console.log(response);
+  return (
+    <>
+      {response.blobs.map((blob) => (
+        <a key={blob.pathname} href={blob.downloadUrl}>
+          {blob.pathname}
+        </a>
+      ))}
+    </>
+  );
+}
 
 export async function listReports() {
   const { blobs } = await list();
