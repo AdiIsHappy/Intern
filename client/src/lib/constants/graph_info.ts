@@ -1,27 +1,25 @@
 /* eslint-disable no-unused-vars */
-const skillSentimentAnalysis =
-  "An evaluation of feedback on the skill received from comments.\n**Positive:** The skill is appreciated.\n**Negative:** The skill is not satisfactory.\n**Neutral:** The skill is mentioned without specific feedback.\nThis analysis is based on comments on PRs.";
+const toolTip_skillSentimentAnalysis =
+  "**Positive:** The skill is appreciated.\n**Negative:** The skill is not satisfactory.\n**Neutral:** The skill is mentioned without specific feedback.";
 
-const skillFrequencyTimeline =
-  "The frequency at which skills were mentioned in comments over a specified period.";
+const toolTip_skillFrequencyTimeline = "";
 
-const prQualityTimeline =
-  "Assessment of the quality of your PR descriptions.\n**High:** The PR is well-described.\n**Medium:** The PR description meets requirements but could be improved.\n**Low:** The PR is not well-described.\nThis evaluation uses the description and title of the PR.";
+const toolTip_prQualityTimeline =
+  "**High:** The PR is well-described.\n**Medium:** The PR description meets requirements but could be improved.\n**Low:** The PR is not well-described.";
 
-const prImpactTimeline =
-  "The impact of changes made in the PRs.\n**High:** The PR introduces significant functionality or fixes critical issues.\n**Medium:** The PR has a moderate impact on the project.\n**Low:** The PR involves minor changes or bug fixes.\nThis assessment is based on the code changes in the PR.";
+const toolTip_prImpactTimeline =
+  "\n**High:** The PR introduces significant functionality or fixes critical issues.\n**Medium:** The PR has a moderate impact on the project.\n**Low:** The PR involves minor changes or bug fixes.";
 
-const testAddedRatio =
-  "The ratio of tests added relative to the code changes in the PR that require testing.";
+const toolTip_testAddedRatio = "";
 
-const commentSentiment =
-  "**Comment Sentiment:** The sentiment of comments on your PRs.\n**User Response Sentiment:** The sentiment of your responses to comments.\nThis analysis uses the comments and responses on your PRs.";
+const toolTip_commentSentiment =
+  "**Comment Sentiment:** The sentiment of comments on your PRs.\n**User Response Sentiment:** The sentiment of your responses to comments.";
 
 export enum GraphInfo {
-  SKILL_SENTIMENT_ANALYSIS = skillSentimentAnalysis,
-  SKILL_FREQUENCY_TIMELINE = skillFrequencyTimeline,
-  PR_QUALITY_TIMELINE = prQualityTimeline,
-  PR_IMPACT_TIMELINE = prImpactTimeline,
-  TEST_ADDED_RATIO = testAddedRatio,
-  COMMENT_SENTIMENT = commentSentiment,
+  TOOLTIP_SKILL_SENTIMENT_ANALYSIS = toolTip_skillSentimentAnalysis,
+  TOOLTIP_SKILL_FREQUENCY_TIMELINE = toolTip_skillFrequencyTimeline,
+  TOOLTIP_PR_QUALITY_TIMELINE = toolTip_prQualityTimeline,
+  TOOLTIP_PR_IMPACT_TIMELINE = toolTip_prImpactTimeline,
+  TOOLTIP_TEST_ADDED_RATIO = toolTip_testAddedRatio,
+  TOOLTIP_COMMENT_SENTIMENT = toolTip_commentSentiment,
 }

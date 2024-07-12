@@ -15,7 +15,6 @@ export function SkillsFrequencyTimeline({
   }[];
   period: TimePeriod;
 }) {
-  console.log("rendering");
   const chartData = {
     labels: data.length > 0 ? Object.keys(data[0].frequency) : [],
     datasets: data.map((item) => ({

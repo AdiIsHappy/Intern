@@ -29,10 +29,10 @@ export default function Home() {
     { value: string; label: string }[] | null
   >(null);
 
-  const periodDropdownOptions: { value: TimePeriod; label: TimePeriod }[] = [
-    { value: "month", label: "month" },
-    { value: "week", label: "week" },
-    { value: "quarter", label: "quarter" },
+  const periodDropdownOptions: { value: TimePeriod; label: string }[] = [
+    { value: "month", label: "last 4 months" },
+    { value: "week", label: "last 6 weeks" },
+    { value: "quarter", label: "last 2 quarter" },
   ];
 
   useEffect(() => {
@@ -57,8 +57,6 @@ export default function Home() {
     });
   }, []);
 
-  console.log(user);
-
   return (
     <main className="pt-12 flex flex-col justify-center items-center bg-gray-200">
       <Navbar
@@ -73,6 +71,7 @@ export default function Home() {
       />
       {userDropwdownOptions && user ? (
         <Dropdown
+          label="Period"
           onChange={(val: string) => setPeriod(val as TimePeriod)}
           defaultValue={period}
           options={periodDropdownOptions}

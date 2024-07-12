@@ -40,7 +40,7 @@ export function NegativeSkills({ data, period }: negativeSkillsProp) {
             }))}
           />
           <div className="absolute top-0 right-0 m-2">
-            <Info tooltipText={GraphInfo.SKILL_SENTIMENT_ANALYSIS} />
+            <Info tooltipText={GraphInfo.TOOLTIP_SKILL_SENTIMENT_ANALYSIS} />
           </div>
         </div>
         <div className="flex-1 w-full relative min-h-96">
@@ -53,7 +53,7 @@ export function NegativeSkills({ data, period }: negativeSkillsProp) {
             }))}
           />
           <div className="absolute top-0 right-0 m-2">
-            <Info tooltipText={GraphInfo.SKILL_SENTIMENT_ANALYSIS} />
+            <Info tooltipText={GraphInfo.TOOLTIP_SKILL_SENTIMENT_ANALYSIS} />
           </div>
         </div>
       </div>
@@ -64,6 +64,7 @@ export function NegativeSkills({ data, period }: negativeSkillsProp) {
             className="w-full md:w-1/2 "
             options={skillsDropdownOptions}
             defaultValue={skillsDropdownOptions.at(0)?.value || ""}
+            label="Skill"
           />
           <ol className="list-inside list-decimal px-2 py-4 flex-1 text-justify">
             {data.negativeSkills

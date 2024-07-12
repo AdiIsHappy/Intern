@@ -1,3 +1,4 @@
+import ChartInfo from "@/components/chart_info";
 import { SkillsFrequencyTimeline } from "@/components/charts/skills_frequency_timeline";
 import { SkillSentimentChart } from "@/components/charts/skills_sentiment_chart";
 import Dropdown from "@/components/dropdown";
@@ -31,12 +32,11 @@ export function PositiveSkills({
 
   return (
     <div className="w-full">
-      <h3 className="font-semibold text-lg">Positive skills</h3>
       <div className="flex w-full flex-col lg:flex-row items-center">
-        <div className="w-full relative min-h-96 lg:max-w-7xl">
-          <div className="absolute top-0 right-0 m-2">
-            <Info tooltipText={GraphInfo.SKILL_SENTIMENT_ANALYSIS} />
-          </div>
+        <ChartInfo
+          tooltipText={GraphInfo.TOOLTIP_SKILL_SENTIMENT_ANALYSIS}
+          infoText={"hello sample text"}
+        >
           <SkillSentimentChart
             className="w-full"
             data={data.positiveSkills.map((skill) => ({
@@ -44,8 +44,11 @@ export function PositiveSkills({
               sentimentFrequency: skill.sentimentFrequency,
             }))}
           />
-        </div>
-        <div className="w-full relative min-h-96 lg:max-w-7xl">
+        </ChartInfo>
+        <ChartInfo
+          tooltipText={GraphInfo.TOOLTIP_SKILL_FREQUENCY_TIMELINE}
+          infoText={"hello sample text"}
+        >
           <SkillsFrequencyTimeline
             className="w-full"
             period={period}
@@ -54,13 +57,11 @@ export function PositiveSkills({
               frequency: skill.frequency,
             }))}
           />
-          <div className="absolute top-0 right-0 m-2">
-            <Info tooltipText={GraphInfo.SKILL_FREQUENCY_TIMELINE} />
-          </div>
-        </div>
+        </ChartInfo>
       </div>
       <div className="flex flex-col items-start justify-start w-full my-8 bg-gray-100 p-4 rounded-md min-h-48">
         <Dropdown
+          label="Skill"
           onChange={(val: string) => setSkill(val)}
           className="w-full md:w-1/2 lg:w-1/4"
           options={skillsDropdownOptions}

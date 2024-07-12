@@ -1,8 +1,8 @@
-import { DownArrow } from "@/lib/constants/icons/down_arrow";
-import { on } from "events";
-import Image from "next/image";
-import { useState, useRef, useEffect } from "react";
+// Navbar.tsx
+import React, { useState, useRef, useEffect } from "react";
 import Skeleton from "react-loading-skeleton";
+import { Arrow } from "@/lib/constants/icons/down_arrow";
+import Image from "next/image";
 
 export interface NavbarProps {
   name?: string;
@@ -11,7 +11,6 @@ export interface NavbarProps {
   teamMembers?: { name: string; username: string }[];
   onUserSelect: (user: string) => void;
 }
-
 export function Navbar(props: NavbarProps) {
   const { name, profilePic, email, teamMembers, onUserSelect } = props;
 
@@ -138,7 +137,7 @@ function UserMenu({
             className="w-full text-left px-4 py-2 hover:bg-gray-200 flex justify-between items-center"
           >
             My team
-            <DownArrow open={teamDropdownOpen} />
+            <Arrow open={teamDropdownOpen} />
           </button>
           {teamDropdownOpen && (
             <ul className="ml-4 mt-2 text-sm text-gray-700">

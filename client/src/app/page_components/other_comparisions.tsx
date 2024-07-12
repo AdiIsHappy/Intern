@@ -23,7 +23,7 @@ export function OtherComparisions({ data, period }: OtherComparisionsProps) {
             data={data.quality}
           />
           <div className="absolute top-0 right-0 m-2">
-            <Info tooltipText={GraphInfo.PR_QUALITY_TIMELINE} />
+            <Info tooltipText={GraphInfo.TOOLTIP_PR_QUALITY_TIMELINE} />
           </div>
         </div>
         <div className="flex-1 w-full relative m-4 min-h-96">
@@ -33,7 +33,7 @@ export function OtherComparisions({ data, period }: OtherComparisionsProps) {
             data={data.impact}
           />
           <div className="absolute top-0 right-0 m-2">
-            <Info tooltipText={GraphInfo.PR_IMPACT_TIMELINE} />
+            <Info tooltipText={GraphInfo.TOOLTIP_PR_IMPACT_TIMELINE} />
           </div>
         </div>
       </div>
@@ -46,12 +46,12 @@ export function OtherComparisions({ data, period }: OtherComparisionsProps) {
             testCasesRequired={data.testCasesRequired}
           />
           <div className="absolute top-0 right-0 m-2">
-            <Info tooltipText={GraphInfo.TEST_ADDED_RATIO} />
+            <Info tooltipText={GraphInfo.TOOLTIP_TEST_ADDED_RATIO} />
           </div>
         </div>
         <div className="flex-1 flex flex-col md:w-full md:flex-row relative m-4 min-h-[36rem] lg:min-h-96">
           <div className="absolute top-0 right-0">
-            <Info tooltipText={GraphInfo.COMMENT_SENTIMENT} />
+            <Info tooltipText={GraphInfo.TOOLTIP_COMMENT_SENTIMENT} />
           </div>
           <div className="flex-1 h-max w-max">
             <SentimentPieChart
