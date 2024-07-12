@@ -9,6 +9,7 @@ import { generateSummary } from "@/lib/utils/generate_summary";
 import useWindowSize from "@/lib/hooks/use_windows_size";
 import Skeleton from "react-loading-skeleton";
 import SectionContainer from "@/components/section";
+import { Quality } from "./qaulity";
 
 export interface ReportProps {
   data: userReport | null;
@@ -21,39 +22,61 @@ export function Report({ data, period }: ReportProps) {
   useWindowSize();
 
   return (
-    <div className=" flex flex-col px-8 w-full max-w-9xl items-center text-justify">
+    <div className=" flex flex-col px-24 w-full items-center text-justify">
       <div className="flex flex-col lg:flex-row w-full">
         {data ? (
           <SectionContainer title="Summary" className="flex-1">
-            <ol className="p-2">
+            <ol className="p-2 list-decimal list-inside">
               {summary.map((element, index) => (
-                <li className="list-item" key={index}>
-                  {element}
+                <li className="list-item text-md my-2" key={index}>
+                  {element.split("\n").map((text, index) => {
+                    const boldText = text.replace(
+                      /\*\*(.*?)\*\*/g,
+                      "<strong>$1</strong>"
+                    );
+                    return (
+                      <span
+                        key={index}
+                        dangerouslySetInnerHTML={{ __html: boldText }}
+                      />
+                    );
+                  })}
                 </li>
               ))}
             </ol>
           </SectionContainer>
         ) : (
           <div className="flex-1 mx-4">
-            <Skeleton height={20} width={200} />
-            <Skeleton containerClassName="w-full h-full" height={200} />
+            <Skeleton height={50} className="w-full" />
+            <Skeleton containerClassName="w-full h-full" height={400} />
           </div>
         )}
         {data ? (
           <SectionContainer title="Insights" className="flex-1">
             <h3 className="font-semibold text-lg">Insights</h3>
-            <ol className="list-decimal list-inside p-2">
+            <ol className="p-2 list-decimal list-inside">
               {data.summary.map((element, index) => (
-                <li className="list-item" key={index}>
-                  {element}
+                <li className="list-item text-md my-2" key={index}>
+                  {element.split("\n").map((text, index) => {
+                    const boldText = text.replace(
+                      /\*\*(.*?)\*\*/g,
+                      "<strong>$1</strong>"
+                    );
+                    return (
+                      <span
+                        key={index}
+                        dangerouslySetInnerHTML={{ __html: boldText }}
+                      />
+                    );
+                  })}
                 </li>
               ))}
             </ol>
           </SectionContainer>
         ) : (
           <div className="flex-1 mx-4">
-            <Skeleton height={20} width={200} />
-            <Skeleton containerClassName="w-full h-full" height={200} />
+            <Skeleton height={50} className="w-full" />
+            <Skeleton containerClassName="w-full h-full" height={400} />
           </div>
         )}
         {data ? (
@@ -63,46 +86,73 @@ export function Report({ data, period }: ReportProps) {
           ></SectionContainer>
         ) : (
           <div className="flex-1 mx-4">
-            <Skeleton height={20} width={200} />
-            <Skeleton containerClassName="w-full h-full" height={200} />
+            <Skeleton height={50} className="w-full" />
+            <Skeleton containerClassName="w-full h-full" height={400} />
           </div>
         )}
       </div>
-      <SectionContainer title="Positive Skills" className="w-full">
+      <div className="flex flex-row">
         {data ? (
-          data.positiveSkills ? (
-            <PositiveSkills period={period} data={data} />
-          ) : (
-            <div>
-              Positive Skills not available please regenerate the report.
-            </div>
-          )
+          <SectionContainer title="Positive Skills" className="w-full">
+            {data.positiveSkills ? (
+              <PositiveSkills period={period} data={data} />
+            ) : (
+              <div>
+                Positive Skills not available please regenerate the report.
+              </div>
+            )}
+          </SectionContainer>
         ) : (
-          <div className="h-50 w-full my-4 px-4">
-            <Skeleton containerClassName="w-full h-full" height={200} />
+          <div className="w-full m-2">
+            <Skeleton height={50} className="w-full" />
+            <Skeleton containerClassName="w-full h-full" height={600} />
           </div>
         )}
-      </SectionContainer>
-
-      {data ? (
-        data.negativeSkills ? (
-          <NegativeSkills period={period} data={data} />
+        {data ? (
+          <SectionContainer title="Negative Skills" className="w-full">
+            {<data value="" className="neg"></data> ? (
+              <NegativeSkills period={period} data={data} />
+            ) : (
+              <div>
+                Negative Skills not available please regenerate the report.
+              </div>
+            )}
+          </SectionContainer>
         ) : (
-          <div>Negative Skills not available please regenerate the report.</div>
-        )
+          <div className="w-full m-2">
+            <Skeleton height={50} className="w-full" />
+            <Skeleton containerClassName="w-full h-full" height={600} />
+          </div>
+        )}
+      </div>
+      {data ? (
+        <SectionContainer title="Merge Requests Assessment" className="w-full">
+          {<data value="" className="neg"></data> ? (
+            <Quality period={period} data={data} />
+          ) : (
+            <div>Quality comparision not available.</div>
+          )}
+        </SectionContainer>
       ) : (
-        <div className="h-50 w-full flex ">
-          <Skeleton
-            containerClassName="w-full h-full flex-1 mx-4"
-            height={200}
-          />
-          <Skeleton
-            containerClassName="w-full h-full md:w-0 md:h-0 flex-1 mx-4"
-            height={200}
-          />
+        <div className="w-full m-2">
+          <Skeleton height={50} className="w-full" />
+          <Skeleton containerClassName="w-full h-full" height={600} />
         </div>
       )}
-      <OtherComparisions period={period} data={data} />
+      {data ? (
+        <SectionContainer title="Merge Requests Assessment" className="w-full">
+          {<data value="" className="neg"></data> ? (
+            <OtherComparisions period={period} data={data} />
+          ) : (
+            <div>Other comparision not available.</div>
+          )}
+        </SectionContainer>
+      ) : (
+        <div className="w-full m-2">
+          <Skeleton height={50} className="w-full" />
+          <Skeleton containerClassName="w-full h-full" height={600} />
+        </div>
+      )}
     </div>
   );
 }

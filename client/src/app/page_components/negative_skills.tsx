@@ -8,6 +8,7 @@ import Image from "next/image";
 import linkIcon from "@/../public/link.svg";
 import { GraphInfo } from "@/lib/constants/graph_info";
 import { Info } from "@/components/info";
+import ChartInfo from "@/components/chart_info";
 export interface negativeSkillsProp {
   data: userReport;
   period: TimePeriod;
@@ -28,10 +29,11 @@ export function NegativeSkills({ data, period }: negativeSkillsProp) {
     return <div>Positive Skill data not availale</div>;
   return (
     <div className="w-full">
-      <h3 className="font-semibold text-lg">Negative skills</h3>
-      {/* Graphs */}
-      <div className="flex w-full flex-col lg:flex-row items-center">
-        <div className="flex-1 w-full relative min-h-96">
+      <div className="flex w-full flex-col items-center">
+        <ChartInfo
+          tooltipText={GraphInfo.TOOLTIP_SKILL_SENTIMENT_ANALYSIS}
+          infoText={"hello sample text"}
+        >
           <SkillSentimentChart
             className="w-full"
             data={data.negativeSkills.map((skill) => ({
@@ -39,11 +41,11 @@ export function NegativeSkills({ data, period }: negativeSkillsProp) {
               sentimentFrequency: skill.sentimentFrequency,
             }))}
           />
-          <div className="absolute top-0 right-0 m-2">
-            <Info tooltipText={GraphInfo.TOOLTIP_SKILL_SENTIMENT_ANALYSIS} />
-          </div>
-        </div>
-        <div className="flex-1 w-full relative min-h-96">
+        </ChartInfo>
+        <ChartInfo
+          tooltipText={GraphInfo.TOOLTIP_SKILL_FREQUENCY_TIMELINE}
+          infoText={"hello sample text"}
+        >
           <SkillsFrequencyTimeline
             className="w-full"
             period={period}
@@ -52,12 +54,9 @@ export function NegativeSkills({ data, period }: negativeSkillsProp) {
               frequency: skill.frequency,
             }))}
           />
-          <div className="absolute top-0 right-0 m-2">
-            <Info tooltipText={GraphInfo.TOOLTIP_SKILL_SENTIMENT_ANALYSIS} />
-          </div>
-        </div>
+        </ChartInfo>
       </div>
-      <div className="flex flex-col lg:flex-row items-start justify-start w-full my-8 bg-gray-100 p-4 rounded-md min-h-48">
+      <div className="w-full my-8 bg-gray-100 p-4 rounded-md min-h-48">
         <div className="flex-1 mx-2">
           <Dropdown
             onChange={(val: string) => setSkill(val)}
@@ -74,7 +73,8 @@ export function NegativeSkills({ data, period }: negativeSkillsProp) {
               ))}
           </ol>
         </div>
-
+      </div>
+      <div className="w-full my-8 bg-gray-100 p-4 rounded-md min-h-48">
         <div className="flex-1 mx-2">
           <h3 className=" font-semibold text-lg">Refrences</h3>
           <div className="flex flex-col max-h-64 scroll-m-11 overflow-auto">

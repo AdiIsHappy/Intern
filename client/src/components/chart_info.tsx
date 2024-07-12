@@ -16,7 +16,7 @@ const ChartInfo: React.FC<ChartInfoProps> = ({
   className = "",
 }) => {
   return (
-    <div className={`w-full relative min-h-96 px-8 ${className}`}>
+    <div className={`w-full relative min-h-96 p-2 my-4 ${className}`}>
       {tooltipText ? (
         <div className="absolute top-0 right-0 m-2">
           <Info tooltipText={tooltipText} />

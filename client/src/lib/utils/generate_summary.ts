@@ -71,41 +71,43 @@ export function generateSummary(data: userReport) {
   let reviews = [];
 
   if (commentsSentiments.Positive > avgCommentSentiment.Positive) {
-    reviews.push("You have been receiving more positive comments recently.");
+    reviews.push(
+      "You have been receiving more **positive** comments recently."
+    );
   } else if (commentsSentiments.Negative > avgCommentSentiment.Negative) {
-    reviews.push("You have been receiving more negative comments recently.");
+    reviews.push(
+      "You have been receiving more **negative** comments recently."
+    );
   } else {
-    reviews.push("Your comments sentiment has been mostly neutral.");
+    reviews.push("others comments sentiment has been mostly **neutral**.");
   }
 
   if (userResponseSentiments.Positive > avgUserResponseSentiment.Positive) {
-    reviews.push(
-      "Your responses to comments have been more positive recently."
-    );
+    reviews.push("Your responses to othere are mostly **positive**.");
   } else if (
     userResponseSentiments.Negative > avgUserResponseSentiment.Negative
   ) {
     reviews.push(
-      "Your responses to comments have seen more negative sentiment."
+      "Your responses to comments have been mostly **negative**. try to communicate more positively."
     );
   } else {
-    reviews.push("Your responses to comments have been mostly neutral.");
+    reviews.push("Your responses to comments have been mostly **neutral.**");
   }
 
-  let testRatioMessage = `Your test added ratio is ${latestTestRatio.toFixed(
+  let testRatioMessage = `Your test added ratio is **${latestTestRatio.toFixed(
     2
-  )}. The average ratio is ${averageTestRatio.toFixed(2)}.`;
+  )}.** The average ratio is **${averageTestRatio.toFixed(2)}**.`;
   if (latestTestRatio < 0.3) {
     testRatioMessage +=
-      " Your test added ratio is quite low, consider adding more test cases.";
+      " Your test added ratio is **quite low**, consider adding more test cases.";
   } else if (latestTestRatio >= 0.3 && latestTestRatio < 0.6) {
     testRatioMessage +=
-      " Your test added ratio is moderate, keep working on improving it.";
+      " Your test added ratio is **moderate**, keep working on improving it.";
   } else if (latestTestRatio >= 0.6 && latestTestRatio < 0.8) {
     testRatioMessage += " Your test added ratio is good, you are doing great.";
   } else {
     testRatioMessage +=
-      " Your test added ratio is excellent, keep up the excellent work.";
+      " Your test added ratio is **excellent**, keep up the excellent work.";
   }
   if (latestTestRatio > averageTestRatio) {
     testRatioMessage += " You are improving.";
@@ -117,11 +119,11 @@ export function generateSummary(data: userReport) {
 
   if (latestQuality.Low > averageQuality.Low) {
     reviews.push(
-      "Your PR description quality has seen a decline, consider describing your PRs more briefly."
+      "Your PR description quality has seen a **decline**, consider describing your PRs more briefly."
     );
   } else {
     reviews.push(
-      "Your PR descriptions are of good quality, keep up the good work."
+      "Your PR descriptions are of **good quality**, keep up the good work."
     );
   }
 

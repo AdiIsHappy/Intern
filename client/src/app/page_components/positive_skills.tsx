@@ -32,7 +32,7 @@ export function PositiveSkills({
 
   return (
     <div className="w-full">
-      <div className="flex w-full flex-col lg:flex-row items-center">
+      <div className="flex w-full flex-col items-center">
         <ChartInfo
           tooltipText={GraphInfo.TOOLTIP_SKILL_SENTIMENT_ANALYSIS}
           infoText={"hello sample text"}
@@ -59,7 +59,7 @@ export function PositiveSkills({
           />
         </ChartInfo>
       </div>
-      <div className="flex flex-col items-start justify-start w-full my-8 bg-gray-100 p-4 rounded-md min-h-48">
+      <div className="flex flex-col items-start justify-start w-full my-8 bg-gray-50 p-4 rounded-md min-h-48">
         <Dropdown
           label="Skill"
           onChange={(val: string) => setSkill(val)}
@@ -67,11 +67,13 @@ export function PositiveSkills({
           options={skillsDropdownOptions}
           defaultValue={skillsDropdownOptions.at(0)?.value || ""}
         />
-        <ol className="list-inside list-decimal px-2 py-4 text-justify">
+        <ol className="list-inside list-decimal px-2 py-4">
           {data.positiveSkills
             .find((e) => e.skill === skill)
             ?.insights.map((insight, index) => (
-              <li key={index}>{insight}</li>
+              <li className="text-md" key={index}>
+                {insight}
+              </li>
             ))}
         </ol>
       </div>
