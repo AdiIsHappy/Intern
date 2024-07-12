@@ -1,6 +1,5 @@
 // components/ButtonWithTooltip.js
 import { useState } from "react";
-import Image from "next/image";
 import InfoIcon from "@/lib/constants/icons/info";
 
 export function Info({ tooltipText }: { tooltipText: string }) {

@@ -1,5 +1,5 @@
 import { DateTime } from "luxon";
-import { Sentiment, userReport } from "./types/core.types";
+import { Sentiment, userReport } from "../types/core.types";
 
 export function generateSummary(data: userReport) {
   const {
@@ -8,7 +8,6 @@ export function generateSummary(data: userReport) {
     testCases,
     testCasesRequired,
     quality,
-    impact,
   } = data;
 
   // Calculate average sentiment for comments and user responses

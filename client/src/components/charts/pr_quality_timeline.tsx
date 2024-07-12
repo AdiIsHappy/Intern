@@ -1,7 +1,7 @@
 "use client";
 import { Quality, TimePeriod } from "@/lib/types/core.types";
 import { ChartOptions, TooltipItem } from "chart.js";
-import { Bar, Line } from "react-chartjs-2";
+import { Bar } from "react-chartjs-2";
 
 export function PRQualityTimeline({
   className,

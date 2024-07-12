@@ -1,7 +1,6 @@
 "use client";
 import { TimePeriod } from "@/lib/types/core.types";
 import { ChartOptions } from "chart.js";
-import { useEffect, useState } from "react";
 import { Line } from "react-chartjs-2";
 
 export function SkillsFrequencyTimeline({

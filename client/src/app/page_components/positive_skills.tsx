@@ -22,6 +22,7 @@ export function PositiveSkills({
 
   useEffect(() => {
     setSkill(skillsDropdownOptions.at(0)?.label || "");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data]);
 
   if (skillsDropdownOptions.length === 0) {
