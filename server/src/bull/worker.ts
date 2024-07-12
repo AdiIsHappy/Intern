@@ -1,4 +1,5 @@
-import { updateStatusDB } from "../services/db/db";
+import { getUserReportDB, updateStatusDB } from "../services/db/db";
+import { uploadUserDataToBlob } from "../services/vercel_blob/blob";
 import { QueueTypes, QueueData } from "../types/bull.types";
 import { TimePeriod } from "../types/core.types";
 import { queue } from "./queue";
@@ -51,6 +52,10 @@ queue.on("completed", async (job) => {
         await queue.add(task);
       }
     } else if (job.data.type === QueueTypes.GENERATE_INSIGHTS) {
+      const report = getUserReportDB(job.data.data.username);
+      if (report) {
+        uploadUserDataToBlob(job.data.data.username, report);
+      }
       console.log(`Insights generated for ${job.data.data.username}`);
     }
   }

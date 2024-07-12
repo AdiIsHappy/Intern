@@ -5,7 +5,7 @@ import "../../lib/constants/chart_registration";
 import { PositiveSkills } from "./positive_skills";
 import { NegativeSkills } from "./negative_skills";
 import { OtherComparisions } from "./other_comparisions";
-import { generateSummary } from "@/lib/generate_summary";
+import { generateSummary } from "@/lib/utils/generate_summary";
 import useWindowSize from "@/lib/hooks/use_windows_size";
 
 export interface ReportProps {

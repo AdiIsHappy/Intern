@@ -5,7 +5,7 @@ import { list } from "@vercel/blob";
 import { readJsonFile } from "./file_handler";
 
 export async function listReports() {
-  const { blobs } = await list();
+  const { blobs } = await list({ prefix: "report/" });
   return blobs;
 }
 

@@ -3,6 +3,7 @@ import { startPreparingReport } from "../report";
 import { TimePeriod } from "../types/core.types";
 import { QueueData, QueueTypes } from "../types/bull.types";
 import { queue } from "../bull/queue";
+import { uploadUserDataToBlob } from "../services/vercel_blob/blob";
 const apiRouter = Router();
 
 apiRouter.post("/reports", async (req: Request, res: Response) => {
@@ -11,6 +12,14 @@ apiRouter.post("/reports", async (req: Request, res: Response) => {
   if (!username)
     return res.json({ status: "error", message: "Username is required" });
   const response = await startPreparingReport(usernamel);
+  return res.json(response);
+});
+
+apiRouter.get("/test", async (req: Request, res: Response) => {
+  const response = await uploadUserDataToBlob(
+    "b21083",
+    JSON.stringify({ greate: false })
+  );
   return res.json(response);
 });
 
