@@ -1,4 +1,4 @@
-import { put } from "@vercel/blob";
+import { list, put } from "@vercel/blob";
 import { config } from "dotenv";
 import { DateTime } from "luxon";
 import { TimePeriod } from "../../types/core.types";
@@ -19,4 +19,9 @@ export async function uploadUserDataToBlob(username: string, data: any) {
     cacheControlMaxAge: maxAge,
   });
   return res;
+}
+
+export async function listReports() {
+  const { blobs } = await list({ prefix: "report/" });
+  return blobs;
 }

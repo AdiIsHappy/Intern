@@ -3,7 +3,10 @@ import { startPreparingReport } from "../report";
 import { TimePeriod } from "../types/core.types";
 import { QueueData, QueueTypes } from "../types/bull.types";
 import { queue } from "../bull/queue";
-import { uploadUserDataToBlob } from "../services/vercel_blob/blob";
+import {
+  listReports,
+  uploadUserDataToBlob,
+} from "../services/vercel_blob/blob";
 const apiRouter = Router();
 
 apiRouter.post("/reports", async (req: Request, res: Response) => {
@@ -16,12 +19,11 @@ apiRouter.post("/reports", async (req: Request, res: Response) => {
 });
 
 apiRouter.get("/test", async (req: Request, res: Response) => {
-  const response = await uploadUserDataToBlob(
-    "b21083",
-    JSON.stringify({ greate: false })
-  );
+  const response = await listReports();
   return res.json(response);
 });
+
+
 
 apiRouter.get("/reports", async (req: Request, res: Response) => {
   const periods: TimePeriod[] = ["month", "week", "quarter"];

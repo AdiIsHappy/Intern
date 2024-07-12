@@ -11,7 +11,7 @@ export async function listReports() {
 
 export async function getReportDownloadURL(username: string) {
   const reports = await listReports();
-  const report = reports.find((r) => r.pathname === `${username}.json`);
+  const report = reports.find((r) => r.pathname === `report/${username}.json`);
   return report?.downloadUrl;
 }
 
