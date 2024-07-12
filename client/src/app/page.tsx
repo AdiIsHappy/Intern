@@ -5,6 +5,20 @@ import { TimePeriod, userReport } from "@/lib/types/core.types";
 import { getAvailableReportsList, getReport } from "@/lib/db/db";
 import { Report } from "@/app/page_components/report";
 import Skeleton from "react-loading-skeleton";
+import { Navbar } from "./page_components/navbar";
+
+const UserInfo = {
+  username: "Torsten Grote",
+  name: "Torsten Grote",
+  email: "chaos.social/@grote",
+  profilePic:
+    "https://gitlab.com/uploads/-/system/user/avatar/26331/grote_1_256x256.jpg",
+  teamMembers: [
+    { name: "Torsten Grote", username: "grote" },
+    { name: "Charles Schlosser", username: "chuckyschluz" },
+    { name: "Adam Belis", username: "adam.belis" },
+  ],
+};
 
 export default function Home() {
   const [period, setPeriod] = useState<TimePeriod>("month");
@@ -46,32 +60,27 @@ export default function Home() {
   console.log(user);
 
   return (
-    <main className="flex min-h-screen flex-col items-center pt-24 p-8 md:p-24">
-      <div className="mt-8 flex flex-col md:flex-row w-full md:max-w-7xl justify-evenly bg-gray-100 p-4 rounded-md">
-        {userDropwdownOptions && user ? (
-          <Dropdown
-            options={userDropwdownOptions}
-            onChange={(val: string) => {
-              setUser(val);
-              setData(null);
-            }}
-            defaultValue={user}
-            className="flex-1 mx-8 my-2"
-          />
-        ) : (
-          <Skeleton containerClassName="flex-1 mx-8 my-2" height={40} />
-        )}
-        {userDropwdownOptions && user ? (
-          <Dropdown
-            onChange={(val: string) => setPeriod(val as TimePeriod)}
-            defaultValue={period}
-            options={periodDropdownOptions}
-            className="flex-1 mx-8 my-2"
-          />
-        ) : (
-          <Skeleton containerClassName="flex-1 mx-8 my-2" height={40} />
-        )}
-      </div>
+    <main className="pt-12 flex flex-col justify-center items-center bg-gray-200">
+      <Navbar
+        onUserSelect={(user: string) => {
+          setUser(user);
+          setData(null);
+        }}
+        email={UserInfo.email}
+        name={UserInfo.name}
+        profilePic={UserInfo.profilePic}
+        teamMembers={UserInfo.teamMembers}
+      />
+      {userDropwdownOptions && user ? (
+        <Dropdown
+          onChange={(val: string) => setPeriod(val as TimePeriod)}
+          defaultValue={period}
+          options={periodDropdownOptions}
+          className="flex-1 mx-8 my-2"
+        />
+      ) : (
+        <Skeleton containerClassName="flex-1 mx-8 my-2" height={40} />
+      )}
 
       {data === undefined ? (
         <p>Report is not available yet. Please try again</p>

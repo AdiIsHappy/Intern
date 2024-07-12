@@ -2,9 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import "react-loading-skeleton/dist/skeleton.css";
-import Navbar from "@/components/navbar";
-
-
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,7 +19,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Navbar />
+        <header>
+          <div className=" max-h-12 bg-gray-800 text-white py-3 px-8 w-full fixed x-0 y-0 flex justify-start items-center z-50">
+            <Link href="/" className="text-md sm:text-xl md:text-xl">
+              {" "}
+              <b>MergeAI</b> Insights
+            </Link>
+          </div>
+        </header>
         {children}
       </body>
     </html>

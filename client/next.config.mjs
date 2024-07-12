@@ -22,6 +22,11 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
+        hostname: "gitlab.com",
+        port: "",
+      },
+      {
+        protocol: "https",
         hostname: "randomuser.me",
         port: "",
       },
