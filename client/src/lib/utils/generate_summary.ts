@@ -1,6 +1,8 @@
 import { DateTime } from "luxon";
 import { Sentiment, userReport } from "../types/core.types";
 
+
+// TODO: Handel test added ratio nan error.
 export function generateSummary(data: userReport) {
   const {
     commentsSentiments,
@@ -10,7 +12,6 @@ export function generateSummary(data: userReport) {
     quality,
   } = data;
 
-  // Calculate average sentiment for comments and user responses
   const averageSentiment = (sentiments: Record<Sentiment, number>) => {
     const total =
       sentiments.Positive + sentiments.Negative + sentiments.Neutral;
@@ -24,12 +25,10 @@ export function generateSummary(data: userReport) {
   const avgCommentSentiment = averageSentiment(commentsSentiments);
   const avgUserResponseSentiment = averageSentiment(userResponseSentiments);
 
-  // Get the latest date using Luxon
   const dates = Object.keys(quality).sort();
   if (dates.length === 0) return [];
   const latestDate = DateTime.fromISO(dates.pop()!).toISO() as string;
 
-  // Calculate average test added ratio
   const calculateAverageTestRatio = () => {
     let totalTestCases = 0;
     let totalTestCasesRequired = 0;
@@ -46,7 +45,6 @@ export function generateSummary(data: userReport) {
   const latestTestRatio = testCases[latestDate] / testCasesRequired[latestDate];
   const averageTestRatio = calculateAverageTestRatio();
 
-  // Calculate average PR quality
   const calculateAverageQuality = () => {
     let totalHigh = 0,
       totalMedium = 0,
@@ -70,10 +68,8 @@ export function generateSummary(data: userReport) {
   const latestQuality = quality[latestDate];
   const averageQuality = calculateAverageQuality();
 
-  // Construct reviews based on trends
   let reviews = [];
 
-  // Review comments sentiment
   if (commentsSentiments.Positive > avgCommentSentiment.Positive) {
     reviews.push("You have been receiving more positive comments recently.");
   } else if (commentsSentiments.Negative > avgCommentSentiment.Negative) {
@@ -82,7 +78,6 @@ export function generateSummary(data: userReport) {
     reviews.push("Your comments sentiment has been mostly neutral.");
   }
 
-  // Review user responses sentiment
   if (userResponseSentiments.Positive > avgUserResponseSentiment.Positive) {
     reviews.push(
       "Your responses to comments have been more positive recently."
@@ -97,7 +92,6 @@ export function generateSummary(data: userReport) {
     reviews.push("Your responses to comments have been mostly neutral.");
   }
 
-  // Review test added ratio
   let testRatioMessage = `Your test added ratio is ${latestTestRatio.toFixed(
     2
   )}. The average ratio is ${averageTestRatio.toFixed(2)}.`;
@@ -121,7 +115,6 @@ export function generateSummary(data: userReport) {
   }
   reviews.push(testRatioMessage);
 
-  // Review PR description quality
   if (latestQuality.Low > averageQuality.Low) {
     reviews.push(
       "Your PR description quality has seen a decline, consider describing your PRs more briefly."

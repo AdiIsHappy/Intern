@@ -1,6 +1,6 @@
 import axios from "axios";
 import dotenv from "dotenv";
-import { RSTDiffNode } from "../../types/gitlab.types";
+import { RSTDiffNode, RSTUserEvent } from "../../types/gitlab.types";
 dotenv.config();
 
 const GITLAB_GRAPHQL_URL = "https://gitlab.com/api/graphql";
@@ -48,3 +48,44 @@ export async function getMergeRequestDiffAsync(
   const data = await response.json();
   return data;
 }
+
+export async function fetchAllUserEvents(
+  userId: number | string,
+  perPage = 100
+): Promise<RSTUserEvent[]> {
+  const url = `https://gitlab.com/api/v4/users/${userId}/events`;
+  let allEvents: RSTUserEvent[] = [];
+  let page = 1;
+  let moreEvents = true;
+
+  while (moreEvents) {
+    try {
+      const response = await fetch(`${url}?page=${page}&per_page=${perPage}`, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      if (!response.ok) {
+        console.log(response);
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+
+      const events: RSTUserEvent[] = await response.json();
+      allEvents = allEvents.concat(events);
+
+      if (events.length < perPage) {
+        moreEvents = false;
+      } else {
+        page++;
+      }
+    } catch (error) {
+      console.error("Error fetching user events:", error);
+      break;
+    }
+  }
+
+  return allEvents;
+}
+

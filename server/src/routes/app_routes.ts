@@ -3,10 +3,7 @@ import { startPreparingReport } from "../report";
 import { TimePeriod } from "../types/core.types";
 import { QueueData, QueueTypes } from "../types/bull.types";
 import { queue } from "../bull/queue";
-import {
-  listReports,
-  uploadUserDataToBlob,
-} from "../services/vercel_blob/blob";
+import { fetchAllUserEvents } from "../api/gitlab/gitlab";
 const apiRouter = Router();
 
 apiRouter.post("/reports", async (req: Request, res: Response) => {
@@ -19,7 +16,7 @@ apiRouter.post("/reports", async (req: Request, res: Response) => {
 });
 
 apiRouter.get("/test", async (req: Request, res: Response) => {
-  const response = await listReports();
+  const response = await fetchAllUserEvents(3421809);
   return res.json(response);
 });
 

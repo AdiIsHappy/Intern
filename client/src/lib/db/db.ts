@@ -2,7 +2,7 @@
 
 import { TimePeriod, userReport } from "@/lib/types/core.types";
 import { list } from "@vercel/blob";
-import { readJsonFile } from "./file_handler";
+import path from "path";
 
 export async function listReports() {
   const { blobs } = await list({ prefix: "report/" });
@@ -19,13 +19,23 @@ export async function getReport(
   username: string,
   period: TimePeriod
 ): Promise<userReport | null> {
-  if (process.env.NODE_ENV === "development") {
-    console.log("yo");
-    const data = await readJsonFile(`./data/${username}.json`);
-    return data.report[period] as userReport;
-  }
+  // if (process.env.NODE_ENV === "development") {
+  //   console.log("yo");
+  //   const data = await readJsonFile(`./data/${username}.json`);
+  //   return data.report[period] as userReport;
+  // }
   const downloadURL = await getReportDownloadURL(username);
   if (!downloadURL) return null;
   const report = await fetch(downloadURL).then((res) => res.json());
   return report.report[period] as userReport;
+}
+
+export async function getAvailableReportsList(): Promise<string[]> {
+  const reports = await listReports();
+  const reportNames = reports.map((r) => {
+    const fileName = path.basename(r.pathname);
+    const reportName = path.parse(fileName).name;
+    return reportName;
+  });
+  return reportNames;
 }

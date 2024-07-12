@@ -80,3 +80,53 @@ export interface RSTDiffNode {
   deleted_file: boolean;
   generated_file: boolean;
 }
+
+export interface RSTUserEvent{
+  id: number;
+  title: string | null;
+  project_id: number;
+  action_name: string;
+  target_id: number | null;
+  target_iid: number | null;
+  target_type: string | null;
+  author_id: number;
+  target_title: string | null;
+  author: {
+    name: string;
+    username: string;
+    id: number;
+    state: string;
+    avatar_url: string;
+    web_url: string;
+  };
+  author_username: string;
+  imported: boolean;
+  imported_from: string;
+  push_data?: {
+    commit_count: number;
+    action: string;
+    ref_type: string;
+    commit_from: string;
+    commit_to: string;
+    ref: string;
+    commit_title: string;
+  };
+  note?: {
+    id: number;
+    body: string;
+    attachment: string | null;
+    author: {
+      name: string;
+      username: string;
+      id: number;
+      state: string;
+      avatar_url: string;
+      web_url: string;
+    };
+    created_at: string;
+    system: boolean;
+    noteable_id: number;
+    noteable_type: string;
+  };
+  created_at?: string;
+};

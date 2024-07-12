@@ -7,10 +7,11 @@ import { GraphInfo } from "@/lib/constants/graph_info";
 import { TimePeriod, userReport } from "@/lib/types/core.types";
 
 export interface OtherComparisionsProps {
-  data: userReport;
+  data: userReport | null;
   period: TimePeriod;
 }
 export function OtherComparisions({ data, period }: OtherComparisionsProps) {
+  if (!data) return null;
   return (
     <div className="w-full items-center">
       <h3 className="font-semibold text-lg">Other Comparisons</h3>
