@@ -67,9 +67,14 @@ export default function MergeRequestAssessment() {
         email={UserInfo.email}
         name={UserInfo.name}
         profilePic={UserInfo.profilePic}
-        teamMembers={UserInfo.teamMembers}
+        teamMembers={
+          userDropwdownOptions?.map((val) => ({
+            name: val.value,
+            username: val.value,
+          })) || []
+        }
       />
-      {userDropwdownOptions && user ? (
+      {user ? (
         <Dropdown
           label="Period"
           onChange={(val: string) => setPeriod(val as TimePeriod)}
@@ -78,7 +83,7 @@ export default function MergeRequestAssessment() {
           className="flex-1 mx-8 my-2"
         />
       ) : (
-        <Skeleton containerClassName="flex-1 mx-8 my-2" height={40} />
+        <Skeleton containerClassName="flex-1 mx-8 my-2 w-1/2" height={40} />
       )}
 
       {data === undefined ? (

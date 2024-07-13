@@ -71,7 +71,7 @@ export function PositiveSkills({
             .find((e) => e.skill === skill)
             ?.insights.map((insight, index) => (
               <li className="text-md" key={index}>
-                {insight}
+                {insight.text}
               </li>
             ))}
         </ol>

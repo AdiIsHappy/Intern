@@ -14,6 +14,7 @@ export const gitlabUserDataQuery: (
           nodes {
             id
             iid
+            webUrl
             title
             description
             state
@@ -35,6 +36,7 @@ export const gitlabUserDataQuery: (
                 author{
                   username
                 }
+                url
                 id
                 body
                 createdAt

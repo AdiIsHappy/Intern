@@ -26,3 +26,42 @@ export interface VERTMergeRequestForAnalysis {
   conflicts: boolean;
   diffStats?: RSTDiffNode[];
 }
+
+
+export interface ReportVert {
+  insights: Insight[];
+  actions: Action[];
+  positiveSkills: TiveSkill[];
+  negativeSkills: TiveSkill[];
+}
+
+interface Action {
+  text: string;
+  references: Reference[];
+}
+
+export interface Reference {
+  title: string;
+  url: string;
+  skill: string;
+  description: string;
+}
+
+interface Insight {
+  text: string;
+  ids: string[];
+}
+
+interface TiveSkill {
+  skill: string;
+  frequency: { [key: string]: number };
+  sentimentFrequency: { [key: string]: SentimentFrequency };
+  insights: Insight[];
+  references?: Reference[];
+}
+
+interface SentimentFrequency {
+  Positive: number;
+  Negative: number;
+  Neutral: number;
+}

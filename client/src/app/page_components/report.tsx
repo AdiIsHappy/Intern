@@ -23,6 +23,12 @@ export function Report({ data, period }: ReportProps) {
 
   return (
     <div className=" flex flex-col px-24 w-full items-center text-justify">
+      <div className="w-full bg-white p-2 rounded-lg flex flex-row justify-evenly">
+        <span>
+          <strong>Name:</strong>
+          {``}{" "}
+        </span>
+      </div>
       <div className="flex flex-col lg:flex-row w-full">
         {data ? (
           <SectionContainer title="Summary" className="flex-1">
@@ -53,11 +59,10 @@ export function Report({ data, period }: ReportProps) {
         )}
         {data ? (
           <SectionContainer title="Insights" className="flex-1">
-            <h3 className="font-semibold text-lg">Insights</h3>
             <ol className="p-2 list-decimal list-inside">
-              {data.summary.map((element, index) => (
+              {data.insights.map((element, index) => (
                 <li className="list-item text-md my-2" key={index}>
-                  {element.split("\n").map((text, index) => {
+                  {element.text.split("\n").map((text, index) => {
                     const boldText = text.replace(
                       /\*\*(.*?)\*\*/g,
                       "<strong>$1</strong>"
@@ -80,10 +85,26 @@ export function Report({ data, period }: ReportProps) {
           </div>
         )}
         {data ? (
-          <SectionContainer
-            title="Focus Area"
-            className="flex-1"
-          ></SectionContainer>
+          <SectionContainer title="Focus Area" className="flex-1">
+            <ol className="p-2 list-decimal list-inside">
+              {data.actions.map((element, index) => (
+                <li className="list-item text-md my-2" key={index}>
+                  {element.text.split("\n").map((text, index) => {
+                    const boldText = text.replace(
+                      /\*\*(.*?)\*\*/g,
+                      "<strong>$1</strong>"
+                    );
+                    return (
+                      <span
+                        key={index}
+                        dangerouslySetInnerHTML={{ __html: boldText }}
+                      />
+                    );
+                  })}
+                </li>
+              ))}
+            </ol>
+          </SectionContainer>
         ) : (
           <div className="flex-1 mx-4">
             <Skeleton height={50} className="w-full" />

@@ -55,19 +55,3 @@ export interface AnalysedNote {
   mergeRequestId?: string;
   summary: string;
 }
-
-export interface InsightsReport {
-  summary?: string[];
-  skills?: [
-    {
-      skill: string;
-      frequency: Record<string, number>;
-      sentimentFrequency: {
-        Positive: Record<string, number>;
-        Negative: Record<string, number>;
-        Neutral: Record<string, number>;
-      };
-      insights: string[];
-    }
-  ];
-}

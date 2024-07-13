@@ -1,7 +1,6 @@
 import {
   AnalysedMergeRequest,
   AnalysedNote,
-  InsightsReport,
   ReportStatus,
   TimePeriod,
   UserReport,
@@ -12,6 +11,7 @@ import {
   PathType,
 } from "../../types/db.types";
 import { GQLNoteNode, GQLUserNode } from "../../types/gitlab.types";
+import { ReportVert } from "../../types/vertex.types";
 import { fileExist, readJsonFile, writeJsonFile } from "./file_handling";
 const config = require("../../config.json");
 
@@ -141,7 +141,7 @@ export function updateStatusDB(username: string, status: ReportStatus) {
 export function storeInsightsDB(
   username: string,
   period: TimePeriod,
-  insights: InsightsReport
+  insights: ReportVert
 ) {
   const filePath = getStoragePathDB("Report", username);
   if (!fileExist(filePath)) {

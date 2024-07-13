@@ -8,16 +8,12 @@ import {
   storeInsightsDB,
   updateStatusDB,
 } from "../../services/db/db";
-import {
-  InsightsReport,
-  Sentiment,
-  Quality,
-  TimePeriod,
-} from "../../types/core.types";
+import { Sentiment, Quality, TimePeriod } from "../../types/core.types";
 import {
   getAllPeriodsBeggningsafter,
   getNPeriodBeforeDate,
 } from "../../utlis/time";
+import { ReportVert } from "../../types/vertex.types";
 
 // TODO: Reschduel the analysis upon failing
 
@@ -37,8 +33,11 @@ export async function generateReport(username: string, period: TimePeriod) {
     return null;
   }
 
+  console.log("Generating Insights for user", username);
+  console.log("using data after", startPeriodDate);
+
   // Get Insights from notes
-  let notesInsights: InsightsReport;
+  let notesInsights: ReportVert;
   try {
     const dataToSend = {
       data: notesAnalysis.data.filter(
@@ -47,7 +46,7 @@ export async function generateReport(username: string, period: TimePeriod) {
       ),
       date: periods,
     };
-    notesInsights = await sendAiPrompt<InsightsReport, any>(
+    notesInsights = await sendAiPrompt<ReportVert, any>(
       dataToSend,
       SystemPrompts.REPORT_NOTES_ANALYSIS
     );
@@ -59,8 +58,10 @@ export async function generateReport(username: string, period: TimePeriod) {
     return;
   }
 
+  console.log("generate insights of notes");
+
   // Get Insights from merge requests
-  let mrInsights: InsightsReport;
+  let mrInsights: ReportVert;
   try {
     const dataToSend = {
       data: mergeRequestAnalysis.data.filter(
@@ -69,7 +70,7 @@ export async function generateReport(username: string, period: TimePeriod) {
       ),
       date: periods,
     };
-    mrInsights = await sendAiPrompt<InsightsReport, any>(
+    mrInsights = await sendAiPrompt<ReportVert, any>(
       dataToSend,
       SystemPrompts.REPORT_MR_ANALYSIS
     );
@@ -81,20 +82,46 @@ export async function generateReport(username: string, period: TimePeriod) {
     return;
   }
 
+  console.log("generate insights of MR");
+
   // Merge generated insights
-  let mergedInsights: InsightsReport = {};
+  let mergedInsights: ReportVert;
   try {
     mergedInsights = await sendAiPrompt<
-      InsightsReport,
-      { notes: InsightsReport; merge_requests: InsightsReport }
+      ReportVert,
+      { comments: ReportVert; merge_requests: ReportVert }
     >(
-      { notes: notesInsights, merge_requests: mrInsights },
+      { comments: notesInsights, merge_requests: mrInsights },
       SystemPrompts.COMBINE_REPORTS
     );
   } catch (error) {
     console.error(`Error merging insights for user ${username}:`, error);
     return;
   }
+
+  console.log("insights collected");
+
+  // Replace Ids with URls
+  const idURLMap: Record<string, string> = {};
+  userInfo.authoredMergeRequests.nodes.forEach((mr) => {
+    idURLMap[mr.id] = mr.webUrl;
+    mr.notes.nodes.forEach((note) => {
+      idURLMap[note.id] = note.url;
+    });
+  });
+  mergedInsights.negativeSkills.forEach((skill) => {
+    skill.insights.forEach((insight) => {
+      insight.ids = insight.ids.map((id) => idURLMap[id]);
+    });
+  });
+  mergedInsights.positiveSkills.forEach((skill) => {
+    skill.insights.forEach((insight) => {
+      insight.ids = insight.ids.map((id) => idURLMap[id]);
+    });
+  });
+  mergedInsights.insights.forEach((insight) => {
+    insight.ids = insight.ids.map((id) => idURLMap[id]);
+  });
 
   // Generate Response sentiments
   const userResponseSentiments: Record<Sentiment, number> = {
@@ -157,6 +184,8 @@ export async function generateReport(username: string, period: TimePeriod) {
       testCases[startOfPeriod] += 1;
     }
   });
+
+  console.log("insights generated");
 
   // store insights
   // :STORAGE

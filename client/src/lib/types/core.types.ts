@@ -4,7 +4,8 @@ export type Quality = "High" | "Medium" | "Low";
 export type Sentiment = "Positive" | "Negative" | "Neutral";
 
 export interface userReport {
-  summary: string[];
+  insights: { text: string; ids: string }[];
+  actions: { text: string; references: Reference[] }[];
   positiveSkills: skillReport[];
   negativeSkills: skillReport[];
   impact: Record<string, Record<Sentiment, number>>;
@@ -15,10 +16,17 @@ export interface userReport {
   commentsSentiments: Record<Sentiment, number>;
 }
 
+export interface Reference {
+  title: string;
+  url: string;
+  skill: string;
+  description: string;
+}
+
 export interface skillReport {
   skill: string;
   frequency: Record<string, number>;
   sentimentFrequency: Record<string, Record<Sentiment, number>>;
-  insights: string[];
-  references?: { title: string; url: string; description: string }[];
+  insights: { text: string; ids: string[] }[];
+  references?: Reference[];
 }

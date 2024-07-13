@@ -27,6 +27,7 @@ export interface GQLAuthoredMergeRequest {
 export interface GQLMergeRequestNode {
   id: string;
   iid: string;
+  webUrl: string;
   title: string;
   description: string;
   state: string;
@@ -55,6 +56,7 @@ export interface GQLNotes {
 export interface GQLNoteNode {
   id: string;
   body: string;
+  url: string;
   createdAt: string;
   author: { username: string };
   position: GQLPositionNode;

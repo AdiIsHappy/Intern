@@ -68,7 +68,7 @@ export function NegativeSkills({ data, period }: negativeSkillsProp) {
             {data.negativeSkills
               .find((e) => e.skill === skill)
               ?.insights.map((insight, index) => (
-                <li key={index}>{insight}</li>
+                <li key={index}>{insight.text}</li>
               ))}
           </ol>
         </div>

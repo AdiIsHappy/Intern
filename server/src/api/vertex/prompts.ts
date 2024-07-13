@@ -111,186 +111,61 @@ Your task is to analyze this information and provide the following details:
 
 Note: Make the JSON as small as possible. There is no need to add additional spaces or newlines, ensuring that it can be directly parsed using the JSON.parse() method of JavaScript.`;
 
-const textsi_report_mr_analysis = `You are given a JSON formatted dataset containing an analysis of authored merge requests by a GitLab user over a fixed time period. Your task is to analyze this data and perform the following tasks:
+const textsi_report_mr_analysis = `You are given a JSON formatted dataset containing an analysis of authored merge requests by a GitLab user over a fixed time period. Your task is to analyze this data and identify following things.
 
-1. Identify trends in merge request activity and sentiment over the given time period focusing more on recent activities.
-2. Determine which skills have been frequently mentioned, group relevant skills together (e.g., Android Development and Android can be merged together), and assess the sentiment towards these skills.
-3. Highlight any significant changes or patterns in activity and skill development.
+- insights: list of insights, limited to 5 points maximum and each insight of maximum 10 words. 
+- actions: list of actions which user should do to improve his performance, these can be learning something, or changing the way user do something. if possible, provide learning resources for each action.
+- positive skills: list of skills in which user is performing good or have shown improvements, mentioning the total frequency, sentiment-wise frequency grouped by specified periods, and insights. Each skill's insights should be formatted as an array with short and crisp points.
+- negative skills: list of skills in which user is performing poor showing lack of skills or repetitive mistakes, mentioning the total frequency, sentiment-wise frequency grouped by specified periods, insights mentioning user mistakes, area where user need to improve etc. and references.
+- for each insight point mention minimum 1 maximum 3 merge request id to back it up the point. do not re-use a merge request id.
+- Each skill's insights should be formatted as an array with a maximum of 5 very short and crisp points of maximum length 10 words.- Use markdown style to represent if some text needs to be made bold.
+- add escape sequency for necessary symbols
+Note: Positive and negative skill must not overlap.
 
 These points should be presented in a direct informational way, giving the user suggestions and pointing out areas for improvement. For example: "You have made more impactful merge requests in the current month compared to the past." Insights should focus on either giving the user direct actions to take or their performance in a report.
 
-The response should be in JSON format with the following structure:
-
-- insights: An array of strings mentioning insights in points, limited to 5 points maximum and each insight of maximum 10 words.
-- positive skills: An array of JSON objects for minimum 3 and maximum of 5 skills in which user is performing good or have shown improvements, mentioning the total frequency, sentiment-wise frequency grouped by specified periods, and insights. Each skill's insights should be formatted as an array with a maximum of 5 short and crisp points.
-- negative skills: An array of JSON objects for maximum of 5 skills in which user is performing poor showing lac of skills or repetitive mistakes, mentioning the total frequency, sentiment-wise frequency grouped by specified periods, insights mentioning user mistakes, area where user need to improve etc. and references.
-
-for Each negative skill provide the learning resources under references which can help user correct his mistakes and improve. provide these insights with a suitable title, description and associated skill in proper format as shown in example.
-
-Each skill's insights should be formatted as an array with a maximum of 5 very short and crisp points of maximum length 10 words. 
-Note: Positive and negative skill must not overlap.
-
-Example JSON format:
+Example Response in JSON format:
 {
- "insights": [
-  "You have made more impactful merge requests in the current month compared to the past.",
-  "Consider discussing more actively and positively with your peers"
- ],
- "positiveSkills": [
-  {
-   "skill": "JavaScript",
-   "frequency": {
-    "2024-01-01T00:00:00.000+05:30": 0,
-    "2024-02-01T00:00:00.000+05:30": 1,
-    "2024-03-01T00:00:00.000+05:30": 6,
-    "2024-04-01T00:00:00.000+05:30": 9,
-    "2024-05-01T00:00:00.000+05:30": 3,
-    "2024-06-01T00:00:00.000+05:30": 6
-   },
-   "sentimentFrequency": {
-    "2024-01-01T00:00:00.000+05:30": {
-     "Positive": 0,
-     "Negative": 0,
-     "Neutral": 0
-    },
-    "2024-02-01T00:00:00.000+05:30": {
-     "Positive": 0,
-     "Negative": 1,
-     "Neutral": 0
-    },
-    "2024-03-01T00:00:00.000+05:30": {
-     "Positive": 5,
-     "Negative": 0,
-     "Neutral": 1
-    },
-    "2024-04-01T00:00:00.000+05:30": {
-     "Positive": 6,
-     "Negative": 1,
-     "Neutral": 2
-    },
-    "2024-05-01T00:00:00.000+05:30": {
-     "Positive": 2,
-     "Negative": 1,
-     "Neutral": 0
-    },
-    "2024-06-01T00:00:00.000+05:30": {
-     "Positive": 3,
-     "Negative": 2,
-     "Neutral": 1
-    }
-   },
-   "insights": [
-    "Your recent work on frontend of insights have received positive feedback.",
-    "There are very few negative feedbacks, consider addressing them to improve the overall quality of the code.",
-    "there is an overall positive review for your JavaScript code."
-   ]
-  }
- ],
- "negativeSkills": [
-  {
-   "skill": "TypeScript",
-   "frequency": {
-    "2024-01-01T00:00:00.000+05:30": 0,
-    "2024-02-01T00:00:00.000+05:30": 1,
-    "2024-03-01T00:00:00.000+05:30": 6,
-    "2024-04-01T00:00:00.000+05:30": 9,
-    "2024-05-01T00:00:00.000+05:30": 3,
-    "2024-06-01T00:00:00.000+05:30": 6
-   },
-   "sentimentFrequency": {
-    "2024-01-01T00:00:00.000+05:30": {
-     "Positive": 0,
-     "Negative": 0,
-     "Neutral": 0
-    },
-    "2024-02-01T00:00:00.000+05:30": {
-     "Positive": 0,
-     "Negative": 1,
-     "Neutral": 0
-    },
-    "2024-03-01T00:00:00.000+05:30": {
-     "Positive": 5,
-     "Negative": 0,
-     "Neutral": 1
-    },
-    "2024-04-01T00:00:00.000+05:30": {
-     "Positive": 6,
-     "Negative": 1,
-     "Neutral": 2
-    },
-    "2024-05-01T00:00:00.000+05:30": {
-     "Positive": 2,
-     "Negative": 1,
-     "Neutral": 0
-    },
-    "2024-06-01T00:00:00.000+05:30": {
-     "Positive": 3,
-     "Negative": 2,
-     "Neutral": 1
-    }
-   },
-   "insights": [
-    "you have reputedly made mistakes in defining the types of the variables.",
-    "consider using proper code format decided for the project",
-    "learn more about interfaces in typescript to improve the code quality."
-   ],
-   "references": [
+  "insights": [
     {
-     "title": "TypeScript Handbook",
-     "url": "https://www.typescriptlang.org/docs/handbook/intro.html",
-     "skill": "TypeScript",
-     "description": "The official handbook for TypeScript. It is a great resource to learn about TypeScript and its features."
+      "text": "your recent activity shows **improved Interface** understanding in typescript.",
+      "ids": [
+        "gid://gitlab/MergeRequest/314323396",
+        "gid://gitlab/MergeRequest/314013485"
+      ]
+    },
+    {
+      "text": "**discuss more positively** with your peers, your replies are getting negative feedback.",
+      "ids": ["gid://gitlab/MergeRequest/300396629"]
     }
-   ]
-  }
- ]
-}
-
-
-
-
-Please ensure the insights are actionable and provide direct information.
-Sample input:
-
-{
-  
- "data": {},
- "dates": [
-  "2024-06-01T00:00:00.000+05:30",
-  "2024-05-01T00:00:00.000+05:30",
-  "2024-04-01T00:00:00.000+05:30",
-  "2024-03-01T00:00:00.000+05:30",
-  "2024-02-01T00:00:00.000+05:30",
-  "2024-01-01T00:00:00.000+05:30"
- ]
-  
-
-Note: Don't use markdown structure in output give a minified single line raw Json file text without any.
-
-`;
-const textsi_report_notes_analysis = `You are given a JSON formatted dataset containing an analysis of comments on authored merge requests by a GitLab user over a fixed time period. Your task is to analyze this data and perform the following tasks:
-
-1. Identify trends in merge request activity and sentiment over the given time period focusing with more focus on recent activites.
-2. Determine which skills have been frequently mentioned or have significant importance to authors work, group relevant skills together (Example Android Development and Android can be merge together) and assess the sentiment towards these skills.
-3. Highlight any significant changes or patterns in activity and skill development.
-
-These points should be presented in a direct informational way, giving the user suggestions and pointing out area for improvement. For example: "your merge request impact have seen a positive trend", "quality of your merge requests is declining, focus on writing more descriptive merge requests." Insights should focus on either giving the user direct actions to take or his performance in a report.
-
-The response should be in JSON format with the following structure:
-
-- summary: An array of strings mentioning insights in points, limited to 5 points maximum and each point of maximum length 10 words.
-- positive skills: An array of JSON objects for minimum 3 and maximum of 5 skills in which user is performing good or have shown improvements, mentioning the total frequency, sentiment-wise frequency grouped by specified periods, and insights. Each skill's insights should be formatted as an array with a maximum of 5 short and crisp points.
-- negative skills: An array of JSON objects for maximum of 5 skills in which user is performing poor showing lac of skills or repetitive mistakes, mentioning the total frequency, sentiment-wise frequency grouped by specified periods, insights mentioning user mistakes, area where user need to improve etc. and references.
-
-for Each negative skill provide the learning resources under references which can help user correct his mistakes and improve. provide these insights with a suitable title, description and associated skill in proper format as shown in example.
-
-Each skill's insights should be formatted as an array with a maximum of 5 very short and crisp points of maximum length of 10 words. 
-Note: Positive and negative skill must not overlap.
-
-Example JSON format:
-{
-  "summary": [
-    "You have made more impactful merge requests in the current month compared to the past."
+  ],
+  "actions": [
+    {
+      "text": "Start learning **React** to improve your frontend skills.",
+      "references": [
+        {
+          "title": "React Documentation",
+          "url": "https://reactjs.org/docs/getting-started.html",
+          "skill": "React",
+          "description": "The official documentation for React. It is a great resource to learn about React and its features."
+        }
+      ]
+    },
+    {
+      "text": "Learn about how to do **server side rendering** in React.",
+      "references": [
+        {
+          "title": "Server Side Rendering",
+          "url": "https://reactjs.org/docs/react-dom-server.html",
+          "skill": "React",
+          "description": "The official documentation for Server Side Rendering in React. It is a great resource to learn about Server Side Rendering in React."
+        }
+      ]
+    },
+    {
+      "text": "Focus on making **seperate components** for the project. to mainitan the **project structure.**",
+      "references": []
+    }
   ],
   "positiveSkills": [
     {
@@ -336,9 +211,18 @@ Example JSON format:
         }
       },
       "insights": [
-        "Your recent work on frotend of insgiths have recived positive feedback.",
-        "There are very few negative feedbacks, consider adressing them to improve the overall quality of the code.",
-        "there is an overall positive review for your javascript code."
+        {
+          "text": "Your **Eslint configuration** is working well with the project. and is being **appreciated**",
+          "ids": ["gid://gitlab/MergeRequest/314018479"]
+        },
+        {
+          "text": "Your recent work on **frontend of insights** have received **positive** feedback.",
+          "ids": [
+            "gid://gitlab/MergeRequest/312842396",
+            "gid://gitlab/MergeRequest/308394629",
+            "gid://gitlab/MergeRequest/314121348"
+          ]
+        }
       ]
     }
   ],
@@ -386,9 +270,242 @@ Example JSON format:
         }
       },
       "insights": [
-        "you have repitedly made mistakes in defining the types of the variables.",
-        "consider using proper code format decided for the project",
-        "learn more about interfaces in typescript to improve the code quality."
+        {
+          "text": "You are making **redundant interfaces** where you can make use **generic interfaces. **",
+          "ids": [
+            "gid://gitlab/MergeRequest/312842390",
+            "gid://gitlab/MergeRequest/308387629",
+            "gid://gitlab/MergeRequest/334121388"
+          ]
+        },
+        {
+          "text": "You have repeatedly made mistakes in defining the **types of the variables. **",
+          "ids": ["gid://gitlab/MergeRequest/314324396"]
+        },
+        {
+          "text": "Consider using proper **code format** decided for the project",
+          "ids": [
+            "gid://gitlab/MergeRequest/314013479",
+            "gid://gitlab/MergeRequest/314121342"
+          ]
+        },
+        {
+          "text": "Use **Union types** to define the types of the variables. instead of using any type.",
+          "ids": ["gid://gitlab/MergeRequest/300356629"]
+        }
+      ],
+      "references": [
+        {
+          "title": "TypeScript Handbook",
+          "url": "https://www.typescriptlang.org/docs/handbook/intro.html",
+          "skill": "TypeScript",
+          "description": "The official handbook for TypeScript. It is a great resource to learn about TypeScript and its features."
+        }
+      ]
+    }
+  ]
+}
+
+  
+
+
+
+Please ensure the insights are actionable and provide direct information.
+Sample input:
+
+{
+  
+ "data": {},
+ "dates": [
+  "2024-06-01T00:00:00.000+05:30",
+  "2024-04-01T00:00:00.000+05:30",
+  "2024-02-01T00:00:00.000+05:30",
+ ]
+  
+
+Note: Don't use markdown structure in output give a minified single line raw Json file text without any newline to spaces
+`;
+const textsi_report_notes_analysis = `You are given a JSON formatted dataset containing an analysis of comments on authored merge requests by a GitLab user over a fixed time period. Your task is to analyze this data and identify following things.
+
+- insights: list of insights, limited to 5 points maximum and each insight of maximum 10 words. 
+- actions: list of actions which user should do to improve his performance, these can be learning something, or changing the way user do something. if possible, provide learning resources for each action.
+- positive skills: list of skills in which user is performing good or have shown improvements, mentioning the total frequency, sentiment-wise frequency grouped by specified periods, and insights. Each skill's insights should be formatted as an array with short and crisp points.
+- negative skills: list of skills in which user is performing poor showing lack of skills or repetitive mistakes, mentioning the total frequency, sentiment-wise frequency grouped by specified periods, insights mentioning user mistakes, area where user need to improve etc. and references.
+- for each insight point, be it global or inside a skill mention minimum 1 maximum 3 comment id to back it up the point. do not re-use a comment id.
+- Each skill's insights should be formatted as an array with a maximum of 5 very short and crisp points of maximum length 10 words.
+- for each negative skill, mention minimum 2 and maximum 5 references- Use markdown style to represent if some text needs to be made bold.- add escape sequency for necessary symbolsNote: Positive and negative skill must not overlap.
+
+These points should be presented in a direct informational way, giving the user suggestions and pointing out areas for improvement. For example: "You have made more impactful merge requests in the current month compared to the past." Insights should focus on either giving the user direct actions to take or their performance in a report.
+
+Example Response in JSON format:
+{
+  "insights": [
+    {
+      "text": "your recent activity shows **improved Interface** understanding in typescript.",
+      "ids": [
+        "gid://gitlab/DiscussionNote/1968290680",
+        "gid://gitlab/DiscussionNote/1968459995"
+      ]
+    },
+    {
+      "text": "**discuss more positively** with your peers, your replies are getting negative feedback.",
+      "ids": ["gid://gitlab/DiscussionNote/1949044193"]
+    }
+  ],
+  "actions": [
+    {
+      "text": "Start learning **React** to improve your frontend skills.",
+      "references": [
+        {
+          "title": "React Documentation",
+          "url": "https://reactjs.org/docs/getting-started.html",
+          "skill": "React",
+          "description": "The official documentation for React. It is a great resource to learn about React and its features."
+        }
+      ]
+    },
+    {
+      "text": "Learn about how to do **server side rendering** in React.",
+      "references": [
+        {
+          "title": "Server Side Rendering",
+          "url": "https://reactjs.org/docs/react-dom-server.html",
+          "skill": "React",
+          "description": "The official documentation for Server Side Rendering in React. It is a great resource to learn about Server Side Rendering in React."
+        }
+      ]
+    },
+    {
+      "text": "Focus on making **seperate components** for the project. to mainitan the **project structure.**",
+      "references": []
+    }
+  ],
+  "positiveSkills": [
+    {
+      "skill": "JavaScript",
+      "frequency": {
+        "2024-01-01T00:00:00.000+05:30": 0,
+        "2024-02-01T00:00:00.000+05:30": 1,
+        "2024-03-01T00:00:00.000+05:30": 6,
+        "2024-04-01T00:00:00.000+05:30": 9,
+        "2024-05-01T00:00:00.000+05:30": 3,
+        "2024-06-01T00:00:00.000+05:30": 6
+      },
+      "sentimentFrequency": {
+        "2024-01-01T00:00:00.000+05:30": {
+          "Positive": 0,
+          "Negative": 0,
+          "Neutral": 0
+        },
+        "2024-02-01T00:00:00.000+05:30": {
+          "Positive": 0,
+          "Negative": 1,
+          "Neutral": 0
+        },
+        "2024-03-01T00:00:00.000+05:30": {
+          "Positive": 5,
+          "Negative": 0,
+          "Neutral": 1
+        },
+        "2024-04-01T00:00:00.000+05:30": {
+          "Positive": 6,
+          "Negative": 1,
+          "Neutral": 2
+        },
+        "2024-05-01T00:00:00.000+05:30": {
+          "Positive": 2,
+          "Negative": 1,
+          "Neutral": 0
+        },
+        "2024-06-01T00:00:00.000+05:30": {
+          "Positive": 3,
+          "Negative": 2,
+          "Neutral": 1
+        }
+      },
+      "insights": [
+        {
+          "text": "Your **Eslint configuration** is working well with the project. and is being **appreciated**",
+          "ids": ["gid://gitlab/DiscussionNote/1912931881"]
+        },
+        {
+          "text": "Your recent work on **frontend of insights** have received **positive** feedback.",
+          "ids": [
+            "gid://gitlab/DiscussionNote/1912916445",
+            "gid://gitlab/DiscussionNote/1912915977",
+            "gid://gitlab/DiffNote/1849065796"
+          ]
+        }
+      ]
+    }
+  ],
+  "negativeSkills": [
+    {
+      "skill": "TypeScript",
+      "frequency": {
+        "2024-01-01T00:00:00.000+05:30": 0,
+        "2024-02-01T00:00:00.000+05:30": 1,
+        "2024-03-01T00:00:00.000+05:30": 6,
+        "2024-04-01T00:00:00.000+05:30": 9,
+        "2024-05-01T00:00:00.000+05:30": 3,
+        "2024-06-01T00:00:00.000+05:30": 6
+      },
+      "sentimentFrequency": {
+        "2024-01-01T00:00:00.000+05:30": {
+          "Positive": 0,
+          "Negative": 0,
+          "Neutral": 0
+        },
+        "2024-02-01T00:00:00.000+05:30": {
+          "Positive": 0,
+          "Negative": 1,
+          "Neutral": 0
+        },
+        "2024-03-01T00:00:00.000+05:30": {
+          "Positive": 5,
+          "Negative": 0,
+          "Neutral": 1
+        },
+        "2024-04-01T00:00:00.000+05:30": {
+          "Positive": 6,
+          "Negative": 1,
+          "Neutral": 2
+        },
+        "2024-05-01T00:00:00.000+05:30": {
+          "Positive": 2,
+          "Negative": 1,
+          "Neutral": 0
+        },
+        "2024-06-01T00:00:00.000+05:30": {
+          "Positive": 3,
+          "Negative": 2,
+          "Neutral": 1
+        }
+      },
+      "insights": [
+        {
+          "text": "You are making **redundant interfaces** where you can make use **generic interfaces. **",
+          "ids": [
+            "gid://gitlab/DiffNote/1849066604",
+            "gid://gitlab/DiscussionNote/1850407011",
+            "gid://gitlab/DiffNote/1850415148"
+          ]
+        },
+        {
+          "text": "You have repeatedly made mistakes in defining the **types of the variables. **",
+          "ids": ["gid://gitlab/DiffNote/1850429289"]
+        },
+        {
+          "text": "Consider using proper **code format** decided for the project",
+          "ids": [
+            "gid://gitlab/Note/1846768288",
+            "gid://gitlab/Note/1891329346"
+          ]
+        },
+        {
+          "text": "Use **Union types** to define the types of the variables. instead of using any type.",
+          "ids": ["gid://gitlab/Note/1891768109"]
+        }
       ],
       "references": [
         {
@@ -403,6 +520,213 @@ Example JSON format:
 }
 
 
+Please ensure the insights are actionable and provide direct information.
+Sample input:
+
+{
+  
+ "data": {},
+ "dates": [
+  "2024-06-01T00:00:00.000+05:30",
+  "2024-04-01T00:00:00.000+05:30",
+  "2024-02-01T00:00:00.000+05:30",
+ ]
+Note: Don't use markdown structure in output give a minified single line raw Json file text without any newline to spaces
+`;
+
+const textsi_combine_reports = `You are given a JSON formatted dataset containing an analysis of comments on authored merge requests by a GitLab user over a fixed time period. Your task is to analyze this data and identify following things.
+
+- insights: list of insights, limited to 5 points maximum and each insight of maximum 10 words. 
+- actions: list of actions which user should do to improve his performance, these can be learning something, or changing the way user do something. if possible, provide learning resources for each action.
+- positive skills: list of skills in which user is performing good or have shown improvements, mentioning the total frequency, sentiment-wise frequency grouped by specified periods, and insights. Each skill's insights should be formatted as an array with short and crisp points.
+- negative skills: list of skills in which user is performing poor showing lack of skills or repetitive mistakes, mentioning the total frequency, sentiment-wise frequency grouped by specified periods, insights mentioning user mistakes, area where user need to improve etc. and references.
+- for each insight point, be it global or inside a skill mention minimum 1 maximum 3 comment id to back it up the point. do not re-use a comment id.
+- Each skill's insights should be formatted as an array with a maximum of 5 very short and crisp points of maximum length 10 words.
+- for each negative skill, mention minimum 2 and maximum 5 references- Use markdown style to represent if some text needs to be made bold.- add escape sequency for necessary symbolsNote: Positive and negative skill must not overlap.
+
+These points should be presented in a direct informational way, giving the user suggestions and pointing out areas for improvement. For example: "You have made more impactful merge requests in the current month compared to the past." Insights should focus on either giving the user direct actions to take or their performance in a report.
+
+Example Response in JSON format:
+{
+  "insights": [
+    {
+      "text": "your recent activity shows **improved Interface** understanding in typescript.",
+      "ids": [
+        "gid://gitlab/DiscussionNote/1968290680",
+        "gid://gitlab/DiscussionNote/1968459995"
+      ]
+    },
+    {
+      "text": "**discuss more positively** with your peers, your replies are getting negative feedback.",
+      "ids": ["gid://gitlab/DiscussionNote/1949044193"]
+    }
+  ],
+  "actions": [
+    {
+      "text": "Start learning **React** to improve your frontend skills.",
+      "references": [
+        {
+          "title": "React Documentation",
+          "url": "https://reactjs.org/docs/getting-started.html",
+          "skill": "React",
+          "description": "The official documentation for React. It is a great resource to learn about React and its features."
+        }
+      ]
+    },
+    {
+      "text": "Learn about how to do **server side rendering** in React.",
+      "references": [
+        {
+          "title": "Server Side Rendering",
+          "url": "https://reactjs.org/docs/react-dom-server.html",
+          "skill": "React",
+          "description": "The official documentation for Server Side Rendering in React. It is a great resource to learn about Server Side Rendering in React."
+        }
+      ]
+    },
+    {
+      "text": "Focus on making **seperate components** for the project. to mainitan the **project structure.**",
+      "references": []
+    }
+  ],
+  "positiveSkills": [
+    {
+      "skill": "JavaScript",
+      "frequency": {
+        "2024-01-01T00:00:00.000+05:30": 0,
+        "2024-02-01T00:00:00.000+05:30": 1,
+        "2024-03-01T00:00:00.000+05:30": 6,
+        "2024-04-01T00:00:00.000+05:30": 9,
+        "2024-05-01T00:00:00.000+05:30": 3,
+        "2024-06-01T00:00:00.000+05:30": 6
+      },
+      "sentimentFrequency": {
+        "2024-01-01T00:00:00.000+05:30": {
+          "Positive": 0,
+          "Negative": 0,
+          "Neutral": 0
+        },
+        "2024-02-01T00:00:00.000+05:30": {
+          "Positive": 0,
+          "Negative": 1,
+          "Neutral": 0
+        },
+        "2024-03-01T00:00:00.000+05:30": {
+          "Positive": 5,
+          "Negative": 0,
+          "Neutral": 1
+        },
+        "2024-04-01T00:00:00.000+05:30": {
+          "Positive": 6,
+          "Negative": 1,
+          "Neutral": 2
+        },
+        "2024-05-01T00:00:00.000+05:30": {
+          "Positive": 2,
+          "Negative": 1,
+          "Neutral": 0
+        },
+        "2024-06-01T00:00:00.000+05:30": {
+          "Positive": 3,
+          "Negative": 2,
+          "Neutral": 1
+        }
+      },
+      "insights": [
+        {
+          "text": "Your **Eslint configuration** is working well with the project. and is being **appreciated**",
+          "ids": ["gid://gitlab/DiscussionNote/1912931881"]
+        },
+        {
+          "text": "Your recent work on **frontend of insights** have received **positive** feedback.",
+          "ids": [
+            "gid://gitlab/DiscussionNote/1912916445",
+            "gid://gitlab/DiscussionNote/1912915977",
+            "gid://gitlab/DiffNote/1849065796"
+          ]
+        }
+      ]
+    }
+  ],
+  "negativeSkills": [
+    {
+      "skill": "TypeScript",
+      "frequency": {
+        "2024-01-01T00:00:00.000+05:30": 0,
+        "2024-02-01T00:00:00.000+05:30": 1,
+        "2024-03-01T00:00:00.000+05:30": 6,
+        "2024-04-01T00:00:00.000+05:30": 9,
+        "2024-05-01T00:00:00.000+05:30": 3,
+        "2024-06-01T00:00:00.000+05:30": 6
+      },
+      "sentimentFrequency": {
+        "2024-01-01T00:00:00.000+05:30": {
+          "Positive": 0,
+          "Negative": 0,
+          "Neutral": 0
+        },
+        "2024-02-01T00:00:00.000+05:30": {
+          "Positive": 0,
+          "Negative": 1,
+          "Neutral": 0
+        },
+        "2024-03-01T00:00:00.000+05:30": {
+          "Positive": 5,
+          "Negative": 0,
+          "Neutral": 1
+        },
+        "2024-04-01T00:00:00.000+05:30": {
+          "Positive": 6,
+          "Negative": 1,
+          "Neutral": 2
+        },
+        "2024-05-01T00:00:00.000+05:30": {
+          "Positive": 2,
+          "Negative": 1,
+          "Neutral": 0
+        },
+        "2024-06-01T00:00:00.000+05:30": {
+          "Positive": 3,
+          "Negative": 2,
+          "Neutral": 1
+        }
+      },
+      "insights": [
+        {
+          "text": "You are making **redundant interfaces** where you can make use **generic interfaces. **",
+          "ids": [
+            "gid://gitlab/DiffNote/1849066604",
+            "gid://gitlab/DiscussionNote/1850407011",
+            "gid://gitlab/DiffNote/1850415148"
+          ]
+        },
+        {
+          "text": "You have repeatedly made mistakes in defining the **types of the variables. **",
+          "ids": ["gid://gitlab/DiffNote/1850429289"]
+        },
+        {
+          "text": "Consider using proper **code format** decided for the project",
+          "ids": [
+            "gid://gitlab/Note/1846768288",
+            "gid://gitlab/Note/1891329346"
+          ]
+        },
+        {
+          "text": "Use **Union types** to define the types of the variables. instead of using any type.",
+          "ids": ["gid://gitlab/Note/1891768109"]
+        }
+      ],
+      "references": [
+        {
+          "title": "TypeScript Handbook",
+          "url": "https://www.typescriptlang.org/docs/handbook/intro.html",
+          "skill": "TypeScript",
+          "description": "The official handbook for TypeScript. It is a great resource to learn about TypeScript and its features."
+        }
+      ]
+    }
+  ]
+}
 
 
 Please ensure the insights are actionable and provide direct information.
@@ -410,111 +734,13 @@ Sample input:
 
 {
   
-  "data": {},
-  "dates": [
-    "2024-06-01T00:00:00.000+05:30",
-    "2024-05-01T00:00:00.000+05:30",
-    "2024-04-01T00:00:00.000+05:30",
-    "2024-03-01T00:00:00.000+05:30",
-    "2024-02-01T00:00:00.000+05:30",
-    "2024-01-01T00:00:00.000+05:30"
-  ]
-  
-}
-Note: Don't use markdown structure in output give a minified single line raw Json file text without any.`;
-const textsi_combine_reports = `You are given two JSON formatted datasets containing insights from GitLab comments and merge requests. Your task is to combine these outputs and provide a single set of combined insights. The datasets are structured as follows:
-
-{
-  "summary": [],
-  "positiveSkills": [
-    {
-      "skill": "",
-      "frequency": { "timestamp": 0 },
-      "sentimentFrequency": {
-        "Positive": { "timestamp": 0 },
-        "Negative": { "timestamp": 0 },
-        "Neutral": { "timestamp": 0 }
-      },
-      "insights": []
-    }
-  ],
-  "negativeSkills": [
-    {
-      "skill": "",
-      "frequency": { "timestamp": 0 },
-      "sentimentFrequency": {
-        "Positive": { "timestamp": 0 },
-        "Negative": { "timestamp": 0 },
-        "Neutral": { "timestamp": 0 }
-      },
-      "insights": [],
-      "references": [
-        {
-          "title": "",
-          "url": "",
-          "skill": "",
-          "description": ""
-        }
-      ]
-    }
-  ]
-}
-
-
-Input Data:
-1. Generated Insights from Comment Analysis
-2. Generated Insights from Merge Request Analysis
-
-Task:
-1. Combine the Insights:
-   - Merge the summary sections from both datasets into a single array of strings, limited to 5 points maximum with each point of maximum length of 10 words.
-   - Merge the skills sections from both datasets. If there are similar or related skills, combine them into a single skill entry. Update the frequency and sentimentFrequency accordingly.
-   - Provide combined insights for each skill, limited to a maximum of 5 points per skill with maximum length of 10 words.
-   - Ensure that insights are not repeated and are actionable.
-
-Output:
-The combined insights should be in the following JSON format:
-
-{
-  "summary": [],
-  "positiveSkills": [
-    {
-      "skill": "",
-      "frequency": { "timestamp": 0 },
-      "sentimentFrequency": {
-        "Positive": { "timestamp": 0 },
-        "Negative": { "timestamp": 0 },
-        "Neutral": { "timestamp": 0 }
-      },
-      "insights": []
-    }
-  ],
-  "negativeSkills": [
-    {
-      "skill": "",
-      "frequency": { "timestamp": 0 },
-      "sentimentFrequency": {
-        "Positive": { "timestamp": 0 },
-        "Negative": { "timestamp": 0 },
-        "Neutral": { "timestamp": 0 }
-      },
-      "insights": [],
-      "references": [
-        {
-          "title": "",
-          "url": "",
-          "skill": "",
-          "description": ""
-        }
-      ]
-    }
-  ]
-}
-
-
-
-Ensure the output JSON is minimal and correctly formatted. The combined insights should provide a clear, actionable summary and detailed skill-specific feedback based on the merged data.
-Note: make the JSON as small as possible no need to add additional spaces or newlines or formatting and ensuring that it can be directly parsed using Json.parse() method of javascript.
+ "data": {},
+ "dates": [
+  "2024-06-01T00:00:00.000+05:30",
+  "2024-04-01T00:00:00.000+05:30",
+  "2024-02-01T00:00:00.000+05:30",
+ ]
+Note: Don't use markdown structure in output give a minified single line raw Json file text without any newline to spaces
 `;
 
 export enum SystemPrompts {

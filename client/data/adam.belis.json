@@ -1,89 +1,120 @@
 {
   "username": "adam.belis",
-  "updatedAt": "2024-07-12T09:35:25.809+05:30",
+  "updatedAt": "2024-07-13T21:50:22.917+05:30",
   "status": "Avaliable",
   "report": {
     "month": {
-      "summary": [
-        "Your recent merge requests have seen a positive trend with more impactful changes.",
-        "You demonstrate strong UI design and keyboard shortcut knowledge, but occasional mistakes need attention.",
-        "Your Git skills show improvement, but you still face challenges with committing changes and merge requests.",
-        "Improve collaboration with peers to achieve more positive and impactful outcomes."
+      "insights": [
+        {
+          "text": "You are improving your understanding of backporting code changes in Git",
+          "ids": [
+            "https://gitlab.com/inkscape/inkscape/-/merge_requests/6566#note_1968290680",
+            "https://gitlab.com/inkscape/inkscape/-/merge_requests/6566#note_1968459995"
+          ]
+        },
+        {
+          "text": "You effectively resolve issues in merge requests",
+          "ids": [
+            "https://gitlab.com/inkscape/inkscape/-/merge_requests/6543#note_1979137078"
+          ]
+        },
+        {
+          "text": "You effectively contribute to discussions by providing constructive feedback",
+          "ids": [
+            "https://gitlab.com/inkscape/inkscape/-/merge_requests/6543#note_1949044193",
+            "https://gitlab.com/inkscape/inkscape/-/merge_requests/6462#note_1911554892",
+            "https://gitlab.com/inkscape/inkscape/-/merge_requests/6462#note_1912916445"
+          ]
+        },
+        {
+          "text": "You proactively seek feedback on your work",
+          "ids": [
+            "https://gitlab.com/inkscape/inkscape/-/merge_requests/6462#note_1911520931",
+            "https://gitlab.com/inkscape/inkscape-docs/manuals/-/merge_requests/143#note_1848673873"
+          ]
+        },
+        {
+          "text": "You effectively utilize GitLab functionality for issue resolution",
+          "ids": [
+            "https://gitlab.com/inkscape/inkscape/-/merge_requests/6516#note_1931723308",
+            "https://gitlab.com/inkscape/inkscape/-/merge_requests/6516#note_1931794488"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "text": "Deepen your understanding of Git by exploring its advanced features like rebasing and cherry-picking.",
+          "references": [
+            {
+              "title": "Git Branching",
+              "url": "https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching",
+              "skill": "Git",
+              "description": "A comprehensive guide on Git branching from the official Git documentation."
+            },
+            {
+              "title": "Git Rebasing",
+              "url": "https://git-scm.com/book/en/v2/Git-Branching-Rebasing",
+              "skill": "Git",
+              "description": "Learn about rebasing branches and its benefits and challenges from the official Git documentation."
+            },
+            {
+              "title": "Git Cherry-Picking",
+              "url": "https://git-scm.com/book/en/v2/Git-Branching-Cherry-Picking",
+              "skill": "Git",
+              "description": "Explore cherry-picking individual commits from one branch to another from the official Git documentation."
+            }
+          ]
+        },
+        {
+          "text": "Engage more in discussions on merge requests by providing more actionable and insightful feedback.",
+          "references": []
+        },
+        {
+          "text": "Learn more about the Inkscape documentation process by reviewing existing documentation and seeking feedback from other contributors.",
+          "references": [
+            {
+              "title": "Inkscape Documentation",
+              "url": "https://wiki.inkscape.org/wiki/Documentation",
+              "skill": "Inkscape",
+              "description": "The official Inkscape documentation website."
+            },
+            {
+              "title": "Inkscape Source Code",
+              "url": "https://gitlab.com/inkscape/inkscape",
+              "skill": "Inkscape",
+              "description": "The official Inkscape repository on GitLab."
+            }
+          ]
+        },
+        {
+          "text": "Familiarize yourself with the structure and formatting of documentation for Inkscape.",
+          "references": []
+        }
       ],
       "positiveSkills": [
         {
-          "skill": "UI Design",
-          "frequency": {
-            "2024-03-01T00:00:00.000+05:30": 0,
-            "2024-04-01T00:00:00.000+05:30": 1,
-            "2024-05-01T00:00:00.000+05:30": 12,
-            "2024-06-01T00:00:00.000+05:30": 7,
-            "2024-07-01T00:00:00.000+05:30": 1
-          },
-          "sentimentFrequency": {
-            "2024-03-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-04-01T00:00:00.000+05:30": {
-              "Positive": 1,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-05-01T00:00:00.000+05:30": {
-              "Positive": 1,
-              "Negative": 4,
-              "Neutral": 7
-            },
-            "2024-06-01T00:00:00.000+05:30": {
-              "Positive": 2,
-              "Negative": 1,
-              "Neutral": 4
-            },
-            "2024-07-01T00:00:00.000+05:30": {
-              "Positive": 1,
-              "Negative": 0,
-              "Neutral": 0
-            }
-          },
-          "insights": [
-            "You've actively contributed to UI design discussions, offering valuable insights.",
-            "Your suggestion for using 'modifier keys' was adopted, showcasing your strong understanding.",
-            "Your feedback on UI features has been constructive, helping improve the overall design.",
-            "Consider collaborating with UI/UX designers for further development.",
-            "Showed an understanding of UI principles, leading to positive feedback."
-          ]
-        },
-        {
           "skill": "Keyboard Shortcuts",
           "frequency": {
-            "2024-03-01T00:00:00.000+05:30": 0,
             "2024-04-01T00:00:00.000+05:30": 0,
-            "2024-05-01T00:00:00.000+05:30": 12,
-            "2024-06-01T00:00:00.000+05:30": 3,
+            "2024-05-01T00:00:00.000+05:30": 14,
+            "2024-06-01T00:00:00.000+05:30": 1,
             "2024-07-01T00:00:00.000+05:30": 0
           },
           "sentimentFrequency": {
-            "2024-03-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
             "2024-04-01T00:00:00.000+05:30": {
               "Positive": 0,
               "Negative": 0,
               "Neutral": 0
             },
             "2024-05-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 2,
-              "Neutral": 10
+              "Positive": 1,
+              "Negative": 0,
+              "Neutral": 13
             },
             "2024-06-01T00:00:00.000+05:30": {
               "Positive": 0,
               "Negative": 0,
-              "Neutral": 3
+              "Neutral": 1
             },
             "2024-07-01T00:00:00.000+05:30": {
               "Positive": 0,
@@ -92,78 +123,55 @@
             }
           },
           "insights": [
-            "Your knowledge of keyboard shortcuts is evident, actively participating in discussions.",
-            "Your suggestions have been helpful in streamlining workflows.",
-            "You are actively involved in designing efficient keyboard shortcuts."
-          ]
-        },
-        {
-          "skill": "Inkscape",
-          "frequency": {
-            "2024-03-01T00:00:00.000+05:30": 0,
-            "2024-04-01T00:00:00.000+05:30": 15,
-            "2024-05-01T00:00:00.000+05:30": 3,
-            "2024-06-01T00:00:00.000+05:30": 2,
-            "2024-07-01T00:00:00.000+05:30": 0
-          },
-          "sentimentFrequency": {
-            "2024-03-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
+            {
+              "text": "You demonstrate a thorough understanding of keyboard shortcuts in Inkscape.",
+              "ids": [
+                "https://gitlab.com/inkscape/inkscape/-/merge_requests/6462#note_1911548664",
+                "https://gitlab.com/inkscape/inkscape/-/merge_requests/6462#note_1912915977",
+                "https://gitlab.com/inkscape/inkscape/-/merge_requests/6462#note_1923572371"
+              ]
             },
-            "2024-04-01T00:00:00.000+05:30": {
-              "Positive": 6,
-              "Negative": 1,
-              "Neutral": 8
+            {
+              "text": "You propose well-thought-out alternatives for shortcut assignments.",
+              "ids": [
+                "https://gitlab.com/inkscape/inkscape/-/merge_requests/6462#note_1912862887",
+                "https://gitlab.com/inkscape/inkscape/-/merge_requests/6462#note_1912893104",
+                "https://gitlab.com/inkscape/inkscape/-/merge_requests/6462#note_1912909851"
+              ]
             },
-            "2024-05-01T00:00:00.000+05:30": {
-              "Positive": 3,
-              "Negative": 0,
-              "Neutral": 0
+            {
+              "text": "You effectively collaborate with others to refine keyboard shortcut implementations.",
+              "ids": [
+                "https://gitlab.com/inkscape/inkscape/-/merge_requests/6462#note_1911554892",
+                "https://gitlab.com/inkscape/inkscape/-/merge_requests/6462#note_1912931881",
+                "https://gitlab.com/inkscape/inkscape/-/merge_requests/6462#note_1946510578"
+              ]
             },
-            "2024-06-01T00:00:00.000+05:30": {
-              "Positive": 2,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-07-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
+            {
+              "text": "You show a strong understanding of the user experience regarding keyboard shortcuts.",
+              "ids": [
+                "https://gitlab.com/inkscape/inkscape/-/merge_requests/6462#note_1912916445",
+                "https://gitlab.com/inkscape/inkscape/-/merge_requests/6462#note_1915181008"
+              ]
             }
-          },
-          "insights": [
-            "Consistent positive feedback and contributions to Inkscape.",
-            "Focus on expanding your skills beyond documentation and UI design.",
-            "Improved documentation on filters, patterns, and Live Path Effects.",
-            "Good use of visuals and examples in documentation.",
-            "Your contributions have provided valuable feedback on Inkscape features.",
-            "You have demonstrated a good understanding of the Inkscape functionalities."
           ]
         },
         {
-          "skill": "Documentation",
+          "skill": "Layers",
           "frequency": {
-            "2024-03-01T00:00:00.000+05:30": 0,
-            "2024-04-01T00:00:00.000+05:30": 8,
-            "2024-05-01T00:00:00.000+05:30": 0,
+            "2024-04-01T00:00:00.000+05:30": 0,
+            "2024-05-01T00:00:00.000+05:30": 1,
             "2024-06-01T00:00:00.000+05:30": 0,
             "2024-07-01T00:00:00.000+05:30": 0
           },
           "sentimentFrequency": {
-            "2024-03-01T00:00:00.000+05:30": {
+            "2024-04-01T00:00:00.000+05:30": {
               "Positive": 0,
               "Negative": 0,
               "Neutral": 0
             },
-            "2024-04-01T00:00:00.000+05:30": {
-              "Positive": 3,
-              "Negative": 2,
-              "Neutral": 3
-            },
             "2024-05-01T00:00:00.000+05:30": {
-              "Positive": 0,
+              "Positive": 1,
               "Negative": 0,
               "Neutral": 0
             },
@@ -179,95 +187,64 @@
             }
           },
           "insights": [
-            "Consistent positive feedback for documentation contributions.",
-            "Good understanding of Inkscape features and functionality.",
-            "Focus on improving documentation structure and clarity.",
-            "Added value to the user experience by providing detailed instructions.",
-            "Contribute more to the documentation for a broader impact.",
-            "Focus on improving the storytelling logic in your documentation."
+            {
+              "text": "You have a good understanding of layers in Inkscape.",
+              "ids": [
+                "https://gitlab.com/inkscape/inkscape/-/merge_requests/6462#note_1913005874"
+              ]
+            }
+          ]
+        },
+        {
+          "skill": "Node Tool",
+          "frequency": {
+            "2024-04-01T00:00:00.000+05:30": 0,
+            "2024-05-01T00:00:00.000+05:30": 1,
+            "2024-06-01T00:00:00.000+05:30": 0,
+            "2024-07-01T00:00:00.000+05:30": 0
+          },
+          "sentimentFrequency": {
+            "2024-04-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-05-01T00:00:00.000+05:30": {
+              "Positive": 1,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-06-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-07-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            }
+          },
+          "insights": [
+            {
+              "text": "You are familiar with the functionality of the Node Tool in Inkscape.",
+              "ids": [
+                "https://gitlab.com/inkscape/inkscape/-/merge_requests/6462#note_1915140066"
+              ]
+            }
           ]
         }
       ],
       "negativeSkills": [
         {
-          "skill": "C++",
+          "skill": "Git",
           "frequency": {
-            "2024-03-01T00:00:00.000+05:30": 0,
             "2024-04-01T00:00:00.000+05:30": 0,
-            "2024-05-01T00:00:00.000+05:30": 1,
+            "2024-05-01T00:00:00.000+05:30": 2,
             "2024-06-01T00:00:00.000+05:30": 3,
             "2024-07-01T00:00:00.000+05:30": 0
           },
           "sentimentFrequency": {
-            "2024-03-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-04-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-05-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 1
-            },
-            "2024-06-01T00:00:00.000+05:30": {
-              "Positive": 1,
-              "Negative": 0,
-              "Neutral": 2
-            },
-            "2024-07-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            }
-          },
-          "insights": [
-            "Inconsistency in code quality, needs improvement.",
-            "Utilize code review feedback for improvement.",
-            "Focus on learning best practices and coding standards.",
-            "Consider using code linters and static analysis tools.",
-            "Invest time in improving your C++ skills for more impactful contributions."
-          ],
-          "references": [
-            {
-              "title": "C++ Programming Language",
-              "url": "https://isocpp.org/",
-              "skill": "C++",
-              "description": "The official website of the C++ programming language. Provides resources, documentation, and standards."
-            },
-            {
-              "title": "C++ Tutorial",
-              "url": "https://www.tutorialspoint.com/cplusplus/",
-              "skill": "C++",
-              "description": "Comprehensive C++ tutorial covering basics, advanced concepts, and examples."
-            },
-            {
-              "title": "C++ for Beginners",
-              "url": "https://www.learncpp.com/",
-              "skill": "C++",
-              "description": "An excellent resource for learning C++ from the ground up."
-            }
-          ]
-        },
-        {
-          "skill": "Git",
-          "frequency": {
-            "2024-03-01T00:00:00.000+05:30": 0,
-            "2024-04-01T00:00:00.000+05:30": 0,
-            "2024-05-01T00:00:00.000+05:30": 3,
-            "2024-06-01T00:00:00.000+05:30": 6,
-            "2024-07-01T00:00:00.000+05:30": 0
-          },
-          "sentimentFrequency": {
-            "2024-03-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
             "2024-04-01T00:00:00.000+05:30": {
               "Positive": 0,
               "Negative": 0,
@@ -276,12 +253,12 @@
             "2024-05-01T00:00:00.000+05:30": {
               "Positive": 0,
               "Negative": 2,
-              "Neutral": 1
+              "Neutral": 0
             },
             "2024-06-01T00:00:00.000+05:30": {
               "Positive": 0,
-              "Negative": 4,
-              "Neutral": 2
+              "Negative": 2,
+              "Neutral": 1
             },
             "2024-07-01T00:00:00.000+05:30": {
               "Positive": 0,
@@ -290,80 +267,124 @@
             }
           },
           "insights": [
-            "You have encountered issues with committing changes and managing merge requests.",
-            "Review Git documentation on commit messages and merge request workflows.",
-            "Seek clarification from experienced team members on Git practices.",
-            "Utilize tools like GitLens for better visualization and understanding.",
-            "Consistency in commit messages and understanding branching strategies are key.",
-            "Use Git effectively for conflict resolution.",
-            "Improve understanding of Git commands and workflows.",
-            "Learn about branching strategies for better collaboration.",
-            "Ensure consistent and clear commit messages."
+            {
+              "text": "You experience issues with commits disappearing from merge requests.",
+              "ids": [
+                "https://gitlab.com/inkscape/inkscape/-/merge_requests/6516#note_1931598824",
+                "https://gitlab.com/inkscape/inkscape/-/merge_requests/6516#note_1931726441"
+              ]
+            },
+            {
+              "text": "You need to familiarize yourself with the correct methods for committing changes in Git.",
+              "ids": [
+                "https://gitlab.com/inkscape/inkscape/-/merge_requests/6516#note_1931723308",
+                "https://gitlab.com/inkscape/inkscape/-/merge_requests/6516#note_1931734026"
+              ]
+            },
+            {
+              "text": "You need to improve your understanding of GitLab functionality for managing merge requests.",
+              "ids": [
+                "https://gitlab.com/inkscape/inkscape/-/merge_requests/6516#note_1931794488",
+                "https://gitlab.com/inkscape/inkscape/-/merge_requests/6494#note_1922297773"
+              ]
+            }
           ],
           "references": [
             {
+              "title": "Git Basics",
+              "url": "https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository",
+              "skill": "Git",
+              "description": "The official documentation on Git basics, including how to get a Git repository and basic commands."
+            },
+            {
+              "title": "Git Committing",
               "url": "https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository",
               "skill": "Git",
-              "description": "Comprehensive guide on Git basics, covering commit messages, branching, and merging."
+              "description": "Learn about commiting changes in Git and best practices from the official Git documentation."
             },
             {
-              "url": "https://www.atlassian.com/git/tutorials/using-branches",
-              "skill": "Git",
-              "description": "Tutorial on using branches effectively in Git."
+              "title": "GitLab Merge Requests",
+              "url": "https://docs.gitlab.com/ee/user/project/merge_requests/",
+              "skill": "GitLab",
+              "description": "Learn about creating, managing, and reviewing merge requests on GitLab."
             },
             {
-              "url": "https://git-scm.com/docs/git-commit",
+              "title": "Git Branching",
+              "url": "https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching",
               "skill": "Git",
-              "description": "Detailed documentation on the 'git commit' command."
+              "description": "Learn about branching in Git and its various use cases from the official Git documentation."
+            }
+          ]
+        },
+        {
+          "skill": "Live Path Effects",
+          "frequency": {
+            "2024-04-01T00:00:00.000+05:30": 1,
+            "2024-05-01T00:00:00.000+05:30": 0,
+            "2024-06-01T00:00:00.000+05:30": 0,
+            "2024-07-01T00:00:00.000+05:30": 0
+          },
+          "sentimentFrequency": {
+            "2024-04-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 1
             },
-            {
-              "title": "Git Documentation",
-              "url": "https://git-scm.com/doc",
-              "skill": "Git",
-              "description": "Official documentation for Git covering its functionalities and features."
+            "2024-05-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
             },
-            {
-              "title": "Pro Git Book",
-              "url": "https://git-scm.com/book/en/v2",
-              "skill": "Git",
-              "description": "A comprehensive guide to Git for both beginners and advanced users."
+            "2024-06-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
             },
+            "2024-07-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            }
+          },
+          "insights": [
             {
-              "title": "GitHub Learning Lab",
-              "url": "https://lab.github.com/",
-              "skill": "Git",
-              "description": "Interactive tutorials and exercises for learning Git and GitHub."
+              "text": "You need to improve your understanding of Live Path Effects in Inkscape.",
+              "ids": [
+                "https://gitlab.com/inkscape/inkscape-docs/manuals/-/merge_requests/142#note_1846768288"
+              ]
+            }
+          ],
+          "references": [
+            {
+              "title": "Inkscape Live Path Effects",
+              "url": "https://wiki.inkscape.org/wiki/index.php/Live_Path_Effects",
+              "skill": "Live Path Effects",
+              "description": "Learn about Live Path Effects and their use cases from the official Inkscape documentation."
             }
           ]
         },
         {
           "skill": "XML",
           "frequency": {
-            "2024-03-01T00:00:00.000+05:30": 0,
             "2024-04-01T00:00:00.000+05:30": 0,
             "2024-05-01T00:00:00.000+05:30": 1,
-            "2024-06-01T00:00:00.000+05:30": 2,
+            "2024-06-01T00:00:00.000+05:30": 0,
             "2024-07-01T00:00:00.000+05:30": 0
           },
           "sentimentFrequency": {
-            "2024-03-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
             "2024-04-01T00:00:00.000+05:30": {
               "Positive": 0,
               "Negative": 0,
               "Neutral": 0
             },
             "2024-05-01T00:00:00.000+05:30": {
-              "Positive": 1,
+              "Positive": 0,
               "Negative": 0,
-              "Neutral": 0
+              "Neutral": 1
             },
             "2024-06-01T00:00:00.000+05:30": {
               "Positive": 0,
-              "Negative": 2,
+              "Negative": 0,
               "Neutral": 0
             },
             "2024-07-01T00:00:00.000+05:30": {
@@ -373,354 +394,572 @@
             }
           },
           "insights": [
-            "Occasional negative feedback on XML-related contributions.",
-            "Consider learning about XML best practices and standards.",
-            "Improve the quality of XML modifications to avoid negative impacts.",
-            "Review the relevant documentation and examples.",
-            "Focus on writing clean and maintainable XML code."
+            {
+              "text": "You need to improve your understanding of XML structure for Inkscape.",
+              "ids": [
+                "https://gitlab.com/inkscape/inkscape/-/merge_requests/6462#note_1912981927"
+              ]
+            }
           ],
           "references": [
             {
-              "title": "W3C XML Specification",
-              "url": "https://www.w3.org/TR/REC-xml/",
+              "title": "XML",
+              "url": "https://www.w3.org/XML/",
               "skill": "XML",
-              "description": "The official specification for Extensible Markup Language (XML)."
-            },
-            {
-              "title": "XML Tutorial",
-              "url": "https://www.tutorialspoint.com/xml/",
-              "skill": "XML",
-              "description": "A comprehensive tutorial on XML covering its concepts, syntax, and applications."
-            },
-            {
-              "title": "XML Schema",
-              "url": "https://www.w3.org/XML/Schema",
-              "skill": "XML",
-              "description": "Learn about XML Schema for defining the structure and content of XML documents."
-            }
-          ]
-        },
-        {
-          "skill": "English",
-          "frequency": {
-            "2024-03-01T00:00:00.000+05:30": 0,
-            "2024-04-01T00:00:00.000+05:30": 0,
-            "2024-05-01T00:00:00.000+05:30": 0,
-            "2024-06-01T00:00:00.000+05:30": 1,
-            "2024-07-01T00:00:00.000+05:30": 0
-          },
-          "sentimentFrequency": {
-            "2024-03-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-04-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-05-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-06-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 1,
-              "Neutral": 0
-            },
-            "2024-07-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            }
-          },
-          "insights": [
-            "Ensure proper grammar and spelling in your communications.",
-            "Use a grammar checker tool for assistance.",
-            "Consider reviewing your writing before posting.",
-            "Clear and concise language improves communication effectiveness."
-          ],
-          "references": [
-            {
-              "url": "https://www.grammarly.com/",
-              "skill": "English",
-              "description": "Grammarly is a popular grammar and spelling checker tool that can help you improve your writing."
+              "description": "The official website for XML, providing resources and documentation."
             }
           ]
         }
       ],
+      "merge_requests": {
+        "insights": [
+          {
+            "text": "You have shown consistent improvement in your contribution quality over time",
+            "ids": [
+              "gid://gitlab/MergeRequest/311060010",
+              "gid://gitlab/MergeRequest/310435293",
+              "gid://gitlab/MergeRequest/302724816"
+            ]
+          },
+          {
+            "text": "Your documentation skills have been impressive, especially in Inkscape manual updates.",
+            "ids": [
+              "gid://gitlab/MergeRequest/293396605",
+              "gid://gitlab/MergeRequest/293539357",
+              "gid://gitlab/MergeRequest/293544338"
+            ]
+          },
+          {
+            "text": "You have successfully addressed several UI and usability issues in Inkscape.",
+            "ids": [
+              "gid://gitlab/MergeRequest/302079582",
+              "gid://gitlab/MergeRequest/295539281",
+              "gid://gitlab/MergeRequest/311015143"
+            ]
+          },
+          {
+            "text": "Your knowledge of GTK+ and CSS has been applied effectively in recent contributions.",
+            "ids": [
+              "gid://gitlab/MergeRequest/310275267",
+              "gid://gitlab/MergeRequest/308036810",
+              "gid://gitlab/MergeRequest/295539281"
+            ]
+          },
+          {
+            "text": "You effectively utilized references to external resources, improving the clarity and value of your work",
+            "ids": [
+              "gid://gitlab/MergeRequest/311060010",
+              "gid://gitlab/MergeRequest/305690298",
+              "gid://gitlab/MergeRequest/302724816"
+            ]
+          }
+        ],
+        "actions": [
+          {
+            "text": "Continue improving your documentation skills, focusing on creating user-friendly guides.",
+            "references": [
+              {
+                "title": "Inkscape Manual Style Guide",
+                "url": "https://inkscape.org/doc/inkscape/index.html",
+                "skill": "Documentation",
+                "description": "The Inkscape manual style guide provides detailed information on how to write and format content for the manual."
+              }
+            ]
+          },
+          {
+            "text": "Explore more advanced UI design techniques to further improve the user experience in Inkscape.",
+            "references": [
+              {
+                "title": "User Interface Design for Developers",
+                "url": "https://www.amazon.com/User-Interface-Design-Developers-Second/dp/149194410X",
+                "skill": "UI Design",
+                "description": "This book provides a comprehensive guide to UI design principles and best practices for developers."
+              }
+            ]
+          },
+          {
+            "text": "Dive deeper into GTK+ and CSS to enhance your ability to create visually appealing and functional interfaces.",
+            "references": [
+              {
+                "title": "GTK+ Documentation",
+                "url": "https://docs.gtk.org/",
+                "skill": "GTK+",
+                "description": "The official documentation for GTK+. It provides comprehensive information on GTK+ features, tutorials, and best practices."
+              },
+              {
+                "title": "CSS Documentation",
+                "url": "https://developer.mozilla.org/en-US/docs/Web/CSS",
+                "skill": "CSS",
+                "description": "The official documentation for CSS. It covers all aspects of CSS, including selectors, properties, values, and layout."
+              }
+            ]
+          },
+          {
+            "text": "Experiment with more complex XML manipulation to enhance your contributions to Inkscape.",
+            "references": [
+              {
+                "title": "XML Tutorial",
+                "url": "https://www.w3schools.com/xml/",
+                "skill": "XML",
+                "description": "This tutorial provides a comprehensive introduction to XML, covering its syntax, elements, attributes, and namespaces."
+              }
+            ]
+          },
+          {
+            "text": "Explore alternative methods for improving the clarity of your merge requests to make them more understandable for reviewers.",
+            "references": []
+          }
+        ],
+        "positiveSkills": [
+          {
+            "skill": "Documentation",
+            "frequency": {
+              "2024-04-01T00:00:00.000+05:30": 3,
+              "2024-05-01T00:00:00.000+05:30": 0,
+              "2024-06-01T00:00:00.000+05:30": 0,
+              "2024-07-01T00:00:00.000+05:30": 0
+            },
+            "sentimentFrequency": {
+              "2024-04-01T00:00:00.000+05:30": {
+                "Positive": 3,
+                "Negative": 0,
+                "Neutral": 0
+              },
+              "2024-05-01T00:00:00.000+05:30": {
+                "Positive": 0,
+                "Negative": 0,
+                "Neutral": 0
+              },
+              "2024-06-01T00:00:00.000+05:30": {
+                "Positive": 0,
+                "Negative": 0,
+                "Neutral": 0
+              },
+              "2024-07-01T00:00:00.000+05:30": {
+                "Positive": 0,
+                "Negative": 0,
+                "Neutral": 0
+              }
+            },
+            "insights": [
+              {
+                "text": "Your documentation skills have been impressive, especially in Inkscape manual updates.",
+                "ids": [
+                  "gid://gitlab/MergeRequest/293396605",
+                  "gid://gitlab/MergeRequest/293539357",
+                  "gid://gitlab/MergeRequest/293544338"
+                ]
+              }
+            ]
+          },
+          {
+            "skill": "Inkscape",
+            "frequency": {
+              "2024-04-01T00:00:00.000+05:30": 3,
+              "2024-05-01T00:00:00.000+05:30": 1,
+              "2024-06-01T00:00:00.000+05:30": 1,
+              "2024-07-01T00:00:00.000+05:30": 0
+            },
+            "sentimentFrequency": {
+              "2024-04-01T00:00:00.000+05:30": {
+                "Positive": 3,
+                "Negative": 0,
+                "Neutral": 0
+              },
+              "2024-05-01T00:00:00.000+05:30": {
+                "Positive": 1,
+                "Negative": 0,
+                "Neutral": 0
+              },
+              "2024-06-01T00:00:00.000+05:30": {
+                "Positive": 1,
+                "Negative": 0,
+                "Neutral": 0
+              },
+              "2024-07-01T00:00:00.000+05:30": {
+                "Positive": 0,
+                "Negative": 0,
+                "Neutral": 0
+              }
+            },
+            "insights": [
+              {
+                "text": "You have shown good understanding of Inkscape's UI and functionality",
+                "ids": [
+                  "gid://gitlab/MergeRequest/302724816",
+                  "gid://gitlab/MergeRequest/293544338",
+                  "gid://gitlab/MergeRequest/293396605"
+                ]
+              },
+              {
+                "text": "Your contributions to Inkscape have been well-received, demonstrating your understanding of the project's needs.",
+                "ids": [
+                  "gid://gitlab/MergeRequest/311060010",
+                  "gid://gitlab/MergeRequest/302079582",
+                  "gid://gitlab/MergeRequest/295539281"
+                ]
+              }
+            ]
+          },
+          {
+            "skill": "GTK+",
+            "frequency": {
+              "2024-04-01T00:00:00.000+05:30": 0,
+              "2024-05-01T00:00:00.000+05:30": 1,
+              "2024-06-01T00:00:00.000+05:30": 2,
+              "2024-07-01T00:00:00.000+05:30": 0
+            },
+            "sentimentFrequency": {
+              "2024-04-01T00:00:00.000+05:30": {
+                "Positive": 0,
+                "Negative": 0,
+                "Neutral": 0
+              },
+              "2024-05-01T00:00:00.000+05:30": {
+                "Positive": 1,
+                "Negative": 0,
+                "Neutral": 0
+              },
+              "2024-06-01T00:00:00.000+05:30": {
+                "Positive": 2,
+                "Negative": 0,
+                "Neutral": 0
+              },
+              "2024-07-01T00:00:00.000+05:30": {
+                "Positive": 0,
+                "Negative": 0,
+                "Neutral": 0
+              }
+            },
+            "insights": [
+              {
+                "text": "Your knowledge of GTK+ and CSS has been applied effectively in recent contributions.",
+                "ids": [
+                  "gid://gitlab/MergeRequest/310275267",
+                  "gid://gitlab/MergeRequest/308036810",
+                  "gid://gitlab/MergeRequest/295539281"
+                ]
+              },
+              {
+                "text": "You have consistently demonstrated understanding of GTK+ and its application in Inkscape.",
+                "ids": [
+                  "gid://gitlab/MergeRequest/311015143",
+                  "gid://gitlab/MergeRequest/302079582",
+                  "gid://gitlab/MergeRequest/310275267"
+                ]
+              }
+            ]
+          },
+          {
+            "skill": "UI Design",
+            "frequency": {
+              "2024-04-01T00:00:00.000+05:30": 1,
+              "2024-05-01T00:00:00.000+05:30": 1,
+              "2024-06-01T00:00:00.000+05:30": 0,
+              "2024-07-01T00:00:00.000+05:30": 0
+            },
+            "sentimentFrequency": {
+              "2024-04-01T00:00:00.000+05:30": {
+                "Positive": 1,
+                "Negative": 0,
+                "Neutral": 0
+              },
+              "2024-05-01T00:00:00.000+05:30": {
+                "Positive": 1,
+                "Negative": 0,
+                "Neutral": 0
+              },
+              "2024-06-01T00:00:00.000+05:30": {
+                "Positive": 0,
+                "Negative": 0,
+                "Neutral": 0
+              },
+              "2024-07-01T00:00:00.000+05:30": {
+                "Positive": 0,
+                "Negative": 0,
+                "Neutral": 0
+              }
+            },
+            "insights": [
+              {
+                "text": "You have successfully addressed several UI and usability issues in Inkscape.",
+                "ids": [
+                  "gid://gitlab/MergeRequest/302079582",
+                  "gid://gitlab/MergeRequest/295539281",
+                  "gid://gitlab/MergeRequest/311015143"
+                ]
+              },
+              {
+                "text": "You have demonstrated an understanding of UI best practices and how they apply to Inkscape.",
+                "ids": [
+                  "gid://gitlab/MergeRequest/302079582",
+                  "gid://gitlab/MergeRequest/295539281",
+                  "gid://gitlab/MergeRequest/311015143"
+                ]
+              }
+            ]
+          },
+          {
+            "skill": "XML",
+            "frequency": {
+              "2024-04-01T00:00:00.000+05:30": 0,
+              "2024-05-01T00:00:00.000+05:30": 1,
+              "2024-06-01T00:00:00.000+05:30": 1,
+              "2024-07-01T00:00:00.000+05:30": 0
+            },
+            "sentimentFrequency": {
+              "2024-04-01T00:00:00.000+05:30": {
+                "Positive": 0,
+                "Negative": 0,
+                "Neutral": 0
+              },
+              "2024-05-01T00:00:00.000+05:30": {
+                "Positive": 1,
+                "Negative": 1,
+                "Neutral": 0
+              },
+              "2024-06-01T00:00:00.000+05:30": {
+                "Positive": 1,
+                "Negative": 0,
+                "Neutral": 0
+              },
+              "2024-07-01T00:00:00.000+05:30": {
+                "Positive": 0,
+                "Negative": 0,
+                "Neutral": 0
+              }
+            },
+            "insights": [
+              {
+                "text": "Your XML manipulation skills have been valuable in enhancing Inkscape's features.",
+                "ids": [
+                  "gid://gitlab/MergeRequest/302724816",
+                  "gid://gitlab/MergeRequest/310435293",
+                  "gid://gitlab/MergeRequest/305690298"
+                ]
+              }
+            ]
+          }
+        ],
+        "negativeSkills": [
+          {
+            "skill": "C++",
+            "frequency": {
+              "2024-04-01T00:00:00.000+05:30": 0,
+              "2024-05-01T00:00:00.000+05:30": 0,
+              "2024-06-01T00:00:00.000+05:30": 3,
+              "2024-07-01T00:00:00.000+05:30": 0
+            },
+            "sentimentFrequency": {
+              "2024-04-01T00:00:00.000+05:30": {
+                "Positive": 0,
+                "Negative": 0,
+                "Neutral": 0
+              },
+              "2024-05-01T00:00:00.000+05:30": {
+                "Positive": 0,
+                "Negative": 0,
+                "Neutral": 0
+              },
+              "2024-06-01T00:00:00.000+05:30": {
+                "Positive": 1,
+                "Negative": 0,
+                "Neutral": 2
+              },
+              "2024-07-01T00:00:00.000+05:30": {
+                "Positive": 0,
+                "Negative": 0,
+                "Neutral": 0
+              }
+            },
+            "insights": [
+              {
+                "text": "Limited C++ experience is evident in some contributions, resulting in neutral impact",
+                "ids": [
+                  "gid://gitlab/MergeRequest/311060010",
+                  "gid://gitlab/MergeRequest/311015143",
+                  "gid://gitlab/MergeRequest/311707393"
+                ]
+              },
+              {
+                "text": "Consider exploring C++ tutorials and resources to enhance your understanding and improve the quality of your code.",
+                "ids": []
+              }
+            ],
+            "references": [
+              {
+                "title": "Learn C++",
+                "url": "https://www.learncpp.com/",
+                "skill": "C++",
+                "description": "This website offers a comprehensive guide to C++ programming, covering everything from the basics to advanced topics."
+              }
+            ]
+          }
+        ]
+      },
       "quality": {
         "2024-06-01T00:00:00.000+05:30": {
-          "High": 1,
+          "High": 4,
           "Low": 2,
-          "Medium": 5
+          "Medium": 2
         },
         "2024-05-01T00:00:00.000+05:30": {
           "High": 3,
-          "Low": 2,
-          "Medium": 0
+          "Low": 1,
+          "Medium": 1
         },
         "2024-04-01T00:00:00.000+05:30": {
-          "High": 5,
+          "High": 4,
           "Low": 0,
-          "Medium": 0
+          "Medium": 1
         }
       },
       "testCases": {
         "2024-06-01T00:00:00.000+05:30": 0
       },
       "testCasesRequired": {
-        "2024-06-01T00:00:00.000+05:30": 4
+        "2024-06-01T00:00:00.000+05:30": 6
       },
       "impact": {
         "2024-06-01T00:00:00.000+05:30": {
-          "Negative": 2,
-          "Neutral": 5,
-          "Positive": 1
-        },
-        "2024-05-01T00:00:00.000+05:30": {
           "Negative": 1,
           "Neutral": 2,
-          "Positive": 2
+          "Positive": 5
+        },
+        "2024-05-01T00:00:00.000+05:30": {
+          "Negative": 0,
+          "Neutral": 2,
+          "Positive": 3
         },
         "2024-04-01T00:00:00.000+05:30": {
           "Negative": 0,
-          "Neutral": 1,
-          "Positive": 4
+          "Neutral": 0,
+          "Positive": 5
         }
       },
       "userResponseSentiments": {
-        "Positive": 1,
-        "Negative": 5,
+        "Positive": 3,
+        "Negative": 3,
         "Neutral": 23
       },
       "commentsSentiments": {
         "Positive": 3,
-        "Negative": 6,
-        "Neutral": 17
+        "Negative": 2,
+        "Neutral": 21
       }
     },
     "week": {
-      "summary": [
-        "Your recent merge requests have seen an increase in positive feedback.",
-        "You've been actively involved in discussions around GitLab UI and Git.",
-        "Your contributions to UI Design are valuable, but pay attention to grammar and consistency.",
-        "You have shown strong skills in SVG, CSS and GTK+",
-        "Focus on providing detailed descriptions and addressing potential issues."
+      "insights": [
+        {
+          "text": "User shows good understanding of Git workflow and backporting process.",
+          "ids": [
+            "https://gitlab.com/inkscape/inkscape/-/merge_requests/6566#note_1968290680",
+            "https://gitlab.com/inkscape/inkscape/-/merge_requests/6566#note_1968459995"
+          ]
+        },
+        {
+          "text": "User actively participates in discussion with peers and suggests improvements.",
+          "ids": [
+            "https://gitlab.com/inkscape/inkscape/-/merge_requests/6543#note_1949044193",
+            "https://gitlab.com/inkscape/inkscape/-/merge_requests/6542#note_1947434380",
+            "https://gitlab.com/inkscape/inkscape/-/merge_requests/6542#note_1947437058"
+          ]
+        },
+        {
+          "text": "User is aware of official terms and their use in user interface.",
+          "ids": [
+            "https://gitlab.com/inkscape/inkscape/-/merge_requests/6542#note_1948069319",
+            "https://gitlab.com/inkscape/inkscape/-/merge_requests/6542#note_1948069467"
+          ]
+        },
+        {
+          "text": "You have shown improvement in UI & application consistency, with merge requests focusing on GTK+ and CSS",
+          "ids": [
+            "https://gitlab.com/inkscape/themes/-/merge_requests/9",
+            "https://gitlab.com/inkscape/inkscape/-/merge_requests/6543"
+          ]
+        },
+        {
+          "text": "You have effectively addressed issues reported by users, showing attention to user feedback",
+          "ids": [
+            "https://gitlab.com/inkscape/inkscape/-/merge_requests/6557",
+            "https://gitlab.com/inkscape/inkscape/-/merge_requests/6566"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "text": "Keep actively contributing to discussions and suggesting improvements.",
+          "references": []
+        },
+        {
+          "text": "Keep learning about Git workflow and its different functionalities.",
+          "references": []
+        },
+        {
+          "text": "Try to understand user interface design principles and guidelines.",
+          "references": []
+        },
+        {
+          "text": "Explore and implement unit testing for your code.",
+          "references": [
+            {
+              "title": "Unit Testing in C++",
+              "url": "https://www.geeksforgeeks.org/unit-testing-in-c-using-gtest/",
+              "skill": "C++",
+              "description": "A comprehensive guide to unit testing in C++."
+            },
+            {
+              "title": "Google Test (gtest)",
+              "url": "https://github.com/google/googletest",
+              "skill": "C++",
+              "description": "A popular C++ testing framework."
+            }
+          ]
+        },
+        {
+          "text": "Deepen your understanding of UI frameworks such as GTK+.",
+          "references": [
+            {
+              "title": "GTK+ Documentation",
+              "url": "https://www.gtk.org/docs/",
+              "skill": "GTK+",
+              "description": "The official GTK+ documentation."
+            }
+          ]
+        }
       ],
       "positiveSkills": [
         {
-          "skill": "UI Design",
+          "skill": "Collaboration",
           "frequency": {
-            "2024-05-27T00:00:00.000+05:30": 0,
-            "2024-06-03T00:00:00.000+05:30": 0,
-            "2024-06-10T00:00:00.000+05:30": 3,
-            "2024-06-17T00:00:00.000+05:30": 5,
-            "2024-06-24T00:00:00.000+05:30": 0,
-            "2024-07-01T00:00:00.000+05:30": 0,
+            "2024-06-10T00:00:00.000+05:30": 0,
+            "2024-06-17T00:00:00.000+05:30": 12,
+            "2024-06-24T00:00:00.000+05:30": 2,
+            "2024-07-01T00:00:00.000+05:30": 1,
             "2024-07-08T00:00:00.000+05:30": 0
           },
           "sentimentFrequency": {
-            "2024-05-27T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-06-03T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
             "2024-06-10T00:00:00.000+05:30": {
               "Positive": 0,
               "Negative": 0,
-              "Neutral": 3
+              "Neutral": 0
             },
             "2024-06-17T00:00:00.000+05:30": {
               "Positive": 1,
-              "Negative": 2,
+              "Negative": 0,
+              "Neutral": 11
+            },
+            "2024-06-24T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
               "Neutral": 2
             },
-            "2024-06-24T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
             "2024-07-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-07-08T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            }
-          },
-          "insights": [
-            "Your suggestions for alternative terms were well-received.",
-            "You demonstrated a good understanding of UI design principles.",
-            "Your positive engagement in discussions contributed to the development of the UI.",
-            "You proactively sought clarification on the scope of features.",
-            "Consider reviewing the official documentation to maintain consistency in terminology."
-          ]
-        },
-        {
-          "skill": "GitLab",
-          "frequency": {
-            "2024-05-27T00:00:00.000+05:30": 0,
-            "2024-06-03T00:00:00.000+05:30": 5,
-            "2024-06-10T00:00:00.000+05:30": 0,
-            "2024-06-17T00:00:00.000+05:30": 0,
-            "2024-06-24T00:00:00.000+05:30": 0,
-            "2024-07-01T00:00:00.000+05:30": 0,
-            "2024-07-08T00:00:00.000+05:30": 0
-          },
-          "sentimentFrequency": {
-            "2024-05-27T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-06-03T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 2,
-              "Neutral": 3
-            },
-            "2024-06-10T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-06-17T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-06-24T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-07-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-07-08T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            }
-          },
-          "insights": [
-            "You effectively used GitLab features to address issues and facilitate collaboration.",
-            "You demonstrated a good understanding of GitLab's workflow.",
-            "Your contributions to GitLab UI were well-received.",
-            "Ensure that all necessary steps are completed for a successful merge request.",
-            "Utilize GitLab's documentation to maximize your usage and ensure compliance with the platform's guidelines."
-          ]
-        },
-        {
-          "skill": "Git",
-          "frequency": {
-            "2024-05-27T00:00:00.000+05:30": 0,
-            "2024-06-03T00:00:00.000+05:30": 5,
-            "2024-06-10T00:00:00.000+05:30": 0,
-            "2024-06-17T00:00:00.000+05:30": 0,
-            "2024-06-24T00:00:00.000+05:30": 1,
-            "2024-07-01T00:00:00.000+05:30": 0,
-            "2024-07-08T00:00:00.000+05:30": 0
-          },
-          "sentimentFrequency": {
-            "2024-05-27T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-06-03T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 3,
-              "Neutral": 2
-            },
-            "2024-06-10T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-06-17T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-06-24T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 1
-            },
-            "2024-07-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-07-08T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            }
-          },
-          "insights": [
-            "You demonstrated understanding of backporting and its process.",
-            "Your understanding of Git branching strategies is evident.",
-            "Ensure that your commits are clear and concise.",
-            "Refer to Git documentation for best practices.",
-            "Provide detailed explanations for your commits to enhance clarity and understanding."
-          ]
-        },
-        {
-          "skill": "SVG",
-          "frequency": {
-            "2024-05-27T00:00:00.000+05:30": 0,
-            "2024-06-03T00:00:00.000+05:30": 0,
-            "2024-06-10T00:00:00.000+05:30": 0,
-            "2024-06-17T00:00:00.000+05:30": 0,
-            "2024-06-24T00:00:00.000+05:30": 1,
-            "2024-07-01T00:00:00.000+05:30": 0,
-            "2024-07-08T00:00:00.000+05:30": 0
-          },
-          "sentimentFrequency": {
-            "2024-05-27T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-06-03T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-06-10T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-06-17T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-06-24T00:00:00.000+05:30": {
               "Positive": 1,
               "Negative": 0,
               "Neutral": 0
             },
-            "2024-07-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
             "2024-07-08T00:00:00.000+05:30": {
               "Positive": 0,
               "Negative": 0,
@@ -728,99 +967,44 @@
             }
           },
           "insights": [
-            "You have successfully used SVG to resolve a critical crash issue.",
-            "Positive feedback on your SVG skills indicates a good understanding of the technology.",
-            "Continue exploring SVG for better user interface and graphics representation."
-          ]
-        },
-        {
-          "skill": "CSS",
-          "frequency": {
-            "2024-05-27T00:00:00.000+05:30": 0,
-            "2024-06-03T00:00:00.000+05:30": 0,
-            "2024-06-10T00:00:00.000+05:30": 0,
-            "2024-06-17T00:00:00.000+05:30": 0,
-            "2024-06-24T00:00:00.000+05:30": 1,
-            "2024-07-01T00:00:00.000+05:30": 0,
-            "2024-07-08T00:00:00.000+05:30": 0
-          },
-          "sentimentFrequency": {
-            "2024-05-27T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
+            {
+              "text": "Your active participation in discussions shows collaborative spirit.",
+              "ids": [
+                "https://gitlab.com/inkscape/inkscape/-/merge_requests/6543#note_1949044193",
+                "https://gitlab.com/inkscape/inkscape/-/merge_requests/6542#note_1947434380"
+              ]
             },
-            "2024-06-03T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-06-10T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-06-17T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-06-24T00:00:00.000+05:30": {
-              "Positive": 1,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-07-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-07-08T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
+            {
+              "text": "You provide constructive feedback and suggest improvements.",
+              "ids": [
+                "https://gitlab.com/inkscape/inkscape/-/merge_requests/6542#note_1947437058",
+                "https://gitlab.com/inkscape/inkscape/-/merge_requests/6542#note_1947801775"
+              ]
             }
-          },
-          "insights": [
-            "You have successfully used CSS to fix UI inconsistencies.",
-            "Your CSS skills are improving and contributing to better UI presentation.",
-            "Keep exploring CSS to enhance user interface and style elements."
           ]
         },
         {
           "skill": "GTK+",
           "frequency": {
-            "2024-05-27T00:00:00.000+05:30": 0,
-            "2024-06-03T00:00:00.000+05:30": 0,
             "2024-06-10T00:00:00.000+05:30": 0,
-            "2024-06-17T00:00:00.000+05:30": 0,
-            "2024-06-24T00:00:00.000+05:30": 1,
+            "2024-06-17T00:00:00.000+05:30": 1,
+            "2024-06-24T00:00:00.000+05:30": 2,
             "2024-07-01T00:00:00.000+05:30": 0,
             "2024-07-08T00:00:00.000+05:30": 0
           },
           "sentimentFrequency": {
-            "2024-05-27T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-06-03T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
             "2024-06-10T00:00:00.000+05:30": {
               "Positive": 0,
               "Negative": 0,
               "Neutral": 0
             },
             "2024-06-17T00:00:00.000+05:30": {
-              "Positive": 0,
+              "Positive": 1,
               "Negative": 0,
               "Neutral": 0
             },
             "2024-06-24T00:00:00.000+05:30": {
-              "Positive": 1,
+              "Positive": 2,
               "Negative": 0,
               "Neutral": 0
             },
@@ -836,18 +1020,18 @@
             }
           },
           "insights": [
-            "You have successfully used GTK+ to improve the application's UI.",
-            "Your understanding of GTK+ is improving, contributing to better UI design.",
-            "Continue exploring GTK+ for advanced UI functionalities."
+            {
+              "text": "Demonstrated understanding of GTK+ UI elements, consistently making positive changes.",
+              "ids": [
+                "https://gitlab.com/inkscape/themes/-/merge_requests/9",
+                "https://gitlab.com/inkscape/inkscape/-/merge_requests/6543"
+              ]
+            }
           ]
-        }
-      ],
-      "negativeSkills": [
+        },
         {
-          "skill": "English",
+          "skill": "C++",
           "frequency": {
-            "2024-05-27T00:00:00.000+05:30": 0,
-            "2024-06-03T00:00:00.000+05:30": 0,
             "2024-06-10T00:00:00.000+05:30": 0,
             "2024-06-17T00:00:00.000+05:30": 1,
             "2024-06-24T00:00:00.000+05:30": 0,
@@ -855,91 +1039,13 @@
             "2024-07-08T00:00:00.000+05:30": 0
           },
           "sentimentFrequency": {
-            "2024-05-27T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-06-03T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
             "2024-06-10T00:00:00.000+05:30": {
               "Positive": 0,
               "Negative": 0,
               "Neutral": 0
             },
             "2024-06-17T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 1,
-              "Neutral": 0
-            },
-            "2024-06-24T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-07-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-07-08T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            }
-          },
-          "insights": [
-            "Review grammar and punctuation in your comments and documentation.",
-            "Consider using online grammar checkers to ensure accuracy.",
-            "Ensure clear and concise communication for effective understanding."
-          ],
-          "references": [
-            {
-              "title": "Grammarly",
-              "url": "https://www.grammarly.com/",
-              "skill": "English",
-              "description": "Grammarly is a popular tool that provides grammar and spell-checking services to improve your writing."
-            },
-            {
-              "title": "Purdue OWL",
-              "url": "https://owl.purdue.edu/",
-              "skill": "English",
-              "description": "Purdue OWL is an online writing lab that offers resources for all aspects of writing, including grammar and style."
-            }
-          ]
-        },
-        {
-          "skill": "Keybindings",
-          "frequency": {
-            "2024-05-27T00:00:00.000+05:30": 1,
-            "2024-06-03T00:00:00.000+05:30": 0,
-            "2024-06-10T00:00:00.000+05:30": 0,
-            "2024-06-17T00:00:00.000+05:30": 0,
-            "2024-06-24T00:00:00.000+05:30": 0,
-            "2024-07-01T00:00:00.000+05:30": 0,
-            "2024-07-08T00:00:00.000+05:30": 0
-          },
-          "sentimentFrequency": {
-            "2024-05-27T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 1
-            },
-            "2024-06-03T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-06-10T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-06-17T00:00:00.000+05:30": {
-              "Positive": 0,
+              "Positive": 1,
               "Negative": 0,
               "Neutral": 0
             },
@@ -960,32 +1066,18 @@
             }
           },
           "insights": [
-            "Ensure you're using the correct terminology when discussing keybindings.",
-            "Consider researching established keybinding conventions to avoid confusion.",
-            "Verify that your proposed keybindings don't conflict with existing ones.",
-            "Provide clear and concise descriptions of keybindings for user understanding.",
-            "Ensure that your proposed keybindings are intuitive and consistent with other UI elements."
-          ],
-          "references": [
             {
-              "title": "Keyboard Shortcuts",
-              "url": "https://www.shortcutfoo.com/",
-              "skill": "Keybindings",
-              "description": "ShortcutFoo is a comprehensive website for finding and learning keyboard shortcuts for various applications."
-            },
-            {
-              "title": "Keyboard Shortcuts: A Guide",
-              "url": "https://en.wikipedia.org/wiki/Keyboard_shortcuts",
-              "skill": "Keybindings",
-              "description": "Wikipedia offers a general overview of keyboard shortcuts, covering common conventions and best practices."
+              "text": "Showed strong C++ skills in recent merge requests, specifically in UI optimization and user experience.",
+              "ids": [
+                "https://gitlab.com/mkov/inkspinbutton/-/merge_requests/1",
+                "https://gitlab.com/inkscape/inkscape/-/merge_requests/6543"
+              ]
             }
           ]
         },
         {
-          "skill": "C++",
+          "skill": "CSS",
           "frequency": {
-            "2024-05-27T00:00:00.000+05:30": 0,
-            "2024-06-03T00:00:00.000+05:30": 0,
             "2024-06-10T00:00:00.000+05:30": 0,
             "2024-06-17T00:00:00.000+05:30": 0,
             "2024-06-24T00:00:00.000+05:30": 1,
@@ -993,84 +1085,6 @@
             "2024-07-08T00:00:00.000+05:30": 0
           },
           "sentimentFrequency": {
-            "2024-05-27T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-06-03T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-06-10T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-06-17T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-06-24T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 1
-            },
-            "2024-07-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-07-08T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            }
-          },
-          "insights": [
-            "Your C++ skills have been used in a neutral context.",
-            "Your C++ skills can be further improved by focusing on code quality and impact.",
-            "Focus on adding more detailed descriptions and addressing potential issues."
-          ],
-          "references": [
-            {
-              "title": "C++ Tutorial",
-              "url": "https://www.learncpp.com/",
-              "skill": "C++",
-              "description": "A comprehensive online C++ tutorial for beginners and intermediate learners."
-            },
-            {
-              "title": "C++ Reference",
-              "url": "https://en.cppreference.com/w/",
-              "skill": "C++",
-              "description": "A complete reference for the C++ programming language."
-            }
-          ]
-        },
-        {
-          "skill": "XML",
-          "frequency": {
-            "2024-05-27T00:00:00.000+05:30": 0,
-            "2024-06-03T00:00:00.000+05:30": 0,
-            "2024-06-10T00:00:00.000+05:30": 0,
-            "2024-06-17T00:00:00.000+05:30": 0,
-            "2024-06-24T00:00:00.000+05:30": 1,
-            "2024-07-01T00:00:00.000+05:30": 0,
-            "2024-07-08T00:00:00.000+05:30": 0
-          },
-          "sentimentFrequency": {
-            "2024-05-27T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-06-03T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
             "2024-06-10T00:00:00.000+05:30": {
               "Positive": 0,
               "Negative": 0,
@@ -1098,36 +1112,137 @@
             }
           },
           "insights": [
-            "Your XML skills have been used in a neutral context.",
-            "Your XML skills can be further improved by focusing on code quality and impact.",
-            "Focus on adding more detailed descriptions and addressing potential issues."
+            {
+              "text": "Demonstrated understanding of CSS, effectively fixing visual inconsistencies and improving the application's appearance.",
+              "ids": [
+                "https://gitlab.com/inkscape/themes/-/merge_requests/9"
+              ]
+            }
+          ]
+        },
+        {
+          "skill": "XML",
+          "frequency": {
+            "2024-06-10T00:00:00.000+05:30": 0,
+            "2024-06-17T00:00:00.000+05:30": 0,
+            "2024-06-24T00:00:00.000+05:30": 1,
+            "2024-07-01T00:00:00.000+05:30": 0,
+            "2024-07-08T00:00:00.000+05:30": 0
+          },
+          "sentimentFrequency": {
+            "2024-06-10T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-06-17T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-06-24T00:00:00.000+05:30": {
+              "Positive": 1,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-07-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-07-08T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            }
+          },
+          "insights": [
+            {
+              "text": "Successfully addressed issues related to XML, improving compatibility with external tools.",
+              "ids": [
+                "https://gitlab.com/inkscape/inkscape/-/merge_requests/6557"
+              ]
+            }
+          ]
+        }
+      ],
+      "negativeSkills": [
+        {
+          "skill": "SVG",
+          "frequency": {
+            "2024-06-10T00:00:00.000+05:30": 0,
+            "2024-06-17T00:00:00.000+05:30": 0,
+            "2024-06-24T00:00:00.000+05:30": 0,
+            "2024-07-01T00:00:00.000+05:30": 0,
+            "2024-07-08T00:00:00.000+05:30": 0
+          },
+          "sentimentFrequency": {
+            "2024-06-10T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-06-17T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-06-24T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-07-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-07-08T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            }
+          },
+          "insights": [
+            {
+              "text": "Need to improve understanding of SVG for better handling of issues and features.",
+              "ids": [
+                "https://gitlab.com/inkscape/inkscape/-/merge_requests/6566"
+              ]
+            }
           ],
           "references": [
             {
-              "title": "XML Tutorial",
-              "url": "https://www.w3schools.com/xml/",
-              "skill": "XML",
-              "description": "A comprehensive online XML tutorial for beginners and intermediate learners."
+              "title": "SVG Documentation",
+              "url": "https://www.w3.org/TR/SVG/",
+              "skill": "SVG",
+              "description": "The official SVG documentation."
             },
             {
-              "title": "XML Schema Definition",
-              "url": "https://www.w3.org/XML/Schema",
-              "skill": "XML",
-              "description": "The official XML Schema Definition (XSD) specification for validating XML documents."
+              "title": "Mozilla Developer Network (MDN) SVG Documentation",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/SVG",
+              "skill": "SVG",
+              "description": "Detailed documentation on SVG from Mozilla."
+            },
+            {
+              "title": "W3Schools SVG Tutorial",
+              "url": "https://www.w3schools.com/graphics/svg_intro.asp",
+              "skill": "SVG",
+              "description": "A beginner-friendly tutorial on SVG."
             }
           ]
         }
       ],
       "quality": {
         "2024-06-24T00:00:00.000+05:30": {
-          "High": 0,
+          "High": 1,
           "Low": 1,
-          "Medium": 3
+          "Medium": 2
         },
         "2024-06-17T00:00:00.000+05:30": {
-          "High": 0,
+          "High": 1,
           "Low": 0,
-          "Medium": 1
+          "Medium": 0
         },
         "2024-06-10T00:00:00.000+05:30": {
           "High": 1,
@@ -1135,14 +1250,14 @@
           "Medium": 0
         },
         "2024-05-27T00:00:00.000+05:30": {
-          "High": 0,
-          "Low": 1,
-          "Medium": 1
-        },
-        "2024-05-20T00:00:00.000+05:30": {
           "High": 1,
           "Low": 1,
           "Medium": 0
+        },
+        "2024-05-20T00:00:00.000+05:30": {
+          "High": 1,
+          "Low": 0,
+          "Medium": 1
         },
         "2024-05-13T00:00:00.000+05:30": {
           "High": 2,
@@ -1150,9 +1265,9 @@
           "Medium": 0
         },
         "2024-04-15T00:00:00.000+05:30": {
-          "High": 1,
+          "High": 0,
           "Low": 0,
-          "Medium": 0
+          "Medium": 1
         },
         "2024-04-01T00:00:00.000+05:30": {
           "High": 4,
@@ -1162,31 +1277,33 @@
       },
       "testCases": {
         "2024-06-24T00:00:00.000+05:30": 0,
+        "2024-06-17T00:00:00.000+05:30": 0,
         "2024-06-10T00:00:00.000+05:30": 0
       },
       "testCasesRequired": {
-        "2024-06-24T00:00:00.000+05:30": 3,
+        "2024-06-24T00:00:00.000+05:30": 4,
+        "2024-06-17T00:00:00.000+05:30": 1,
         "2024-06-10T00:00:00.000+05:30": 1
       },
       "impact": {
         "2024-06-24T00:00:00.000+05:30": {
-          "Negative": 1,
-          "Neutral": 2,
-          "Positive": 1
+          "Negative": 0,
+          "Neutral": 1,
+          "Positive": 3
         },
         "2024-06-17T00:00:00.000+05:30": {
           "Negative": 0,
-          "Neutral": 1,
-          "Positive": 0
+          "Neutral": 0,
+          "Positive": 1
         },
         "2024-06-10T00:00:00.000+05:30": {
           "Negative": 0,
-          "Neutral": 2,
-          "Positive": 0
+          "Neutral": 1,
+          "Positive": 1
         },
         "2024-05-27T00:00:00.000+05:30": {
-          "Negative": 2,
-          "Neutral": 0,
+          "Negative": 1,
+          "Neutral": 1,
           "Positive": 0
         },
         "2024-05-20T00:00:00.000+05:30": {
@@ -1196,13 +1313,13 @@
         },
         "2024-05-13T00:00:00.000+05:30": {
           "Negative": 0,
-          "Neutral": 1,
-          "Positive": 1
+          "Neutral": 0,
+          "Positive": 2
         },
         "2024-04-15T00:00:00.000+05:30": {
           "Negative": 0,
-          "Neutral": 1,
-          "Positive": 0
+          "Neutral": 0,
+          "Positive": 1
         },
         "2024-04-01T00:00:00.000+05:30": {
           "Negative": 0,
@@ -1211,188 +1328,122 @@
         }
       },
       "userResponseSentiments": {
-        "Positive": 1,
-        "Negative": 5,
+        "Positive": 3,
+        "Negative": 3,
         "Neutral": 23
       },
       "commentsSentiments": {
         "Positive": 3,
-        "Negative": 6,
-        "Neutral": 17
+        "Negative": 2,
+        "Neutral": 21
       }
     },
     "quarter": {
-      "summary": [
-        "You have been actively involved in discussing merge requests on UI design, Inkscape and GitLab.",
-        "Your contributions focus on improving user experience, suggesting UI improvements and correcting grammar.",
-        "You have shown interest in learning about new features and improvements in Inkscape, demonstrating proactive learning.",
-        "You have a good understanding of Inkscape and its features, but you can benefit from improving your understanding of filter effects and their application."
-      ],
-      "positiveSkills": [
+      "insights": [
         {
-          "skill": "UI Design",
-          "frequency": {
-            "2024-01-01T00:00:00.000+05:30": 0,
-            "2024-04-01T00:00:00.000+05:30": 10,
-            "2024-07-01T00:00:00.000+05:30": 9
-          },
-          "sentimentFrequency": {
-            "2024-01-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-04-01T00:00:00.000+05:30": {
-              "Positive": 5,
-              "Negative": 3,
-              "Neutral": 2
-            },
-            "2024-07-01T00:00:00.000+05:30": {
-              "Positive": 3,
-              "Negative": 0,
-              "Neutral": 6
-            }
-          },
-          "insights": [
-            "You have been actively contributing to UI design discussions.",
-            "Your suggestions regarding shortcuts and user experience are valuable.",
-            "You have shown an understanding of UI design principles.",
-            "You are actively involved in improving the user experience.",
-            "You have shown a willingness to learn about new UI features and functionalities."
+          "text": "You are comfortable with backporting and understanding of git versioning",
+          "ids": [
+            "https://gitlab.com/inkscape/inkscape/-/merge_requests/6566#note_1968290680",
+            "https://gitlab.com/inkscape/inkscape/-/merge_requests/6566#note_1968459995"
           ]
         },
         {
-          "skill": "GitLab",
-          "frequency": {
-            "2024-01-01T00:00:00.000+05:30": 0,
-            "2024-04-01T00:00:00.000+05:30": 2,
-            "2024-07-01T00:00:00.000+05:30": 6
-          },
-          "sentimentFrequency": {
-            "2024-01-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-04-01T00:00:00.000+05:30": {
-              "Positive": 1,
-              "Negative": 0,
-              "Neutral": 1
-            },
-            "2024-07-01T00:00:00.000+05:30": {
-              "Positive": 2,
-              "Negative": 0,
-              "Neutral": 4
-            }
-          },
-          "insights": [
-            "You have been actively using GitLab for collaboration and communication.",
-            "You are familiar with GitLab's features and functionalities.",
-            "You are using GitLab effectively for project management.",
-            "Your contributions to GitLab discussions are appreciated.",
-            "You are actively engaged in improving GitLab workflows."
+          "text": "You are actively suggesting improvements in wording for UI elements.",
+          "ids": [
+            "https://gitlab.com/inkscape/inkscape/-/merge_requests/6543#note_1949044193",
+            "https://gitlab.com/inkscape/inkscape/-/merge_requests/6542#note_1947434380",
+            "https://gitlab.com/inkscape/inkscape/-/merge_requests/6542#note_1947437058"
           ]
         },
         {
-          "skill": "Inkscape",
-          "frequency": {
-            "2024-01-01T00:00:00.000+05:30": 0,
-            "2024-04-01T00:00:00.000+05:30": 22,
-            "2024-07-01T00:00:00.000+05:30": 4
-          },
-          "sentimentFrequency": {
-            "2024-01-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-04-01T00:00:00.000+05:30": {
-              "Positive": 14,
-              "Negative": 2,
-              "Neutral": 6
-            },
-            "2024-07-01T00:00:00.000+05:30": {
-              "Positive": 3,
-              "Negative": 0,
-              "Neutral": 1
-            }
-          },
-          "insights": [
-            "You have been actively involved in discussing Inkscape features and improvements.",
-            "You are showing a keen interest in learning more about Inkscape.",
-            "Your feedback on Inkscape's documentation is valuable.",
-            "You are contributing to the improvement of Inkscape's user experience.",
-            "Your understanding of Inkscape's features is increasing over time."
+          "text": "You are good at discussing and finding solutions for usability issues related to keyboard shortcuts and UI elements.",
+          "ids": [
+            "https://gitlab.com/inkscape/inkscape/-/merge_requests/6462#note_1911548664",
+            "https://gitlab.com/inkscape/inkscape/-/merge_requests/6462#note_1911554892",
+            "https://gitlab.com/inkscape/inkscape/-/merge_requests/6462#note_1912915977"
           ]
         },
         {
-          "skill": "Documentation",
-          "frequency": {
-            "2024-01-01T00:00:00.000+05:30": 0,
-            "2024-04-01T00:00:00.000+05:30": 4,
-            "2024-07-01T00:00:00.000+05:30": 0
-          },
-          "sentimentFrequency": {
-            "2024-01-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-04-01T00:00:00.000+05:30": {
-              "Positive": 4,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-07-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            }
-          },
-          "insights": [
-            "Demonstrated strong documentation skills by improving existing content.",
-            "Your contributions to the documentation have been highly impactful and well-received.",
-            "Continue enhancing the documentation by providing clear, concise, and helpful information for users."
+          "text": "You are proficient in finding and providing relevant references",
+          "ids": [
+            "https://gitlab.com/inkscape/inkscape/-/merge_requests/6462#note_1911554892",
+            "https://gitlab.com/inkscape/inkscape/-/merge_requests/6462#note_1912911471",
+            "https://gitlab.com/inkscape/inkscape-docs/manuals/-/merge_requests/143#note_1848686907"
           ]
         },
         {
-          "skill": "CSS",
-          "frequency": {
-            "2024-01-01T00:00:00.000+05:30": 0,
-            "2024-04-01T00:00:00.000+05:30": 2,
-            "2024-07-01T00:00:00.000+05:30": 1
-          },
-          "sentimentFrequency": {
-            "2024-01-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-04-01T00:00:00.000+05:30": {
-              "Positive": 2,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-07-01T00:00:00.000+05:30": {
-              "Positive": 1,
-              "Negative": 0,
-              "Neutral": 0
-            }
-          },
-          "insights": [
-            "Showcased strong CSS skills through contributions to Inkscape's UI.",
-            "Your CSS changes have improved the visual appeal and user experience of the application.",
-            "Consider exploring advanced CSS techniques and best practices to further enhance your skills."
+          "text": "You are pro-active in understanding the intent of proposed changes",
+          "ids": [
+            "https://gitlab.com/inkscape/inkscape/-/merge_requests/6462#note_1912909851",
+            "https://gitlab.com/inkscape/inkscape/-/merge_requests/6462#note_1912952518",
+            "https://gitlab.com/inkscape/inkscape/-/merge_requests/6462#note_1912957952"
           ]
         }
       ],
-      "negativeSkills": [
+      "actions": [
+        {
+          "text": "Learn about different types of keyboard shortcuts and their usage in different applications.",
+          "references": [
+            {
+              "title": "Keyboard Shortcuts",
+              "url": "https://en.wikipedia.org/wiki/Keyboard_shortcut",
+              "skill": "Keyboard Shortcuts",
+              "description": "A comprehensive overview of keyboard shortcuts"
+            }
+          ]
+        },
+        {
+          "text": "Learn about different design principles and how to apply them in your work.",
+          "references": [
+            {
+              "title": "Design Principles",
+              "url": "https://www.interaction-design.org/literature/article/design-principles-explained",
+              "skill": "Design Principles",
+              "description": "A guide to design principles for UI/UX"
+            }
+          ]
+        },
+        {
+          "text": "Learn about different user feedback methods and how to analyze them.",
+          "references": [
+            {
+              "title": "User Feedback Methods",
+              "url": "https://www.nngroup.com/articles/user-feedback-methods/",
+              "skill": "User Feedback",
+              "description": "Methods for collecting and analyzing user feedback"
+            }
+          ]
+        },
+        {
+          "text": "Learn about XML structure and its usage in web development.",
+          "references": [
+            {
+              "title": "XML",
+              "url": "https://www.w3schools.com/xml/",
+              "skill": "XML",
+              "description": "A guide to XML for web developers"
+            }
+          ]
+        },
+        {
+          "text": "Learn about the principles of good documentation and how to write effective user guides.",
+          "references": [
+            {
+              "title": "Documentation Best Practices",
+              "url": "https://www.gov.uk/service-manual/design/content/writing-content",
+              "skill": "Documentation",
+              "description": "Guidelines for writing effective documentation"
+            }
+          ]
+        }
+      ],
+      "positiveSkills": [
         {
           "skill": "Git",
           "frequency": {
             "2024-01-01T00:00:00.000+05:30": 0,
-            "2024-04-01T00:00:00.000+05:30": 3,
-            "2024-07-01T00:00:00.000+05:30": 4
+            "2024-04-01T00:00:00.000+05:30": 1,
+            "2024-07-01T00:00:00.000+05:30": 12
           },
           "sentimentFrequency": {
             "2024-01-01T00:00:00.000+05:30": {
@@ -1402,32 +1453,23 @@
             },
             "2024-04-01T00:00:00.000+05:30": {
               "Positive": 0,
-              "Negative": 2,
+              "Negative": 0,
               "Neutral": 1
             },
             "2024-07-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 2,
-              "Neutral": 2
+              "Positive": 1,
+              "Negative": 3,
+              "Neutral": 8
             }
           },
           "insights": [
-            "There have been issues with committing changes to merge requests.",
-            "Ensure that changes are properly committed and pushed to the remote repository.",
-            "Review Git commit best practices to improve code management.",
-            "Seek clarification on Git workflows and best practices to avoid confusion.",
-            "Learn more about Git branching strategies and their application in collaborative development."
-          ],
-          "references": [
             {
-              "url": "https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository",
-              "skill": "Git",
-              "description": "An introductory guide to Git repository management."
-            },
-            {
-              "url": "https://www.atlassian.com/git/tutorials/using-branches",
-              "skill": "Git",
-              "description": "A tutorial on Git branching strategies."
+              "text": "You are comfortable with git related activities, but need to improve your commit practices",
+              "ids": [
+                "https://gitlab.com/inkscape/inkscape/-/merge_requests/6516#note_1931734026",
+                "https://gitlab.com/inkscape/inkscape/-/merge_requests/6516#note_1931794488",
+                "https://gitlab.com/inkscape/inkscape/-/merge_requests/6516#note_1931598824"
+              ]
             }
           ]
         },
@@ -1435,146 +1477,7 @@
           "skill": "Keyboard Shortcuts",
           "frequency": {
             "2024-01-01T00:00:00.000+05:30": 0,
-            "2024-04-01T00:00:00.000+05:30": 6,
-            "2024-07-01T00:00:00.000+05:30": 0
-          },
-          "sentimentFrequency": {
-            "2024-01-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-04-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 4,
-              "Neutral": 2
-            },
-            "2024-07-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            }
-          },
-          "insights": [
-            "Consider potential conflicts with existing shortcuts before suggesting new ones.",
-            "Be mindful of user experience when proposing new shortcuts.",
-            "Ensure that new shortcuts are intuitive and easy to remember.",
-            "Research best practices for designing effective keyboard shortcuts.",
-            "Incorporate feedback from other users when designing new shortcuts."
-          ],
-          "references": [
-            {
-              "url": "https://www.usability.gov/how-to-and-tools/methods/keyboards-and-keyboard-shortcuts.html",
-              "skill": "Keyboard Shortcuts",
-              "description": "A guide to designing effective keyboard shortcuts."
-            },
-            {
-              "url": "https://www.interaction-design.org/literature/article/keyboard-shortcuts-design-and-implementation",
-              "skill": "Keyboard Shortcuts",
-              "description": "An article on keyboard shortcut design and implementation."
-            }
-          ]
-        },
-        {
-          "skill": "Filter Effect",
-          "frequency": {
-            "2024-01-01T00:00:00.000+05:30": 0,
-            "2024-04-01T00:00:00.000+05:30": 3,
-            "2024-07-01T00:00:00.000+05:30": 0
-          },
-          "sentimentFrequency": {
-            "2024-01-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-04-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 2,
-              "Neutral": 1
-            },
-            "2024-07-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            }
-          },
-          "insights": [
-            "Explore and experiment with different filter effects to gain a better understanding.",
-            "Review documentation and online resources to learn about filter effects and their applications.",
-            "Consider the practical uses of filter effects in design and graphic editing.",
-            "Seek feedback from others on your understanding and application of filter effects.",
-            "Practice using filter effects in different contexts to develop your skills."
-          ],
-          "references": [
-            {
-              "url": "https://www.w3schools.com/cssref/pr_filter.asp",
-              "skill": "Filter Effect",
-              "description": "A comprehensive guide to CSS filter effects."
-            },
-            {
-              "url": "https://www.photoshopessentials.com/photo-editing/photoshop-filter-effects-guide/",
-              "skill": "Filter Effect",
-              "description": "A guide to filter effects in Adobe Photoshop."
-            }
-          ]
-        },
-        {
-          "skill": "C++",
-          "frequency": {
-            "2024-01-01T00:00:00.000+05:30": 0,
-            "2024-04-01T00:00:00.000+05:30": 2,
-            "2024-07-01T00:00:00.000+05:30": 3
-          },
-          "sentimentFrequency": {
-            "2024-01-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-04-01T00:00:00.000+05:30": {
-              "Positive": 1,
-              "Negative": 0,
-              "Neutral": 1
-            },
-            "2024-07-01T00:00:00.000+05:30": {
-              "Positive": 1,
-              "Negative": 1,
-              "Neutral": 1
-            }
-          },
-          "insights": [
-            "Consider adopting a more structured approach for writing C++ code.",
-            "Focus on making your C++ code more readable and maintainable by following coding conventions.",
-            "Pay close attention to comments and documentation to enhance the clarity and understanding of your C++ code.",
-            "Try to improve your code quality by focusing on writing clean and well-structured code."
-          ],
-          "references": [
-            {
-              "title": "C++ Core Guidelines",
-              "url": "https://isocpp.github.io/CppCoreGuidelines/",
-              "skill": "C++",
-              "description": "A set of guidelines for modern C++ programming."
-            },
-            {
-              "title": "Effective Modern C++",
-              "url": "https://www.amazon.com/Effective-Modern-C-42-Specific-Ways/dp/1491903797",
-              "skill": "C++",
-              "description": "A book that covers best practices for modern C++ programming."
-            },
-            {
-              "title": "C++ Programming Language",
-              "url": "https://www.amazon.com/Programming-Language-4th-Special-Edition/dp/0321716721",
-              "skill": "C++",
-              "description": "A comprehensive book on C++ programming."
-            }
-          ]
-        },
-        {
-          "skill": "XML",
-          "frequency": {
-            "2024-01-01T00:00:00.000+05:30": 0,
-            "2024-04-01T00:00:00.000+05:30": 2,
+            "2024-04-01T00:00:00.000+05:30": 14,
             "2024-07-01T00:00:00.000+05:30": 2
           },
           "sentimentFrequency": {
@@ -1584,73 +1487,640 @@
               "Neutral": 0
             },
             "2024-04-01T00:00:00.000+05:30": {
-              "Positive": 1,
+              "Positive": 0,
               "Negative": 0,
-              "Neutral": 1
+              "Neutral": 14
+            },
+            "2024-07-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 2
+            }
+          },
+          "insights": [
+            {
+              "text": "You are actively participating in discussions about keyboard shortcuts and usability of UI elements.",
+              "ids": [
+                "https://gitlab.com/inkscape/inkscape/-/merge_requests/6462#note_1911554892",
+                "https://gitlab.com/inkscape/inkscape/-/merge_requests/6462#note_1912862887",
+                "https://gitlab.com/inkscape/inkscape/-/merge_requests/6462#note_1912893104"
+              ]
+            },
+            {
+              "text": "You are providing constructive feedback on keyboard shortcuts, suggesting improvements and considering user experience.",
+              "ids": [
+                "https://gitlab.com/inkscape/inkscape/-/merge_requests/6462#note_1912916445",
+                "https://gitlab.com/inkscape/inkscape/-/merge_requests/6462#note_1912931881",
+                "https://gitlab.com/inkscape/inkscape/-/merge_requests/6462#note_1923572371"
+              ]
+            }
+          ]
+        },
+        {
+          "skill": "Layers",
+          "frequency": {
+            "2024-01-01T00:00:00.000+05:30": 0,
+            "2024-04-01T00:00:00.000+05:30": 0,
+            "2024-07-01T00:00:00.000+05:30": 1
+          },
+          "sentimentFrequency": {
+            "2024-01-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-04-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
             },
             "2024-07-01T00:00:00.000+05:30": {
               "Positive": 1,
-              "Negative": 1,
+              "Negative": 0,
               "Neutral": 0
             }
           },
           "insights": [
-            "Your XML skills are not consistent, showing both positive and negative feedback.",
-            "Strive for better organization and consistency in your XML code.",
-            "Focus on understanding XML schema and validation rules for improved quality.",
-            "Consider using XML editors and linters to detect and correct errors in your XML code."
-          ],
-          "references": [
             {
-              "title": "W3Schools XML Tutorial",
-              "url": "https://www.w3schools.com/xml/",
-              "skill": "XML",
-              "description": "A comprehensive tutorial on XML."
+              "text": "You have a good understanding of layers functionality.",
+              "ids": [
+                "https://gitlab.com/inkscape/inkscape/-/merge_requests/6462#note_1913005874",
+                "https://gitlab.com/inkscape/inkscape/-/merge_requests/6462#note_1912957952"
+              ]
+            }
+          ]
+        },
+        {
+          "skill": "Node Tool",
+          "frequency": {
+            "2024-01-01T00:00:00.000+05:30": 0,
+            "2024-04-01T00:00:00.000+05:30": 0,
+            "2024-07-01T00:00:00.000+05:30": 1
+          },
+          "sentimentFrequency": {
+            "2024-01-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
             },
-            {
-              "title": "XML Schema Definition",
-              "url": "https://www.w3.org/XML/Schema",
-              "skill": "XML",
-              "description": "The official specification for XML Schema Definition."
+            "2024-04-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
             },
+            "2024-07-01T00:00:00.000+05:30": {
+              "Positive": 1,
+              "Negative": 0,
+              "Neutral": 0
+            }
+          },
+          "insights": [
             {
-              "title": "XML.com",
-              "url": "https://www.xml.com/",
-              "skill": "XML",
-              "description": "A website dedicated to XML resources and information."
+              "text": "You are showing good understanding of the node tool functionality.",
+              "ids": [
+                "https://gitlab.com/inkscape/inkscape/-/merge_requests/6462#note_1915140066"
+              ]
+            }
+          ]
+        },
+        {
+          "skill": "UI",
+          "frequency": {
+            "2024-01-01T00:00:00.000+05:30": 0,
+            "2024-04-01T00:00:00.000+05:30": 0,
+            "2024-07-01T00:00:00.000+05:30": 2
+          },
+          "sentimentFrequency": {
+            "2024-01-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-04-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-07-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 2
+            }
+          },
+          "insights": [
+            {
+              "text": "You are discussing about UI related issues and suggestions",
+              "ids": [
+                "https://gitlab.com/inkscape/inkscape/-/merge_requests/6462#note_1912952518",
+                "https://gitlab.com/inkscape/inkscape/-/merge_requests/6462#note_1912957952"
+              ]
             }
           ]
         }
       ],
+      "negativeSkills": [
+        {
+          "skill": "GitLab",
+          "frequency": {
+            "2024-01-01T00:00:00.000+05:30": 0,
+            "2024-04-01T00:00:00.000+05:30": 0,
+            "2024-07-01T00:00:00.000+05:30": 1
+          },
+          "sentimentFrequency": {
+            "2024-01-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-04-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-07-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 1
+            }
+          },
+          "insights": [
+            {
+              "text": "You are experiencing issues with GitLab merge request commit functionality, you should learn how merge request commits work in GitLab.",
+              "ids": [
+                "https://gitlab.com/inkscape/inkscape/-/merge_requests/6516#note_1931723308"
+              ]
+            }
+          ],
+          "references": [
+            {
+              "title": "GitLab Merge Request Commits",
+              "url": "https://docs.gitlab.com/ee/user/project/merge_requests/commits.html",
+              "skill": "GitLab",
+              "description": "Learn how merge request commits work in GitLab"
+            }
+          ]
+        },
+        {
+          "skill": "Live Path Effects",
+          "frequency": {
+            "2024-01-01T00:00:00.000+05:30": 0,
+            "2024-04-01T00:00:00.000+05:30": 1,
+            "2024-07-01T00:00:00.000+05:30": 0
+          },
+          "sentimentFrequency": {
+            "2024-01-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-04-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 1
+            },
+            "2024-07-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            }
+          },
+          "insights": [
+            {
+              "text": "You are not clear on Live Path Effect functionality and need to improve your understanding of it",
+              "ids": [
+                "https://gitlab.com/inkscape/inkscape-docs/manuals/-/merge_requests/142#note_1846768288",
+                "https://gitlab.com/inkscape/inkscape-docs/manuals/-/merge_requests/142#note_1891768109"
+              ]
+            }
+          ],
+          "references": [
+            {
+              "title": "Live Path Effects",
+              "url": "https://wiki.inkscape.org/wiki/Inkscape:Live_Path_Effects",
+              "skill": "Live Path Effects",
+              "description": "Learn about Live Path Effects in Inkscape"
+            }
+          ]
+        },
+        {
+          "skill": "XML",
+          "frequency": {
+            "2024-01-01T00:00:00.000+05:30": 0,
+            "2024-04-01T00:00:00.000+05:30": 0,
+            "2024-07-01T00:00:00.000+05:30": 1
+          },
+          "sentimentFrequency": {
+            "2024-01-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-04-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-07-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 1
+            }
+          },
+          "insights": [
+            {
+              "text": "You are not familiar with the XML structure, it is recommended to improve your understanding of XML.",
+              "ids": [
+                "https://gitlab.com/inkscape/inkscape/-/merge_requests/6462#note_1912981927"
+              ]
+            }
+          ],
+          "references": [
+            {
+              "title": "XML",
+              "url": "https://www.w3schools.com/xml/",
+              "skill": "XML",
+              "description": "Learn about XML for web developers"
+            }
+          ]
+        }
+      ],
+      "merge_requests": {
+        "insights": [
+          {
+            "text": "Your contributions are mostly positive and have a high impact on the project.",
+            "ids": [
+              "gid://gitlab/MergeRequest/311060010",
+              "gid://gitlab/MergeRequest/310435293",
+              "gid://gitlab/MergeRequest/308036810"
+            ]
+          },
+          {
+            "text": "You have made great contributions to the documentation of Inkscape.",
+            "ids": [
+              "gid://gitlab/MergeRequest/293544338",
+              "gid://gitlab/MergeRequest/293539357",
+              "gid://gitlab/MergeRequest/293396605"
+            ]
+          },
+          {
+            "text": "You are proficient in GTK+ and UI design and have made many contributions in these areas.",
+            "ids": [
+              "gid://gitlab/MergeRequest/311015143",
+              "gid://gitlab/MergeRequest/302079582",
+              "gid://gitlab/MergeRequest/295539281"
+            ]
+          },
+          {
+            "text": "You have shown improvement in your XML skills by making significant contributions in this area.",
+            "ids": [
+              "gid://gitlab/MergeRequest/310435293",
+              "gid://gitlab/MergeRequest/302724816",
+              "gid://gitlab/MergeRequest/305690298"
+            ]
+          },
+          {
+            "text": "Your recent merge requests lack detailed descriptions and context.",
+            "ids": [
+              "gid://gitlab/MergeRequest/311707393",
+              "gid://gitlab/MergeRequest/311060010",
+              "gid://gitlab/MergeRequest/304264274"
+            ]
+          }
+        ],
+        "actions": [
+          {
+            "text": "Focus on providing detailed and clear descriptions for your merge requests.",
+            "references": []
+          },
+          {
+            "text": "Consider using screenshots to better illustrate the changes you made.",
+            "references": []
+          },
+          {
+            "text": "Review and improve your merge requests before submitting them.",
+            "references": []
+          },
+          {
+            "text": "Learn about platform-specific considerations when making changes to the application.",
+            "references": []
+          },
+          {
+            "text": "Improve your CSS skills by learning more about CSS techniques and best practices.",
+            "references": [
+              {
+                "title": "MDN Web Docs: CSS",
+                "url": "https://developer.mozilla.org/en-US/docs/Web/CSS",
+                "skill": "CSS",
+                "description": "A comprehensive resource for learning CSS."
+              }
+            ]
+          }
+        ],
+        "positiveSkills": [
+          {
+            "skill": "GTK+",
+            "frequency": {
+              "2024-01-01T00:00:00.000+05:30": 0,
+              "2024-04-01T00:00:00.000+05:30": 0,
+              "2024-07-01T00:00:00.000+05:30": 4
+            },
+            "sentimentFrequency": {
+              "2024-01-01T00:00:00.000+05:30": {
+                "Positive": 0,
+                "Negative": 0,
+                "Neutral": 0
+              },
+              "2024-04-01T00:00:00.000+05:30": {
+                "Positive": 0,
+                "Negative": 0,
+                "Neutral": 0
+              },
+              "2024-07-01T00:00:00.000+05:30": {
+                "Positive": 4,
+                "Negative": 0,
+                "Neutral": 0
+              }
+            },
+            "insights": [
+              {
+                "text": "You have shown strong understanding of GTK+ by implementing various features."
+              },
+              {
+                "text": "You have been actively improving the UI of Inkscape using GTK+."
+              },
+              {
+                "text": "Your contributions in GTK+ have been well received by the team."
+              }
+            ]
+          },
+          {
+            "skill": "Inkscape",
+            "frequency": {
+              "2024-01-01T00:00:00.000+05:30": 0,
+              "2024-04-01T00:00:00.000+05:30": 4,
+              "2024-07-01T00:00:00.000+05:30": 2
+            },
+            "sentimentFrequency": {
+              "2024-01-01T00:00:00.000+05:30": {
+                "Positive": 0,
+                "Negative": 0,
+                "Neutral": 0
+              },
+              "2024-04-01T00:00:00.000+05:30": {
+                "Positive": 4,
+                "Negative": 0,
+                "Neutral": 0
+              },
+              "2024-07-01T00:00:00.000+05:30": {
+                "Positive": 2,
+                "Negative": 0,
+                "Neutral": 0
+              }
+            },
+            "insights": [
+              {
+                "text": "You have made significant contributions to Inkscape through your merge requests."
+              },
+              {
+                "text": "You have demonstrated a good understanding of Inkscape's features and functionalities."
+              },
+              {
+                "text": "Your contributions have been well-received by the Inkscape community."
+              }
+            ]
+          },
+          {
+            "skill": "UI Design",
+            "frequency": {
+              "2024-01-01T00:00:00.000+05:30": 0,
+              "2024-04-01T00:00:00.000+05:30": 1,
+              "2024-07-01T00:00:00.000+05:30": 1
+            },
+            "sentimentFrequency": {
+              "2024-01-01T00:00:00.000+05:30": {
+                "Positive": 0,
+                "Negative": 0,
+                "Neutral": 0
+              },
+              "2024-04-01T00:00:00.000+05:30": {
+                "Positive": 1,
+                "Negative": 0,
+                "Neutral": 0
+              },
+              "2024-07-01T00:00:00.000+05:30": {
+                "Positive": 1,
+                "Negative": 0,
+                "Neutral": 0
+              }
+            },
+            "insights": [
+              {
+                "text": "You have shown good UI design skills by improving the user interface of Inkscape."
+              },
+              {
+                "text": "You have demonstrated a strong understanding of visual appeal and user experience."
+              }
+            ]
+          },
+          {
+            "skill": "Documentation",
+            "frequency": {
+              "2024-01-01T00:00:00.000+05:30": 0,
+              "2024-04-01T00:00:00.000+05:30": 3,
+              "2024-07-01T00:00:00.000+05:30": 0
+            },
+            "sentimentFrequency": {
+              "2024-01-01T00:00:00.000+05:30": {
+                "Positive": 0,
+                "Negative": 0,
+                "Neutral": 0
+              },
+              "2024-04-01T00:00:00.000+05:30": {
+                "Positive": 3,
+                "Negative": 0,
+                "Neutral": 0
+              },
+              "2024-07-01T00:00:00.000+05:30": {
+                "Positive": 0,
+                "Negative": 0,
+                "Neutral": 0
+              }
+            },
+            "insights": [
+              {
+                "text": "You have improved the documentation of Inkscape by adding new features and explanations."
+              },
+              {
+                "text": "Your efforts in improving the documentation have been appreciated by the team."
+              }
+            ]
+          },
+          {
+            "skill": "XML",
+            "frequency": {
+              "2024-01-01T00:00:00.000+05:30": 0,
+              "2024-04-01T00:00:00.000+05:30": 1,
+              "2024-07-01T00:00:00.000+05:30": 2
+            },
+            "sentimentFrequency": {
+              "2024-01-01T00:00:00.000+05:30": {
+                "Positive": 0,
+                "Negative": 0,
+                "Neutral": 0
+              },
+              "2024-04-01T00:00:00.000+05:30": {
+                "Positive": 1,
+                "Negative": 0,
+                "Neutral": 0
+              },
+              "2024-07-01T00:00:00.000+05:30": {
+                "Positive": 1,
+                "Negative": 1,
+                "Neutral": 0
+              }
+            },
+            "insights": [
+              {
+                "text": "You have demonstrated proficiency in XML by contributing to Inkscape's XML files."
+              },
+              {
+                "text": "Your understanding of XML is evident in your contributions."
+              }
+            ]
+          }
+        ],
+        "negativeSkills": [
+          {
+            "skill": "C++",
+            "frequency": {
+              "2024-01-01T00:00:00.000+05:30": 0,
+              "2024-04-01T00:00:00.000+05:30": 0,
+              "2024-07-01T00:00:00.000+05:30": 3
+            },
+            "sentimentFrequency": {
+              "2024-01-01T00:00:00.000+05:30": {
+                "Positive": 0,
+                "Negative": 0,
+                "Neutral": 0
+              },
+              "2024-04-01T00:00:00.000+05:30": {
+                "Positive": 0,
+                "Negative": 0,
+                "Neutral": 0
+              },
+              "2024-07-01T00:00:00.000+05:30": {
+                "Positive": 1,
+                "Negative": 0,
+                "Neutral": 2
+              }
+            },
+            "insights": [
+              {
+                "text": "Your understanding of C++ needs improvement based on your contributions."
+              },
+              {
+                "text": "You should focus on improving your C++ skills by learning more about the language."
+              },
+              {
+                "text": "You should seek guidance from experienced developers to improve your C++ coding practices."
+              }
+            ],
+            "references": [
+              {
+                "title": "C++ Tutorial",
+                "url": "https://www.cplusplus.com/doc/tutorial/",
+                "skill": "C++",
+                "description": "A comprehensive tutorial for learning C++."
+              },
+              {
+                "title": "C++ Reference",
+                "url": "https://www.cplusplus.com/reference/",
+                "skill": "C++",
+                "description": "A reference guide for the C++ programming language."
+              }
+            ]
+          },
+          {
+            "skill": "Git",
+            "frequency": {
+              "2024-01-01T00:00:00.000+05:30": 0,
+              "2024-04-01T00:00:00.000+05:30": 0,
+              "2024-07-01T00:00:00.000+05:30": 2
+            },
+            "sentimentFrequency": {
+              "2024-01-01T00:00:00.000+05:30": {
+                "Positive": 0,
+                "Negative": 0,
+                "Neutral": 0
+              },
+              "2024-04-01T00:00:00.000+05:30": {
+                "Positive": 0,
+                "Negative": 0,
+                "Neutral": 0
+              },
+              "2024-07-01T00:00:00.000+05:30": {
+                "Positive": 1,
+                "Negative": 0,
+                "Neutral": 1
+              }
+            },
+            "insights": [
+              {
+                "text": "You need to improve your understanding of Git and its workflows."
+              },
+              {
+                "text": "You should learn more about Git branching and merging strategies."
+              },
+              {
+                "text": "You should follow best practices for using Git to ensure efficient collaboration."
+              }
+            ],
+            "references": [
+              {
+                "title": "Git - The Simple Guide",
+                "url": "https://learngitbranching.js.org/",
+                "skill": "Git",
+                "description": "An interactive tutorial for learning Git branching."
+              },
+              {
+                "title": "Git Documentation",
+                "url": "https://git-scm.com/doc",
+                "skill": "Git",
+                "description": "The official documentation for Git."
+              }
+            ]
+          }
+        ]
+      },
       "quality": {
         "2024-04-01T00:00:00.000+05:30": {
-          "High": 9,
-          "Low": 4,
-          "Medium": 5
+          "High": 11,
+          "Low": 3,
+          "Medium": 4
         }
       },
       "testCases": {
         "2024-04-01T00:00:00.000+05:30": 0
       },
       "testCasesRequired": {
-        "2024-04-01T00:00:00.000+05:30": 4
+        "2024-04-01T00:00:00.000+05:30": 6
       },
       "impact": {
         "2024-04-01T00:00:00.000+05:30": {
-          "Negative": 3,
-          "Neutral": 8,
-          "Positive": 7
+          "Negative": 1,
+          "Neutral": 4,
+          "Positive": 13
         }
       },
       "userResponseSentiments": {
-        "Positive": 1,
-        "Negative": 5,
+        "Positive": 3,
+        "Negative": 3,
         "Neutral": 23
       },
       "commentsSentiments": {
         "Positive": 3,
-        "Negative": 6,
-        "Neutral": 17
+        "Negative": 2,
+        "Neutral": 21
       }
     }
   }

@@ -1,627 +1,386 @@
 {
   "username": "grote",
-  "updatedAt": "2024-07-12T09:16:37.285+05:30",
+  "updatedAt": "2024-07-13T20:52:17.972+05:30",
   "status": "Avaliable",
   "report": {
-    "month": {
-      "summary": [
-        "You have shown strong skills in Android, Java, Git, UI design, and Material Design.",
-        "Your contributions highlight your strong understanding of Android development.",
-        "There are areas of improvement in your understanding of sorting algorithms and Android sharing functionality.",
-        "Consider reviewing the resources provided for negative skills to enhance your knowledge.",
-        "Reviewing your merge requests thoroughly before submitting them can minimize potential errors."
+    "quarter": {
+      "insights": [
+        {
+          "text": "You have successfully improved the user experience with your recent merge requests.",
+          "ids": [
+            "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1339#note_1770883133",
+            "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1347#note_1781587558"
+          ]
+        },
+        {
+          "text": "You are increasingly focusing on sharing functionality, implementing robust solutions.",
+          "ids": [
+            "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1385#note_1989689247",
+            "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1385#note_1989861157",
+            "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1385#note_1990430101"
+          ]
+        },
+        {
+          "text": "You are contributing to the project's stability by identifying and addressing potential regression issues.",
+          "ids": [
+            "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1385#note_1862811889",
+            "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1385#note_1862708641",
+            "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1385#note_1862907437"
+          ]
+        },
+        {
+          "text": "You are improving your CI performance by actively resolving issues.",
+          "ids": [
+            "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1357#note_1801765438",
+            "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1357#note_1811542301",
+            "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1357#note_1811936125"
+          ]
+        },
+        {
+          "text": "You are showing a great understanding of Android and its complexities.",
+          "ids": [
+            "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1390#note_1891654049",
+            "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1390#note_1892243046",
+            "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1390#note_1893304228"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "text": "Explore best practices for handling external storage in Android.",
+          "references": []
+        },
+        {
+          "text": "Learn more about URI schemes and their implications for security.",
+          "references": []
+        },
+        {
+          "text": "Research alternative build tools for F-Droid and explore their advantages and disadvantages.",
+          "references": []
+        },
+        {
+          "text": "Consider improving your Markdown skills by exploring more advanced formatting options.",
+          "references": [
+            "https://www.markdownguide.org/basic-syntax/"
+          ]
+        },
+        {
+          "text": "Improve your understanding of sorting algorithms to effectively manage APK priority.",
+          "references": [
+            "https://www.geeksforgeeks.org/sorting-algorithms/"
+          ]
+        }
       ],
       "positiveSkills": [
         {
-          "skill": "Android",
+          "skill": "Testing",
           "frequency": {
-            "2024-03-01T00:00:00.000+05:30": 25,
-            "2024-04-01T00:00:00.000+05:30": 23,
-            "2024-05-01T00:00:00.000+05:30": 26,
-            "2024-06-01T00:00:00.000+05:30": 11,
-            "2024-07-01T00:00:00.000+05:30": 21
+            "2024-01-01T00:00:00.000+05:30": 0,
+            "2024-04-01T00:00:00.000+05:30": 1,
+            "2024-07-01T00:00:00.000+05:30": 7
           },
           "sentimentFrequency": {
-            "2024-03-01T00:00:00.000+05:30": {
-              "Positive": 11,
-              "Negative": 5,
-              "Neutral": 9
+            "2024-01-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
             },
             "2024-04-01T00:00:00.000+05:30": {
-              "Positive": 12,
-              "Negative": 7,
-              "Neutral": 4
+              "Positive": 1,
+              "Negative": 0,
+              "Neutral": 0
             },
-            "2024-05-01T00:00:00.000+05:30": {
-              "Positive": 12,
-              "Negative": 7,
-              "Neutral": 7
-            },
-            "2024-06-01T00:00:00.000+05:30": {
+            "2024-07-01T00:00:00.000+05:30": {
               "Positive": 6,
-              "Negative": 3,
-              "Neutral": 2
-            },
-            "2024-07-01T00:00:00.000+05:30": {
-              "Positive": 11,
-              "Negative": 5,
-              "Neutral": 5
-            }
-          },
-          "insights": [
-            "You have demonstrated a strong understanding of Android concepts.",
-            "Your contributions have addressed various Android-related issues.",
-            "Your ability to navigate Android UI complexities is commendable.",
-            "You have shown improvements in addressing Android sharing functionality issues.",
-            "Your work on Android has received positive feedback from peers."
-          ]
-        },
-        {
-          "skill": "Java",
-          "frequency": {
-            "2024-03-01T00:00:00.000+05:30": 18,
-            "2024-04-01T00:00:00.000+05:30": 15,
-            "2024-05-01T00:00:00.000+05:30": 17,
-            "2024-06-01T00:00:00.000+05:30": 6,
-            "2024-07-01T00:00:00.000+05:30": 13
-          },
-          "sentimentFrequency": {
-            "2024-03-01T00:00:00.000+05:30": {
-              "Positive": 10,
-              "Negative": 2,
-              "Neutral": 6
-            },
-            "2024-04-01T00:00:00.000+05:30": {
-              "Positive": 10,
-              "Negative": 1,
-              "Neutral": 4
-            },
-            "2024-05-01T00:00:00.000+05:30": {
-              "Positive": 9,
-              "Negative": 2,
-              "Neutral": 6
-            },
-            "2024-06-01T00:00:00.000+05:30": {
-              "Positive": 4,
-              "Negative": 0,
-              "Neutral": 2
-            },
-            "2024-07-01T00:00:00.000+05:30": {
-              "Positive": 7,
-              "Negative": 2,
-              "Neutral": 4
-            }
-          },
-          "insights": [
-            "Your Java coding skills are strong.",
-            "You have demonstrated proficiency in various Java concepts.",
-            "Your understanding of Java testing frameworks is evident.",
-            "You have received positive feedback for your Java code.",
-            "Your Java skills have shown steady improvement over time."
-          ]
-        },
-        {
-          "skill": "Git",
-          "frequency": {
-            "2024-03-01T00:00:00.000+05:30": 7,
-            "2024-04-01T00:00:00.000+05:30": 7,
-            "2024-05-01T00:00:00.000+05:30": 8,
-            "2024-06-01T00:00:00.000+05:30": 3,
-            "2024-07-01T00:00:00.000+05:30": 5
-          },
-          "sentimentFrequency": {
-            "2024-03-01T00:00:00.000+05:30": {
-              "Positive": 3,
-              "Negative": 1,
-              "Neutral": 3
-            },
-            "2024-04-01T00:00:00.000+05:30": {
-              "Positive": 4,
-              "Negative": 1,
-              "Neutral": 2
-            },
-            "2024-05-01T00:00:00.000+05:30": {
-              "Positive": 5,
-              "Negative": 0,
-              "Neutral": 3
-            },
-            "2024-06-01T00:00:00.000+05:30": {
-              "Positive": 2,
-              "Negative": 0,
-              "Neutral": 1
-            },
-            "2024-07-01T00:00:00.000+05:30": {
-              "Positive": 3,
-              "Negative": 0,
-              "Neutral": 2
-            }
-          },
-          "insights": [
-            "Your Git workflow is efficient and well-structured.",
-            "You demonstrate a good understanding of Git branching and merging.",
-            "Your commit messages are clear and informative.",
-            "Your Git skills have received positive feedback.",
-            "You have shown consistency in adhering to Git best practices."
-          ]
-        },
-        {
-          "skill": "UI",
-          "frequency": {
-            "2024-03-01T00:00:00.000+05:30": 2,
-            "2024-04-01T00:00:00.000+05:30": 1,
-            "2024-05-01T00:00:00.000+05:30": 1,
-            "2024-06-01T00:00:00.000+05:30": 0,
-            "2024-07-01T00:00:00.000+05:30": 2
-          },
-          "sentimentFrequency": {
-            "2024-03-01T00:00:00.000+05:30": {
-              "Positive": 1,
-              "Negative": 1,
-              "Neutral": 0
-            },
-            "2024-04-01T00:00:00.000+05:30": {
-              "Positive": 1,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-05-01T00:00:00.000+05:30": {
-              "Positive": 1,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-06-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-07-01T00:00:00.000+05:30": {
-              "Positive": 1,
-              "Negative": 1,
-              "Neutral": 0
-            }
-          },
-          "insights": [
-            "Your understanding of UI design principles is improving.",
-            "You have shown a willingness to improve the UI of your code.",
-            "You have received positive feedback for your UI improvements.",
-            "Consider exploring UI design best practices to further refine your skills.",
-            "Continue to pay attention to UI aspects in your future contributions."
-          ]
-        },
-        {
-          "skill": "Material Design",
-          "frequency": {
-            "2024-03-01T00:00:00.000+05:30": 2,
-            "2024-04-01T00:00:00.000+05:30": 0,
-            "2024-05-01T00:00:00.000+05:30": 0,
-            "2024-06-01T00:00:00.000+05:30": 0,
-            "2024-07-01T00:00:00.000+05:30": 1
-          },
-          "sentimentFrequency": {
-            "2024-03-01T00:00:00.000+05:30": {
-              "Positive": 1,
-              "Negative": 0,
-              "Neutral": 1
-            },
-            "2024-04-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-05-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-06-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-07-01T00:00:00.000+05:30": {
-              "Positive": 1,
-              "Negative": 0,
-              "Neutral": 0
-            }
-          },
-          "insights": [
-            "You have demonstrated a good understanding of Material Design principles.",
-            "Your use of Material Design elements has improved.",
-            "You have received positive feedback for your Material Design work.",
-            "Continue to explore and implement Material Design best practices.",
-            "Your Material Design skills are steadily progressing."
-          ]
-        },
-        {
-          "skill": "WorkManager",
-          "frequency": {
-            "2024-03-01T00:00:00.000+05:30": 1,
-            "2024-04-01T00:00:00.000+05:30": 0,
-            "2024-05-01T00:00:00.000+05:30": 0,
-            "2024-06-01T00:00:00.000+05:30": 0,
-            "2024-07-01T00:00:00.000+05:30": 0
-          },
-          "sentimentFrequency": {
-            "2024-03-01T00:00:00.000+05:30": {
-              "Positive": 1,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-04-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-05-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-06-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-07-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            }
-          },
-          "insights": [
-            "You have successfully integrated WorkManager for managing background updates.",
-            "Your usage of WorkManager demonstrates an understanding of efficient background task management.",
-            "Your WorkManager contributions are valuable for improving the app's performance and reliability.",
-            "Consider exploring the full capabilities of WorkManager, such as scheduling tasks and handling constraints.",
-            "Your WorkManager expertise is crucial for ensuring smooth and reliable background updates."
-          ]
-        },
-        {
-          "skill": "Kotlin",
-          "frequency": {
-            "2024-03-01T00:00:00.000+05:30": 3,
-            "2024-04-01T00:00:00.000+05:30": 2,
-            "2024-05-01T00:00:00.000+05:30": 4,
-            "2024-06-01T00:00:00.000+05:30": 1,
-            "2024-07-01T00:00:00.000+05:30": 2
-          },
-          "sentimentFrequency": {
-            "2024-03-01T00:00:00.000+05:30": {
-              "Positive": 2,
-              "Negative": 0,
-              "Neutral": 1
-            },
-            "2024-04-01T00:00:00.000+05:30": {
-              "Positive": 2,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-05-01T00:00:00.000+05:30": {
-              "Positive": 3,
-              "Negative": 0,
-              "Neutral": 1
-            },
-            "2024-06-01T00:00:00.000+05:30": {
-              "Positive": 1,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-07-01T00:00:00.000+05:30": {
-              "Positive": 1,
               "Negative": 0,
               "Neutral": 1
             }
           },
           "insights": [
-            "You are using Kotlin effectively to improve the app's functionality and enhance its performance.",
-            "Your Kotlin contributions are valuable for modernizing the codebase.",
-            "Your recent contributions show an understanding of Kotlin's core concepts.",
-            "Keep exploring Kotlin's advanced features like coroutines and lambdas for a deeper understanding.",
-            "Your expertise in Kotlin contributes to making the app more efficient and user-friendly."
-          ]
-        },
-        {
-          "skill": "Room",
-          "frequency": {
-            "2024-03-01T00:00:00.000+05:30": 0,
-            "2024-04-01T00:00:00.000+05:30": 0,
-            "2024-05-01T00:00:00.000+05:30": 0,
-            "2024-06-01T00:00:00.000+05:30": 0,
-            "2024-07-01T00:00:00.000+05:30": 1
-          },
-          "sentimentFrequency": {
-            "2024-03-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
+            {
+              "text": "You are actively testing your code and receiving positive feedback.",
+              "ids": [
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1347#note_1781587558",
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1339#note_1770883133",
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1386#note_1996832661"
+              ]
             },
-            "2024-04-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-05-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-06-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-07-01T00:00:00.000+05:30": {
-              "Positive": 1,
-              "Negative": 0,
-              "Neutral": 0
+            {
+              "text": "Your contribution has improved the overall test coverage of the project.",
+              "ids": [
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1358#note_1811546449",
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1379#note_1851148359",
+                null
+              ]
             }
-          },
-          "insights": [
-            "Your contributions show a good understanding of using Room for database management.",
-            "Your Room integration is valuable for making the app's data handling more efficient.",
-            "Keep exploring Room's capabilities for more advanced database operations.",
-            "Your Room expertise helps contribute to a more reliable and robust application.",
-            "Consider using Room's advanced features like entities and DAOs for a more structured approach."
-          ]
-        },
-        {
-          "skill": "RecyclerView",
-          "frequency": {
-            "2024-03-01T00:00:00.000+05:30": 0,
-            "2024-04-01T00:00:00.000+05:30": 0,
-            "2024-05-01T00:00:00.000+05:30": 0,
-            "2024-06-01T00:00:00.000+05:30": 0,
-            "2024-07-01T00:00:00.000+05:30": 1
-          },
-          "sentimentFrequency": {
-            "2024-03-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-04-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-05-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-06-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-07-01T00:00:00.000+05:30": {
-              "Positive": 1,
-              "Negative": 0,
-              "Neutral": 0
-            }
-          },
-          "insights": [
-            "You've effectively used RecyclerView for displaying lists of data, enhancing the app's efficiency.",
-            "Your RecyclerView implementation demonstrates a good understanding of dynamic list display.",
-            "Consider exploring RecyclerView's advanced features like item animations and viewholders for improved user experience.",
-            "Your RecyclerView skills contribute to making the app more responsive and visually appealing.",
-            "Keep refining your RecyclerView skills to ensure optimal performance and user interaction."
-          ]
-        },
-        {
-          "skill": "Glide",
-          "frequency": {
-            "2024-03-01T00:00:00.000+05:30": 0,
-            "2024-04-01T00:00:00.000+05:30": 1,
-            "2024-05-01T00:00:00.000+05:30": 0,
-            "2024-06-01T00:00:00.000+05:30": 0,
-            "2024-07-01T00:00:00.000+05:30": 0
-          },
-          "sentimentFrequency": {
-            "2024-03-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-04-01T00:00:00.000+05:30": {
-              "Positive": 1,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-05-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-06-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-07-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            }
-          },
-          "insights": [
-            "You have used Glide to improve image loading, but consider using it more consistently for optimizing image loading and display.",
-            "Explore Glide's advanced features like caching and transformations for enhancing its performance.",
-            "Ensure your Glide implementation is well-documented and adheres to best practices.",
-            "Review Glide's documentation to keep your understanding up-to-date with its latest features and updates.",
-            "Incorporating Glide effectively can contribute to a smoother and more responsive user experience."
           ]
         }
       ],
       "negativeSkills": [
         {
-          "skill": "Sorting",
+          "skill": "URL",
           "frequency": {
-            "2024-03-01T00:00:00.000+05:30": 0,
-            "2024-04-01T00:00:00.000+05:30": 0,
-            "2024-05-01T00:00:00.000+05:30": 4,
-            "2024-06-01T00:00:00.000+05:30": 0,
-            "2024-07-01T00:00:00.000+05:30": 0
+            "2024-01-01T00:00:00.000+05:30": 0,
+            "2024-04-01T00:00:00.000+05:30": 2,
+            "2024-07-01T00:00:00.000+05:30": 5
           },
           "sentimentFrequency": {
-            "2024-03-01T00:00:00.000+05:30": {
+            "2024-01-01T00:00:00.000+05:30": {
               "Positive": 0,
               "Negative": 0,
               "Neutral": 0
             },
             "2024-04-01T00:00:00.000+05:30": {
               "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-05-01T00:00:00.000+05:30": {
-              "Positive": 0,
               "Negative": 2,
-              "Neutral": 2
-            },
-            "2024-06-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
               "Neutral": 0
             },
             "2024-07-01T00:00:00.000+05:30": {
               "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
+              "Negative": 3,
+              "Neutral": 2
             }
           },
           "insights": [
-            "There have been instances of incorrect sorting order in your code.",
-            "Consider reviewing sorting algorithms and their implementation.",
-            "Ensure that your code correctly applies the intended sorting logic.",
-            "Refer to resources like the Wikipedia article on sorting algorithms for a better understanding.",
-            "Pay attention to sorting requirements in your future contributions."
+            {
+              "text": "You are making mistakes in handling URL formats and its limitations.",
+              "ids": [
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1385#note_1862649186",
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1385#note_1862811889",
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1385#note_1862907437"
+              ]
+            },
+            {
+              "text": "You are missing some important aspects of the URL structure and its implications.",
+              "ids": [
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1385#note_1862708641",
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1390#note_1887582199",
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1390#note_1891423818"
+              ]
+            },
+            {
+              "text": "You are overlooking potential edge cases related to URL handling.",
+              "ids": [
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1361#note_1812451669",
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1390#note_1887582211",
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1390#note_1887992001"
+              ]
+            }
           ],
           "references": [
-            {
-              "url": "https://en.wikipedia.org/wiki/Sorting_algorithm",
-              "skill": "Sorting",
-              "description": "General Information on Sorting Algorithms"
-            }
+            "https://developer.mozilla.org/en-US/docs/Web/API/URL",
+            "https://www.w3.org/Addressing/URL/",
+            "https://www.w3.org/Addressing/URL/url-spec.txt"
           ]
         },
         {
           "skill": "Android",
           "frequency": {
-            "2024-03-01T00:00:00.000+05:30": 6,
-            "2024-04-01T00:00:00.000+05:30": 6,
-            "2024-05-01T00:00:00.000+05:30": 7,
-            "2024-06-01T00:00:00.000+05:30": 3,
+            "2024-01-01T00:00:00.000+05:30": 0,
+            "2024-04-01T00:00:00.000+05:30": 1,
             "2024-07-01T00:00:00.000+05:30": 5
           },
           "sentimentFrequency": {
-            "2024-03-01T00:00:00.000+05:30": {
-              "Positive": 1,
-              "Negative": 2,
-              "Neutral": 3
-            },
-            "2024-04-01T00:00:00.000+05:30": {
-              "Positive": 2,
-              "Negative": 2,
-              "Neutral": 2
-            },
-            "2024-05-01T00:00:00.000+05:30": {
-              "Positive": 2,
-              "Negative": 2,
-              "Neutral": 3
-            },
-            "2024-06-01T00:00:00.000+05:30": {
-              "Positive": 1,
-              "Negative": 1,
-              "Neutral": 1
-            },
-            "2024-07-01T00:00:00.000+05:30": {
-              "Positive": 1,
-              "Negative": 1,
-              "Neutral": 3
-            }
-          },
-          "insights": [
-            "There have been issues with Android sharing functionality.",
-            "Consider reviewing Android sharing providers for a better understanding.",
-            "Ensure your code handles sharing intents correctly.",
-            "Pay attention to compatibility with different sharing apps.",
-            "Refer to Android developer documentation for guidance on sharing functionalities."
-          ],
-          "references": [
-            {
-              "url": "https://developer.android.com/guide/topics/providers/share-providers",
-              "skill": "Android",
-              "description": "Learn about Android sharing providers for app development"
-            }
-          ]
-        },
-        {
-          "skill": "Repository",
-          "frequency": {
-            "2024-03-01T00:00:00.000+05:30": 2,
-            "2024-04-01T00:00:00.000+05:30": 2,
-            "2024-05-01T00:00:00.000+05:30": 4,
-            "2024-06-01T00:00:00.000+05:30": 1,
-            "2024-07-01T00:00:00.000+05:30": 0
-          },
-          "sentimentFrequency": {
-            "2024-03-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 2
-            },
-            "2024-04-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 2
-            },
-            "2024-05-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 2,
-              "Neutral": 2
-            },
-            "2024-06-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 1
-            },
-            "2024-07-01T00:00:00.000+05:30": {
+            "2024-01-01T00:00:00.000+05:30": {
               "Positive": 0,
               "Negative": 0,
               "Neutral": 0
+            },
+            "2024-04-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 1,
+              "Neutral": 0
+            },
+            "2024-07-01T00:00:00.000+05:30": {
+              "Positive": 1,
+              "Negative": 3,
+              "Neutral": 1
             }
           },
           "insights": [
-            "You have received feedback on your repository-related code.",
-            "Ensure your code adheres to best practices for managing repositories.",
-            "Review GitLab documentation on repositories for clarification.",
-            "Pay close attention to interactions with repositories in your code.",
-            "Consider seeking feedback from experienced developers on repository management."
+            {
+              "text": "You are facing issues with understanding how Android's system dialog works.",
+              "ids": [
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1370#note_1830413211",
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1370#note_1830499512",
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1370#note_1863438618"
+              ]
+            },
+            {
+              "text": "You need to understand how to handle permissions in Android.",
+              "ids": [
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1410#note_1997380773",
+                null,
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1390#note_1887582211"
+              ]
+            },
+            {
+              "text": "Ensure proper usage of external storage in your Android applications.",
+              "ids": [
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1361#note_1807787181",
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1361#note_1812451669",
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1361#note_1812477380"
+              ]
+            },
+            {
+              "text": "You need to be mindful of Android Beam and how its removal affects the application.",
+              "ids": [
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1332#note_1781498058",
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1332#note_1782820071",
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1332#note_1749415166"
+              ]
+            }
           ],
           "references": [
+            "https://developer.android.com/guide/topics/data/data-storage",
+            "https://developer.android.com/guide/components/activities/activity-lifecycle",
+            "https://developer.android.com/guide/topics/ui/notifiers/toasts",
+            "https://www.xda-developers.com/android-beam-permanent-removal-android-14/"
+          ]
+        }
+      ],
+      "quality": {
+        "2024-07-01T00:00:00.000+05:30": {
+          "High": 2,
+          "Low": 3,
+          "Medium": 0
+        },
+        "2024-04-01T00:00:00.000+05:30": {
+          "High": 13,
+          "Low": 2,
+          "Medium": 0
+        },
+        "2024-01-01T00:00:00.000+05:30": {
+          "High": 19,
+          "Low": 1,
+          "Medium": 2
+        }
+      },
+      "testCases": {
+        "2024-04-01T00:00:00.000+05:30": 0,
+        "2024-01-01T00:00:00.000+05:30": 7
+      },
+      "testCasesRequired": {
+        "2024-04-01T00:00:00.000+05:30": 1,
+        "2024-01-01T00:00:00.000+05:30": 19
+      },
+      "impact": {
+        "2024-07-01T00:00:00.000+05:30": {
+          "Negative": 0,
+          "Neutral": 2,
+          "Positive": 3
+        },
+        "2024-04-01T00:00:00.000+05:30": {
+          "Negative": 0,
+          "Neutral": 3,
+          "Positive": 12
+        },
+        "2024-01-01T00:00:00.000+05:30": {
+          "Negative": 0,
+          "Neutral": 2,
+          "Positive": 20
+        }
+      },
+      "userResponseSentiments": {
+        "Positive": 13,
+        "Negative": 6,
+        "Neutral": 59
+      },
+      "commentsSentiments": {
+        "Positive": 19,
+        "Negative": 19,
+        "Neutral": 99
+      }
+    },
+    "month": {
+      "insights": [
+        {
+          "text": "You have improved your Markdown skills.",
+          "ids": [
+            "https://gitlab.com/fdroid/fdroid-website/-/merge_requests/1121#note_1905414640",
+            "https://gitlab.com/fdroid/fdroid-website/-/merge_requests/1121#note_1905416117",
+            "https://gitlab.com/fdroid/fdroid-website/-/merge_requests/1121#note_1905418236"
+          ]
+        },
+        {
+          "text": "Your understanding of HTTP has improved.",
+          "ids": [
+            "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1390#note_1887992001",
+            "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1390#note_1891423818",
+            "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1394#note_1896605058"
+          ]
+        },
+        {
+          "text": "You are proactive in identifying regressions.",
+          "ids": [
+            "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1385#note_1862811889",
+            "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1379#note_1851122185",
+            "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1375#note_1849006395"
+          ]
+        },
+        {
+          "text": "You have shown strong collaboration skills.",
+          "ids": [
+            "https://gitlab.com/fdroid/fdroiddata/-/merge_requests/15347#note_1991872598",
+            "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1401#note_1944772083",
+            "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1401#note_1945033375"
+          ]
+        },
+        {
+          "text": "You have been actively fixing bugs.",
+          "ids": [
+            "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1409",
+            "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1401",
+            "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1394"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "text": "Deepen your understanding of Android's URI scheme.",
+          "references": [
             {
-              "url": "https://docs.gitlab.com/ee/user/project/repository/",
-              "skill": "Repository",
-              "description": "General Information on GitLab Repositories"
+              "title": "Android URI Scheme",
+              "url": "https://developer.android.com/reference/android/net/Uri",
+              "skill": "Android",
+              "description": "Information about URI scheme for Android"
             }
           ]
         },
         {
-          "skill": "YAML",
+          "text": "Learn about different sorting algorithms.",
+          "references": [
+            {
+              "title": "Sorting Algorithms",
+              "url": "https://www.geeksforgeeks.org/sorting-algorithms/",
+              "skill": "Sorting Algorithm",
+              "description": "Learn about various sorting algorithms and their complexities for efficient data organization"
+            }
+          ]
+        },
+        {
+          "text": "Improve your testing strategies.",
+          "references": []
+        },
+        {
+          "text": "Improve your code style.",
+          "references": []
+        },
+        {
+          "text": "Focus on understanding user expectations.",
+          "references": []
+        }
+      ],
+      "positiveSkills": [
+        {
+          "skill": "JUnit",
           "frequency": {
-            "2024-03-01T00:00:00.000+05:30": 0,
             "2024-04-01T00:00:00.000+05:30": 0,
             "2024-05-01T00:00:00.000+05:30": 0,
-            "2024-06-01T00:00:00.000+05:30": 2,
+            "2024-06-01T00:00:00.000+05:30": 0,
             "2024-07-01T00:00:00.000+05:30": 1
           },
           "sentimentFrequency": {
-            "2024-03-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
             "2024-04-01T00:00:00.000+05:30": {
               "Positive": 0,
               "Negative": 0,
@@ -635,57 +394,428 @@
             "2024-06-01T00:00:00.000+05:30": {
               "Positive": 0,
               "Negative": 0,
-              "Neutral": 2
+              "Neutral": 0
             },
             "2024-07-01T00:00:00.000+05:30": {
-              "Positive": 0,
+              "Positive": 1,
               "Negative": 0,
-              "Neutral": 1
+              "Neutral": 0
             }
           },
           "insights": [
-            "You have used YAML in a few merge requests, but the descriptions are lacking in detail.",
-            "Ensure your YAML files are well-formatted and adhere to the project's standards.",
-            "Review the YAML documentation for best practices and syntax.",
-            "Consider using a YAML linter to catch potential errors before committing.",
-            "Thorough descriptions for your YAML-related contributions will improve their clarity and usefulness to others."
-          ],
-          "references": [
             {
-              "title": "YAML Documentation",
-              "url": "https://yaml.org/spec/1.2/spec.html",
-              "skill": "YAML",
-              "description": "This document provides the official specification for the YAML language, covering syntax, datatypes, and best practices."
-            },
-            {
-              "title": "YAML Lint",
-              "url": "https://yaml-lint.info/",
-              "skill": "YAML",
-              "description": "This online tool can be used to validate the syntax of your YAML files and identify potential errors."
-            },
-            {
-              "title": "YAML Tutorial",
-              "url": "https://www.tutorialspoint.com/yaml/yaml_introduction.htm",
-              "skill": "YAML",
-              "description": "This tutorial provides an introduction to YAML, covering its basic syntax and common use cases."
+              "text": "You are improving test report clarity.",
+              "ids": [
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1379#note_1851148359"
+              ]
             }
           ]
         },
         {
-          "skill": "GitLab CI",
+          "skill": "Kotlin",
           "frequency": {
-            "2024-03-01T00:00:00.000+05:30": 0,
+            "2024-04-01T00:00:00.000+05:30": 4,
+            "2024-05-01T00:00:00.000+05:30": 9,
+            "2024-06-01T00:00:00.000+05:30": 7,
+            "2024-07-01T00:00:00.000+05:30": 4
+          },
+          "sentimentFrequency": {
+            "2024-04-01T00:00:00.000+05:30": {
+              "Positive": 2,
+              "Negative": 2,
+              "Neutral": 0
+            },
+            "2024-05-01T00:00:00.000+05:30": {
+              "Positive": 5,
+              "Negative": 1,
+              "Neutral": 3
+            },
+            "2024-06-01T00:00:00.000+05:30": {
+              "Positive": 4,
+              "Negative": 1,
+              "Neutral": 2
+            },
+            "2024-07-01T00:00:00.000+05:30": {
+              "Positive": 2,
+              "Negative": 1,
+              "Neutral": 1
+            }
+          },
+          "insights": [
+            {
+              "text": "You have shown improvement in handling file:// URIs.",
+              "ids": [
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1390#note_1892243046",
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1390#note_1893308110"
+              ]
+            },
+            {
+              "text": "Your explanations about Kotlin and Java are clear.",
+              "ids": [
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1386#note_1916572343",
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1386#note_1968419965"
+              ]
+            },
+            {
+              "text": "You are demonstrating a strong understanding of Kotlin's features.",
+              "ids": [
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1390#note_1896017903",
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1390#note_1891654049"
+              ]
+            }
+          ]
+        },
+        {
+          "skill": "Refactoring",
+          "frequency": {
+            "2024-04-01T00:00:00.000+05:30": 0,
+            "2024-05-01T00:00:00.000+05:30": 0,
+            "2024-06-01T00:00:00.000+05:30": 0,
+            "2024-07-01T00:00:00.000+05:30": 1
+          },
+          "sentimentFrequency": {
+            "2024-04-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-05-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-06-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-07-01T00:00:00.000+05:30": {
+              "Positive": 1,
+              "Negative": 0,
+              "Neutral": 0
+            }
+          },
+          "insights": [
+            {
+              "text": "Your refactoring efforts are appreciated.",
+              "ids": [
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1377#note_1916114495"
+              ]
+            }
+          ]
+        }
+      ],
+      "negativeSkills": [
+        {
+          "skill": "URI",
+          "frequency": {
             "2024-04-01T00:00:00.000+05:30": 1,
             "2024-05-01T00:00:00.000+05:30": 0,
             "2024-06-01T00:00:00.000+05:30": 0,
             "2024-07-01T00:00:00.000+05:30": 0
           },
           "sentimentFrequency": {
-            "2024-03-01T00:00:00.000+05:30": {
+            "2024-04-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 1,
+              "Neutral": 0
+            },
+            "2024-05-01T00:00:00.000+05:30": {
               "Positive": 0,
               "Negative": 0,
               "Neutral": 0
             },
+            "2024-06-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-07-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            }
+          },
+          "insights": [
+            {
+              "text": "You need to improve understanding of file:// URIs",
+              "ids": [
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1390#note_1887582199"
+              ]
+            },
+            {
+              "text": "Consider handling file:// URIs like other types.",
+              "ids": [
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1390#note_1887582199",
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1390#note_1891654049"
+              ]
+            }
+          ],
+          "references": [
+            {
+              "title": "URI",
+              "url": "https://www.w3.org/Addressing/URL/",
+              "skill": "URI",
+              "description": "Learn about Uniform Resource Identifiers (URIs) and their different types, including file URIs"
+            }
+          ]
+        },
+        {
+          "skill": "Database",
+          "frequency": {
+            "2024-04-01T00:00:00.000+05:30": 2,
+            "2024-05-01T00:00:00.000+05:30": 0,
+            "2024-06-01T00:00:00.000+05:30": 0,
+            "2024-07-01T00:00:00.000+05:30": 0
+          },
+          "sentimentFrequency": {
+            "2024-04-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 1,
+              "Neutral": 1
+            },
+            "2024-05-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-06-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-07-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            }
+          },
+          "insights": [
+            {
+              "text": "You need to pay more attention to null values.",
+              "ids": [
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1375#note_1849006395"
+              ]
+            },
+            {
+              "text": "Review database migration handling.",
+              "ids": [
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1375#note_1849015936",
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1375#note_1849021209"
+              ]
+            }
+          ],
+          "references": [
+            {
+              "title": "Database",
+              "url": "https://www.postgresql.org/docs/current/datatype-numeric.html",
+              "skill": "Database",
+              "description": "Database documentation"
+            }
+          ]
+        },
+        {
+          "skill": "Markdown",
+          "frequency": {
+            "2024-04-01T00:00:00.000+05:30": 0,
+            "2024-05-01T00:00:00.000+05:30": 3,
+            "2024-06-01T00:00:00.000+05:30": 0,
+            "2024-07-01T00:00:00.000+05:30": 0
+          },
+          "sentimentFrequency": {
+            "2024-04-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-05-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 1,
+              "Neutral": 2
+            },
+            "2024-06-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-07-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            }
+          },
+          "insights": [
+            {
+              "text": "You need to review Markdown syntax for better readability.",
+              "ids": [
+                "https://gitlab.com/fdroid/fdroid-website/-/merge_requests/1121#note_1905414640",
+                "https://gitlab.com/fdroid/fdroid-website/-/merge_requests/1121#note_1905416117",
+                "https://gitlab.com/fdroid/fdroid-website/-/merge_requests/1121#note_1905418236"
+              ]
+            }
+          ],
+          "references": [
+            {
+              "title": "Markdown Guide",
+              "url": "https://www.markdownguide.org/basic-syntax/",
+              "skill": "Markdown",
+              "description": "Learn how to use Markdown for better formatting and clarity in your writing."
+            }
+          ]
+        },
+        {
+          "skill": "Sharing",
+          "frequency": {
+            "2024-04-01T00:00:00.000+05:30": 4,
+            "2024-05-01T00:00:00.000+05:30": 0,
+            "2024-06-01T00:00:00.000+05:30": 0,
+            "2024-07-01T00:00:00.000+05:30": 6
+          },
+          "sentimentFrequency": {
+            "2024-04-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 2,
+              "Neutral": 2
+            },
+            "2024-05-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-06-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-07-01T00:00:00.000+05:30": {
+              "Positive": 1,
+              "Negative": 0,
+              "Neutral": 5
+            }
+          },
+          "insights": [
+            {
+              "text": "Your understanding of file sharing needs improvement.",
+              "ids": [
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1385#note_1862811889",
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1385#note_1862882933",
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1385#note_1862946782",
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1385#note_1862954829"
+              ]
+            },
+            {
+              "text": "You need to be mindful of intent limitations.",
+              "ids": [
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1385#note_1990484873",
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1385#note_1990574622",
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1385#note_1990626726"
+              ]
+            }
+          ],
+          "references": []
+        },
+        {
+          "skill": "string resources",
+          "frequency": {
+            "2024-04-01T00:00:00.000+05:30": 1,
+            "2024-05-01T00:00:00.000+05:30": 0,
+            "2024-06-01T00:00:00.000+05:30": 0,
+            "2024-07-01T00:00:00.000+05:30": 0
+          },
+          "sentimentFrequency": {
+            "2024-04-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 1,
+              "Neutral": 0
+            },
+            "2024-05-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-06-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-07-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            }
+          },
+          "insights": [
+            {
+              "text": "You should consider the proper use of strings.",
+              "ids": [
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1380#note_1851295217"
+              ]
+            }
+          ],
+          "references": []
+        },
+        {
+          "skill": "Localization",
+          "frequency": {
+            "2024-04-01T00:00:00.000+05:30": 0,
+            "2024-05-01T00:00:00.000+05:30": 0,
+            "2024-06-01T00:00:00.000+05:30": 0,
+            "2024-07-01T00:00:00.000+05:30": 1
+          },
+          "sentimentFrequency": {
+            "2024-04-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-05-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-06-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-07-01T00:00:00.000+05:30": {
+              "Positive": 1,
+              "Negative": 0,
+              "Neutral": 0
+            }
+          },
+          "insights": [
+            {
+              "text": "Provide more details on the changes made.",
+              "ids": [
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1407"
+              ]
+            },
+            {
+              "text": "Documenting the changes made can help others understand.",
+              "ids": [
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1407"
+              ]
+            }
+          ],
+          "references": [
+            {
+              "title": "Android Localization Guide",
+              "url": "https://developer.android.com/studio/write/localization",
+              "skill": "Localization",
+              "description": "Official Android localization guide."
+            }
+          ]
+        },
+        {
+          "skill": "Installer",
+          "frequency": {
+            "2024-04-01T00:00:00.000+05:30": 1,
+            "2024-05-01T00:00:00.000+05:30": 0,
+            "2024-06-01T00:00:00.000+05:30": 0,
+            "2024-07-01T00:00:00.000+05:30": 0
+          },
+          "sentimentFrequency": {
             "2024-04-01T00:00:00.000+05:30": {
               "Positive": 1,
               "Negative": 0,
@@ -708,33 +838,303 @@
             }
           },
           "insights": [
-            "You have used GitLab CI in one instance to improve CI workflows, however, consider incorporating GitLab CI more frequently for automated testing and deployments.",
-            "Explore advanced GitLab CI features like pipeline stages and variables for more efficient workflows.",
-            "Leveraging GitLab CI for automated tasks can free up time for other development activities.",
-            "Learn about best practices for writing GitLab CI pipelines to ensure consistency and maintainability.",
-            "Invest in learning and implementing GitLab CI to improve the overall development process and streamline your contributions."
-          ],
-          "references": [
             {
-              "title": "GitLab CI/CD Documentation",
-              "url": "https://docs.gitlab.com/ee/ci/pipelines/",
-              "skill": "GitLab CI",
-              "description": "Comprehensive documentation on GitLab CI/CD features and workflows, including pipeline stages, variables, and best practices."
+              "text": "Consider providing more context on the changes made.",
+              "ids": [
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1380"
+              ]
             },
             {
-              "title": "GitLab CI/CD Tutorial",
-              "url": "https://www.tutorialspoint.com/gitlab/gitlab_cicd.htm",
-              "skill": "GitLab CI",
-              "description": "This tutorial provides an introduction to GitLab CI/CD, covering its basic concepts and use cases."
+              "text": "Explaining the implications for users would enhance.",
+              "ids": [
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1380"
+              ]
             }
-          ]
+          ],
+          "references": []
+        },
+        {
+          "skill": "UI",
+          "frequency": {
+            "2024-04-01T00:00:00.000+05:30": 1,
+            "2024-05-01T00:00:00.000+05:30": 0,
+            "2024-06-01T00:00:00.000+05:30": 0,
+            "2024-07-01T00:00:00.000+05:30": 0
+          },
+          "sentimentFrequency": {
+            "2024-04-01T00:00:00.000+05:30": {
+              "Positive": 1,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-05-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-06-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-07-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            }
+          },
+          "insights": [
+            {
+              "text": "Consider using a consistent UI pattern.",
+              "ids": [
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1389"
+              ]
+            },
+            {
+              "text": "Visual mockups in the merge request would help.",
+              "ids": [
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1389"
+              ]
+            }
+          ],
+          "references": []
+        },
+        {
+          "skill": "RecyclerView",
+          "frequency": {
+            "2024-04-01T00:00:00.000+05:30": 1,
+            "2024-05-01T00:00:00.000+05:30": 0,
+            "2024-06-01T00:00:00.000+05:30": 0,
+            "2024-07-01T00:00:00.000+05:30": 0
+          },
+          "sentimentFrequency": {
+            "2024-04-01T00:00:00.000+05:30": {
+              "Positive": 1,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-05-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-06-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-07-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            }
+          },
+          "insights": [
+            {
+              "text": "Provide more context on how you are using RecyclerView.",
+              "ids": [
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1389"
+              ]
+            },
+            {
+              "text": "Consider using best practices for RecyclerView performance.",
+              "ids": [
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1389"
+              ]
+            }
+          ],
+          "references": []
+        },
+        {
+          "skill": "ConstraintLayout",
+          "frequency": {
+            "2024-04-01T00:00:00.000+05:30": 1,
+            "2024-05-01T00:00:00.000+05:30": 0,
+            "2024-06-01T00:00:00.000+05:30": 0,
+            "2024-07-01T00:00:00.000+05:30": 0
+          },
+          "sentimentFrequency": {
+            "2024-04-01T00:00:00.000+05:30": {
+              "Positive": 1,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-05-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-06-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-07-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            }
+          },
+          "insights": [
+            {
+              "text": "Elaborate on how ConstraintLayout is used.",
+              "ids": [
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1389"
+              ]
+            },
+            {
+              "text": "Consider using advanced ConstraintLayout features.",
+              "ids": [
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1389"
+              ]
+            }
+          ],
+          "references": []
+        },
+        {
+          "skill": "YAML",
+          "frequency": {
+            "2024-04-01T00:00:00.000+05:30": 0,
+            "2024-05-01T00:00:00.000+05:30": 1,
+            "2024-06-01T00:00:00.000+05:30": 1,
+            "2024-07-01T00:00:00.000+05:30": 1
+          },
+          "sentimentFrequency": {
+            "2024-04-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-05-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 1
+            },
+            "2024-06-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 1
+            },
+            "2024-07-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 1
+            }
+          },
+          "insights": [
+            {
+              "text": "Be specific about the changes made in YAML files.",
+              "ids": [
+                "https://gitlab.com/fdroid/fdroiddata/-/merge_requests/15347"
+              ]
+            },
+            {
+              "text": "Explaining the reason behind the YAML update can help.",
+              "ids": [
+                "https://gitlab.com/fdroid/fdroiddata/-/merge_requests/15139"
+              ]
+            }
+          ],
+          "references": []
+        },
+        {
+          "skill": "HTML",
+          "frequency": {
+            "2024-04-01T00:00:00.000+05:30": 0,
+            "2024-05-01T00:00:00.000+05:30": 2,
+            "2024-06-01T00:00:00.000+05:30": 0,
+            "2024-07-01T00:00:00.000+05:30": 0
+          },
+          "sentimentFrequency": {
+            "2024-04-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-05-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 2
+            },
+            "2024-06-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-07-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            }
+          },
+          "insights": [
+            {
+              "text": "Consider using a consistent format for HTML code.",
+              "ids": [
+                "https://gitlab.com/fdroid/fdroid-website/-/merge_requests/1121"
+              ]
+            },
+            {
+              "text": "Adding more context to HTML changes would improve.",
+              "ids": [
+                "https://gitlab.com/fdroid/fdroid-website/-/merge_requests/1121"
+              ]
+            }
+          ],
+          "references": []
+        },
+        {
+          "skill": "Markdown",
+          "frequency": {
+            "2024-04-01T00:00:00.000+05:30": 0,
+            "2024-05-01T00:00:00.000+05:30": 1,
+            "2024-06-01T00:00:00.000+05:30": 0,
+            "2024-07-01T00:00:00.000+05:30": 0
+          },
+          "sentimentFrequency": {
+            "2024-04-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-05-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 1
+            },
+            "2024-06-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-07-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            }
+          },
+          "insights": [
+            {
+              "text": "Ensure Markdown content adheres to the project's style guide.",
+              "ids": [
+                "https://gitlab.com/fdroid/fdroid-website/-/merge_requests/1121"
+              ]
+            },
+            {
+              "text": "Formatting Markdown consistently can make it easier to understand.",
+              "ids": [
+                "https://gitlab.com/fdroid/fdroid-website/-/merge_requests/1121"
+              ]
+            }
+          ],
+          "references": []
         }
       ],
       "quality": {
         "2024-07-01T00:00:00.000+05:30": {
-          "High": 1,
-          "Low": 2,
-          "Medium": 1
+          "High": 2,
+          "Low": 3,
+          "Medium": 0
         },
         "2024-06-01T00:00:00.000+05:30": {
           "High": 1,
@@ -742,48 +1142,48 @@
           "Medium": 0
         },
         "2024-05-01T00:00:00.000+05:30": {
-          "High": 3,
-          "Low": 0,
-          "Medium": 1
+          "High": 2,
+          "Low": 1,
+          "Medium": 0
         },
         "2024-04-01T00:00:00.000+05:30": {
-          "High": 8,
-          "Low": 1,
-          "Medium": 2
+          "High": 10,
+          "Low": 0,
+          "Medium": 0
         },
         "2024-03-01T00:00:00.000+05:30": {
-          "High": 6,
-          "Low": 0,
-          "Medium": 2
+          "High": 7,
+          "Low": 1,
+          "Medium": 0
         },
         "2024-02-01T00:00:00.000+05:30": {
-          "High": 8,
-          "Low": 1,
+          "High": 9,
+          "Low": 0,
           "Medium": 1
         },
         "2024-01-01T00:00:00.000+05:30": {
           "High": 3,
-          "Low": 1,
+          "Low": 0,
           "Medium": 1
         }
       },
       "testCases": {
-        "2024-04-01T00:00:00.000+05:30": 7,
-        "2024-03-01T00:00:00.000+05:30": 1,
-        "2024-02-01T00:00:00.000+05:30": 0,
-        "2024-01-01T00:00:00.000+05:30": 0
+        "2024-04-01T00:00:00.000+05:30": 0,
+        "2024-03-01T00:00:00.000+05:30": 0,
+        "2024-02-01T00:00:00.000+05:30": 5,
+        "2024-01-01T00:00:00.000+05:30": 2
       },
       "testCasesRequired": {
-        "2024-04-01T00:00:00.000+05:30": 7,
-        "2024-03-01T00:00:00.000+05:30": 7,
-        "2024-02-01T00:00:00.000+05:30": 6,
-        "2024-01-01T00:00:00.000+05:30": 4
+        "2024-04-01T00:00:00.000+05:30": 1,
+        "2024-03-01T00:00:00.000+05:30": 8,
+        "2024-02-01T00:00:00.000+05:30": 8,
+        "2024-01-01T00:00:00.000+05:30": 3
       },
       "impact": {
         "2024-07-01T00:00:00.000+05:30": {
           "Negative": 0,
           "Neutral": 2,
-          "Positive": 2
+          "Positive": 3
         },
         "2024-06-01T00:00:00.000+05:30": {
           "Negative": 0,
@@ -793,127 +1193,191 @@
         "2024-05-01T00:00:00.000+05:30": {
           "Negative": 0,
           "Neutral": 1,
-          "Positive": 3
+          "Positive": 2
         },
         "2024-04-01T00:00:00.000+05:30": {
           "Negative": 0,
           "Neutral": 1,
-          "Positive": 10
+          "Positive": 9
         },
         "2024-03-01T00:00:00.000+05:30": {
           "Negative": 0,
-          "Neutral": 3,
-          "Positive": 5
+          "Neutral": 1,
+          "Positive": 7
         },
         "2024-02-01T00:00:00.000+05:30": {
           "Negative": 0,
-          "Neutral": 3,
-          "Positive": 7
+          "Neutral": 0,
+          "Positive": 10
         },
         "2024-01-01T00:00:00.000+05:30": {
           "Negative": 0,
-          "Neutral": 0,
-          "Positive": 5
+          "Neutral": 1,
+          "Positive": 3
         }
       },
       "userResponseSentiments": {
-        "Positive": 10,
-        "Negative": 4,
+        "Positive": 13,
+        "Negative": 6,
         "Neutral": 59
       },
       "commentsSentiments": {
-        "Positive": 20,
-        "Negative": 15,
-        "Neutral": 102
+        "Positive": 19,
+        "Negative": 19,
+        "Neutral": 99
       }
     },
     "week": {
-      "summary": [
-        "You have been actively contributing to the project with your merge requests.",
-        "Your contribution in the recent month have been well received.",
-        "Your skills in Kotlin, Android, and Java are well-received.",
-        "Consider refining your understanding of Android Intents to improve code quality.",
-        "Consider improving your documentation for merge requests to provide better context."
+      "insights": [
+        {
+          "text": "recent activity shows improved Android understanding in Java.",
+          "ids": [
+            "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1410#note_1997374453",
+            "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1410#note_1997380773"
+          ]
+        },
+        {
+          "text": "effectively utilized WorkManager for background tasks.",
+          "ids": [
+            "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1386#note_1969437304",
+            "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1386#note_1996832641"
+          ]
+        },
+        {
+          "text": "recent work shows improved collaboration in the team",
+          "ids": [
+            "https://gitlab.com/fdroid/fdroiddata/-/merge_requests/15347#note_1991872598",
+            "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1386#note_1969001524"
+          ]
+        },
+        {
+          "text": "most of your merge requests are rated as high quality.",
+          "ids": [
+            "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1410",
+            "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1409"
+          ]
+        },
+        {
+          "text": "showing good understanding of Android Development concepts and best practices.",
+          "ids": [
+            "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1409",
+            "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1410"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "text": "Learn about different approaches for handling permissions in your application.",
+          "references": [
+            {
+              "title": "Permissions",
+              "url": "https://developer.android.com/guide/topics/permissions/overview",
+              "skill": "Android",
+              "description": "Official documentation on permissions in Android development"
+            }
+          ]
+        },
+        {
+          "text": "learn about best practices for writing Java code",
+          "references": [
+            {
+              "title": "Java Best Practices",
+              "url": "https://www.oracle.com/java/technologies/javase/codeconventions-index.html",
+              "skill": "Java",
+              "description": "Oracle's Best Practices for Java Code"
+            }
+          ]
+        },
+        {
+          "text": "Explore advanced Kotlin features to write cleaner and more efficient code",
+          "references": [
+            {
+              "title": "Kotlin Features",
+              "url": "https://kotlinlang.org/docs/reference/",
+              "skill": "Kotlin",
+              "description": "Kotlin Documentation with Advanced Features"
+            }
+          ]
+        },
+        {
+          "text": "Learn how to write effective test cases for your code.",
+          "references": [
+            {
+              "title": "Android Testing Documentation",
+              "url": "https://developer.android.com/studio/test",
+              "skill": "Android Development",
+              "description": "The official Android Testing documentation provides information on various testing techniques for Android applications."
+            }
+          ]
+        },
+        {
+          "text": "Focus on writing clear and concise documentation for your code.",
+          "references": []
+        }
       ],
       "positiveSkills": [
         {
           "skill": "Java",
           "frequency": {
-            "2024-05-27T00:00:00.000+05:30": 0,
-            "2024-06-03T00:00:00.000+05:30": 0,
-            "2024-06-10T00:00:00.000+05:30": 1,
-            "2024-06-17T00:00:00.000+05:30": 1,
-            "2024-06-24T00:00:00.000+05:30": 1,
-            "2024-07-01T00:00:00.000+05:30": 0,
+            "2024-06-10T00:00:00.000+05:30": 0,
+            "2024-06-17T00:00:00.000+05:30": 0,
+            "2024-06-24T00:00:00.000+05:30": 0,
+            "2024-07-01T00:00:00.000+05:30": 1,
             "2024-07-08T00:00:00.000+05:30": 2
           },
           "sentimentFrequency": {
-            "2024-05-27T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-06-03T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
             "2024-06-10T00:00:00.000+05:30": {
               "Positive": 0,
               "Negative": 0,
-              "Neutral": 1
+              "Neutral": 0
             },
             "2024-06-17T00:00:00.000+05:30": {
-              "Positive": 1,
+              "Positive": 0,
               "Negative": 0,
               "Neutral": 0
             },
             "2024-06-24T00:00:00.000+05:30": {
-              "Positive": 1,
+              "Positive": 0,
               "Negative": 0,
               "Neutral": 0
             },
             "2024-07-01T00:00:00.000+05:30": {
               "Positive": 0,
               "Negative": 0,
-              "Neutral": 0
+              "Neutral": 1
             },
             "2024-07-08T00:00:00.000+05:30": {
-              "Positive": 2,
+              "Positive": 1,
               "Negative": 0,
-              "Neutral": 0
+              "Neutral": 1
             }
           },
           "insights": [
-            "Your Java code is generally well-written and efficient.",
-            "You have shown good understanding of Java and your contributions have received positive feedback.",
-            "Keep up the good work.",
-            "You are comfortable working with Java and your code is well-received.",
-            "Explore advanced Java concepts like multithreading and concurrency."
+            {
+              "text": "proficient in using Java for Android development.",
+              "ids": [
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1401#note_1945033375"
+              ]
+            },
+            {
+              "text": "understanding of Java has improved over the past few weeks",
+              "ids": [
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1386#note_1968419965",
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1410#note_1997374453"
+              ]
+            }
           ]
         },
         {
           "skill": "Kotlin",
           "frequency": {
-            "2024-05-27T00:00:00.000+05:30": 0,
-            "2024-06-03T00:00:00.000+05:30": 0,
             "2024-06-10T00:00:00.000+05:30": 0,
             "2024-06-17T00:00:00.000+05:30": 0,
-            "2024-06-24T00:00:00.000+05:30": 1,
-            "2024-07-01T00:00:00.000+05:30": 0,
-            "2024-07-08T00:00:00.000+05:30": 1
+            "2024-06-24T00:00:00.000+05:30": 0,
+            "2024-07-01T00:00:00.000+05:30": 1,
+            "2024-07-08T00:00:00.000+05:30": 0
           },
           "sentimentFrequency": {
-            "2024-05-27T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-06-03T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
             "2024-06-10T00:00:00.000+05:30": {
               "Positive": 0,
               "Negative": 0,
@@ -925,113 +1389,40 @@
               "Neutral": 0
             },
             "2024-06-24T00:00:00.000+05:30": {
-              "Positive": 1,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-07-01T00:00:00.000+05:30": {
               "Positive": 0,
               "Negative": 0,
               "Neutral": 0
             },
-            "2024-07-08T00:00:00.000+05:30": {
+            "2024-07-01T00:00:00.000+05:30": {
               "Positive": 1,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-07-08T00:00:00.000+05:30": {
+              "Positive": 0,
               "Negative": 0,
               "Neutral": 0
             }
           },
           "insights": [
-            "Your usage of Kotlin has been well-received by the team.",
-            "Your Kotlin code shows significant improvements.",
-            "Recent fixes and updates were well-received.",
-            "Keep up the good work with Kotlin.",
-            "You are gaining proficiency in Kotlin.",
-            "Your Kotlin code is well-written and demonstrates your understanding of the language.",
-            "The positive feedback is a testament to your growing expertise.",
-            "Consider sharing your knowledge with others through documentation or code reviews."
+            {
+              "text": "understanding of Kotlin has increased. you are using it effectively.",
+              "ids": [
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1386#note_1968419965"
+              ]
+            }
           ]
         },
         {
-          "skill": "Version Control",
+          "skill": "Android Development",
           "frequency": {
-            "2024-05-27T00:00:00.000+05:30": 0,
-            "2024-06-03T00:00:00.000+05:30": 2,
             "2024-06-10T00:00:00.000+05:30": 0,
             "2024-06-17T00:00:00.000+05:30": 0,
             "2024-06-24T00:00:00.000+05:30": 0,
             "2024-07-01T00:00:00.000+05:30": 0,
-            "2024-07-08T00:00:00.000+05:30": 2
+            "2024-07-08T00:00:00.000+05:30": 3
           },
           "sentimentFrequency": {
-            "2024-05-27T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-06-03T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 2
-            },
-            "2024-06-10T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-06-17T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-06-24T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-07-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-07-08T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 2
-            }
-          },
-          "insights": [
-            "You are actively engaging with version control practices.",
-            "You are comfortable discussing version control concepts and seeking clarifications.",
-            "Your understanding of version control is improving with each merge request.",
-            "Ensure proper branch management and merging techniques are used.",
-            "Review the project's Git workflow and adhere to best practices.",
-            "Consider using Git features like rebasing and squashing for cleaner commit history."
-          ]
-        }
-      ],
-      "negativeSkills": [
-        {
-          "skill": "Android",
-          "frequency": {
-            "2024-05-27T00:00:00.000+05:30": 0,
-            "2024-06-03T00:00:00.000+05:30": 0,
-            "2024-06-10T00:00:00.000+05:30": 0,
-            "2024-06-17T00:00:00.000+05:30": 0,
-            "2024-06-24T00:00:00.000+05:30": 0,
-            "2024-07-01T00:00:00.000+05:30": 0,
-            "2024-07-08T00:00:00.000+05:30": 6
-          },
-          "sentimentFrequency": {
-            "2024-05-27T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-06-03T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
             "2024-06-10T00:00:00.000+05:30": {
               "Positive": 0,
               "Negative": 0,
@@ -1054,59 +1445,43 @@
             },
             "2024-07-08T00:00:00.000+05:30": {
               "Positive": 2,
-              "Negative": 3,
+              "Negative": 0,
               "Neutral": 1
             }
           },
           "insights": [
-            "There have been some issues with your handling of Intents, leading to negative feedback.",
-            "Consider revisiting Android Intent best practices to improve code quality.",
-            "Refine your understanding of how multiple content types are handled in Intents.",
-            "Explore available resources to learn more about intent management in Android development.",
-            "Consult the Android documentation and community forums for insights on handling Intents correctly.",
-            "Your contributions to the Android app have been widely appreciated.",
-            "Focus on improving user experience through UI/UX enhancements.",
-            "Consider exploring advanced Android concepts like Jetpack Compose.",
-            "Your expertise in Android development is commendable.",
-            "Continue working on improving the stability and performance of the app."
-          ],
-          "references": [
             {
-              "title": "Android Developer Documentation - Intents",
-              "url": "https://developer.android.com/guide/components/intents-filters",
-              "skill": "Android",
-              "description": "Official documentation on Intents, providing comprehensive information on their use and best practices."
+              "text": "showing good understanding of Android Development concepts and best practices.",
+              "ids": [
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1409",
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1410"
+              ]
             },
             {
-              "title": "Intents and Intent Filters - Android Tutorials",
-              "url": "https://www.tutorialspoint.com/android/android_intents.htm",
-              "skill": "Android",
-              "description": "A tutorial on Intents, covering basics and advanced concepts with code examples."
+              "text": "good understanding of android development",
+              "ids": [
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1408",
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1407"
+              ]
+            },
+            {
+              "text": "Android Development skills are showing improvement in understanding  runtime permissions",
+              "ids": [
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1410"
+              ]
             }
           ]
         },
         {
-          "skill": "URL",
+          "skill": "sharing",
           "frequency": {
-            "2024-05-27T00:00:00.000+05:30": 0,
-            "2024-06-03T00:00:00.000+05:30": 0,
             "2024-06-10T00:00:00.000+05:30": 0,
             "2024-06-17T00:00:00.000+05:30": 0,
             "2024-06-24T00:00:00.000+05:30": 0,
             "2024-07-01T00:00:00.000+05:30": 0,
-            "2024-07-08T00:00:00.000+05:30": 2
+            "2024-07-08T00:00:00.000+05:30": 7
           },
           "sentimentFrequency": {
-            "2024-05-27T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-06-03T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
             "2024-06-10T00:00:00.000+05:30": {
               "Positive": 0,
               "Negative": 0,
@@ -1130,28 +1505,34 @@
             "2024-07-08T00:00:00.000+05:30": {
               "Positive": 1,
               "Negative": 0,
-              "Neutral": 1
+              "Neutral": 6
             }
           },
           "insights": [
-            "You are starting to integrate URL handling into your code.",
-            "Ensure your URL handling is robust and secure.",
-            "Consider potential security implications associated with URL handling."
-          ],
-          "references": [
             {
-              "title": "Android Developer Documentation - URL Handling",
-              "url": "https://developer.android.com/guide/topics/providers/content-provider-basics",
-              "skill": "URL",
-              "description": "Official documentation on URL handling in Android, outlining best practices and security considerations."
+              "text": "actively discussing various ways to implement sharing functionalities.",
+              "ids": [
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1385#note_1989689247",
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1385#note_1989861157"
+              ]
+            },
+            {
+              "text": "successfully addressed concerns regarding sharing functionality.",
+              "ids": [
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1385#note_1990049686"
+              ]
+            },
+            {
+              "text": "actively engaging in discussion regarding sharing.",
+              "ids": [
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1385#note_1990430101"
+              ]
             }
           ]
         },
         {
-          "skill": "YAML",
+          "skill": "Localization",
           "frequency": {
-            "2024-05-27T00:00:00.000+05:30": 0,
-            "2024-06-03T00:00:00.000+05:30": 1,
             "2024-06-10T00:00:00.000+05:30": 0,
             "2024-06-17T00:00:00.000+05:30": 0,
             "2024-06-24T00:00:00.000+05:30": 0,
@@ -1159,16 +1540,53 @@
             "2024-07-08T00:00:00.000+05:30": 1
           },
           "sentimentFrequency": {
-            "2024-05-27T00:00:00.000+05:30": {
+            "2024-06-10T00:00:00.000+05:30": {
               "Positive": 0,
               "Negative": 0,
               "Neutral": 0
             },
-            "2024-06-03T00:00:00.000+05:30": {
+            "2024-06-17T00:00:00.000+05:30": {
               "Positive": 0,
               "Negative": 0,
-              "Neutral": 1
+              "Neutral": 0
             },
+            "2024-06-24T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-07-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-07-08T00:00:00.000+05:30": {
+              "Positive": 1,
+              "Negative": 0,
+              "Neutral": 0
+            }
+          },
+          "insights": [
+            {
+              "text": "improving your localization skills, demonstrating a strong understanding of the language.",
+              "ids": [
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1407"
+              ]
+            }
+          ]
+        }
+      ],
+      "negativeSkills": [
+        {
+          "skill": "YAML",
+          "frequency": {
+            "2024-06-10T00:00:00.000+05:30": 0,
+            "2024-06-17T00:00:00.000+05:30": 0,
+            "2024-06-24T00:00:00.000+05:30": 0,
+            "2024-07-01T00:00:00.000+05:30": 0,
+            "2024-07-08T00:00:00.000+05:30": 1
+          },
+          "sentimentFrequency": {
             "2024-06-10T00:00:00.000+05:30": {
               "Positive": 0,
               "Negative": 0,
@@ -1196,56 +1614,31 @@
             }
           },
           "insights": [
-            "Your use of YAML needs to be more structured and consistent.",
-            "Consider adhering to the project's YAML style guide.",
-            "Missing documentation in your YAML files hinders clarity and maintainability.",
-            "Ensure your YAML code is properly formatted and validated.",
-            "Learn about best practices for writing efficient and readable YAML files.",
-            "Your use of YAML for metadata management needs to be reviewed for clarity and consistency."
-          ],
-          "references": [
             {
-              "title": "YAML Ain't Markup Language",
-              "url": "https://yaml.org/",
-              "skill": "YAML",
-              "description": "The official YAML website, providing comprehensive documentation and resources."
+              "text": "limited experience in YAML, but are making efforts to learn.",
+              "ids": [
+                "https://gitlab.com/fdroid/fdroiddata/-/merge_requests/15347"
+              ]
             },
             {
-              "title": "YAML Specification",
-              "url": "https://yaml.org/spec/1.2/spec.html",
-              "skill": "YAML",
-              "description": "Detailed specifications for YAML syntax and structure."
-            },
-            {
-              "title": "YAML for Humans",
-              "url": "https://learnxinyminutes.com/docs/yaml/",
-              "skill": "YAML",
-              "description": "An easy-to-understand guide to YAML basics."
+              "text": "not utilizing your YAML skills effectively.",
+              "ids": [
+                "https://gitlab.com/fdroid/fdroiddata/-/merge_requests/15347"
+              ]
             }
-          ]
+          ],
+          "references": []
         },
         {
-          "skill": "Git",
+          "skill": "Java",
           "frequency": {
-            "2024-05-27T00:00:00.000+05:30": 0,
-            "2024-06-03T00:00:00.000+05:30": 1,
             "2024-06-10T00:00:00.000+05:30": 0,
             "2024-06-17T00:00:00.000+05:30": 0,
             "2024-06-24T00:00:00.000+05:30": 0,
             "2024-07-01T00:00:00.000+05:30": 0,
-            "2024-07-08T00:00:00.000+05:30": 2
+            "2024-07-08T00:00:00.000+05:30": 1
           },
           "sentimentFrequency": {
-            "2024-05-27T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-06-03T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 1
-            },
             "2024-06-10T00:00:00.000+05:30": {
               "Positive": 0,
               "Negative": 0,
@@ -1268,44 +1661,228 @@
             },
             "2024-07-08T00:00:00.000+05:30": {
               "Positive": 0,
+              "Negative": 0,
+              "Neutral": 1
+            }
+          },
+          "insights": [
+            {
+              "text": "limited experience in Java, but are making efforts to learn.",
+              "ids": [
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1410"
+              ]
+            },
+            {
+              "text": "not utilizing your Java skills effectively.",
+              "ids": [
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1410"
+              ]
+            }
+          ],
+          "references": []
+        },
+        {
+          "skill": "Android",
+          "frequency": {
+            "2024-06-10T00:00:00.000+05:30": 0,
+            "2024-06-17T00:00:00.000+05:30": 0,
+            "2024-06-24T00:00:00.000+05:30": 0,
+            "2024-07-01T00:00:00.000+05:30": 0,
+            "2024-07-08T00:00:00.000+05:30": 1
+          },
+          "sentimentFrequency": {
+            "2024-06-10T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-06-17T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-06-24T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-07-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-07-08T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 1
+            }
+          },
+          "insights": [
+            {
+              "text": "You need to be aware of Android specific features while designing UI",
+              "ids": [
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1410#note_1997380773"
+              ]
+            },
+            {
+              "text": "You need to be proficient with permissions in Android applications",
+              "ids": [
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1410#note_1997380773"
+              ]
+            }
+          ],
+          "references": [
+            {
+              "title": "Android Developers",
+              "url": "https://developer.android.com/studio",
+              "skill": "Android",
+              "description": "Official Android Developer Documentation"
+            },
+            {
+              "title": "Android UI Design",
+              "url": "https://developer.android.com/guide/topics/ui",
+              "skill": "Android",
+              "description": "Android UI Design Guide"
+            }
+          ]
+        },
+        {
+          "skill": "testing",
+          "frequency": {
+            "2024-06-10T00:00:00.000+05:30": 0,
+            "2024-06-17T00:00:00.000+05:30": 0,
+            "2024-06-24T00:00:00.000+05:30": 0,
+            "2024-07-01T00:00:00.000+05:30": 0,
+            "2024-07-08T00:00:00.000+05:30": 3
+          },
+          "sentimentFrequency": {
+            "2024-06-10T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-06-17T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-06-24T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-07-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-07-08T00:00:00.000+05:30": {
+              "Positive": 1,
               "Negative": 0,
               "Neutral": 2
             }
           },
           "insights": [
-            "Your Git commit messages could be more descriptive.",
-            "Ensure proper branch management and merging techniques are used.",
-            "Review the project's Git workflow and adhere to best practices.",
-            "Consider using Git features like rebasing and squashing for cleaner commit history.",
-            "Make your Git commits atomic and focused on a single task."
+            {
+              "text": "should explore more testing strategies for your code",
+              "ids": [
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1386#note_1996832641",
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1386#note_1996832626"
+              ]
+            },
+            {
+              "text": "should be proficient with testing in Android",
+              "ids": [
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1386#note_1996832661"
+              ]
+            }
           ],
           "references": [
             {
-              "title": "Pro Git Book",
-              "url": "https://git-scm.com/book/en/v2",
-              "skill": "Git",
-              "description": "An excellent resource for learning Git fundamentals and advanced techniques."
+              "title": "Android Testing",
+              "url": "https://developer.android.com/studio/test",
+              "skill": "Android",
+              "description": "Android Testing Documentation"
             },
             {
-              "title": "GitHub Flow",
-              "url": "https://guides.github.com/introduction/flow/",
-              "skill": "Git",
-              "description": "A popular Git workflow for collaborative development."
+              "title": "Testing in Android",
+              "url": "https://developer.android.com/studio/test/ui/espresso",
+              "skill": "Android",
+              "description": "Testing UI in Android"
             },
             {
-              "title": "Git Tutorials",
-              "url": "https://www.atlassian.com/git/tutorials",
-              "skill": "Git",
-              "description": "A collection of Git tutorials from Atlassian."
+              "title": "Testing in Android",
+              "url": "https://developer.android.com/studio/test/instrumentation",
+              "skill": "Android",
+              "description": "Instrumentation Testing in Android"
+            }
+          ]
+        },
+        {
+          "skill": "UX",
+          "frequency": {
+            "2024-06-10T00:00:00.000+05:30": 0,
+            "2024-06-17T00:00:00.000+05:30": 0,
+            "2024-06-24T00:00:00.000+05:30": 0,
+            "2024-07-01T00:00:00.000+05:30": 0,
+            "2024-07-08T00:00:00.000+05:30": 1
+          },
+          "sentimentFrequency": {
+            "2024-06-10T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-06-17T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-06-24T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-07-01T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 0
+            },
+            "2024-07-08T00:00:00.000+05:30": {
+              "Positive": 0,
+              "Negative": 0,
+              "Neutral": 1
+            }
+          },
+          "insights": [
+            {
+              "text": "You should be aware of Android UX guidelines while designing UI.",
+              "ids": [
+                "https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1385#note_1990430101"
+              ]
+            }
+          ],
+          "references": [
+            {
+              "title": "Material Design",
+              "url": "https://material.io/design",
+              "skill": "UX",
+              "description": "Google's Material Design Guidelines"
+            },
+            {
+              "title": "Android Design",
+              "url": "https://developer.android.com/design",
+              "skill": "UX",
+              "description": "Android Design Guide"
             }
           ]
         }
       ],
       "quality": {
         "2024-07-08T00:00:00.000+05:30": {
-          "High": 1,
-          "Low": 2,
-          "Medium": 1
+          "High": 2,
+          "Low": 3,
+          "Medium": 0
         },
         "2024-06-03T00:00:00.000+05:30": {
           "High": 1,
@@ -1314,23 +1891,23 @@
         },
         "2024-05-13T00:00:00.000+05:30": {
           "High": 1,
-          "Low": 0,
-          "Medium": 1
+          "Low": 1,
+          "Medium": 0
         },
         "2024-05-06T00:00:00.000+05:30": {
-          "High": 2,
+          "High": 1,
           "Low": 0,
           "Medium": 0
         },
         "2024-04-29T00:00:00.000+05:30": {
-          "High": 3,
+          "High": 2,
           "Low": 0,
           "Medium": 0
         },
         "2024-04-22T00:00:00.000+05:30": {
-          "High": 0,
+          "High": 2,
           "Low": 0,
-          "Medium": 2
+          "Medium": 0
         },
         "2024-04-15T00:00:00.000+05:30": {
           "High": 2,
@@ -1338,8 +1915,8 @@
           "Medium": 0
         },
         "2024-04-08T00:00:00.000+05:30": {
-          "High": 1,
-          "Low": 1,
+          "High": 2,
+          "Low": 0,
           "Medium": 0
         },
         "2024-04-01T00:00:00.000+05:30": {
@@ -1358,9 +1935,9 @@
           "Medium": 0
         },
         "2024-03-04T00:00:00.000+05:30": {
-          "High": 3,
-          "Low": 0,
-          "Medium": 2
+          "High": 4,
+          "Low": 1,
+          "Medium": 0
         },
         "2024-02-26T00:00:00.000+05:30": {
           "High": 1,
@@ -1368,8 +1945,8 @@
           "Medium": 0
         },
         "2024-02-12T00:00:00.000+05:30": {
-          "High": 3,
-          "Low": 1,
+          "High": 4,
+          "Low": 0,
           "Medium": 1
         },
         "2024-02-05T00:00:00.000+05:30": {
@@ -1379,7 +1956,7 @@
         },
         "2024-01-22T00:00:00.000+05:30": {
           "High": 3,
-          "Low": 1,
+          "Low": 0,
           "Medium": 0
         },
         "2024-01-08T00:00:00.000+05:30": {
@@ -1389,38 +1966,30 @@
         }
       },
       "testCases": {
-        "2024-04-29T00:00:00.000+05:30": 1,
-        "2024-04-22T00:00:00.000+05:30": 1,
-        "2024-04-15T00:00:00.000+05:30": 2,
-        "2024-04-08T00:00:00.000+05:30": 1,
-        "2024-04-01T00:00:00.000+05:30": 2,
-        "2024-03-25T00:00:00.000+05:30": 1,
+        "2024-04-22T00:00:00.000+05:30": 0,
+        "2024-03-25T00:00:00.000+05:30": 0,
         "2024-03-18T00:00:00.000+05:30": 0,
         "2024-03-04T00:00:00.000+05:30": 0,
         "2024-02-26T00:00:00.000+05:30": 0,
-        "2024-02-12T00:00:00.000+05:30": 0,
-        "2024-02-05T00:00:00.000+05:30": 0,
-        "2024-01-22T00:00:00.000+05:30": 0
+        "2024-02-12T00:00:00.000+05:30": 3,
+        "2024-02-05T00:00:00.000+05:30": 2,
+        "2024-01-22T00:00:00.000+05:30": 2
       },
       "testCasesRequired": {
-        "2024-04-29T00:00:00.000+05:30": 1,
         "2024-04-22T00:00:00.000+05:30": 1,
-        "2024-04-15T00:00:00.000+05:30": 2,
-        "2024-04-08T00:00:00.000+05:30": 1,
-        "2024-04-01T00:00:00.000+05:30": 2,
         "2024-03-25T00:00:00.000+05:30": 2,
         "2024-03-18T00:00:00.000+05:30": 1,
-        "2024-03-04T00:00:00.000+05:30": 4,
+        "2024-03-04T00:00:00.000+05:30": 5,
         "2024-02-26T00:00:00.000+05:30": 1,
         "2024-02-12T00:00:00.000+05:30": 4,
-        "2024-02-05T00:00:00.000+05:30": 1,
-        "2024-01-22T00:00:00.000+05:30": 4
+        "2024-02-05T00:00:00.000+05:30": 3,
+        "2024-01-22T00:00:00.000+05:30": 3
       },
       "impact": {
         "2024-07-08T00:00:00.000+05:30": {
           "Negative": 0,
           "Neutral": 2,
-          "Positive": 2
+          "Positive": 3
         },
         "2024-06-03T00:00:00.000+05:30": {
           "Negative": 0,
@@ -1435,12 +2004,12 @@
         "2024-05-06T00:00:00.000+05:30": {
           "Negative": 0,
           "Neutral": 0,
-          "Positive": 2
+          "Positive": 1
         },
         "2024-04-29T00:00:00.000+05:30": {
           "Negative": 0,
           "Neutral": 0,
-          "Positive": 3
+          "Positive": 2
         },
         "2024-04-22T00:00:00.000+05:30": {
           "Negative": 0,
@@ -1474,8 +2043,8 @@
         },
         "2024-03-04T00:00:00.000+05:30": {
           "Negative": 0,
-          "Neutral": 3,
-          "Positive": 2
+          "Neutral": 1,
+          "Positive": 4
         },
         "2024-02-26T00:00:00.000+05:30": {
           "Negative": 0,
@@ -1484,614 +2053,34 @@
         },
         "2024-02-12T00:00:00.000+05:30": {
           "Negative": 0,
-          "Neutral": 2,
-          "Positive": 3
+          "Neutral": 0,
+          "Positive": 5
         },
         "2024-02-05T00:00:00.000+05:30": {
-          "Negative": 0,
-          "Neutral": 1,
-          "Positive": 3
-        },
-        "2024-01-22T00:00:00.000+05:30": {
           "Negative": 0,
           "Neutral": 0,
           "Positive": 4
         },
-        "2024-01-08T00:00:00.000+05:30": {
+        "2024-01-22T00:00:00.000+05:30": {
           "Negative": 0,
           "Neutral": 0,
-          "Positive": 1
+          "Positive": 3
+        },
+        "2024-01-08T00:00:00.000+05:30": {
+          "Negative": 0,
+          "Neutral": 1,
+          "Positive": 0
         }
       },
       "userResponseSentiments": {
-        "Positive": 10,
-        "Negative": 4,
+        "Positive": 13,
+        "Negative": 6,
         "Neutral": 59
       },
       "commentsSentiments": {
-        "Positive": 20,
-        "Negative": 15,
-        "Neutral": 102
-      }
-    },
-    "quarter": {
-      "summary": [
-        "Your merge request activity has been steady, showing consistency in your contributions.",
-        "You demonstrate good understanding of Android development, particularly in UI design and sharing functionalities.",
-        "You frequently use Git for version control and have a good understanding of its commands.",
-        "Your skills in Java and Kotlin are noteworthy, showcasing proficiency in programming languages.",
-        "You need to improve documentation and error handling to enhance code quality."
-      ],
-      "positiveSkills": [
-        {
-          "skill": "Android",
-          "frequency": {
-            "2024-01-01T00:00:00.000+05:30": 33,
-            "2024-04-01T00:00:00.000+05:30": 40,
-            "2024-07-01T00:00:00.000+05:30": 33
-          },
-          "sentimentFrequency": {
-            "2024-01-01T00:00:00.000+05:30": {
-              "Positive": 9,
-              "Negative": 10,
-              "Neutral": 14
-            },
-            "2024-04-01T00:00:00.000+05:30": {
-              "Positive": 16,
-              "Negative": 10,
-              "Neutral": 14
-            },
-            "2024-07-01T00:00:00.000+05:30": {
-              "Positive": 16,
-              "Negative": 9,
-              "Neutral": 8
-            }
-          },
-          "insights": [
-            "You have a strong understanding of Android development concepts.",
-            "You are improving your skills in UI design and sharing functionalities.",
-            "Your contributions have been increasingly positive in recent months.",
-            "Ensure to address the negative feedback to improve code quality.",
-            "Focus on improving error handling and debugging skills."
-          ]
-        },
-        {
-          "skill": "UI",
-          "frequency": {
-            "2024-01-01T00:00:00.000+05:30": 4,
-            "2024-04-01T00:00:00.000+05:30": 4,
-            "2024-07-01T00:00:00.000+05:30": 5
-          },
-          "sentimentFrequency": {
-            "2024-01-01T00:00:00.000+05:30": {
-              "Positive": 2,
-              "Negative": 1,
-              "Neutral": 1
-            },
-            "2024-04-01T00:00:00.000+05:30": {
-              "Positive": 2,
-              "Negative": 1,
-              "Neutral": 1
-            },
-            "2024-07-01T00:00:00.000+05:30": {
-              "Positive": 3,
-              "Negative": 1,
-              "Neutral": 1
-            }
-          },
-          "insights": [
-            "You have demonstrated proficiency in UI design principles.",
-            "You are receiving positive feedback for your UI improvements.",
-            "Focus on addressing the negative feedback related to UI issues.",
-            "Utilize Material Design guidelines to enhance your UI designs.",
-            "Ensure to test your UI changes on various devices to guarantee consistency."
-          ]
-        },
-        {
-          "skill": "Git",
-          "frequency": {
-            "2024-01-01T00:00:00.000+05:30": 13,
-            "2024-04-01T00:00:00.000+05:30": 13,
-            "2024-07-01T00:00:00.000+05:30": 15
-          },
-          "sentimentFrequency": {
-            "2024-01-01T00:00:00.000+05:30": {
-              "Positive": 3,
-              "Negative": 1,
-              "Neutral": 9
-            },
-            "2024-04-01T00:00:00.000+05:30": {
-              "Positive": 5,
-              "Negative": 2,
-              "Neutral": 6
-            },
-            "2024-07-01T00:00:00.000+05:30": {
-              "Positive": 6,
-              "Negative": 2,
-              "Neutral": 7
-            }
-          },
-          "insights": [
-            "You demonstrate good understanding of Git commands and practices.",
-            "You are effectively using Git for version control in your projects.",
-            "Ensure to adhere to project-specific Git branching strategies.",
-            "Write clear and concise commit messages to enhance code readability.",
-            "Focus on improving the quality of your commit messages for better understanding."
-          ]
-        },
-        {
-          "skill": "Java",
-          "frequency": {
-            "2024-01-01T00:00:00.000+05:30": 8,
-            "2024-04-01T00:00:00.000+05:30": 8,
-            "2024-07-01T00:00:00.000+05:30": 3
-          },
-          "sentimentFrequency": {
-            "2024-01-01T00:00:00.000+05:30": {
-              "Positive": 4,
-              "Negative": 0,
-              "Neutral": 4
-            },
-            "2024-04-01T00:00:00.000+05:30": {
-              "Positive": 6,
-              "Negative": 0,
-              "Neutral": 2
-            },
-            "2024-07-01T00:00:00.000+05:30": {
-              "Positive": 2,
-              "Negative": 0,
-              "Neutral": 1
-            }
-          },
-          "insights": [
-            "Your Java skills have been consistently utilized in various modules.",
-            "You have effectively used Java for bug fixes and enhancements.",
-            "Your code is generally well-structured and readable."
-          ]
-        },
-        {
-          "skill": "Kotlin",
-          "frequency": {
-            "2024-01-01T00:00:00.000+05:30": 4,
-            "2024-04-01T00:00:00.000+05:30": 5,
-            "2024-07-01T00:00:00.000+05:30": 3
-          },
-          "sentimentFrequency": {
-            "2024-01-01T00:00:00.000+05:30": {
-              "Positive": 3,
-              "Negative": 0,
-              "Neutral": 1
-            },
-            "2024-04-01T00:00:00.000+05:30": {
-              "Positive": 4,
-              "Negative": 0,
-              "Neutral": 1
-            },
-            "2024-07-01T00:00:00.000+05:30": {
-              "Positive": 2,
-              "Negative": 0,
-              "Neutral": 1
-            }
-          },
-          "insights": [
-            "Your understanding of Kotlin is steadily improving, especially in the area of error handling and data manipulation.",
-            "You have demonstrated competence in utilizing Kotlin for various tasks, including bug fixes and feature enhancements.",
-            "Explore advanced Kotlin features like coroutines and lambdas for further code optimization."
-          ]
-        },
-        {
-          "skill": "WorkManager",
-          "frequency": {
-            "2024-01-01T00:00:00.000+05:30": 0,
-            "2024-04-01T00:00:00.000+05:30": 1,
-            "2024-07-01T00:00:00.000+05:30": 0
-          },
-          "sentimentFrequency": {
-            "2024-01-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-04-01T00:00:00.000+05:30": {
-              "Positive": 1,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-07-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            }
-          },
-          "insights": [
-            "You have successfully implemented WorkManager for efficient background tasks.",
-            "This demonstrates your ability to adopt and utilize new technologies.",
-            "Consider exploring further advancements in background task management for future projects."
-          ]
-        },
-        {
-          "skill": "CI/CD",
-          "frequency": {
-            "2024-01-01T00:00:00.000+05:30": 1,
-            "2024-04-01T00:00:00.000+05:30": 1,
-            "2024-07-01T00:00:00.000+05:30": 0
-          },
-          "sentimentFrequency": {
-            "2024-01-01T00:00:00.000+05:30": {
-              "Positive": 1,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-04-01T00:00:00.000+05:30": {
-              "Positive": 1,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-07-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            }
-          },
-          "insights": [
-            "Your CI/CD implementations have been effective in automating builds and tests.",
-            "You have demonstrated the ability to integrate CI/CD into the workflow.",
-            "Consider investigating advanced CI/CD practices for greater efficiency and reliability."
-          ]
-        }
-      ],
-      "negativeSkills": [
-        {
-          "skill": "Documentation",
-          "frequency": {
-            "2024-01-01T00:00:00.000+05:30": 2,
-            "2024-04-01T00:00:00.000+05:30": 3,
-            "2024-07-01T00:00:00.000+05:30": 2
-          },
-          "sentimentFrequency": {
-            "2024-01-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 1,
-              "Neutral": 1
-            },
-            "2024-04-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 2,
-              "Neutral": 1
-            },
-            "2024-07-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 1,
-              "Neutral": 1
-            }
-          },
-          "insights": [
-            "You need to improve the documentation of your code.",
-            "Writing clear and concise documentation is crucial for maintainability.",
-            "Focus on documenting the purpose and functionality of your code changes.",
-            "Use comments effectively to explain complex logic and clarify code intent.",
-            "Refer to project documentation guidelines for best practices."
-          ],
-          "references": [
-            {
-              "url": "https://developer.android.com/studio/write/documentation",
-              "skill": "Documentation",
-              "description": "Android documentation guidelines for writing clear and concise documentation."
-            },
-            {
-              "url": "https://google.github.io/styleguide/javaguide.html",
-              "skill": "Documentation",
-              "description": "Google's Java style guide, which includes recommendations for effective code commenting."
-            },
-            {
-              "url": "https://en.wikipedia.org/wiki/Javadoc",
-              "skill": "Documentation",
-              "description": "General information about Javadoc, a tool for generating API documentation from source code."
-            }
-          ]
-        },
-        {
-          "skill": "Error Handling",
-          "frequency": {
-            "2024-01-01T00:00:00.000+05:30": 3,
-            "2024-04-01T00:00:00.000+05:30": 4,
-            "2024-07-01T00:00:00.000+05:30": 3
-          },
-          "sentimentFrequency": {
-            "2024-01-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 2,
-              "Neutral": 1
-            },
-            "2024-04-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 3,
-              "Neutral": 1
-            },
-            "2024-07-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 2,
-              "Neutral": 1
-            }
-          },
-          "insights": [
-            "You have encountered some error handling issues in your code.",
-            "Ensure to handle potential exceptions gracefully and provide informative error messages.",
-            "Consider using try-catch blocks to handle exceptions effectively.",
-            "Implement appropriate logging mechanisms to track errors and debug issues.",
-            "Refer to best practices for error handling in Java and Kotlin."
-          ],
-          "references": [
-            {
-              "url": "https://docs.oracle.com/javase/tutorial/essential/exceptions/",
-              "skill": "Error Handling",
-              "description": "Oracle's Java tutorial on exception handling."
-            },
-            {
-              "url": "https://kotlinlang.org/docs/exception-handling.html",
-              "skill": "Error Handling",
-              "description": "Kotlin documentation on exception handling."
-            },
-            {
-              "url": "https://www.baeldung.com/java-exception-handling",
-              "skill": "Error Handling",
-              "description": "A comprehensive guide to exception handling in Java."
-            }
-          ]
-        },
-        {
-          "skill": "Git",
-          "frequency": {
-            "2024-01-01T00:00:00.000+05:30": 2,
-            "2024-04-01T00:00:00.000+05:30": 1,
-            "2024-07-01T00:00:00.000+05:30": 2
-          },
-          "sentimentFrequency": {
-            "2024-01-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 2
-            },
-            "2024-04-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 1
-            },
-            "2024-07-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 2
-            }
-          },
-          "insights": [
-            "Some MRs lack proper descriptions, hindering clarity.",
-            "Ensure comprehensive commit messages that detail changes made.",
-            "Refer to Git best practices for effective branching and merging strategies.",
-            "Use Git tools effectively for version control and collaboration.",
-            "Consider utilizing tools like GitLab's merge request templates for better structure."
-          ],
-          "references": [
-            {
-              "title": "Pro Git Book",
-              "url": "https://git-scm.com/book/en/v2",
-              "skill": "Git",
-              "description": "A comprehensive guide to Git for beginners and experienced users."
-            },
-            {
-              "title": "Atlassian Git Tutorial",
-              "url": "https://www.atlassian.com/git/tutorials",
-              "skill": "Git",
-              "description": "Interactive tutorials covering various aspects of Git."
-            },
-            {
-              "title": "GitHub Git Guide",
-              "url": "https://docs.github.com/en/get-started/getting-started-with-git",
-              "skill": "Git",
-              "description": "A guide to using Git with GitHub."
-            }
-          ]
-        },
-        {
-          "skill": "URL",
-          "frequency": {
-            "2024-01-01T00:00:00.000+05:30": 6,
-            "2024-04-01T00:00:00.000+05:30": 5,
-            "2024-07-01T00:00:00.000+05:30": 4
-          },
-          "sentimentFrequency": {
-            "2024-01-01T00:00:00.000+05:30": {
-              "Positive": 1,
-              "Negative": 2,
-              "Neutral": 3
-            },
-            "2024-04-01T00:00:00.000+05:30": {
-              "Positive": 1,
-              "Negative": 2,
-              "Neutral": 2
-            },
-            "2024-07-01T00:00:00.000+05:30": {
-              "Positive": 1,
-              "Negative": 1,
-              "Neutral": 2
-            }
-          },
-          "insights": [
-            "You need to improve your understanding of URL handling in your code.",
-            "Ensure to validate and sanitize user input before constructing URLs.",
-            "Pay attention to URL encoding and decoding to prevent errors.",
-            "Refer to best practices for URL handling in Java and Kotlin.",
-            "Utilize libraries like Apache HttpComponents or OkHttp for robust URL management."
-          ],
-          "references": [
-            {
-              "url": "https://www.w3schools.com/tags/tag_base.asp",
-              "skill": "URL",
-              "description": "Learn more about the base URL tag and its usage."
-            },
-            {
-              "url": "https://developer.android.com/guide/topics/providers/share-providers",
-              "skill": "URL",
-              "description": "Learn about Android sharing providers for app development."
-            },
-            {
-              "url": "https://developer.android.com/reference/android/net/Uri",
-              "skill": "Android",
-              "description": "Learn about Android Uri scheme and its usage in URL handling."
-            }
-          ]
-        },
-        {
-          "skill": "YAML",
-          "frequency": {
-            "2024-01-01T00:00:00.000+05:30": 0,
-            "2024-04-01T00:00:00.000+05:30": 0,
-            "2024-07-01T00:00:00.000+05:30": 2
-          },
-          "sentimentFrequency": {
-            "2024-01-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-04-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-07-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 2
-            }
-          },
-          "insights": [
-            "MRs with YAML changes lack descriptive information.",
-            "Ensure proper indentation and syntax in YAML files.",
-            "Use YAML validation tools for error detection."
-          ],
-          "references": [
-            {
-              "title": "YAML Specification",
-              "url": "https://yaml.org/spec/1.2/spec.html",
-              "skill": "YAML",
-              "description": "The official YAML specification document."
-            },
-            {
-              "title": "YAML Ain't Markup Language",
-              "url": "https://yaml.org/",
-              "skill": "YAML",
-              "description": "The official YAML website with resources and tutorials."
-            },
-            {
-              "title": "YAML Tutorial",
-              "url": "https://www.tutorialspoint.com/yaml/yaml_introduction.htm",
-              "skill": "YAML",
-              "description": "A comprehensive YAML tutorial."
-            }
-          ]
-        },
-        {
-          "skill": "XML",
-          "frequency": {
-            "2024-01-01T00:00:00.000+05:30": 1,
-            "2024-04-01T00:00:00.000+05:30": 0,
-            "2024-07-01T00:00:00.000+05:30": 1
-          },
-          "sentimentFrequency": {
-            "2024-01-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 1
-            },
-            "2024-04-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 0
-            },
-            "2024-07-01T00:00:00.000+05:30": {
-              "Positive": 0,
-              "Negative": 0,
-              "Neutral": 1
-            }
-          },
-          "insights": [
-            "Some XML changes lack clear explanations.",
-            "Ensure well-formatted and valid XML code.",
-            "Validate XML files with tools for correctness."
-          ],
-          "references": [
-            {
-              "title": "W3C XML Tutorial",
-              "url": "https://www.w3.org/TR/REC-xml/",
-              "skill": "XML",
-              "description": "A comprehensive tutorial on XML from the World Wide Web Consortium."
-            },
-            {
-              "title": "XML Schema Definition Language",
-              "url": "https://www.w3.org/XML/Schema",
-              "skill": "XML",
-              "description": "The W3C standard for defining XML schemas."
-            },
-            {
-              "title": "XML.com",
-              "url": "https://www.xml.com/",
-              "skill": "XML",
-              "description": "A website dedicated to XML resources and tutorials."
-            }
-          ]
-        }
-      ],
-      "quality": {
-        "2024-07-01T00:00:00.000+05:30": {
-          "High": 1,
-          "Low": 2,
-          "Medium": 1
-        },
-        "2024-04-01T00:00:00.000+05:30": {
-          "High": 12,
-          "Low": 2,
-          "Medium": 3
-        },
-        "2024-01-01T00:00:00.000+05:30": {
-          "High": 17,
-          "Low": 2,
-          "Medium": 4
-        }
-      },
-      "testCases": {
-        "2024-04-01T00:00:00.000+05:30": 7,
-        "2024-01-01T00:00:00.000+05:30": 1
-      },
-      "testCasesRequired": {
-        "2024-04-01T00:00:00.000+05:30": 7,
-        "2024-01-01T00:00:00.000+05:30": 17
-      },
-      "impact": {
-        "2024-07-01T00:00:00.000+05:30": {
-          "Negative": 0,
-          "Neutral": 2,
-          "Positive": 2
-        },
-        "2024-04-01T00:00:00.000+05:30": {
-          "Negative": 0,
-          "Neutral": 3,
-          "Positive": 14
-        },
-        "2024-01-01T00:00:00.000+05:30": {
-          "Negative": 0,
-          "Neutral": 6,
-          "Positive": 17
-        }
-      },
-      "userResponseSentiments": {
-        "Positive": 10,
-        "Negative": 4,
-        "Neutral": 59
-      },
-      "commentsSentiments": {
-        "Positive": 20,
-        "Negative": 15,
-        "Neutral": 102
+        "Positive": 19,
+        "Negative": 19,
+        "Neutral": 99
       }
     }
   }
