@@ -20,7 +20,7 @@ const UserInfo = {
   ],
 };
 
-export default function Home() {
+export default function MergeRequestAssessment() {
   const [period, setPeriod] = useState<TimePeriod>("month");
   const [user, setUser] = useState<string | null>(null);
   const [data, setData] = useState<userReport | null>(null);
@@ -58,7 +58,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="pt-12 flex flex-col justify-center items-center bg-gray-200">
+    <main className="pt-12 flex flex-col justify-center items-center">
       <Navbar
         onUserSelect={(user: string) => {
           setUser(user);

@@ -35,3 +35,5 @@ ChartJS.register(
   Tooltip,
   Colors
 );
+
+ChartJS.defaults.borderColor = "rgba(0, 0, 0, 0.2)";

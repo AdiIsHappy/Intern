@@ -27,6 +27,7 @@ export function SkillSentimentChart({
               (prevVal: number, currentVal: number) => prevVal + currentVal
             )
         ),
+        backgroundColor: "rgba(132,206,109, 0.8)",
       },
       {
         label: "Neutral",
@@ -37,6 +38,7 @@ export function SkillSentimentChart({
               (prevVal: number, currentVal: number) => prevVal + currentVal
             )
         ),
+        backgroundColor: "rgba(100, 193, 253, 0.8)",
       },
       {
         label: "Negative",
@@ -47,6 +49,7 @@ export function SkillSentimentChart({
               (prevVal: number, currentVal: number) => prevVal + currentVal
             )
         ),
+        backgroundColor: "rgba(252,41,70,0.8)",
       },
     ],
   };
@@ -56,10 +59,6 @@ export function SkillSentimentChart({
       title: {
         display: true,
         text: "Skill Sentiment Analysis",
-      },
-      colors: {
-        enabled: true,
-        forceOverride: true,
       },
       tooltip: {
         enabled: true,

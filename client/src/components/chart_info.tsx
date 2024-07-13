@@ -22,7 +22,7 @@ const ChartInfo: React.FC<ChartInfoProps> = ({
           <Info tooltipText={tooltipText} />
         </div>
       ) : null}
-      <div className="w-full">{children}</div>
+      <div className="w-full min-h-96">{children}</div>
       {infoText ? (
         <div className="flex  mt-4 text-sm items-center w-full px-8 py-2 bg-yellow-100 rounded-md text-yellow-600">
           <InfoIcon className="w-4 h-4 mr-4" />

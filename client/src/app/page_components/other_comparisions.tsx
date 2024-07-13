@@ -1,9 +1,6 @@
 import ChartInfo from "@/components/chart_info";
 import { PRImpactTimeline } from "@/components/charts/pr_impact_timeline";
-import { PRQualityTimeline } from "@/components/charts/pr_quality_timeline";
 import { SentimentPieChart } from "@/components/charts/sentiment_pie";
-import { TestCaseRatioChart } from "@/components/charts/test_case_ratio_chart";
-import { Info } from "@/components/info";
 import { GraphInfo } from "@/lib/constants/graph_info";
 import { TimePeriod, userReport } from "@/lib/types/core.types";
 

@@ -2,7 +2,6 @@ import ChartInfo from "@/components/chart_info";
 import { SkillsFrequencyTimeline } from "@/components/charts/skills_frequency_timeline";
 import { SkillSentimentChart } from "@/components/charts/skills_sentiment_chart";
 import Dropdown from "@/components/dropdown";
-import { Info } from "@/components/info";
 import { GraphInfo } from "@/lib/constants/graph_info";
 import { TimePeriod, userReport } from "@/lib/types/core.types";
 import { useEffect, useState } from "react";

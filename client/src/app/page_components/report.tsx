@@ -9,7 +9,7 @@ import { generateSummary } from "@/lib/utils/generate_summary";
 import useWindowSize from "@/lib/hooks/use_windows_size";
 import Skeleton from "react-loading-skeleton";
 import SectionContainer from "@/components/section";
-import { Quality } from "./qaulity";
+import { Quality } from "./merge_request_assesment";
 
 export interface ReportProps {
   data: userReport | null;
@@ -91,9 +91,9 @@ export function Report({ data, period }: ReportProps) {
           </div>
         )}
       </div>
-      <div className="flex flex-row">
+      <div className="flex flex-row w-full">
         {data ? (
-          <SectionContainer title="Positive Skills" className="w-full">
+          <SectionContainer title="Positive Skills" className="flex-1">
             {data.positiveSkills ? (
               <PositiveSkills period={period} data={data} />
             ) : (
@@ -109,7 +109,7 @@ export function Report({ data, period }: ReportProps) {
           </div>
         )}
         {data ? (
-          <SectionContainer title="Negative Skills" className="w-full">
+          <SectionContainer title="Negative Skills" className="flex-1">
             {<data value="" className="neg"></data> ? (
               <NegativeSkills period={period} data={data} />
             ) : (
@@ -140,7 +140,7 @@ export function Report({ data, period }: ReportProps) {
         </div>
       )}
       {data ? (
-        <SectionContainer title="Merge Requests Assessment" className="w-full">
+        <SectionContainer title="Other Comparisions" className="w-full">
           {<data value="" className="neg"></data> ? (
             <OtherComparisions period={period} data={data} />
           ) : (

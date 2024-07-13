@@ -18,14 +18,17 @@ export function PRQualityTimeline({
       {
         label: "High",
         data: Object.keys(data).map((date) => data[date].High),
+        backgroundColor: "rgba(132,206,109, 0.5)",
       },
       {
         label: "Medium",
         data: Object.keys(data).map((date) => data[date].Medium),
+        backgroundColor: "rgba(100, 193, 253, 0.5)",
       },
       {
         label: "Low",
         data: Object.keys(data).map((date) => data[date].Low),
+        backgroundColor: "rgba(252,41,70,0.5)",
       },
     ],
   };

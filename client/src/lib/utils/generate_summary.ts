@@ -1,8 +1,6 @@
 import { DateTime } from "luxon";
 import { Sentiment, userReport } from "../types/core.types";
 
-
-// TODO: Handel test added ratio nan error.
 export function generateSummary(data: userReport) {
   const {
     commentsSentiments,
@@ -38,11 +36,15 @@ export function generateSummary(data: userReport) {
         totalTestCasesRequired += testCasesRequired[date] || 0;
       }
     }
-    const averageTestRatio = totalTestCases / totalTestCasesRequired;
-    return averageTestRatio;
+    return totalTestCasesRequired > 0
+      ? totalTestCases / totalTestCasesRequired
+      : 0;
   };
 
-  const latestTestRatio = testCases[latestDate] / testCasesRequired[latestDate];
+  const latestTestRatio =
+    testCasesRequired[latestDate] > 0
+      ? testCases[latestDate] / testCasesRequired[latestDate]
+      : 0;
   const averageTestRatio = calculateAverageTestRatio();
 
   const calculateAverageQuality = () => {
@@ -58,11 +60,13 @@ export function generateSummary(data: userReport) {
         count++;
       }
     }
-    return {
-      High: totalHigh / count,
-      Medium: totalMedium / count,
-      Low: totalLow / count,
-    };
+    return count > 0
+      ? {
+          High: totalHigh / count,
+          Medium: totalMedium / count,
+          Low: totalLow / count,
+        }
+      : { High: 0, Medium: 0, Low: 0 };
   };
 
   const latestQuality = quality[latestDate];
@@ -83,15 +87,15 @@ export function generateSummary(data: userReport) {
   }
 
   if (userResponseSentiments.Positive > avgUserResponseSentiment.Positive) {
-    reviews.push("Your responses to othere are mostly **positive**.");
+    reviews.push("Your responses to others are mostly **positive**.");
   } else if (
     userResponseSentiments.Negative > avgUserResponseSentiment.Negative
   ) {
     reviews.push(
-      "Your responses to comments have been mostly **negative**. try to communicate more positively."
+      "Your responses to comments have been mostly **negative**. Try to communicate more positively."
     );
   } else {
-    reviews.push("Your responses to comments have been mostly **neutral.**");
+    reviews.push("Your responses to comments have been mostly **neutral**.");
   }
 
   let testRatioMessage = `Your test added ratio is **${latestTestRatio.toFixed(

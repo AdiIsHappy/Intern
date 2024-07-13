@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} bg-gray-200`}>
         <header>
           <div className=" max-h-12 bg-gray-800 text-white py-3 px-8 w-full fixed x-0 y-0 flex justify-start items-center z-50">
             <Link href="/" className="text-md sm:text-xl md:text-xl">

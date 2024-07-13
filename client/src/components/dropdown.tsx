@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useRef, useEffect } from "react";
 import { Arrow } from "@/lib/constants/icons/down_arrow"; // Assuming Arrow component is correctly implemented
 

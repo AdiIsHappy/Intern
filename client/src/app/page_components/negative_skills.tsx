@@ -7,7 +7,6 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import linkIcon from "@/../public/link.svg";
 import { GraphInfo } from "@/lib/constants/graph_info";
-import { Info } from "@/components/info";
 import ChartInfo from "@/components/chart_info";
 export interface negativeSkillsProp {
   data: userReport;

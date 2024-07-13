@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // Navbar.tsx
 import React, { useState, useRef, useEffect } from "react";
 import Skeleton from "react-loading-skeleton";
