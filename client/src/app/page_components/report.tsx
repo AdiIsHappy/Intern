@@ -10,6 +10,7 @@ import useWindowSize from "@/lib/hooks/use_windows_size";
 import Skeleton from "react-loading-skeleton";
 import SectionContainer from "@/components/section";
 import { Quality } from "./merge_request_assesment";
+import LinkedText from "@/components/linked_text";
 
 export interface ReportProps {
   data: userReport | null;
@@ -22,7 +23,7 @@ export function Report({ data, period }: ReportProps) {
   useWindowSize();
 
   return (
-    <div className=" flex flex-col px-24 w-full items-center text-justify">
+    <div className=" flex flex-col px-24 w-full items-center">
       <div className="w-full bg-white p-2 rounded-lg flex flex-row justify-evenly">
         <span>
           <strong>Name:</strong>
@@ -35,18 +36,7 @@ export function Report({ data, period }: ReportProps) {
             <ol className="p-2 list-decimal list-inside">
               {summary.map((element, index) => (
                 <li className="list-item text-md my-2" key={index}>
-                  {element.split("\n").map((text, index) => {
-                    const boldText = text.replace(
-                      /\*\*(.*?)\*\*/g,
-                      "<strong>$1</strong>"
-                    );
-                    return (
-                      <span
-                        key={index}
-                        dangerouslySetInnerHTML={{ __html: boldText }}
-                      />
-                    );
-                  })}
+                  <LinkedText text={element} />
                 </li>
               ))}
             </ol>
@@ -62,18 +52,7 @@ export function Report({ data, period }: ReportProps) {
             <ol className="p-2 list-decimal list-inside">
               {data.insights.map((element, index) => (
                 <li className="list-item text-md my-2" key={index}>
-                  {element.text.split("\n").map((text, index) => {
-                    const boldText = text.replace(
-                      /\*\*(.*?)\*\*/g,
-                      "<strong>$1</strong>"
-                    );
-                    return (
-                      <span
-                        key={index}
-                        dangerouslySetInnerHTML={{ __html: boldText }}
-                      />
-                    );
-                  })}
+                  <LinkedText text={element.text} urls={element.ids} />
                 </li>
               ))}
             </ol>
@@ -89,18 +68,10 @@ export function Report({ data, period }: ReportProps) {
             <ol className="p-2 list-decimal list-inside">
               {data.actions.map((element, index) => (
                 <li className="list-item text-md my-2" key={index}>
-                  {element.text.split("\n").map((text, index) => {
-                    const boldText = text.replace(
-                      /\*\*(.*?)\*\*/g,
-                      "<strong>$1</strong>"
-                    );
-                    return (
-                      <span
-                        key={index}
-                        dangerouslySetInnerHTML={{ __html: boldText }}
-                      />
-                    );
-                  })}
+                  <LinkedText
+                    text={element.text}
+                    urls={element.references.map((ref) => ref.url)}
+                  />
                 </li>
               ))}
             </ol>
@@ -148,7 +119,7 @@ export function Report({ data, period }: ReportProps) {
       </div>
       {data ? (
         <SectionContainer title="Merge Requests Assessment" className="w-full">
-          {<data value="" className="neg"></data> ? (
+          {data ? (
             <Quality period={period} data={data} />
           ) : (
             <div>Quality comparision not available.</div>

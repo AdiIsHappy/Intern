@@ -4,7 +4,7 @@ export type Quality = "High" | "Medium" | "Low";
 export type Sentiment = "Positive" | "Negative" | "Neutral";
 
 export interface userReport {
-  insights: { text: string; ids: string }[];
+  insights: { text: string; ids: string[] }[];
   actions: { text: string; references: Reference[] }[];
   positiveSkills: skillReport[];
   negativeSkills: skillReport[];

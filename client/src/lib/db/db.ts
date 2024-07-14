@@ -32,7 +32,7 @@ export async function getReport(
 
 export async function getAvailableReportsList(): Promise<string[]> {
   if (process.env.NODE_ENV === "development") {
-    return ["grote"];
+    return ["grote", "adam.belis"];
   }
   const reports = await listReports();
   const reportNames = reports.map((r) => {

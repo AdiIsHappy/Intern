@@ -8,6 +8,7 @@ import Image from "next/image";
 import linkIcon from "@/../public/link.svg";
 import { GraphInfo } from "@/lib/constants/graph_info";
 import ChartInfo from "@/components/chart_info";
+import LinkedText from "@/components/linked_text";
 export interface negativeSkillsProp {
   data: userReport;
   period: TimePeriod;
@@ -64,11 +65,13 @@ export function NegativeSkills({ data, period }: negativeSkillsProp) {
             defaultValue={skillsDropdownOptions.at(0)?.value || ""}
             label="Skill"
           />
-          <ol className="list-inside list-decimal px-2 py-4 flex-1 text-justify">
+          <ol className="list-inside list-decimal px-2 py-4 flex-1">
             {data.negativeSkills
               .find((e) => e.skill === skill)
               ?.insights.map((insight, index) => (
-                <li key={index}>{insight.text}</li>
+                <li key={index}>
+                  <LinkedText text={insight.text} urls={insight.ids} />
+                </li>
               ))}
           </ol>
         </div>
