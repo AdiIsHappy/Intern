@@ -8,10 +8,11 @@ config();
 
 export async function uploadUserDataToBlob(username: string, data: any) {
   const period: TimePeriod = configData.analysis.reportUpdatePeriod;
-  const maxAge = DateTime.now()
-    .plus({ [period]: 1 })
-    .diffNow()
-    .as("seconds");
+  // const maxAge = DateTime.now()
+  //   .plus({ [period]: 1 })
+  //   .diffNow()
+  //   .as("seconds");
+  const maxAge = 0;
 
   const res = await put(`report/${username}.json`, JSON.stringify(data), {
     access: "public",

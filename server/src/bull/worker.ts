@@ -1,7 +1,13 @@
-import { getUserReportDB, updateStatusDB } from "../services/db/db";
-import { uploadUserDataToBlob } from "../services/vercel_blob/blob";
+import {
+  getUserDataDB,
+  getUserReportDB,
+  updateStatusDB,
+} from "../services/db/db";
+import { uploadUserDataToBlob } from "../services/vercel/blob";
+import { upsertUser } from "../services/vercel/pg";
 import { QueueTypes, QueueData } from "../types/bull.types";
 import { TimePeriod } from "../types/core.types";
+import { User } from "../types/vercel.types";
 import { queue } from "./queue";
 import { analyseMergeRequestsAsync } from "./workers/analyse_merge_requests";
 import { analyseNotesAsync } from "./workers/analyse_notes";
@@ -54,9 +60,22 @@ queue.on("completed", async (job) => {
     } else if (job.data.type === QueueTypes.GENERATE_INSIGHTS) {
       const report = getUserReportDB(job.data.data.username);
       if (report) {
-        uploadUserDataToBlob(job.data.data.username, report);
+        const response = await uploadUserDataToBlob(
+          job.data.data.username,
+          report
+        );
+        const userData = getUserDataDB(job.data.data.username);
+        const userInfo: User = {
+          managerUsername: null,
+          name: userData?.name || "",
+          profilePicUrl: userData?.avatarUrl || "",
+          reportUrl: response.url,
+          username: userData?.username || "",
+          webUrl: userData?.webUrl || "",
+        };
+        await upsertUser(userInfo);
       }
-      console.log(`Insights generated for ${job.data.data.username}`);
     }
+    console.log(`Insights generated for ${job.data.data.username}`);
   }
 });

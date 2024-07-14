@@ -4,19 +4,20 @@ import React, { useState, useRef, useEffect } from "react";
 import Skeleton from "react-loading-skeleton";
 import { Arrow } from "@/lib/constants/icons/down_arrow";
 import Image from "next/image";
+import Avatar from "@/components/avatar";
 
 export interface NavbarProps {
   name?: string;
-  email?: string;
+  username?: string;
   profilePic?: string;
   teamMembers?: { name: string; username: string }[];
   onUserSelect: (user: string) => void;
   className?: string;
 }
 export function Navbar(props: NavbarProps) {
-  const { name, profilePic, email, teamMembers, onUserSelect, className } =
+  const { name, profilePic, username, teamMembers, onUserSelect, className } =
     props;
-
+  console.log("NavbarProps", props);
   const [dropdownOpen, setDropdownOpen] = useState<boolean>(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
@@ -44,30 +45,6 @@ export function Navbar(props: NavbarProps) {
     setDropdownOpen((prev) => !prev);
   };
 
-  const renderAvatar = () => {
-    if (profilePic) {
-      return (
-        <Image
-          src={profilePic}
-          alt="Profile Pic"
-          width={40}
-          height={40}
-          className="rounded-md"
-        />
-      );
-    } else {
-      const initials = name ? name.charAt(0).toUpperCase() : "";
-
-      return (
-        <div
-          className={`w-10 h-10 rounded-md flex items-center justify-center font-semibold text-2xl text-white bg-blue-500`}
-        >
-          {initials}
-        </div>
-      );
-    }
-  };
-
   return (
     <div className={`w-full ${className}`}>
       <div className="w-full bg-gray-100 justify-between flex max-w-9xl px-8 py-1 items-center">
@@ -83,7 +60,13 @@ export function Navbar(props: NavbarProps) {
             aria-haspopup="true"
             aria-expanded={dropdownOpen}
           >
-            {renderAvatar()}
+            <Avatar
+              alt=""
+              height={16}
+              name={name}
+              src={profilePic || ""}
+              width={16}
+            />
           </button>
         ) : (
           <Skeleton height={40} width={40} />
@@ -96,7 +79,7 @@ export function Navbar(props: NavbarProps) {
         >
           <UserMenu
             name={name}
-            email={email}
+            username={username}
             teamMembers={teamMembers}
             onUserSelect={onUserSelect}
           />
@@ -108,12 +91,12 @@ export function Navbar(props: NavbarProps) {
 
 function UserMenu({
   name,
-  email,
+  username,
   teamMembers,
   onUserSelect,
 }: {
   name?: string;
-  email?: string;
+  username?: string;
   teamMembers?: { name: string; username: string }[];
   onUserSelect: (user: string) => void;
 }) {
@@ -128,7 +111,7 @@ function UserMenu({
     <div className="px-4 py-3 text-sm text-gray-900 divide-y divide-gray-200">
       <div className="mb-1">
         <div>{name}</div>
-        <div className="font-medium truncate">{email}</div>
+        <div className="font-thin truncate">@{username}</div>
       </div>
       <ul
         className="py-2 text-sm text-gray-700"

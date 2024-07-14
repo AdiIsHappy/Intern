@@ -30,6 +30,11 @@ const nextConfig = {
         hostname: "randomuser.me",
         port: "",
       },
+      {
+        protocol: "https",
+        hostname: "secure.gravatar.com",
+        port: "",
+      },
     ],
   },
 };

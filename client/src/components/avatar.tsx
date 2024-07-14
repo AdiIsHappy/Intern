@@ -1,32 +1,42 @@
-// Avatar.tsx
-import React from "react";
+import { useState } from "react";
 import Image from "next/image";
 
 interface AvatarProps {
-  src?: string;
-  name?: string;
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+  name: string;
 }
 
-const Avatar: React.FC<AvatarProps> = ({ src, name }) => {
-  if (src) {
-    return (
-      <Image
-        src={src}
-        alt="Profile Pic"
-        width={40}
-        height={40}
-        className="rounded-md"
-      />
-    );
-  } else {
-    const initials = name ? name.charAt(0).toUpperCase() : "";
+const Avatar: React.FC<AvatarProps> = ({ src, alt, width, height, name }) => {
+  const [imageError, setImageError] = useState<boolean>(false);
 
-    return (
-      <div className="w-10 h-10 rounded-md flex items-center justify-center font-semibold text-2xl text-white bg-blue-500">
-        {initials}
-      </div>
-    );
-  }
+  const handleImageError = () => {
+    setImageError(true);
+  };
+
+  const initials = name ? name.charAt(0).toUpperCase() : "";
+
+  return (
+    <div className="rounded-md ">
+      {!imageError ? (
+        <Image
+          src={src}
+          alt={alt}
+          width={40}
+          height={40}
+          onError={handleImageError} // Handle image load error
+        />
+      ) : (
+        <div
+          className={`w-10 h-10 rounded-md flex items-center justify-center font-semibold text-2xl text-white bg-blue-500`}
+        >
+          {initials}
+        </div>
+      )}
+    </div>
+  );
 };
 
 export default Avatar;

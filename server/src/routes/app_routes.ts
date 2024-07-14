@@ -4,6 +4,7 @@ import { TimePeriod } from "../types/core.types";
 import { QueueData, QueueTypes } from "../types/bull.types";
 import { queue } from "../bull/queue";
 import { fetchAllUserEvents } from "../api/gitlab/gitlab";
+import { upsertUser } from "../services/vercel/pg";
 const apiRouter = Router();
 
 apiRouter.post("/reports", async (req: Request, res: Response) => {
@@ -16,7 +17,14 @@ apiRouter.post("/reports", async (req: Request, res: Response) => {
 });
 
 apiRouter.get("/test", async (req: Request, res: Response) => {
-  const response = await fetchAllUserEvents(3421809);
+  const response = await upsertUser({
+    managerUsername: null,
+    name: "test",
+    profilePicUrl: "test",
+    reportUrl: "test",
+    username: "test",
+    webUrl: "test",
+  });
   return res.json(response);
 });
 

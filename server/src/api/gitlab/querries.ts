@@ -9,6 +9,7 @@ export const gitlabUserDataQuery: (
         username
         name
         webUrl
+        avatarUrl
         createdAt
         authoredMergeRequests(createdAfter: "${createdAfter}") {
           nodes {

@@ -30,3 +30,12 @@ export interface skillReport {
   insights: { text: string; ids: string[] }[];
   references?: Reference[];
 }
+export interface User {
+  username: string;
+  name: string;
+  web_url: string;
+  profile_pic_url: string;
+  report_url: string;
+  manager_username: string | null; // nullable if user does not report to anyone
+}
+

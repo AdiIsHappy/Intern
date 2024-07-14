@@ -16,6 +16,7 @@ export interface GQLUserNode {
   username: string;
   name: string;
   webUrl: string;
+  avatarUrl: string;
   createdAt: string;
   authoredMergeRequests: GQLAuthoredMergeRequest;
 }
