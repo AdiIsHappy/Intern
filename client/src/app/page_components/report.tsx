@@ -23,7 +23,7 @@ export function Report({ data, period }: ReportProps) {
   useWindowSize();
 
   return (
-    <div className=" flex flex-col px-24 w-full items-center">
+    <div className=" flex flex-col px-24 w-full items-center scroll-auto">
       <div className="w-full bg-white p-2 rounded-lg flex flex-row justify-evenly">
         <span>
           <strong>Name:</strong>

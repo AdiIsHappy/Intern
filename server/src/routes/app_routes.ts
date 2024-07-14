@@ -24,12 +24,13 @@ apiRouter.get("/test", async (req: Request, res: Response) => {
 
 apiRouter.get("/reports", async (req: Request, res: Response) => {
   const periods: TimePeriod[] = ["quarter", "month", "week"];
+  const { username } = req.body;
   for (const period of periods) {
     const task: QueueData = {
-      tag: "grote",
+      tag: username,
       type: QueueTypes.GENERATE_INSIGHTS,
       data: {
-        username: "grote",
+        username: username,
         period: period,
       },
     };

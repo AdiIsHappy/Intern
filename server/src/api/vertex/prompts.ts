@@ -124,6 +124,13 @@ Note: Positive and negative skill must not overlap.
 
 These points should be presented in a direct informational way, giving the user suggestions and pointing out areas for improvement. For example: "You have made more impactful merge requests in the current month compared to the past." Insights should focus on either giving the user direct actions to take or their performance in a report.
 
+Keep Note of following points:
+- Maximum length of any text is of 10 words.
+- for any list of insights generate at least 4 points and at max 5 points.
+- there must be at least 3 and at max 5 references for each negative skill.
+- for any skills list generate at least 3 and at max 5 skills
+- for any list of references there must be at least 3 and at max 5 references.
+
 Example Response in JSON format:
 {
   "insights": [
@@ -333,9 +340,19 @@ const textsi_report_notes_analysis = `You are given a JSON formatted dataset con
 - negative skills: list of skills in which user is performing poor showing lack of skills or repetitive mistakes, mentioning the total frequency, sentiment-wise frequency grouped by specified periods, insights mentioning user mistakes, area where user need to improve etc. and references.
 - for each insight point, be it global or inside a skill mention minimum 1 maximum 3 comment id to back it up the point. do not re-use a comment id.
 - Each skill's insights should be formatted as an array with a maximum of 5 very short and crisp points of maximum length 10 words.
-- for each negative skill, mention minimum 2 and maximum 5 references- Use markdown style to represent if some text needs to be made bold.- add escape sequency for necessary symbolsNote: Positive and negative skill must not overlap.
+- for each negative skill, mention minimum 3 and maximum 5 references- Use markdown style to represent if some text needs to be made bold.
+- add escape sequency for necessary symbols.
+
+Note: Positive and negative skill must not overlap.
 
 These points should be presented in a direct informational way, giving the user suggestions and pointing out areas for improvement. For example: "You have made more impactful merge requests in the current month compared to the past." Insights should focus on either giving the user direct actions to take or their performance in a report.
+
+Keep Note of following points:
+- Maximum length of any text is of 10 words.
+- for any list of insights generate at least 4 points and at max 5 points.
+- there must be at least 3 and at max 5 references for each negative skill.
+- for any skills list generate at least 3 and at max 5 skills
+- for any list of references there must be at least 3 and at max 5 references.
 
 Example Response in JSON format:
 {
@@ -532,6 +549,7 @@ Sample input:
   "2024-02-01T00:00:00.000+05:30",
  ]
 Note: Don't use markdown structure in output give a minified single line raw Json file text without any newline to spaces
+
 `;
 
 const textsi_combine_reports = `You are given a JSON formatted dataset containing an analysis of comments on authored merge requests by a GitLab user over a fixed time period. Your task is to analyze this data and identify following things.
@@ -545,6 +563,13 @@ const textsi_combine_reports = `You are given a JSON formatted dataset containin
 - for each negative skill, mention minimum 2 and maximum 5 references- Use markdown style to represent if some text needs to be made bold.- add escape sequency for necessary symbolsNote: Positive and negative skill must not overlap.
 
 These points should be presented in a direct informational way, giving the user suggestions and pointing out areas for improvement. For example: "You have made more impactful merge requests in the current month compared to the past." Insights should focus on either giving the user direct actions to take or their performance in a report.
+
+Keep Note of following points:
+- Maximum length of any text is of 10 words.
+- for any list of insights generate at least 4 points and at max 5 points.
+- there must be at least 3 and at max 5 references for each negative skill.
+- for any list of references there must be at least 3 and at max 5 references.
+- for any skills list generate at least 3 and at max 5 skills
 
 Example Response in JSON format:
 {

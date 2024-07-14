@@ -58,7 +58,7 @@ export default function MergeRequestAssessment() {
   }, []);
 
   return (
-    <main className="pt-12 flex flex-col justify-center items-center">
+    <main className="pt-24 flex flex-col justify-center items-center">
       <Navbar
         onUserSelect={(user: string) => {
           setUser(user);
@@ -73,6 +73,7 @@ export default function MergeRequestAssessment() {
             username: val.value,
           })) || []
         }
+        className="fixed top-12 left-0 right-0 z-50 bg-white shadow-md"
       />
       {user ? (
         <Dropdown

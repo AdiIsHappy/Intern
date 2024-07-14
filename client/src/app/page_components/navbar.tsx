@@ -11,9 +11,11 @@ export interface NavbarProps {
   profilePic?: string;
   teamMembers?: { name: string; username: string }[];
   onUserSelect: (user: string) => void;
+  className?: string;
 }
 export function Navbar(props: NavbarProps) {
-  const { name, profilePic, email, teamMembers, onUserSelect } = props;
+  const { name, profilePic, email, teamMembers, onUserSelect, className } =
+    props;
 
   const [dropdownOpen, setDropdownOpen] = useState<boolean>(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -67,7 +69,7 @@ export function Navbar(props: NavbarProps) {
   };
 
   return (
-    <>
+    <div className={`w-full ${className}`}>
       <div className="w-full bg-gray-100 justify-between flex max-w-9xl px-8 py-1 items-center">
         {name ? (
           <p className="font-medium text-xl text-gray-900">{name}</p>
@@ -100,7 +102,7 @@ export function Navbar(props: NavbarProps) {
           />
         </div>
       )}
-    </>
+    </div>
   );
 }
 

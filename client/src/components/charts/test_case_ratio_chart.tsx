@@ -56,7 +56,7 @@ export function TestCaseRatioChart({
       x: {
         type: "time",
         time: {
-          unit: period,
+          unit: period === "quarter" ? "month" : period,
         },
         title: {
           display: true,
