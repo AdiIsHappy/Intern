@@ -8,6 +8,7 @@ import { getReport } from "@/lib/db/db";
 import { TimePeriod, userReport, User } from "@/lib/types/core.types";
 
 import { getAllUsersUnderUsername, getUserByUsername } from "@/lib/db/pg";
+import { ReportSkeleton } from "@/components/report_skeleton";
 
 const authenticatedUsername = "grote";
 
@@ -79,14 +80,19 @@ export default function MergeRequestAssessment() {
           teamMembers={teamMembers.map((member) => ({
             name: member.name,
             username: member.username,
+            avatarUrl: member.profile_pic_url,
           }))}
           className="fixed top-12 left-0 right-0 z-50 bg-white shadow-md"
+          activeUser={selectedUser}
         />
       ) : (
-        <Skeleton height={40} className="w-full" />
+        <div className="fixed top-12 left-0 right-0 z-50 bg-white shadow-md flex items-center justify-between px-4 py-1">
+          <Skeleton height={30} width={160} className="mx-4" />
+          <Skeleton height={40} width={40} className="mx-4" />
+        </div>
       )}
       {loading ? (
-        <Skeleton containerClassName="flex-1 mx-8 my-2 w-1/2" height={40} />
+        <Skeleton containerClassName="flex-1 mx-8 my-2 w-1/4" height={40} />
       ) : (
         selectedUser && (
           <Dropdown
@@ -99,8 +105,8 @@ export default function MergeRequestAssessment() {
         )
       )}
 
-      {data === undefined ? (
-        <p>Report is not available yet. Please try again</p>
+      {!data ? (
+        <ReportSkeleton />
       ) : (
         data && <Report data={data} period={period} />
       )}

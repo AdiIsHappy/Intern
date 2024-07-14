@@ -45,7 +45,6 @@ export function OtherComparisions({ data, period }: OtherComparisionsProps) {
             />
           </div>
         </div>
-        ;
       </ChartInfo>
     </div>
   );

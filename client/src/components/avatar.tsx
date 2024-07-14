@@ -19,18 +19,21 @@ const Avatar: React.FC<AvatarProps> = ({ src, alt, width, height, name }) => {
   const initials = name ? name.charAt(0).toUpperCase() : "";
 
   return (
-    <div className="rounded-md ">
+    <div className="rounded-sm">
       {!imageError ? (
         <Image
           src={src}
           alt={alt}
-          width={40}
-          height={40}
+          width={width}
+          height={height}
           onError={handleImageError} // Handle image load error
         />
       ) : (
         <div
-          className={`w-10 h-10 rounded-md flex items-center justify-center font-semibold text-2xl text-white bg-blue-500`}
+          style={{ width: `${width}px`, height: `${height}px` }}
+          className={`rounded-sm flex items-center justify-center font-semibold ${
+            width > 36 ? "text-2xl" : width > 28 ? "text-xl" : "text-md"
+          } text-white bg-blue-500`}
         >
           {initials}
         </div>
