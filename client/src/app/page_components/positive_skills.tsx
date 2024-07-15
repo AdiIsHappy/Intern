@@ -35,7 +35,7 @@ export function PositiveSkills({
       <div className="flex w-full flex-col items-center">
         <ChartInfo
           tooltipText={GraphInfo.TOOLTIP_SKILL_SENTIMENT_ANALYSIS}
-          infoText={"hello sample text"}
+          infoText={GraphInfo.INFO_SKILL_SENTIMENT_ANALYSIS}
         >
           <SkillSentimentChart
             className="w-full"
@@ -47,7 +47,7 @@ export function PositiveSkills({
         </ChartInfo>
         <ChartInfo
           tooltipText={GraphInfo.TOOLTIP_SKILL_FREQUENCY_TIMELINE}
-          infoText={"hello sample text"}
+          infoText={GraphInfo.INFO_SKILL_FREQUENCY_TIMELINE}
         >
           <SkillsFrequencyTimeline
             className="w-full"

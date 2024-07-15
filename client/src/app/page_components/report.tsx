@@ -7,7 +7,6 @@ import { NegativeSkills } from "./negative_skills";
 import { OtherComparisions } from "./other_comparisions";
 import { generateSummary } from "@/lib/utils/generate_summary";
 import useWindowSize from "@/lib/hooks/use_windows_size";
-import Skeleton from "react-loading-skeleton";
 import SectionContainer from "@/components/section";
 import { Quality } from "./merge_request_assesment";
 import LinkedText from "@/components/linked_text";

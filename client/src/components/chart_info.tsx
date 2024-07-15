@@ -25,8 +25,8 @@ const ChartInfo: React.FC<ChartInfoProps> = ({
       <div className="w-full min-h-96">{children}</div>
       {infoText ? (
         <div className="flex  mt-4 text-sm items-center w-full px-8 py-2 bg-yellow-100 rounded-md text-yellow-600">
-          <InfoIcon className="w-4 h-4 mr-4" />
-          {infoText}
+          <InfoIcon width={16} height={16} className="mr-4" />
+          <span className="flex-1">{infoText}</span>
         </div>
       ) : null}
     </div>

@@ -1,12 +1,11 @@
 "use client";
-import { useEffect, useState } from "react";
-import Dropdown from "@/components/dropdown";
+import React, { useEffect, useState } from "react";
 import Skeleton from "react-loading-skeleton";
+import Dropdown from "@/components/dropdown";
 import { Navbar } from "@/app/page_components/navbar";
 import { Report } from "@/app/page_components/report";
 import { getReport } from "@/lib/db/db";
 import { TimePeriod, userReport, User } from "@/lib/types/core.types";
-
 import { getAllUsersUnderUsername, getUserByUsername } from "@/lib/db/pg";
 import { ReportSkeleton } from "@/components/report_skeleton";
 
@@ -19,6 +18,7 @@ export default function MergeRequestAssessment() {
   const [data, setData] = useState<userReport | null>(null);
   const [teamMembers, setTeamMembers] = useState<User[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
+
   const periodDropdownOptions: { value: TimePeriod; label: string }[] = [
     { value: "month", label: "last 4 months" },
     { value: "week", label: "last 6 weeks" },
@@ -26,45 +26,43 @@ export default function MergeRequestAssessment() {
   ];
 
   useEffect(() => {
-    if (authenticatedUser === null) {
-      setLoading(true);
-      getUserByUsername(authenticatedUsername)
-        .then((result) => {
-          setAuthenticatedUser(result);
-          getAllUsersUnderUsername(authenticatedUsername)
-            .then((result) => {
-              setTeamMembers(result);
-              setSelectedUser(result[0].username);
-              setLoading(false);
-              return;
-            })
-            .catch((e) => {
-              console.error(e);
-              setLoading(false);
-              return;
-            });
-        })
-        .catch((e) => {
-          console.error(e);
-          setLoading(false);
-          return;
-        });
-    }
+    const fetchAuthenticatedUserData = async () => {
+      try {
+        setLoading(true);
+        const user = await getUserByUsername(authenticatedUsername);
+        setAuthenticatedUser(user);
+        const members = await getAllUsersUnderUsername(authenticatedUsername);
+        setTeamMembers(members);
+        setSelectedUser(members[0].username);
+        setLoading(false);
+      } catch (error) {
+        console.error(error);
+        setLoading(false);
+      }
+    };
+
+    fetchAuthenticatedUserData();
+  }, []);
+
+  useEffect(() => {
     if (selectedUser === null) {
       setData(null);
       return;
     }
-    setLoading(true);
-    getReport(selectedUser, period)
-      .then((result) => {
+    const fetchReportData = async () => {
+      try {
+        setLoading(true);
+        const result = await getReport(selectedUser, period);
         setData(result);
         setLoading(false);
-      })
-      .catch((e) => {
-        console.error(e);
+      } catch (error) {
+        console.error(error);
         setLoading(false);
-      });
-  }, [selectedUser, period, authenticatedUser]);
+      }
+    };
+
+    fetchReportData();
+  }, [selectedUser, period]);
 
   return (
     <main className="pt-24 flex flex-col justify-center items-center">
@@ -91,6 +89,7 @@ export default function MergeRequestAssessment() {
           <Skeleton height={40} width={40} className="mx-4" />
         </div>
       )}
+
       {loading ? (
         <Skeleton containerClassName="flex-1 mx-8 my-2 w-1/4" height={40} />
       ) : (
@@ -105,11 +104,7 @@ export default function MergeRequestAssessment() {
         )
       )}
 
-      {!data ? (
-        <ReportSkeleton />
-      ) : (
-        data && <Report data={data} period={period} />
-      )}
+      {!data ? <ReportSkeleton /> : <Report data={data} period={period} />}
     </main>
   );
 }

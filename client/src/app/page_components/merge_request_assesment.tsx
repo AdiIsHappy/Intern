@@ -14,7 +14,7 @@ export function Quality({ data, period }: QualityProps) {
     <div className="w-full flex flex-row">
       <ChartInfo
         tooltipText={GraphInfo.TOOLTIP_PR_QUALITY_TIMELINE}
-        infoText="Quality"
+        infoText={GraphInfo.INFO_PR_QUALITY_TIMELINE}
       >
         <PRQualityTimeline
           className="w-full"
@@ -24,7 +24,7 @@ export function Quality({ data, period }: QualityProps) {
       </ChartInfo>
       <ChartInfo
         tooltipText={GraphInfo.TOOLTIP_TEST_ADDED_RATIO}
-        infoText="test case ratio"
+        infoText={GraphInfo.INFO_TEST_ADDED_RATIO}
       >
         <TestCaseRatioChart
           className="w-full"

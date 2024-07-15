@@ -15,7 +15,7 @@ export function OtherComparisions({ data, period }: OtherComparisionsProps) {
     <div className="w-full flex flex-row">
       <ChartInfo
         tooltipText={GraphInfo.TOOLTIP_PR_IMPACT_TIMELINE}
-        infoText="Impact"
+        infoText={GraphInfo.INFO_PR_IMPACT_TIMELINE}
         className="flex-1 h-max"
       >
         <PRImpactTimeline
@@ -26,7 +26,7 @@ export function OtherComparisions({ data, period }: OtherComparisionsProps) {
       </ChartInfo>
       <ChartInfo
         tooltipText={GraphInfo.TOOLTIP_COMMENT_SENTIMENT}
-        infoText="comment sentiment"
+        infoText={GraphInfo.INFO_COMMENT_SENTIMENT}
         className="flex-1 h-min"
       >
         <div className="flex">
