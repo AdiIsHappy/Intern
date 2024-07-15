@@ -55,3 +55,39 @@ export interface AnalysedNote {
   mergeRequestId?: string;
   summary: string;
 }
+
+export interface Report {
+  insights: Insight[];
+  actions: Action[];
+  positiveSkills: TiveSkill[];
+  negativeSkills: TiveSkill[];
+}
+
+export interface Action {
+  text: string;
+  references: Refs[];
+}
+
+export interface Insight {
+  text: string;
+  ids: string[];
+}
+
+export interface Refs {
+  title: string;
+  url: string;
+  skill: string;
+  description: string;
+}
+
+export interface PositiveSkill extends TiveSkill {}
+export interface NegativeSkill extends TiveSkill {
+  references: Refs[];
+}
+
+export interface TiveSkill {
+  skill: string;
+  frequency: { [key: string]: number };
+  sentimentFrequency: { [key: string]: Record<Sentiment, number> };
+  insights: Insight[];
+}

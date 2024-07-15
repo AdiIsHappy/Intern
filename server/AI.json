@@ -1,0 +1,60 @@
+{
+  "usageMetadata": {
+    "promptTokenCount": 6804,
+    "candidatesTokenCount": 386,
+    "totalTokenCount": 7190
+  },
+  "candidates": [
+    {
+      "index": 0,
+      "content": {
+        "role": "model",
+        "parts": [
+          {
+            "text": "{\"a\": [{\"t\": \"You should focus on writing clear and concise **merge request descriptions**.\", \"refs\": [{\"te\": \"Merge Request Guide\", \"url\": \"https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html\", \"s\": \"Merge Request\", \"de\": \"Official guide on creating merge requests.\"}]}, {\"t\": \"Learn about best practices for writing **code comments**.\", \"refs\": [{\"te\": \"Code Commenting Guide\", \"url\": \"https://www.codecademy.com/articles/how-to-comment-code\", \"s\": \"Code Comments\", \"de\": \"Guide on writing effective code comments.\"}]}, {\"t\": \"Improve your understanding of **compiler-specific behavior**.\", \"refs\": [{\"te\": \"Compiler Explorer\", \"url\": \"https://godbolt.org/\", \"s\": \"Compiler Explorer\", \"de\": \"Online tool for exploring compiler optimizations.\"}]}, {\"t\": \"Learn about **floating-point arithmetic** and its nuances.\", \"refs\": [{\"te\": \"What Every Computer Scientist Should Know About Floating-Point Arithmetic\", \"url\": \"https://docs.oracle.com/cd/E19957-01/806-3568/6j5y8wzk7/index.html\", \"s\": \"Floating-Point Arithmetic\", \"de\": \"Classic paper on floating-point arithmetic.\"}]}, {\"t\": \"Focus on writing **comprehensive tests** for your code changes.\", \"refs\": [{\"te\": \"Testing in GitLab\", \"url\": \"https://docs.gitlab.com/ee/ci/testing/\", \"s\": \"Testing in GitLab\", \"de\": \"GitLab documentation on testing.\"}]}]}"
+          }
+        ]
+      },
+      "safetyRatings": [
+        {
+          "category": "HARM_CATEGORY_HATE_SPEECH",
+          "probability": "NEGLIGIBLE",
+          "probabilityScore": 0.34875605,
+          "severity": "HARM_SEVERITY_NEGLIGIBLE",
+          "severityScore": 0.109324835
+        },
+        {
+          "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
+          "probability": "NEGLIGIBLE",
+          "probabilityScore": 0.22236224,
+          "severity": "HARM_SEVERITY_NEGLIGIBLE",
+          "severityScore": 0.1625129
+        },
+        {
+          "category": "HARM_CATEGORY_HARASSMENT",
+          "probability": "NEGLIGIBLE",
+          "probabilityScore": 0.19620942,
+          "severity": "HARM_SEVERITY_NEGLIGIBLE",
+          "severityScore": 0.17147702
+        },
+        {
+          "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+          "probability": "NEGLIGIBLE",
+          "probabilityScore": 0.03358951,
+          "severity": "HARM_SEVERITY_NEGLIGIBLE",
+          "severityScore": 0.04115289
+        }
+      ],
+      "citationMetadata": {
+        "citations": [
+          {
+            "startIndex": 864,
+            "endIndex": 992,
+            "uri": "https://github.com/Noe-J-Nava/BDA_course_Aalto"
+          }
+        ]
+      },
+      "finishReason": "STOP"
+    }
+  ]
+}

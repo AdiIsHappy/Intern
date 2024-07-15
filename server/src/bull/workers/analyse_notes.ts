@@ -1,14 +1,18 @@
-import { SystemPrompts } from "../../api/vertex/prompts";
 import { sendAiPrompt } from "../../api/vertex/vertex";
 import { addNotesToAnalysisDB, getUserDataDB } from "../../services/db/db";
 import { QueueData, QueueTypes } from "../../types/bull.types";
-import { AnalysedNote, TimePeriod } from "../../types/core.types";
+import { AnalysedNote } from "../../types/core.types";
 import { VERTNoteBody, VERTNoteForAnalysis } from "../../types/vertex.types";
 import { queue } from "../queue";
+import prompts from "../../api/vertex/prompts.json";
 
 export async function analyseNotesAsync(username: string, noteIds: string[]) {
+  console.clear();
+  console.group("Analyzing Notes", username, noteIds);
   // get notes for analysis
   // :STORAGE
+
+  console.log("Getting notes for analysis");
   const userData = getUserDataDB(username);
   if (userData === null) {
     return;
@@ -38,11 +42,12 @@ export async function analyseNotesAsync(username: string, noteIds: string[]) {
     body: note.body,
   }));
 
+  console.log("Formalizing notes");
   // formalize notes
   try {
-    const formalComments = await sendAiPrompt<VERTNoteBody[], VERTNoteBody[]>(
+    const formalComments: VERTNoteBody[] = await sendAiPrompt(
       notesBody,
-      SystemPrompts.NOTE_FORMAL
+      prompts.analysis.formal
     );
 
     formalComments.forEach((comment) => {
@@ -65,6 +70,8 @@ export async function analyseNotesAsync(username: string, noteIds: string[]) {
     return;
   }
 
+  console.log("Analysing notes");
+
   // analyse notes
   let analysedNotes: AnalysedNote[] = [];
   try {
@@ -75,9 +82,9 @@ export async function analyseNotesAsync(username: string, noteIds: string[]) {
       mergeRequest: note.mergeRequest,
     }));
 
-    analysedNotes = await sendAiPrompt<AnalysedNote[], VERTNoteForAnalysis[]>(
+    analysedNotes = await sendAiPrompt(
       notesForAnalysis,
-      SystemPrompts.NOTE_ANALYSIS
+      prompts.analysis.comment
     );
 
     analysedNotes.forEach((analysedNote) => {
@@ -104,6 +111,8 @@ export async function analyseNotesAsync(username: string, noteIds: string[]) {
     return;
   }
 
+  console.log("Analysis complete");
+  console.groupEnd();
   // Update notes in storage
   // :STORAGE
   addNotesToAnalysisDB(username, analysedNotes);

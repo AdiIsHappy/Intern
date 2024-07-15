@@ -23,6 +23,7 @@ const logQueueState = async () => {
   }
 };
 
+
 // Log the queue state every minute
 setInterval(logQueueState, 3000);
 

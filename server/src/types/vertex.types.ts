@@ -29,39 +29,41 @@ export interface VERTMergeRequestForAnalysis {
 
 
 export interface ReportVert {
-  insights: Insight[];
-  actions: Action[];
-  positiveSkills: TiveSkill[];
-  negativeSkills: TiveSkill[];
+  i: InsightVert[];
+  a: ActionVert[];
+  ps: PositiveSkillVert[];
+  ns: NegativeSkillVert[];
 }
 
-interface Action {
-  text: string;
-  references: Reference[];
+export interface ActionVert {
+  t: string;
+  refs: ReferenceVert[];
 }
 
-export interface Reference {
-  title: string;
+export interface ReferenceVert {
+  te: string;
   url: string;
-  skill: string;
-  description: string;
+  s: string;
+  de: string;
 }
 
-interface Insight {
-  text: string;
+export interface InsightVert {
+  t: string;
   ids: string[];
 }
-
-interface TiveSkill {
-  skill: string;
-  frequency: { [key: string]: number };
-  sentimentFrequency: { [key: string]: SentimentFrequency };
-  insights: Insight[];
-  references?: Reference[];
+export interface NegativeSkillVert extends TiveSkillVert {
+  refs: ReferenceVert[];
+}
+export interface PositiveSkillVert extends TiveSkillVert {}
+export interface TiveSkillVert {
+  s: string;
+  f: { [key: string]: number };
+  sf: { [key: string]: SentimentFrequency };
+  i: InsightVert[];
 }
 
-interface SentimentFrequency {
-  Positive: number;
-  Negative: number;
-  Neutral: number;
+export interface SentimentFrequency {
+  p: number;
+  n: number;
+  ne: number;
 }

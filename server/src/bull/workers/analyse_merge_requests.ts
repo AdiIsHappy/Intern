@@ -1,24 +1,26 @@
-import { SystemPrompts } from "../../api/vertex/prompts";
 import { sendAiPrompt } from "../../api/vertex/vertex";
 import {
   addMergeRequestsToAnalysisDB,
   getUserDataDB,
 } from "../../services/db/db";
 import { QueueData, QueueTypes } from "../../types/bull.types";
-import { AnalysedMergeRequest, TimePeriod } from "../../types/core.types";
+import { AnalysedMergeRequest } from "../../types/core.types";
 import { VERTMergeRequestForAnalysis } from "../../types/vertex.types";
 import { queue } from "../queue";
+import prompts from "../../api/vertex/prompts.json";
 
 export async function analyseMergeRequestsAsync(
   username: string,
   mergeRequestIds: string[]
 ) {
+  console.clear();
+  console.group("Analyzing Merge Requests", username, mergeRequestIds);
   // ger merge requests for analysis
   const userData = getUserDataDB(username);
   if (userData === null) {
     return;
   }
-
+  console.log("Getting merge requests for analysis");
   const mergeRequests: VERTMergeRequestForAnalysis[] =
     userData.authoredMergeRequests.nodes
       .filter((mr) => mergeRequestIds.includes(mr.id))
@@ -36,11 +38,12 @@ export async function analyseMergeRequestsAsync(
   // do analysis
   let analysedMergeRequest: AnalysedMergeRequest[] = [];
 
+  console.log("Analysing merge requests");
   try {
-    analysedMergeRequest = await sendAiPrompt<
-      AnalysedMergeRequest[],
-      VERTMergeRequestForAnalysis[]
-    >(mergeRequests, SystemPrompts.MERGE_REQUEST_ANALYSIS);
+    analysedMergeRequest = await sendAiPrompt(
+      mergeRequests,
+      prompts.analysis.mergeRequest
+    );
 
     analysedMergeRequest.forEach((mr) => {
       mr.createdAt = userData.authoredMergeRequests.nodes.find(
@@ -63,6 +66,8 @@ export async function analyseMergeRequestsAsync(
     await queue.add(task);
     return;
   }
+  console.log("analysis complete");
+  console.groupEnd();
 
   // Updates merege requests in storage
   // :STORAGE

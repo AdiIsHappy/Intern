@@ -1,6 +1,7 @@
 import {
   AnalysedMergeRequest,
   AnalysedNote,
+  Report,
   ReportStatus,
   TimePeriod,
   UserReport,
@@ -141,7 +142,7 @@ export function updateStatusDB(username: string, status: ReportStatus) {
 export function storeInsightsDB(
   username: string,
   period: TimePeriod,
-  insights: ReportVert
+  insights: Report
 ) {
   const filePath = getStoragePathDB("Report", username);
   if (!fileExist(filePath)) {
