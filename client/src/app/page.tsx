@@ -64,7 +64,8 @@ export default function MergeRequestAssessment() {
             label: periodLabels[p as TimePeriod],
           }))
         );
-        setPeriod(availablePeriods[0] as TimePeriod);
+        
+        if (period === null) setPeriod(availablePeriods[0] as TimePeriod);
         if (period === null) return;
         const result = await getReport(selectedUser, period);
         setData(result);
