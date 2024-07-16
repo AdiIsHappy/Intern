@@ -29,6 +29,13 @@ export async function getReport(
   return report.report[period] as userReport;
 }
 
+export async function getAvailablePeriods(username: string): Promise<string[]> {
+  const url = await getReportDownloadURL(username);
+  if (!url) return [];
+  const report = await fetch(url).then((res) => res.json());
+  const periods = Object.keys(report.report);
+  return periods;
+}
 
 // export async function getAvailableReportsList(): Promise<string[]> {
 //   // if (process.env.NODE_ENV === "development") {
