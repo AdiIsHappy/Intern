@@ -22,12 +22,12 @@ export function Report({ data, period }: ReportProps) {
 
   return (
     <div className="px-24 w-full items-center scroll-auto flex flex-col pb-16">
-      <div className="my-1 w-full bg-white p-2 rounded-lg flex flex-row justify-evenly">
+      {/* <div className="my-1 w-full bg-white p-2 rounded-lg flex flex-row justify-evenly">
         <span>
           <strong>Name:</strong>
           {``}{" "}
         </span>
-      </div>
+      </div> */}
       <div className="flex flex-col lg:flex-row w-full my-1">
         <SectionContainer title="Summary" className="flex-1 mr-1">
           <ol className="list-decimal list-inside">
