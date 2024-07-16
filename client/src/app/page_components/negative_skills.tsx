@@ -9,24 +9,29 @@ import linkIcon from "@/../public/link.svg";
 import { GraphInfo } from "@/lib/constants/graph_info";
 import ChartInfo from "@/components/chart_info";
 import LinkedText from "@/components/linked_text";
-export interface negativeSkillsProp {
+import { ReferenceCard } from "@/components/cards/reference_card";
+
+export interface NegativeSkillsProp {
   data: userReport;
   period: TimePeriod;
 }
-export function NegativeSkills({ data, period }: negativeSkillsProp) {
+
+export function NegativeSkills({ data, period }: NegativeSkillsProp) {
   const skillsDropdownOptions: { label: string; value: string }[] =
     data.negativeSkills.map((skill) => ({
       value: skill.skill,
       label: skill.skill,
     }));
+
+  const [skill, setSkill] = useState(skillsDropdownOptions.at(0)?.value || "");
+
   useEffect(() => {
-    setSkill(skillsDropdownOptions.at(0)?.label || "");
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    setSkill(skillsDropdownOptions.at(0)?.value || "");
   }, [data]);
-  const [skill, setSkill] = useState("");
 
   if (skillsDropdownOptions.length === 0)
-    return <div>Positive Skill data not availale</div>;
+    return <div>Negative Skill data not available</div>;
+
   return (
     <div className="w-full">
       <div className="flex w-full flex-col items-center">
@@ -60,9 +65,9 @@ export function NegativeSkills({ data, period }: negativeSkillsProp) {
         <div className="flex-1 mx-2">
           <Dropdown
             onChange={(val: string) => setSkill(val)}
-            className="w-full md:w-1/2 "
+            className="w-full md:w-1/2"
             options={skillsDropdownOptions}
-            defaultValue={skillsDropdownOptions.at(0)?.value || ""}
+            defaultValue={skill} // Ensure the current value is correctly reflected
             label="Skill"
           />
           <ol className="list-inside list-decimal px-2 py-4 flex-1">
@@ -78,32 +83,15 @@ export function NegativeSkills({ data, period }: negativeSkillsProp) {
       </div>
       <div className="w-full my-8 bg-gray-100 p-4 rounded-md min-h-48">
         <div className="flex-1 mx-2">
-          <h3 className=" font-semibold text-lg">Refrences</h3>
-          <div className="flex flex-col max-h-64 scroll-m-11 overflow-auto">
+          <h3 className="font-semibold text-lg">References</h3>
+          <div className="flex flex-row max-h-64 scroll-m-11 overflow-auto">
             {data.negativeSkills
               .find((e) => e.skill === skill)
-              ?.references?.map((ref, index) => {
-                return (
-                  <div className="my-2" key={index}>
-                    <Link href={ref.url} target="_blank">
-                      <div className="flex flex-row min-h-20 bg-white rounded-md p-2 shadow-sm hover:shadow-md duration-100">
-                        <div className="flex-1">
-                          <h4 className="font-semibold">{ref.title}</h4>
-                          <p className="text-sm w-auto">{ref.description}</p>
-                        </div>
-                        <div className="w-16 items-center m-auto">
-                          <Image
-                            width={36}
-                            height={36}
-                            src={linkIcon}
-                            alt="link"
-                          />
-                        </div>
-                      </div>
-                    </Link>
-                  </div>
-                );
-              })}
+              ?.references?.map((ref, index) => (
+                <div className="my-2" key={index}>
+                  <ReferenceCard reference={ref} />
+                </div>
+              ))}
           </div>
         </div>
       </div>

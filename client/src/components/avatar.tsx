@@ -33,7 +33,7 @@ const Avatar: React.FC<AvatarProps> = ({ src, alt, width, height, name }) => {
           style={{ width: `${width}px`, height: `${height}px` }}
           className={`rounded-sm flex items-center justify-center font-semibold ${
             width > 36 ? "text-2xl" : width > 28 ? "text-xl" : "text-md"
-          } text-white bg-blue-500`}
+          } text-white bg-purple-500`}
         >
           {initials}
         </div>

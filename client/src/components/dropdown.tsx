@@ -55,7 +55,7 @@ export default function Dropdown({
       <button
         id="dropdownDefaultButton"
         onClick={toggleDropdown}
-        className="text-black bg-white border-gray-300 border-2 focus:ring-2 hover:bg-gray-100 focus:outline-none font-medium rounded-lg text-sm px-2 py-2 pt-3 min-w-48 text-center justify-between inline-flex items-center"
+        className="text-black bg-white border-gray-300 border-2 focus:ring-2 focus:ring-[#9DAAF2] hover:bg-gray-100 focus:outline-none font-medium rounded-lg text-sm px-2 py-2 pt-3 min-w-48 text-center justify-between inline-flex items-center"
         type="button"
       >
         {options.find((option) => option.value === selectedValue)?.label}

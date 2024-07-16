@@ -1,6 +1,6 @@
 // components/CustomTextParser.tsx
 import Link from "next/link";
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 interface LinkedTextProps {
   text: string;
@@ -9,33 +9,40 @@ interface LinkedTextProps {
 }
 
 const LinkedText: React.FC<LinkedTextProps> = ({ text, urls, className }) => {
-  const [hovering, setHovering] = useState(false);
-  const [hoverPosition, setHoverPosition] = useState({ top: 0, left: 0 });
+  const [showingPopup, setShowingPopup] = useState(false);
+  const [popupPosition, setPopupPosition] = useState({ top: 0, left: 0 });
   const hideTimeout = useRef<number | null>(null);
+  const popupRef = useRef<HTMLDivElement | null>(null);
 
-  const handleMouseEnter = (
+  const handleClick = (
     event: React.MouseEvent<HTMLSpanElement, MouseEvent>
   ) => {
     if (urls && urls.length > 0) {
-      if (hideTimeout.current) {
-        clearTimeout(hideTimeout.current);
-        hideTimeout.current = null;
-      }
       const rect = event.currentTarget.getBoundingClientRect();
-      setHoverPosition({
+      setPopupPosition({
         top: window.scrollY + rect.bottom + 2, // Adjusted for a small offset
         left: window.scrollX + rect.left + 50,
       });
-      setHovering(true);
+      setShowingPopup(true);
     }
   };
 
   const handleMouseLeave = () => {
     if (urls && urls.length > 0) {
       hideTimeout.current = window.setTimeout(() => {
-        setHovering(false);
+        setShowingPopup(false);
       }, 100); // Delay before hiding popup
     }
+  };
+
+  const handleOutsideClick = (event: MouseEvent) => {
+    if (popupRef.current && !popupRef.current.contains(event.target as Node)) {
+      setShowingPopup(false);
+    }
+  };
+
+  const handleScroll = () => {
+    setShowingPopup(false);
   };
 
   const handlePopupMouseEnter = () => {
@@ -46,8 +53,25 @@ const LinkedText: React.FC<LinkedTextProps> = ({ text, urls, className }) => {
   };
 
   const handlePopupMouseLeave = () => {
-    setHovering(false);
+    hideTimeout.current = window.setTimeout(() => {
+      setShowingPopup(false);
+    }, 1000);
   };
+
+  useEffect(() => {
+    if (showingPopup) {
+      document.addEventListener("mousedown", handleOutsideClick);
+      window.addEventListener("scroll", handleScroll);
+    } else {
+      document.removeEventListener("mousedown", handleOutsideClick);
+      window.removeEventListener("scroll", handleScroll);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [showingPopup]);
 
   const parseText = (text: string) => {
     const regex = /\*\*(.*?)\*\*/g;
@@ -67,29 +91,32 @@ const LinkedText: React.FC<LinkedTextProps> = ({ text, urls, className }) => {
   return (
     <span
       className={`${
-        urls && urls.length > 0 ? "hover:underline hover:decoration-dotted" : ""
+        urls && urls.length > 0
+          ? "cursor-pointer hover:underline hover:decoration-dotted"
+          : ""
       } text-md my-2`}
       onMouseLeave={handleMouseLeave}
     >
-      <span onMouseEnter={handleMouseEnter}>{parseText(text)}</span>
-      {hovering && (
+      <span onClick={handleClick}>{parseText(text)}</span>
+      {showingPopup && (
         <div
+          ref={popupRef}
           className="absolute bg-white border border-gray-300 rounded-md shadow-lg p-2 z-50"
           style={{
-            top: `${hoverPosition.top}px`,
-            left: `${hoverPosition.left}px`,
+            top: `${popupPosition.top}px`,
+            left: `${popupPosition.left}px`,
           }}
           onMouseEnter={handlePopupMouseEnter}
           onMouseLeave={handlePopupMouseLeave}
         >
-          <ul>
+          <ul className="max-h-32 overflow-auto">
             {urls?.map((url, index) => (
               <li key={index} className="mb-1">
                 <Link
                   href={url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-500 hover:underline"
+                  className="text-[#3954ef] hover:underline text-sm"
                 >
                   {url}
                 </Link>

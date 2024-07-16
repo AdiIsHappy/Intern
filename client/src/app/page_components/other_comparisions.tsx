@@ -34,7 +34,7 @@ export function OtherComparisions({ data, period }: OtherComparisionsProps) {
             <SentimentPieChart
               className="w-full my-4"
               data={data.commentsSentiments}
-              title="Comments Sentiments"
+              title="Reviewers Sentiments"
             />
           </div>
           <div className="flex-1 h-max w-max">

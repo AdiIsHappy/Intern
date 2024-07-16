@@ -19,11 +19,10 @@ export function PositiveSkills({
       value: skill.skill,
       label: skill.skill,
     }));
-  const [skill, setSkill] = useState("");
+  const [skill, setSkill] = useState(skillsDropdownOptions.at(0)?.value || "");
 
   useEffect(() => {
-    setSkill(skillsDropdownOptions.at(0)?.label || "");
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    setSkill(skillsDropdownOptions.at(0)?.value || "");
   }, [data]);
 
   if (skillsDropdownOptions.length === 0) {
@@ -65,7 +64,7 @@ export function PositiveSkills({
           onChange={(val: string) => setSkill(val)}
           className="w-full md:w-1/2 lg:w-1/4"
           options={skillsDropdownOptions}
-          defaultValue={skillsDropdownOptions.at(0)?.value || ""}
+          defaultValue={skill} // Ensure the current value is correctly reflected
         />
         <ol className="list-inside list-decimal px-2 py-4">
           {data.positiveSkills

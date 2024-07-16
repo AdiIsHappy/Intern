@@ -13,7 +13,7 @@ const toolTip_prImpactTimeline =
 const toolTip_testAddedRatio = "";
 
 const toolTip_commentSentiment =
-  "**Comment Sentiment:** The sentiment of comments on your PRs.\n**User Response Sentiment:** The sentiment of your responses to comments.";
+  "**Reviewers Sentiment:** The sentiment of comments on your PRs.\n**User Response Sentiment:** The sentiment of your responses to comments.";
 
   const info_skillSentimentAnalysis =
     "This graph displays sentiment analysis of skills in your PRs, showing the frequency of each skill mentioned based on PR details, comments, and reviews.";

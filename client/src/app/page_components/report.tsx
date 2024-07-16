@@ -10,6 +10,7 @@ import useWindowSize from "@/lib/hooks/use_windows_size";
 import SectionContainer from "@/components/section";
 import { Quality } from "./merge_request_assesment";
 import LinkedText from "@/components/linked_text";
+import { ActionCard } from "@/components/cards/action_card";
 
 export interface ReportProps {
   data: userReport;
@@ -22,15 +23,9 @@ export function Report({ data, period }: ReportProps) {
 
   return (
     <div className="px-24 w-full items-center scroll-auto flex flex-col pb-16">
-      {/* <div className="my-1 w-full bg-white p-2 rounded-lg flex flex-row justify-evenly">
-        <span>
-          <strong>Name:</strong>
-          {``}{" "}
-        </span>
-      </div> */}
-      <div className="flex flex-col lg:flex-row w-full my-1">
-        <SectionContainer title="Summary" className="flex-1 mr-1">
-          <ol className="list-decimal list-inside">
+      <div className="flex flex-col lg:flex-row w-full my-2">
+        <SectionContainer title="Summary" className="flex-1 mr-2">
+          <ol className="list-decimal list-inside max-h-96 scroll-smooth overflow-auto">
             {summary.map((element, index) => (
               <li className="list-item text-md m-2" key={index}>
                 <LinkedText text={element} />
@@ -38,8 +33,8 @@ export function Report({ data, period }: ReportProps) {
             ))}
           </ol>
         </SectionContainer>
-        <SectionContainer title="Insights" className="flex-1 mx-1">
-          <ol className="p-2 list-decimal list-inside">
+        <SectionContainer title="Insights" className="flex-1 mx-2">
+          <ol className="p-2 list-decimal list-inside max-h-96 scroll-smooth overflow-auto">
             {data.insights.map((element, index) => (
               <li className="list-item text-md m-2" key={index}>
                 <LinkedText text={element.text} urls={element.ids} />
@@ -47,34 +42,34 @@ export function Report({ data, period }: ReportProps) {
             ))}
           </ol>
         </SectionContainer>
-        <SectionContainer title="Focus Area" className="flex-1 ml-1">
-          <ol className="p-2 list-decimal list-inside">
+        <SectionContainer title="Focus Area" className="flex-1 ml-2 h-auto">
+          <ol className="p-2 max-h-96 scroll-smooth overflow-auto">
             {data.actions.map((element, index) => (
-              <li className="list-item text-md m-2" key={index}>
-                <LinkedText
+              <li className="text-md m-2" key={index}>
+                <ActionCard
                   text={element.text}
-                  urls={element.references.map((ref) => ref.url)}
+                  references={element.references}
                 />
               </li>
             ))}
           </ol>
         </SectionContainer>
       </div>
-      <div className="flex flex-row w-full my-1">
-        <SectionContainer title="Positive Skills" className="flex-1 mr-1">
+      <div className="flex flex-row w-full my-2">
+        <SectionContainer title="Positive Skills" className="flex-1 mr-2">
           <PositiveSkills period={period} data={data} />
         </SectionContainer>
-        <SectionContainer title="Negative Skills" className="flex-1 ml-1">
+        <SectionContainer title="Negative Skills" className="flex-1 ml-2">
           <NegativeSkills period={period} data={data} />
         </SectionContainer>
       </div>
       <SectionContainer
         title="Merge Requests Assessment"
-        className="w-full my-1"
+        className="w-full my-2"
       >
         <Quality period={period} data={data} />
       </SectionContainer>
-      <SectionContainer title="Other Comparisions" className="w-full my-1">
+      <SectionContainer title="Other Comparisions" className="w-full my-2">
         <OtherComparisions period={period} data={data} />
       </SectionContainer>
     </div>

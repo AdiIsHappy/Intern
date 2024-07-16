@@ -55,12 +55,11 @@ export function Navbar(props: NavbarProps) {
 
   return (
     <div className={`w-full ${className}`}>
-      <div className="w-full bg-gray-100 justify-between flex max-w-9xl px-8 py-1 items-center">
-        {name ? (
-          <p className="font-medium text-xl text-gray-900">{name}</p>
-        ) : (
-          <Skeleton height={20} width={80} />
-        )}
+      <div className="w-full bg-[#1A2238] shadow-md  justify-between flex max-w-9xl px-8 py-2 items-center">
+        <p className="font-medium text-xl text-white">
+          <strong>MergeAI</strong> Insights
+        </p>
+
         {name ? (
           <button
             onClick={toggleDropdown}
@@ -83,7 +82,7 @@ export function Navbar(props: NavbarProps) {
       {dropdownOpen && (
         <div
           ref={dropdownRef}
-          className="absolute right-8 top-14 z-10 bg-white rounded-lg shadow-lg border-2 border-gray-200 min-w-64"
+          className="absolute right-8 top-16 z-10 bg-white rounded-lg drop-shadow-lg border-2 border-gray-200 min-w-64"
         >
           <UserMenu
             name={name}
@@ -156,7 +155,7 @@ function UserMenu({
                     key={member.username}
                     className={`block px-4 py-2 w-full ${
                       activeUser && activeUser === member.username
-                        ? "bg-green-100 hover:bg-green-200"
+                        ? "bg-[#bdc4ed] hover:bg-[#b4bef5]"
                         : "hover:bg-gray-200"
                     }`}
                   >

@@ -80,7 +80,7 @@ export default function MergeRequestAssessment() {
   }, [selectedUser, period]);
 
   return (
-    <main className="pt-24 flex flex-col justify-center items-center">
+    <main className=" pt-14 flex flex-col justify-center items-center">
       {authenticatedUser ? (
         <Navbar
           onUserSelect={(user: string) => {
@@ -97,11 +97,11 @@ export default function MergeRequestAssessment() {
             username: member.username,
             avatarUrl: member.profile_pic_url,
           }))}
-          className="fixed top-12 left-0 right-0 z-50 bg-white shadow-md"
+          className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md "
           activeUser={selectedUser}
         />
       ) : (
-        <div className="fixed top-12 left-0 right-0 z-50 bg-white shadow-md flex items-center justify-between px-4 py-1">
+        <div className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md  flex items-center justify-between px-4 py-1">
           <Skeleton height={30} width={160} className="mx-4" />
           <Skeleton height={40} width={40} className="mx-4" />
         </div>
