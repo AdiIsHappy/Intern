@@ -23,6 +23,8 @@ const logQueueState = async () => {
   }
 };
 
+// queue.getJobs(["failed", "completed"]).then((jobs) => {console.log(jobs)});
+
 
 // Log the queue state every minute
 setInterval(logQueueState, 3000);

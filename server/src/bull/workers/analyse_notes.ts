@@ -7,8 +7,8 @@ import { queue } from "../queue";
 import prompts from "../../api/vertex/prompts.json";
 
 export async function analyseNotesAsync(username: string, noteIds: string[]) {
-  console.clear();
-  console.group("Analyzing Notes", username, noteIds);
+  
+  console.log("Analyzing Notes", username, noteIds);
   // get notes for analysis
   // :STORAGE
 

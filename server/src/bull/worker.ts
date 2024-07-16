@@ -57,25 +57,8 @@ queue.on("completed", async (job) => {
         };
         await queue.add(task);
       }
-    } else if (job.data.type === QueueTypes.GENERATE_INSIGHTS) {
-      const report = getUserReportDB(job.data.data.username);
-      if (report) {
-        const response = await uploadUserDataToBlob(
-          job.data.data.username,
-          report
-        );
-        const userData = getUserDataDB(job.data.data.username);
-        const userInfo: User = {
-          managerUsername: null,
-          name: userData?.name || "",
-          profilePicUrl: userData?.avatarUrl || "",
-          reportUrl: response.url,
-          username: userData?.username || "",
-          webUrl: userData?.webUrl || "",
-        };
-        await upsertUser(userInfo);
-      }
+    } else if (job.data.type === QueueTypes.GENERATE_INSIGHTS){
+      console.log(`Insights generated for ${job.data.data.username}`);
     }
-    console.log(`Insights generated for ${job.data.data.username}`);
   }
 });

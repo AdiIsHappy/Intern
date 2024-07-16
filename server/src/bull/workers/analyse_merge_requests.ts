@@ -13,8 +13,8 @@ export async function analyseMergeRequestsAsync(
   username: string,
   mergeRequestIds: string[]
 ) {
-  console.clear();
-  console.group("Analyzing Merge Requests", username, mergeRequestIds);
+  
+  console.log("Analyzing Merge Requests", username, mergeRequestIds);
   // ger merge requests for analysis
   const userData = getUserDataDB(username);
   if (userData === null) {

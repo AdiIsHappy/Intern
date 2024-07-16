@@ -4,6 +4,7 @@ import {
   getMergeRequestAnalysisDB,
   getNotesAnalsysisDB,
   getUserDataDB,
+  getUserReportDB,
   storeInsightsDB,
   updateStatusDB,
 } from "../../services/db/db";
@@ -31,12 +32,14 @@ import {
 import prompts from "../../api/vertex/prompts.json";
 import { text } from "express";
 import { writeJsonFile } from "../../services/db/file_handling";
+import { uploadUserDataToBlob } from "../../services/vercel/blob";
+import { upsertUser } from "../../services/vercel/pg";
+import { User } from "../../types/vercel.types";
 
 // TODO: Reschduel the analysis upon failing
 
 export async function generateReport(username: string, period: TimePeriod) {
-  console.clear();
-  console.group("Generating Report", username, period);
+  console.log("Generating Report", username, period);
   console.log("Getting data for user");
   // Get analysis datas
   const startPeriodDate = getNPeriodBeforeDate(period);
@@ -53,12 +56,12 @@ export async function generateReport(username: string, period: TimePeriod) {
     return null;
   }
 
-  console.group("Generating insights");
+  console.log("Generating insights");
 
   // Get Insights from merge requests
   let mrInsights: ReportVert;
   try {
-    console.group("preparing merge requests");
+    console.log("preparing merge requests");
     console.log("Getting insights from merge requests");
     const dataToSend = {
       data: mergeRequestAnalysis.data.filter(
@@ -109,7 +112,7 @@ export async function generateReport(username: string, period: TimePeriod) {
   // Get Insights from notes
   let notesInsights: ReportVert;
   try {
-    console.group("Preparing notes");
+    console.log("Preparing notes");
     const dataToSend = {
       data: notesAnalysis.data.filter(
         (note) =>
@@ -153,22 +156,29 @@ export async function generateReport(username: string, period: TimePeriod) {
     return;
   }
 
-  console.log("Merging insights");
+  console.log("Merging");
   // Merge generated insights
   let mergedInsights: ReportVert;
   try {
+    console.log("Merging insights");
+    writeJsonFile("test.json", {
+      data: { comments: notesInsights, mergeRequest: mrInsights },
+    });
     const insights: { i: InsightVert[] } = await sendAiPrompt(
       { comments: notesInsights, mergeRequest: mrInsights },
       prompts.combine.insight
     );
+    console.log("Merging actions");
     const actions: { a: ActionVert[] } = await sendAiPrompt(
       { comments: notesInsights, mergeRequest: mrInsights },
       prompts.combine.actions
     );
+    console.log("Merging positive skills");
     const positiveSkills: { ps: PositiveSkillVert[] } = await sendAiPrompt(
       { comments: notesInsights, mergeRequest: mrInsights },
       prompts.combine.positiveSkills
     );
+    console.log("Merging negative skills");
     const negativeSkills: { ns: NegativeSkillVert[] } = await sendAiPrompt(
       { comments: notesInsights, mergeRequest: mrInsights },
       prompts.combine.negativeSkills
@@ -183,6 +193,7 @@ export async function generateReport(username: string, period: TimePeriod) {
     console.error(`Error merging insights for user ${username}:`, error);
     return;
   }
+  console.groupEnd();
 
   // Changed ReportVert to Report;
 
@@ -359,6 +370,20 @@ export async function generateReport(username: string, period: TimePeriod) {
   };
   storeInsightsDB(username, period, dataToStore);
   updateStatusDB(username, "Avaliable");
+
+  const finalReport = getUserReportDB(username);
+  if (finalReport) {
+    const response = await uploadUserDataToBlob(username, finalReport);
+    const informationDB: User = {
+      managerUsername: null,
+      name: userInfo.name || "",
+      profilePicUrl: userInfo?.avatarUrl || "",
+      reportUrl: response.url,
+      username: userInfo?.username || "",
+      webUrl: userInfo?.webUrl || "",
+    };
+    await upsertUser(informationDB);
+  }
 
   console.log("Report generated successfully");
   console.groupEnd();
