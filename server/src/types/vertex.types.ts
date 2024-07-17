@@ -65,5 +65,5 @@ export interface TiveSkillVert {
 export interface SentimentFrequency {
   p: number;
   n: number;
-  ne: number;
+  ex: number;
 }

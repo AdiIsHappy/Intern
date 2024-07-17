@@ -266,7 +266,7 @@ export async function generateReport(username: string, period: TimePeriod) {
       poisitveSF[skill.s][date] = {
         Positive: skill.sf[date].p,
         Negative: skill.sf[date].n,
-        Neutral: skill.sf[date].ne,
+        Neutral: skill.sf[date].ex,
       };
     });
   });
@@ -281,7 +281,7 @@ export async function generateReport(username: string, period: TimePeriod) {
       negativeSF[skill.s][date] = {
         Positive: skill.sf[date].p,
         Negative: skill.sf[date].n,
-        Neutral: skill.sf[date].ne,
+        Neutral: skill.sf[date].ex,
       };
     });
   });

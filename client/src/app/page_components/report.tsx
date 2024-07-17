@@ -42,8 +42,12 @@ export function Report({ data, period }: ReportProps) {
             ))}
           </ol>
         </SectionContainer>
-        <SectionContainer title="Focus Area" className="flex-1 ml-2 h-auto">
-          <ol className="p-2 max-h-96 scroll-smooth overflow-auto">
+        <SectionContainer
+          title="Focus Area"
+          className="flex-1 ml-2 h-auto"
+          childClassName="px-[0px] py-2"
+        >
+          <ol className="p-2 max-h-96 scroll-auto overflow-auto">
             {data.actions.map((element, index) => (
               <li className="text-md m-2" key={index}>
                 <ActionCard

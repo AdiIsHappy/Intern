@@ -29,14 +29,11 @@ export function ActionCard({ text, references }: ActionCardProps) {
         <p className="text-sm font-semibold mt-2">References:</p>
       )}
       {references.map((ref, index) => (
-        <Link
-          target="_blank"
-          className="ml-4 text-sm text-[#4f66e9]"
-          key={index}
-          href={ref.url}
-        >
-          {parseText(ref.description)}
-        </Link>
+        <div key={index} className="ml-4 text-sm text-[#4f66e9]">
+          <Link target="_blank" href={ref.url}>
+            {parseText(ref.description)}
+          </Link>
+        </div>
       ))}
     </div>
   );
