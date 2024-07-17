@@ -28,8 +28,6 @@ import {
   ReportVert,
 } from "../../types/vertex.types";
 import prompts from "../../api/vertex/prompts.json";
-import { text } from "express";
-import { writeJsonFile } from "../../services/db/file_handling";
 import { uploadUserDataToBlob } from "../../services/vercel/blob";
 import { upsertUser } from "../../services/vercel/pg";
 import { User } from "../../types/vercel.types";
@@ -140,9 +138,6 @@ export async function generateReport(username: string, period: TimePeriod) {
       ),
       date: periods,
     };
-    writeJsonFile("test.json", {
-      dataToSend,
-    });
     console.log("Getting insights from merge requests");
     const insights: { i: InsightVert[] } = await sendAiPrompt(
       dataToSend,
@@ -189,7 +184,6 @@ export async function generateReport(username: string, period: TimePeriod) {
       ),
       periods: periods,
     };
-    writeJsonFile("test.json", dataToSend);
     console.log("Getting insights from notes");
     const insights: { i: InsightVert[] } = await sendAiPrompt(
       dataToSend,
@@ -230,9 +224,6 @@ export async function generateReport(username: string, period: TimePeriod) {
   let mergedInsights: ReportVert;
   try {
     console.log("Merging insights");
-    writeJsonFile("test.json", {
-      data: { comments: notesInsights, mergeRequest: mrInsights },
-    });
     const insights: { i: InsightVert[] } = await sendAiPrompt(
       { comments: notesInsights, mergeRequest: mrInsights },
       prompts.combine.insight
@@ -247,7 +238,6 @@ export async function generateReport(username: string, period: TimePeriod) {
       { comments: notesInsights.ps, mergeRequest: mrInsights.ps },
       prompts.combine.positiveSkills
     );
-    writeJsonFile("mergedPositive.json", positiveSkills);
     console.log("Merging negative skills");
     const negativeSkills: { ns: NegativeSkillVert[] } = await sendAiPrompt(
       { comments: notesInsights.ns, mergeRequest: mrInsights.ns },
@@ -266,7 +256,6 @@ export async function generateReport(username: string, period: TimePeriod) {
   console.groupEnd();
 
   // Changed ReportVert to Report;
-  writeJsonFile("merged.json", mergedInsights);
   const poisitveSF: Record<
     string,
     Record<string, Record<Sentiment, number>>
