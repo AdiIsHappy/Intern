@@ -15,10 +15,8 @@ const vertex_ai = new VertexAI({
   location: "us-central1",
 });
 const model = "gemini-1.5-flash-001";
-// const model = "gemini-1.5-pro-001";
 
 // Instantiate the models
-
 const generativeAiModel = vertex_ai.getGenerativeModel({
   model: model,
   generationConfig: {
@@ -67,11 +65,23 @@ export async function sendAiPrompt(data: any, systemPrompt: string) {
 
       const result = await streamingResp.response;
       writeJsonFile("AI.json", result);
-      const formalNotes = JSON.parse(
-        result.candidates?.at(0)?.content.parts.at(0)?.text as string
-      );
 
-      return formalNotes;
+      // Extract and parse the response content
+      const responseContent = result.candidates?.at(0)?.content.parts.at(0)
+        ?.text as string;
+      let response;
+
+      // Check if the response is in Markdown format
+      if (responseContent.trim().startsWith("```json")) {
+        // Extract the JSON part from the Markdown code block
+        const jsonString = responseContent.replace(/```json|```/g, "").trim();
+        response = JSON.parse(jsonString);
+      } else {
+        // Assume the response is plain JSON
+        response = JSON.parse(responseContent);
+      }
+
+      return response;
     } catch (error) {
       if (error instanceof ClientError) {
         console.log(
@@ -87,7 +97,7 @@ export async function sendAiPrompt(data: any, systemPrompt: string) {
         );
         console.error(error);
         retryCount++;
-        await delay(2000); // Wait for 10 seconds
+        await delay(2000); // Wait for 2 seconds
       }
     }
   }

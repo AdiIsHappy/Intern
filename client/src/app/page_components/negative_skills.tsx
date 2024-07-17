@@ -82,17 +82,15 @@ export function NegativeSkills({ data, period }: NegativeSkillsProp) {
         </div>
       </div>
       <div className="w-full my-8 bg-gray-100 p-4 rounded-md min-h-48">
-        <div className="flex-1 mx-2">
-          <h3 className="font-semibold text-lg">References</h3>
-          <div className="flex flex-row max-h-64 scroll-m-11 overflow-auto">
-            {data.negativeSkills
-              .find((e) => e.skill === skill)
-              ?.references?.map((ref, index) => (
-                <div className="my-2" key={index}>
-                  <ReferenceCard reference={ref} />
-                </div>
-              ))}
-          </div>
+        <h3 className="font-semibold text-lg">References</h3>
+        <div className="flex flex-row max-h-64 scroll-m-11 overflow-auto">
+          {data.negativeSkills
+            .find((e) => e.skill === skill)
+            ?.references?.map((ref, index) => (
+              <div className="my-2" key={index}>
+                <ReferenceCard reference={ref} />
+              </div>
+            ))}
         </div>
       </div>
     </div>
