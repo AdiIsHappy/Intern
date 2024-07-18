@@ -8,7 +8,7 @@ interface LinkedTextProps {
   className?: string;
 }
 
-const LinkedText: React.FC<LinkedTextProps> = ({ text, urls, className }) => {
+const LinkedText: React.FC<LinkedTextProps> = ({ text, urls }) => {
   const [showingPopup, setShowingPopup] = useState(false);
   const [popupPosition, setPopupPosition] = useState({ top: 0, left: 0 });
   const hideTimeout = useRef<number | null>(null);

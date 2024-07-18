@@ -1,7 +1,5 @@
 import { Reference } from "@/lib/types/core.types";
 import Link from "next/link";
-import Image from "next/image";
-import icon from "@/../public/link.svg";
 
 export interface ReferenceCardProp {
   reference: Reference;

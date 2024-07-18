@@ -11,7 +11,7 @@ import { ReportSkeleton } from "@/components/report_skeleton";
 
 const authenticatedUsername = "grote";
 
-const periodLabels: { [key in TimePeriod]: string } = {
+const periodLabels = {
   month: "Last 3 Month",
   week: "Last 4 Week",
   quarter: "Last 2 Quarter",
@@ -23,7 +23,6 @@ export default function MergeRequestAssessment() {
   const [authenticatedUser, setAuthenticatedUser] = useState<User | null>(null);
   const [data, setData] = useState<userReport | null>(null);
   const [teamMembers, setTeamMembers] = useState<User[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
 
   const [periodDropdownOptions, setPeriodDropdownOptions] = useState<
     { value: TimePeriod; label: string }[] | null
@@ -32,16 +31,13 @@ export default function MergeRequestAssessment() {
   useEffect(() => {
     const fetchAuthenticatedUserData = async () => {
       try {
-        setLoading(true);
         const user = await getUserByUsername(authenticatedUsername);
         setAuthenticatedUser(user);
         const members = await getAllUsersUnderUsername(authenticatedUsername);
         setTeamMembers(members);
         setSelectedUser(members[0].username);
-        setLoading(false);
       } catch (error) {
         console.error(error);
-        setLoading(false);
       }
     };
 
@@ -55,7 +51,6 @@ export default function MergeRequestAssessment() {
     }
     const fetchReportData = async () => {
       try {
-        setLoading(true);
         const availablePeriods = await getAvailablePeriods(selectedUser);
         if (availablePeriods.length === 0) return;
         setPeriodDropdownOptions(
@@ -64,15 +59,13 @@ export default function MergeRequestAssessment() {
             label: periodLabels[p as TimePeriod],
           }))
         );
-        
+
         if (period === null) setPeriod(availablePeriods[0] as TimePeriod);
         if (period === null) return;
         const result = await getReport(selectedUser, period);
         setData(result);
-        setLoading(false);
       } catch (error) {
         console.error(error);
-        setLoading(false);
       }
     };
 
