@@ -13,7 +13,6 @@ export async function analyseMergeRequestsAsync(
   username: string,
   mergeRequestIds: string[]
 ) {
-  
   console.log("Analyzing Merge Requests", username, mergeRequestIds);
   // ger merge requests for analysis
   const userData = getUserDataDB(username);
@@ -70,6 +69,5 @@ export async function analyseMergeRequestsAsync(
   console.groupEnd();
 
   // Updates merege requests in storage
-  // :STORAGE
   addMergeRequestsToAnalysisDB(username, analysedMergeRequest);
 }

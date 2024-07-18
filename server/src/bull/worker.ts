@@ -1,13 +1,6 @@
-import {
-  getUserDataDB,
-  getUserReportDB,
-  updateStatusDB,
-} from "../services/db/db";
-import { uploadUserDataToBlob } from "../services/vercel/blob";
-import { upsertUser } from "../services/vercel/pg";
+import { updateStatusDB } from "../services/db/db";
 import { QueueTypes, QueueData } from "../types/bull.types";
 import { TimePeriod } from "../types/core.types";
-import { User } from "../types/vercel.types";
 import { queue } from "./queue";
 import { analyseMergeRequestsAsync } from "./workers/analyse_merge_requests";
 import { analyseNotesAsync } from "./workers/analyse_notes";
@@ -57,7 +50,7 @@ queue.on("completed", async (job) => {
         };
         await queue.add(task);
       }
-    } else if (job.data.type === QueueTypes.GENERATE_INSIGHTS){
+    } else if (job.data.type === QueueTypes.GENERATE_INSIGHTS) {
       console.log(`Insights generated for ${job.data.data.username}`);
     }
   }

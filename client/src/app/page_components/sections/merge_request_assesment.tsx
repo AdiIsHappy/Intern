@@ -1,4 +1,4 @@
-import ChartInfo from "@/components/chart_info";
+import ChartInfo from "@/components/containers/chart_info";
 import { PRQualityTimeline } from "@/components/charts/pr_quality_timeline";
 import { TestCaseRatioChart } from "@/components/charts/test_case_ratio_chart";
 import { GraphInfo } from "@/lib/constants/graph_info";

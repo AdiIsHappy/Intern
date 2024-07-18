@@ -20,6 +20,7 @@ export async function startPreparingReport(username: string) {
   }
 
   const userReport = getUserReportDB(username);
+
   // Check if user report is already being prepared
   if (userReport !== null && userReport.status !== "Avaliable") {
     return {

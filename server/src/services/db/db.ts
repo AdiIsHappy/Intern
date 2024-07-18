@@ -12,7 +12,6 @@ import {
   PathType,
 } from "../../types/db.types";
 import { GQLNoteNode, GQLUserNode } from "../../types/gitlab.types";
-import { ReportVert } from "../../types/vertex.types";
 import { fileExist, readJsonFile, writeJsonFile } from "./file_handling";
 const config = require("../../config.json");
 

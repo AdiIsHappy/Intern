@@ -2,14 +2,11 @@ import { SkillsFrequencyTimeline } from "@/components/charts/skills_frequency_ti
 import { SkillSentimentChart } from "@/components/charts/skills_sentiment_chart";
 import Dropdown from "@/components/dropdown";
 import { TimePeriod, userReport } from "@/lib/types/core.types";
-import Link from "next/link";
 import { useEffect, useState } from "react";
-import Image from "next/image";
-import linkIcon from "@/../public/link.svg";
 import { GraphInfo } from "@/lib/constants/graph_info";
-import ChartInfo from "@/components/chart_info";
-import LinkedText from "@/components/linked_text";
-import { ReferenceCard } from "@/components/cards/reference_card";
+import ChartInfo from "@/components/containers/chart_info";
+import LinkedText from "@/components/containers/linked_text";
+import { ReferenceCard } from "@/components/containers/reference_card";
 
 export interface NegativeSkillsProp {
   data: userReport;

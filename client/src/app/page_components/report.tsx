@@ -2,15 +2,15 @@
 
 import { TimePeriod, userReport } from "@/lib/types/core.types";
 import "../../lib/constants/chart_registration";
-import { PositiveSkills } from "./positive_skills";
-import { NegativeSkills } from "./negative_skills";
-import { OtherComparisions } from "./other_comparisions";
+import { PositiveSkills } from "./sections/positive_skills";
+import { NegativeSkills } from "./sections/negative_skills";
+import { OtherComparisions } from "./sections/other_comparisions";
 import { generateSummary } from "@/lib/utils/generate_summary";
 import useWindowSize from "@/lib/hooks/use_windows_size";
-import SectionContainer from "@/components/section";
-import { Quality } from "./merge_request_assesment";
-import LinkedText from "@/components/linked_text";
-import { ActionCard } from "@/components/cards/action_card";
+import SectionContainer from "@/components/containers/section";
+import { Quality } from "./sections/merge_request_assesment";
+import LinkedText from "@/components/containers/linked_text";
+import { ActionCard } from "@/components/containers/action_card";
 
 export interface ReportProps {
   data: userReport;

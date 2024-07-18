@@ -2,8 +2,7 @@ import { DateTime } from "luxon";
 import { getMergeRequestAnalysisDB, getUserDataDB } from "../../services/db/db";
 import { QueueData, QueueTypes } from "../../types/bull.types";
 import { queue } from "../queue";
-
-const config = require("../../config.json");
+import config from "../../config.json";
 
 const notesPerIteration = config.analysis.dataPerJob.notes;
 const mergeRequestsPerITeration = config.analysis.dataPerJob.mergeRequests;

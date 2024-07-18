@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import Skeleton from "react-loading-skeleton";
 import Dropdown from "@/components/dropdown";
-import { Navbar } from "@/app/page_components/navbar";
+import { Navbar } from "@/app/page_components/sections/navbar";
 import { Report } from "@/app/page_components/report";
 import { getAvailablePeriods, getReport } from "@/lib/db/db";
 import { TimePeriod, userReport, User } from "@/lib/types/core.types";

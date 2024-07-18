@@ -27,9 +27,8 @@ export async function fecthUserDataAsync(username: string, tag: string) {
     userData.authoredMergeRequests.nodes[i] = mergeRequest;
   }
 
-  //:STORAGE
   storeUserDataDB(username, userData);
-  await updateStatusDB(username, "Analyzing Data");
+  updateStatusDB(username, "Analyzing Data");
 
   // Add Schduler to Job Queue
   const task: QueueData = {

@@ -4,7 +4,6 @@ import {
   gitlabUserDataQuery,
   gitlabUserExistenseQuery,
 } from "../../api/gitlab/querries";
-import { TimePeriod } from "../../types/core.types";
 import {
   GQLResponse,
   GQLUserNode,
@@ -27,8 +26,7 @@ export async function checkIfUserExistsAsync(
 }
 
 export async function getGitlabUserDataAsync(
-  username: string,
-  period: TimePeriod = "month"
+  username: string
 ): Promise<GQLUserNode> {
   const date = DateTime.now()
     .startOf("week")

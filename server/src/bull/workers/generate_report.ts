@@ -31,12 +31,15 @@ import prompts from "../../api/vertex/prompts.json";
 import { uploadUserDataToBlob } from "../../services/vercel/blob";
 import { upsertUser } from "../../services/vercel/pg";
 import { User } from "../../types/vercel.types";
+import { GQLUserNode } from "../../types/gitlab.types";
+import {
+  AnalysedMergeRequestStorage,
+  AnalysedNoteStorage,
+} from "../../types/db.types";
 
 // TODO: Reschduel the analysis upon failing
 
 export async function generateReport(username: string, period: TimePeriod) {
-  console.group("Generating Report", username, period);
-  console.group("Getting data for user");
   // Get analysis datas
   const startPeriodDate = getNPeriodBeforeDate(period);
   const notesAnalysis = getNotesAnalsysisDB(username);
@@ -48,41 +51,14 @@ export async function generateReport(username: string, period: TimePeriod) {
     return null;
   }
 
-  console.log("processign data");
-  const idURLMap: Record<string, string> = {};
-  userInfo.authoredMergeRequests.nodes
-    .filter((e) => e)
-    .forEach((mr) => {
-      idURLMap[mr.id] = mr.webUrl;
-      mr.notes.nodes.forEach((note) => {
-        idURLMap[note.id] = note.url;
-      });
-    });
-
-  console.log("Generating other stats");
-
   // Generate Response sentiments
-  const userResponseSentiments: Record<Sentiment, number> = {
-    Positive: 0,
-    Negative: 0,
-    Neutral: 0,
-  };
-  const commentsSentiments: Record<Sentiment, number> = {
-    Positive: 0,
-    Negative: 0,
-    Neutral: 0,
-  };
-  userInfo.authoredMergeRequests.nodes.forEach((mr) => {
-    mr.notes.nodes.forEach((note) => {
-      const analysis = notesAnalysis.data.find((n) => n.id === note.id);
-      if (!analysis) return;
-      if (note.author.username === username) {
-        userResponseSentiments[analysis.feedback] += 1;
-      } else {
-        commentsSentiments[analysis.feedback] += 1;
-      }
-    });
-  });
+  const {
+    userResponseSentiments,
+    commentsSentiments,
+  }: {
+    userResponseSentiments: Record<Sentiment, number>;
+    commentsSentiments: Record<Sentiment, number>;
+  } = GenerateReponseSentiemnts();
 
   // Generate PR quality count, impact count & test added count
   const quality: Record<string, Record<Quality, number>> = {};
@@ -123,48 +99,14 @@ export async function generateReport(username: string, period: TimePeriod) {
     }
   });
 
-  console.groupEnd();
-  console.group("Generating insights");
-
   // Get Insights from merge requests
   let mrInsights: ReportVert;
   try {
-    console.log("preparing merge requests");
-    console.log("Getting insights from merge requests");
-    const dataToSend = {
-      data: mergeRequestAnalysis.data.filter(
-        (mr) =>
-          DateTime.fromISO(mr.createdAt!) >= DateTime.fromISO(startPeriodDate)
-      ),
-      date: periods,
-    };
-    console.log("Getting insights from merge requests");
-    const insights: { i: InsightVert[] } = await sendAiPrompt(
-      dataToSend,
-      prompts.report.insight
+    mrInsights = await generateMRInsights(
+      mergeRequestAnalysis,
+      startPeriodDate,
+      periods
     );
-    console.log("Getting actions from merge requests");
-    const actions: { a: ActionVert[] } = await sendAiPrompt(
-      dataToSend,
-      prompts.report.actions
-    );
-    console.log("Getting positive skills from merge requests");
-    const positiveSkills: { ps: PositiveSkillVert[] } = await sendAiPrompt(
-      dataToSend,
-      prompts.report.positiveSkillsMR
-    );
-    console.log("Getting negative skills from merge requests");
-    const negativeSkills: { ns: NegativeSkillVert[] } = await sendAiPrompt(
-      { ...dataToSend, positiveSkills: positiveSkills.ps },
-      prompts.report.negativeSkillsMR
-    );
-    console.groupEnd();
-    mrInsights = {
-      i: insights.i,
-      a: actions.a,
-      ps: positiveSkills.ps,
-      ns: negativeSkills.ns,
-    };
   } catch (error) {
     console.error(
       `Error generating insights from mr for user ${username}:`,
@@ -176,41 +118,11 @@ export async function generateReport(username: string, period: TimePeriod) {
   // Get Insights from notes
   let notesInsights: ReportVert;
   try {
-    console.group("Preparing notes");
-    const dataToSend = {
-      data: notesAnalysis.data.filter(
-        (note) =>
-          DateTime.fromISO(note.createdAt!) >= DateTime.fromISO(startPeriodDate)
-      ),
-      periods: periods,
-    };
-    console.log("Getting insights from notes");
-    const insights: { i: InsightVert[] } = await sendAiPrompt(
-      dataToSend,
-      prompts.report.insight
+    notesInsights = await generateNotesInsights(
+      notesAnalysis,
+      startPeriodDate,
+      periods
     );
-    console.log("Getting actions from notes");
-    const actions: { a: ActionVert[] } = await sendAiPrompt(
-      dataToSend,
-      prompts.report.actions
-    );
-    console.log("Getting positive skills from notes");
-    const positiveSkills: { ps: PositiveSkillVert[] } = await sendAiPrompt(
-      dataToSend,
-      prompts.report.positiveSkillsNote
-    );
-    console.log("Getting negative skills from notes");
-    const negativeSkills: { ns: NegativeSkillVert[] } = await sendAiPrompt(
-      { ...dataToSend, positiveSkills: positiveSkills.ps },
-      prompts.report.negativeSkillsNote
-    );
-    console.groupEnd();
-    notesInsights = {
-      i: insights.i,
-      a: actions.a,
-      ps: positiveSkills.ps,
-      ns: negativeSkills.ns,
-    };
   } catch (error) {
     console.error(
       `Error generating insights from notes for user ${username}:`,
@@ -219,43 +131,199 @@ export async function generateReport(username: string, period: TimePeriod) {
     return;
   }
 
-  console.group("Merging");
   // Merge generated insights
   let mergedInsights: ReportVert;
   try {
-    console.log("Merging insights");
-    const insights: { i: InsightVert[] } = await sendAiPrompt(
-      { comments: notesInsights, mergeRequest: mrInsights },
-      prompts.combine.insight
-    );
-    console.log("Merging actions");
-    const actions: { a: ActionVert[] } = await sendAiPrompt(
-      { comments: notesInsights, mergeRequest: mrInsights },
-      prompts.combine.actions
-    );
-    console.log("Merging positive skills");
-    const positiveSkills: { ps: PositiveSkillVert[] } = await sendAiPrompt(
-      { comments: notesInsights.ps, mergeRequest: mrInsights.ps },
-      prompts.combine.positiveSkills
-    );
-    console.log("Merging negative skills");
-    const negativeSkills: { ns: NegativeSkillVert[] } = await sendAiPrompt(
-      { comments: notesInsights.ns, mergeRequest: mrInsights.ns },
-      prompts.combine.negativeSkills
-    );
-    mergedInsights = {
-      a: actions.a,
-      i: insights.i,
-      ps: positiveSkills.ps,
-      ns: negativeSkills.ns,
-    };
+    mergedInsights = await mergeInsights(notesInsights, mrInsights);
   } catch (error) {
     console.error(`Error merging insights for user ${username}:`, error);
     return;
   }
-  console.groupEnd();
 
   // Changed ReportVert to Report;
+  const {
+    postitiveSkill,
+    negativeSkill,
+  }: { postitiveSkill: PositiveSkill[]; negativeSkill: NegativeSkill[] } =
+    prepareSkills(mergedInsights);
+
+  const report: Report = {
+    actions: mergedInsights.a.map((action) => ({
+      references: action.refs.map((ref) => ({
+        title: ref.te,
+        url: ref.url,
+        skill: ref.s,
+        description: ref.de,
+      })),
+      text: action.t,
+    })),
+    insights: mergedInsights.i.map((insight) => ({
+      text: insight.t,
+      ids: insight.ids,
+    })),
+    positiveSkills: postitiveSkill,
+    negativeSkills: negativeSkill,
+  };
+
+  // Replace Ids with URls
+  replaceIdsWithUrls(report, userInfo);
+
+  // store insights
+  const dataToStore = {
+    ...report,
+    quality,
+    testCases,
+    testCasesRequired,
+    impact,
+    userResponseSentiments,
+    commentsSentiments,
+  };
+  storeInsightsDB(username, period, dataToStore);
+  updateStatusDB(username, "Avaliable");
+
+  await uploadData(username, userInfo);
+
+  function GenerateReponseSentiemnts() {
+    const userResponseSentiments: Record<Sentiment, number> = {
+      Positive: 0,
+      Negative: 0,
+      Neutral: 0,
+    };
+    const commentsSentiments: Record<Sentiment, number> = {
+      Positive: 0,
+      Negative: 0,
+      Neutral: 0,
+    };
+    userInfo!.authoredMergeRequests.nodes.forEach((mr) => {
+      mr.notes.nodes.forEach((note) => {
+        const analysis = notesAnalysis!.data.find((n) => n.id === note.id);
+        if (!analysis) return;
+        if (note.author.username === username) {
+          userResponseSentiments[analysis.feedback] += 1;
+        } else {
+          commentsSentiments[analysis.feedback] += 1;
+        }
+      });
+    });
+    return { userResponseSentiments, commentsSentiments };
+  }
+}
+
+async function generateMRInsights(
+  mergeRequestAnalysis: AnalysedMergeRequestStorage,
+  startPeriodDate: string,
+  periods: string[]
+) {
+  let mrInsights: ReportVert;
+  const dataToSend = {
+    data: mergeRequestAnalysis.data.filter(
+      (mr) =>
+        DateTime.fromISO(mr.createdAt!) >= DateTime.fromISO(startPeriodDate)
+    ),
+    date: periods,
+  };
+  const insights: { i: InsightVert[] } = await sendAiPrompt(
+    dataToSend,
+    prompts.report.insight
+  );
+  const actions: { a: ActionVert[] } = await sendAiPrompt(
+    dataToSend,
+    prompts.report.actions
+  );
+  const positiveSkills: { ps: PositiveSkillVert[] } = await sendAiPrompt(
+    dataToSend,
+    prompts.report.positiveSkillsMR
+  );
+  const negativeSkills: { ns: NegativeSkillVert[] } = await sendAiPrompt(
+    { ...dataToSend, positiveSkills: positiveSkills.ps },
+    prompts.report.negativeSkillsMR
+  );
+  console.groupEnd();
+  mrInsights = {
+    i: insights.i,
+    a: actions.a,
+    ps: positiveSkills.ps,
+    ns: negativeSkills.ns,
+  };
+  return mrInsights;
+}
+
+async function generateNotesInsights(
+  notesAnalysis: AnalysedNoteStorage,
+  startPeriodDate: string,
+  periods: string[]
+) {
+  let notesInsights: ReportVert;
+  const dataToSend = {
+    data: notesAnalysis.data.filter(
+      (note) =>
+        DateTime.fromISO(note.createdAt!) >= DateTime.fromISO(startPeriodDate)
+    ),
+    periods: periods,
+  };
+  const insights: { i: InsightVert[] } = await sendAiPrompt(
+    dataToSend,
+    prompts.report.insight
+  );
+  console.log("Getting actions from notes");
+  const actions: { a: ActionVert[] } = await sendAiPrompt(
+    dataToSend,
+    prompts.report.actions
+  );
+  console.log("Getting positive skills from notes");
+  const positiveSkills: { ps: PositiveSkillVert[] } = await sendAiPrompt(
+    dataToSend,
+    prompts.report.positiveSkillsNote
+  );
+  console.log("Getting negative skills from notes");
+  const negativeSkills: { ns: NegativeSkillVert[] } = await sendAiPrompt(
+    { ...dataToSend, positiveSkills: positiveSkills.ps },
+    prompts.report.negativeSkillsNote
+  );
+  console.groupEnd();
+  notesInsights = {
+    i: insights.i,
+    a: actions.a,
+    ps: positiveSkills.ps,
+    ns: negativeSkills.ns,
+  };
+  return notesInsights;
+}
+
+async function mergeInsights(
+  notesInsights: ReportVert,
+  mrInsights: ReportVert
+) {
+  let mergedInsights: ReportVert;
+  const insights: { i: InsightVert[] } = await sendAiPrompt(
+    { comments: notesInsights, mergeRequest: mrInsights },
+    prompts.combine.insight
+  );
+  console.log("Merging actions");
+  const actions: { a: ActionVert[] } = await sendAiPrompt(
+    { comments: notesInsights, mergeRequest: mrInsights },
+    prompts.combine.actions
+  );
+  console.log("Merging positive skills");
+  const positiveSkills: { ps: PositiveSkillVert[] } = await sendAiPrompt(
+    { comments: notesInsights.ps, mergeRequest: mrInsights.ps },
+    prompts.combine.positiveSkills
+  );
+  console.log("Merging negative skills");
+  const negativeSkills: { ns: NegativeSkillVert[] } = await sendAiPrompt(
+    { comments: notesInsights.ns, mergeRequest: mrInsights.ns },
+    prompts.combine.negativeSkills
+  );
+  mergedInsights = {
+    a: actions.a,
+    i: insights.i,
+    ps: positiveSkills.ps,
+    ns: negativeSkills.ns,
+  };
+  return mergedInsights;
+}
+
+function prepareSkills(mergedInsights: ReportVert) {
   const poisitveSF: Record<
     string,
     Record<string, Record<Sentiment, number>>
@@ -305,28 +373,20 @@ export async function generateReport(username: string, period: TimePeriod) {
       url: ref.url,
     })),
   }));
+  return { postitiveSkill, negativeSkill };
+}
 
-  const report: Report = {
-    actions: mergedInsights.a.map((action) => ({
-      references: action.refs.map((ref) => ({
-        title: ref.te,
-        url: ref.url,
-        skill: ref.s,
-        description: ref.de,
-      })),
-      text: action.t,
-    })),
-    insights: mergedInsights.i.map((insight) => ({
-      text: insight.t,
-      ids: insight.ids,
-    })),
-    positiveSkills: postitiveSkill,
-    negativeSkills: negativeSkill,
-  };
+function replaceIdsWithUrls(report: Report, userInfo: GQLUserNode) {
+  const idURLMap: Record<string, string> = {};
+  userInfo.authoredMergeRequests.nodes
+    .filter((e) => e)
+    .forEach((mr) => {
+      idURLMap[mr.id] = mr.webUrl;
+      mr.notes.nodes.forEach((note) => {
+        idURLMap[note.id] = note.url;
+      });
+    });
 
-  console.log("Replacing Ids with URLs");
-
-  // Replace Ids with URls
   report.negativeSkills.forEach((skill) => {
     skill.insights.forEach((insight) => {
       insight.ids = insight.ids.map((id) => idURLMap[id]);
@@ -340,23 +400,9 @@ export async function generateReport(username: string, period: TimePeriod) {
   report.insights.forEach((insight) => {
     insight.ids = insight.ids.map((id) => idURLMap[id]);
   });
+}
 
-  console.log("Storing insights");
-
-  // store insights
-  // :STORAGE
-  const dataToStore = {
-    ...report,
-    quality,
-    testCases,
-    testCasesRequired,
-    impact,
-    userResponseSentiments,
-    commentsSentiments,
-  };
-  storeInsightsDB(username, period, dataToStore);
-  updateStatusDB(username, "Avaliable");
-
+async function uploadData(username: string, userInfo: GQLUserNode) {
   const finalReport = getUserReportDB(username);
   if (finalReport) {
     const response = await uploadUserDataToBlob(username, finalReport);
@@ -370,7 +416,5 @@ export async function generateReport(username: string, period: TimePeriod) {
     };
     await upsertUser(informationDB);
   }
-
-  console.log("Report generated successfully");
-  console.groupEnd();
 }
+

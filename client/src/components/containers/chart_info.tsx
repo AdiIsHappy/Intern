@@ -1,8 +1,38 @@
-// components/ButtonWithTooltip.js
-import { useState } from "react";
+import React, { ReactNode, useState } from "react";
 import InfoIcon from "@/lib/constants/icons/info";
 
-export function Info({ tooltipText }: { tooltipText: string }) {
+interface ChartInfoProps {
+  children?: ReactNode;
+  tooltipText: string;
+  infoText: string;
+  className?: string;
+}
+
+const ChartInfo: React.FC<ChartInfoProps> = ({
+  children,
+  tooltipText,
+  infoText,
+  className = "",
+}) => {
+  return (
+    <div className={`w-full relative min-h-96 p-2 my-4 ${className}`}>
+      {tooltipText ? (
+        <div className="absolute top-0 right-0 m-2">
+          <Info tooltipText={tooltipText} />
+        </div>
+      ) : null}
+      <div className="w-full min-h-96">{children}</div>
+      {infoText ? (
+        <div className="flex  mt-4 text-sm items-center w-full px-8 py-2 bg-yellow-100 rounded-md text-yellow-600">
+          <InfoIcon width={16} height={16} className="mr-4" />
+          <span className="flex-1">{infoText}</span>
+        </div>
+      ) : null}
+    </div>
+  );
+};
+
+function Info({ tooltipText }: { tooltipText: string }) {
   const [visible, setVisible] = useState(false);
 
   const handleMouseEnter = () => setVisible(true);
@@ -37,3 +67,5 @@ export function Info({ tooltipText }: { tooltipText: string }) {
     </div>
   );
 }
+
+export default ChartInfo;

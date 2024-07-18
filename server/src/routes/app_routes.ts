@@ -3,10 +3,9 @@ import { startPreparingReport } from "../report";
 import { TimePeriod } from "../types/core.types";
 import { QueueData, QueueTypes } from "../types/bull.types";
 import { queue } from "../bull/queue";
-import { fetchAllUserEvents } from "../api/gitlab/gitlab";
-import { upsertUser } from "../services/vercel/pg";
 const apiRouter = Router();
 
+// Generate report for the user starting from scratch
 apiRouter.post("/reports", async (req: Request, res: Response) => {
   const { username } = req.body;
   const usernamel = username.toLowerCase();
@@ -16,20 +15,7 @@ apiRouter.post("/reports", async (req: Request, res: Response) => {
   return res.json(response);
 });
 
-apiRouter.get("/test", async (req: Request, res: Response) => {
-  const response = await upsertUser({
-    managerUsername: null,
-    name: "test",
-    profilePicUrl: "test",
-    reportUrl: "test",
-    username: "test",
-    webUrl: "test",
-  });
-  return res.json(response);
-});
-
-
-
+// Generate Report from the user using exisitng data. For testing.
 apiRouter.get("/reports", async (req: Request, res: Response) => {
   const periods: TimePeriod[] = ["week", "quarter", "month"];
   const { username } = req.body;

@@ -1,4 +1,4 @@
-import ChartInfo from "@/components/chart_info";
+import ChartInfo from "@/components/containers/chart_info";
 import { PRImpactTimeline } from "@/components/charts/pr_impact_timeline";
 import { SentimentPieChart } from "@/components/charts/sentiment_pie";
 import { GraphInfo } from "@/lib/constants/graph_info";
