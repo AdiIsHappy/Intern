@@ -36,5 +36,7 @@ I made this project as the part of my 2 months summer internship at Sprinklr.
 - authenticate the server project your using gcloud cli. see: [Authenticate for using the gcloud CLI | Authentication | Google Cloud](https://cloud.google.com/docs/authentication/gcloud#gcloud-credentials)
 - for both serve and client install the required packages by running command  ``` npm i ``` in respective folders.
 
+## Links
 **Final Presentation:** [click here](https://docs.google.com/presentation/d/1P3pmx69XOV7E8pybV9YARDVxaK8y0_7A/edit?usp=sharing&ouid=109264835369932589961&rtpof=true&sd=true)
+**Hosted Website:** [click here](https://gitlabinsights-aditya-sahus-projects-c5a2adb0.vercel.app/)
 
